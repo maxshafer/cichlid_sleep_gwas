@@ -44,6 +44,6 @@ module load Java
 
 # ~/gatk-4.2.4.1/gatk VariantFiltration -R ~/pro-ects/cichlids_2/genome/GCF_001858045.1_ASM185804v2_genomic_edit.fna -V ~/projects/cichlids_2/sra_reads_nobackup/cohort_geno_gathered.g.vcf.gz -O ~/projects/cichlids_2/sra_reads_nobackup/cohort_geno_gathered_filtered.g.vcf.gz
 
-~/gatk-4.2.4.1/gatk VariantFiltration -R ~/projects/cichlids_2/genome/GCF_001858045.1_ASM185804v2_genomic_edit.fna -V ~/projects/cichlids_2/sra_reads_nobackup/cohort_genotyped_whole.g.vcf.gz --filter-expression "QD < 2.0 || FS > 60.0 || MQ < 40.0 || MQRankSum < -12.5 || ReadPosRankSum < -8.0" --filter-name "my_filter" -O ~/projects/cichlids_2/sra_reads_nobackup/cohort_genotyped_whole_filtered.g.vcf.gz
+~/gatk-4.2.4.0/gatk VariantFiltration -R ~/projects/cichlids_2/genome/GCF_001858045.1_ASM185804v2_genomic_edit.fna -V ~/projects/cichlids_2/sra_reads_nobackup/cohort_db_geno.g.vcf.gz --filter-expression "QD < 2.0 || FS > 60.0 || MQ < 40.0 || MQRankSum < -12.5 || ReadPosRankSum < -8.0" --filter-name "LQ_filter" -O ~/projects/cichlids_2/sra_reads_nobackup/cohort_db_geno_filtered.g.vcf.gz
 
 

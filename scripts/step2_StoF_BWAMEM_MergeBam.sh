@@ -13,7 +13,7 @@
 #SBATCH --error=/scicore/home/schiera/gizevo30/projects/cichlids_2/scripts/logs/StoF_BWAMEM_MergeBam_stderr.txt
 
 #You selected an array of jobs from 1 to 9 with 9 simultaneous jobs
-#SBATCH --array=1-123%123
+#SBATCH --array=1-119%119
 #SBATCH --mail-type=END,FAIL,TIME_LIMIT
 #SBATCH --mail-user=max.shafer@gmail.com        #You will be notified via email when your task ends or fails
 
@@ -51,4 +51,4 @@ set -o pipefail
 
 java -jar $EBROOTPICARD/picard.jar SamToFastq --INPUT ${SAMPLE}_2_marked.bam --FASTQ /dev/stdout --CLIPPING_ATTRIBUTE XT --CLIPPING_ACTION 2 --INTERLEAVE true --INCLUDE_NON_PF_READS true --TMP_DIR /scicore/home/schiera/gizevo30/mstemp | bwa mem -M -t 7 -p /scicore/home/schiera/gizevo30/projects/cichlids_2/genome/GCF_001858045.1_ASM185804v2_genomic_edit.fna /dev/stdin | java -jar $EBROOTPICARD/picard.jar MergeBamAlignment --ALIGNED_BAM /dev/stdin --UNMAPPED_BAM ${SAMPLE}_2_marked.bam --OUTPUT ${SAMPLE}_3_piped.bam --REFERENCE_SEQUENCE /scicore/home/schiera/gizevo30/projects/cichlids_2/genome/GCF_001858045.1_ASM185804v2_genomic_edit.fna --CREATE_INDEX true --ADD_MATE_CIGAR true --CLIP_ADAPTERS false --CLIP_OVERLAPPING_READS true --INCLUDE_SECONDARY_ALIGNMENTS true --MAX_INSERTIONS_OR_DELETIONS -1 --PRIMARY_ALIGNMENT_STRATEGY MostDistant --ATTRIBUTES_TO_RETAIN XS --TMP_DIR /scicore/home/schiera/gizevo30/mstemp
 
-# rm SRR96${SLURM_ARRAY_TASK_ID}_2_marked.bam
+rm ${SAMPLE}_2_marked.bam

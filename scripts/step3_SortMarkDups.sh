@@ -13,7 +13,7 @@
 #SBATCH --error=/scicore/home/schiera/gizevo30/projects/cichlids_2/scripts/logs/SortMarkDups_stderr_184-238.txt
 
 #You selected an array of jobs from 1 to 9 with 9 simultaneous jobs
-#SBATCH --array=1-123%123
+#SBATCH --array=1-119%119
 #SBATCH --mail-type=END,FAIL,TIME_LIMIT
 #SBATCH --mail-user=max.shafer@gmail.com        #You will be notified via email when your task ends or fails
 
@@ -50,3 +50,5 @@ java -jar $EBROOTPICARD/picard.jar SortSam --INPUT ${SAMPLE}_3_piped.bam --OUTPU
 java -jar $EBROOTPICARD/picard.jar MarkDuplicates --INPUT ${SAMPLE}_4_sorted_reads.bam --OUTPUT ${SAMPLE}_5_dedup.bam --METRICS_FILE ${SAMPLE}_5_dedup_metrics.txt --TMP_DIR $TMPDIR
 
 java -jar $EBROOTPICARD/picard.jar BuildBamIndex --INPUT ${SAMPLE}_5_dedup.bam
+
+rm ${SAMPLE}_3_piped.bam

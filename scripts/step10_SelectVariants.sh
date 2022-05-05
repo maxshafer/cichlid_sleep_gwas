@@ -29,6 +29,7 @@
 
 module load Java
 module load BEDTools/2.30.0-GCC-10.3.0
+module load BCFtools/1.12-GCC-10.3.0
 
 #export your required environment variables below
 #################################################
@@ -40,15 +41,21 @@ module load BEDTools/2.30.0-GCC-10.3.0
 # First, concatonate the bed files from all the masks and index it
 # cd /scicore/home/schiera/gizevo30/projects/cichlids_2/masks/
 
-# cat cohort_geno_gathered.DPmask.bed cohort_geno_gathered.g.vcf.gz.LQ.bed mapability_mask_100_90.bed | sortBed -faidx /scicore/home/schiera/gizevo30/projects/cichlids_2/genome/GCF_001858045.1_ASM185804v2_genomic_edit.chrs -i stdin | mergeBed -i stdin > cohort_geno_gathered.allMasksMerged.bed
+# cat cohort_db_geno.DPMask.bed cohort_db_geno.LQmask.bed mapability_mask_100_90.bed | sortBed -faidx /scicore/home/schiera/gizevo30/projects/cichlids_2/genome/GCF_001858045.1_ASM185804v2_genomic_edit.chrs -i stdin | mergeBed -i stdin > cohort_db_geno.allMasksMerged.bed
 
-# ~/gatk-4.2.4.1/gatk IndexFeatureFile -I cohort_geno_gathered.allMasksMerged.bed
+# ~/gatk-4.2.4.0/gatk IndexFeatureFile -I cohort_db_geno.allMasksMerged.bed
 
-# # Then make a new Filtered g.vcf file, before hard filtereing using the mask
+# Then make a new Filtered g.vcf file, before hard filtereing using the mask
 cd /scicore/home/schiera/gizevo30/projects/cichlids_2/sra_reads_nobackup/
 
-~/gatk-4.2.4.1/gatk VariantFiltration -R ~/projects/cichlids_2/genome/GCF_001858045.1_ASM185804v2_genomic_edit.fna -V cohort_genotyped_whole.g.vcf.gz --mask ../masks/cohort_geno_gathered.allMasksMerged.bed --mask-name "combined_filter" -O temp_cohort_genotyped_whole_filtered.g.vcf.gz
+#~/gatk-4.2.4.0/gatk VariantFiltration -R ~/projects/cichlids_2/genome/GCF_001858045.1_ASM185804v2_genomic_edit.fna -V cohort_db_geno_filtered.g.vcf.gz --mask ../masks/cohort_db_geno.allMasksMerged.bed --mask-name "combined_filter" -O cohort_db_geno_SoftFilter.g.vcf.gz
 
-~/gatk-4.2.4.1/gatk SelectVariants -R ~/projects/cichlids_2/genome/GCF_001858045.1_ASM185804v2_genomic_edit.fna -V temp_cohort_genotyped_whole_filtered.g.vcf.gz --exclude-filtered true -O cohort_genotyped_whole_hardfiltered.g.vcf.gz
+#~/gatk-4.2.4.0/gatk SelectVariants -R ~/projects/cichlids_2/genome/GCF_001858045.1_ASM185804v2_genomic_edit.fna -V cohort_db_geno_SoftFilter.g.vcf.gz --exclude-filtered true -O cohort_db_geno_hardfiltered.g.vcf.gz
 
+
+# This is subsetting the VCF to keep only balletic SNPs and excluding singletons and indels
+# These numbers correspond to the total haplotypes present in the dataset (119*2 = 238) 
+# bcftools view --max-ac 236 --min-ac 2 -m2 -M2 --exclude-types indels -O z -o cohort_db_geno.hardfiltered_SNPS.biallelic.NoSingletons.g.vcf.gz cohort_db_geno_hardfiltered.g.vcf.gz
+
+~/gatk-4.2.4.0/gatk IndexFeatureFile -I cohort_db_geno.hardfiltered_SNPS.biallelic.NoSingletons.g.vcf.gz
 

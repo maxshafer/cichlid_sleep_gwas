@@ -14,7 +14,7 @@
 #SBATCH --error=/scicore/home/schiera/gizevo30/projects/cichlids_2/scripts/logs/fastq_dump_stderr.txt
 
 #You selected an array of jobs from 1 to n with n simultaneous jobs
-#SBATCH --array=1-123%123
+#SBATCH --array=1-119%119
 #SBATCH --mail-type=END,FAIL,TIME_LIMIT
 #SBATCH --mail-user=max.shafer@gmail.com        #You will be notified via email when your task ends or fails
 
