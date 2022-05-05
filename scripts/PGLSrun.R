@@ -7,12 +7,13 @@
 ### Example to execute this script on the Sanger Farm:
 # bsub -G rdgroup -e getDP_e_%J -o getDP_o_%J -q long -R'select[mem>60000] rusage[mem=60000]' -M60000 /software/R-4.0.3/bin/Rscript PGLSrun.R medians_for_GWAS_withoutfilter_speciesCodesAndGenomeIDs_wOretan_TanganyikaGWAS_wOreTan_NC_031965_fromProbabilities_AF.txt.gz 
 
+### Modified by MERS 27.04.2022
+
 ########################################################################
 #######   Load packages  ######################################
 ########################################################################
 
 library(caper)
-
 
 ########################################################################
 #######   Defining trailing arguments  #################################
@@ -22,6 +23,9 @@ args = commandArgs(trailingOnly=TRUE)
 if (length(args) != 3) {
 	stop("must have 3 arguments for Rscript command")
 }
+
+# # Setting arguments for testing script
+# args <- c("speciesCodesAndGenomeIDs_for_GWAS_2_cohort_db_geno_NC_013663_fromProbabilities_AF.txt", "../cichlid_sleep_gwas/pheno_data/combined_cichlid_data_2022-05-05.csv", "day_night_dif")
 
 AFfile <- args[1]
 Phenofile <- args[2]
@@ -34,7 +38,7 @@ pheno_to_test <- as.character(args[3])
 # Obviously - runs the PGLS
 doPGSL <- function(x) {
 	ourDF <- data.frame(pheno= y[,pheno_to_test],geno=as.numeric(x))
-	rownames(ourDF) <- y$species_six
+	rownames(ourDF) <- y$six_letter_name_Ronco
 	ourDF$species_six = row.names(ourDF)
 	compD = comparative.data(phy = tanTree2, data=ourDF, species_six)
 	if (length(unique(x)) == 1) { print(x); return(1.0); }
@@ -51,7 +55,15 @@ doPGSL <- function(x) {
 ##  The script to be executed                 ##########################
 ########################################################################
 
+# # For testing
+# tanTree <- read.nexus("../05_BEAST_RAxML.tre")
+
 tanTree <- read.nexus("/scicore/home/schiera/gizevo30/projects/cichlids_2/scripts/05_BEAST_RAxML.tre")
+
+############
+### Read phenotype vector  
+############ 
+y <- read.table(Phenofile,header=T,sep=",")
 
 ############
 ### Read and process the Allele Frequencies from the file supplied by the command line argument
@@ -61,16 +73,13 @@ AF <- read.table(AFfile,header=T)
 # -1 stands originally for missing data; then subset only the Allele Frequency columns
 AF[AF==-1] <- NA; AFfull <- AF; AF <- AF[,5:ncol(AF)]   # ncol(AF) is the final column of the AF object - needs to change if using a different number of species
 
-# Remove those that aren't in the tree file
+# Remove those that aren't in the tree file OR in the pheno file (in case of removing shell-dwellers)
 AF <- AF[,colnames(AF) %in% tanTree$tip.label]
+AF <- AF[,colnames(AF) %in% y$six_letter_name_Ronco]
 # Scale the actual Allele Frequncies to be on the interval [-1,1]  
 AFscaled <- 2*((AF - min(AF,na.rm=T))/(max(AF,na.rm=T)-min(AF,na.rm=T))) - 1
 
-############
-### Read phenotype vector  
-############ 
-y <- read.table(Phenofile,header=T,sep=",")
-y <- y[match(colnames(AFscaled), y$species_six),]
+y <- y[match(colnames(AFscaled), y$six_letter_name_Ronco),]
 
 ##########
 ### Remove SNPs with missing data (i.e. those where the allele frequency could not be calculated)
@@ -92,8 +101,9 @@ naVector <- sapply(GWASvector.noMiss, function(x) is.na(x$coefficients[2]));    
 ### We load the phenotype vector again and process it slightly differently for this purpose - this is not optimal, but it works so let's not mess with it for no good reason
 #########
 
-tanTree2 <- drop.tip(tanTree, tanTree$tip.label[! tanTree$tip.label %in% y$species_six]);
-pglsGWASvector <- apply(AFscaled.noMiss[-which(naVector == TRUE),], 1, doPGSL)
-pglsGWASvector.withLoc <- cbind(AFfull[names(pglsGWASvector),1:2],pglsGWASvector)
-write.table(pglsGWASvector.withLoc,file=paste0(substr(AFfile, 1, nchar(AFfile)-7),"_",args[3],"_PGLSpiVals_corrected.txt"),quote=F,sep="\t")
+tanTree2 <- drop.tip(tanTree, tanTree$tip.label[! tanTree$tip.label %in% y$six_letter_name_Ronco]);
+PGLSpiVals <- apply(AFscaled.noMiss[-which(naVector == TRUE),], 1, doPGSL)
+pglsGWASvector.withLoc <- cbind(AFfull[names(pglsGWASvector),1:2],PGLSpiVals)
 
+# Write the results to disk
+write.table(pglsGWASvector.withLoc, file = paste(substr(AFfile, 1, nchar(AFfile)-7), "_PGLSpiVals_", args[3],"_", nrow(y), "-species", ".txt", sep = ""), quote=F, sep="\t")
