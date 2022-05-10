@@ -21,6 +21,7 @@ source('../../scripts/variants_functions.R')
 # }
 
 # Setting arguments for testing script
+# Need to make sure to specify the same phenotype file as was used in the gwas (if testing fewer species)
 args <- c("../../pheno_data/combined_cichlid_data_2022-05-05.csv", 0.001, "peak")
 
 Phenofile <- args[1]

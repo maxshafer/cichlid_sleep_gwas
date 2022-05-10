@@ -22,7 +22,7 @@ if (length(args) != 3) {
 }
 
 # # Setting arguments for testing script
-# args <- c("speciesCodesAndGenomeIDs_for_GWAS_2_cohort_db_geno_NC_013663_fromProbabilities_AF.txt", "../cichlid_sleep_gwas/pheno_data/combined_cichlid_data_2022-05-05.csv", "day_night_dif")
+# args <- c("speciesCodesAndGenomeIDs_for_GWAS_2_cohort_db_geno_NC_013663_fromProbabilities_AF.txt", "../../pheno_data/combined_cichlid_data_2022-05-05.csv", "day_night_dif")
 
 AFfile <- args[1]
 Phenofile <- args[2]
