@@ -5,10 +5,13 @@ library(Rgb)
 library(readr)
 library(patchwork)
 
+# This should be run in the folder with the allele_frequncies
+setwd("/Volumes/BZ/Scientific Data/RG-AS04-Data01/Cichlid-genomes/cichlid_sleep_gwas/sra_reads_nobackup/alleleFreqs")
+
 ## Make a script to read in all of the allelefreq files, combine them, plot the relationships, then subset by p-values
 ## This can then be modified, and re-run if we want other plots produced!
 
-source('/Volumes/BZ/Scientific Data/RG-AS04-Data01/Cichlid-genomes/cichlid_sleep_gwas/scripts/variants_functions.R')
+source('../../scripts/variants_functions.R')
 
 # This can be run from the command line with trailing arguments, or within IDE by setting them manually
 # # Load arguments
@@ -18,14 +21,11 @@ source('/Volumes/BZ/Scientific Data/RG-AS04-Data01/Cichlid-genomes/cichlid_sleep
 # }
 
 # Setting arguments for testing script
-args <- c("../cichlid_sleep_gwas/pheno_data/combined_cichlid_data_2022-05-05.csv", 0.001, "peak")
+args <- c("../../pheno_data/combined_cichlid_data_2022-05-05.csv", 0.001, "peak")
 
 Phenofile <- args[1]
 cutoff <- as.numeric(args[2])
 pheno_to_test <- as.character(args[3])
-
-# This should be run in the folder with the allele_frequncies
-setwd("/Volumes/BZ/Scientific Data/RG-AS04-Data01/Cichlid-genomes/alleleFreqs")
 
 ################################################################################################################################################################################################
 #### Load the data  ############################################################################################################################################################################
@@ -142,7 +142,7 @@ dev.off()
 ################################################################################################################################################################################################
 
 # Load phenotype file for plotting and annotating with frequencies
-phenotypes <- read.csv("../cichlid_sleep_gwas/pheno_data/combined_cichlid_data_2022-05-05.csv", row.names = "X")
+phenotypes <- read.csv(Phenofile, row.names = "X")
 
 # Sort by Chromosome for faster finding (loads fewer allele_freq tables)
 genes <- genes[order(genes$CHROM),]
