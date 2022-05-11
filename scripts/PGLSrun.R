@@ -25,7 +25,7 @@ if (length(args) != 3) {
 }
 
 # # Setting arguments for testing script
-# args <- c("speciesCodesAndGenomeIDs_for_GWAS_2_cohort_db_geno_NC_013663_fromProbabilities_AF.txt", "../../pheno_data/combined_cichlid_data_2022-05-05.csv", "day_night_dif")
+# args <- c("speciesCodesAndGenomeIDs_for_GWAS_2_cohort_db_geno_NC_013663_fromProbabilities_AF.txt", "../../pheno_data/combined_cichlid_data_2022-05-05_noshell.csv", "day_night_dif")
 
 AFfile <- args[1]
 Phenofile <- args[2]
@@ -56,7 +56,7 @@ doPGSL <- function(x) {
 ########################################################################
 
 # # For testing
-# tanTree <- read.nexus("../05_BEAST_RAxML.tre")
+# tanTree <- read.nexus("../../../05_BEAST_RAxML.tre")
 
 tanTree <- read.nexus("/scicore/home/schiera/gizevo30/projects/cichlids_2/scripts/05_BEAST_RAxML.tre")
 
@@ -103,7 +103,7 @@ naVector <- sapply(GWASvector.noMiss, function(x) is.na(x$coefficients[2]));    
 
 tanTree2 <- drop.tip(tanTree, tanTree$tip.label[! tanTree$tip.label %in% y$six_letter_name_Ronco]);
 PGLSpiVals <- apply(AFscaled.noMiss[-which(naVector == TRUE),], 1, doPGSL)
-pglsGWASvector.withLoc <- cbind(AFfull[names(pglsGWASvector),1:2],PGLSpiVals)
+pglsGWASvector.withLoc <- cbind(AFfull[names(PGLSpiVals),1:2],PGLSpiVals)
 
 # Write the results to disk
 write.table(pglsGWASvector.withLoc, file = paste(substr(AFfile, 1, nchar(AFfile)-7), "_PGLSpiVals_", args[3],"_", nrow(y), "-species", ".txt", sep = ""), quote=F, sep="\t")
