@@ -26,15 +26,15 @@ gtf4 <- gtf[gtf$feature == "CDS",]
 # # Setting arguments for testing script
 # # Need to make sure to specify the same phenotype file as was used in the gwas (if testing fewer species)
 
-Phenofile <- "../../pheno_data/combined_cichlid_data_2022-08-04.csv"
+Phenofile <- "../../pheno_data/combined_cichlid_data_2022-11-17.csv"
 # pheno_to_test <- "total_rest"
 # pheno_to_test <- "day_night_dif_spd_60-species"
 # pheno_to_test <- "day_night_dif_spd_58-species"
 # pheno_to_test <- "day_night_dif_spd_55-species"
-pheno_to_test <- "day_night_dif_60-species"
+# pheno_to_test <- "day_night_dif_60-species"
 # pheno_to_test <- "day_night_dif_58-species"
 # pheno_to_test <- "day_night_dif_55-species"
-# pheno_to_test <- "peak"
+pheno_to_test <- "peak_60-species"
 # pheno_to_test <- "peak_amplitude"
 
 ################################################################################################################################################################################################
@@ -141,6 +141,9 @@ lt_phylo <- read.nexus("/Volumes/BZ/Scientific Data/RG-AS04-Data01/Cichlid-genom
 
 if (grepl("day_night_dif", pheno_to_test)) {
   pheno_to_test2 <- "day_night_dif"
+} 
+if (grepl("peak", pheno_to_test)) {
+  pheno_to_test2 <- "peak"
 } else {
   pheno_to_test2 <- pheno_to_test
 }
@@ -200,10 +203,10 @@ for (i in 1:nrow(genes_for_plotting)) {
     p3 <- phylo.plot + geom_tile(data = phenotypes, aes(y=y, x=x, fill = day_night_dif_spd), width = 2, inherit.aes = FALSE, color = "white") + scale_fill_distiller(palette = "RdBu", limits = c(-50,50), name = "Day/Night Diff. (speed)")
   }
   if(grepl("peak", pheno_to_test)) {
-    p3 <- phylo.plot + geom_tile(data = phenotypes, aes_string(y="y", x="x", fill = pheno_to_test), width = 2, inherit.aes = FALSE, color = "white") + scale_fill_distiller(palette = "BrBG", direction = 1, name = "Peak %")
+    p3 <- phylo.plot + geom_tile(data = phenotypes, aes_string(y="y", x="x", fill = "peak"), width = 2, inherit.aes = FALSE, color = "white") + scale_fill_distiller(palette = "BrBG", direction = 1, name = "Peak %")
   }
   if(grepl("total_rest", pheno_to_test)) {
-    p3 <- phylo.plot + geom_tile(data = phenotypes, aes_string(y="y", x="x", fill = pheno_to_test), width = 2, inherit.aes = FALSE, color = "white") + scale_fill_distiller(palette = "PRGn", direction = -1, name = "Total rest (hrs)")
+    p3 <- phylo.plot + geom_tile(data = phenotypes, aes_string(y="y", x="x", fill = total_rest), width = 2, inherit.aes = FALSE, color = "white") + scale_fill_distiller(palette = "PRGn", direction = -1, name = "Total rest (hrs)")
   }
   
   p3 <- p3 + new_scale("size") + new_scale("fill") + geom_tile(data = phenotypes, aes_string(y="y", x="x+1", fill = col_name)) + scale_fill_distiller(palette = "Greys", direction = 1, name = "Genotype Freq.") 

@@ -32,7 +32,7 @@ if (length(args) != 3) {
 
 # # Setting arguments for testing script
 # # Need to make sure to specify the same phenotype file as was used in the gwas (if testing fewer species)
-# args <- c("../../pheno_data/combined_cichlid_data_2022-08-04.csv", 0.00005, "day_night_dif_spd_55-species")
+# args <- c("../../pheno_data/combined_cichlid_data_2022-08-04.csv", 0.00005, "total_rest")
 
 Phenofile <- args[1]
 cutoff <- as.numeric(args[2])

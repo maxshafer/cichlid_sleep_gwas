@@ -120,6 +120,11 @@ getGenesEns <- function(results.table, gene_table = gtf2, window = 25000, gene_t
         gene_ids$ps <- as.numeric(x[grep("ps", colnames)[1]])
         gene_ids$PGLSps <- as.numeric(x[grep("PGLSps", colnames)])
       }
+      if ("pvalue" %in% colnames) {
+        gene_ids$CHROM <- as.character(x[grep("chr", colnames)])
+        gene_ids$POS <- as.numeric(x[grep("coord", colnames)])
+        gene_ids$ps <- as.numeric(x[grep("pvalue", colnames)[1]])
+      }
       within_gene <- ifelse(data.table::between(gene_ids$POS,gene_ids$start, gene_ids$end), "within", ifelse(gene_ids$POS < gene_ids$start, "upstream","downstream"))
       gene_ids$distance_to_gene <- ifelse(within_gene == "upstream", gene_ids$start - gene_ids$POS, ifelse(within_gene == "downstream", gene_ids$POS - gene_ids$end, 0))
       gene_ids$closest <- ifelse(gene_ids$distance_to_gene == 0, "yes", ifelse(gene_ids$distance_to_gene == min(gene_ids$distance_to_gene), "yes", "no"))
@@ -161,6 +166,11 @@ wobbleAA <- function(results.table = exon_genes[1:20,], gene_table = gtf4, windo
         gene_ids$POS <- as.numeric(x[grep("POS|coord", colnames)])
         gene_ids$ps <- as.numeric(x[grep("ps", colnames)[1]])
         gene_ids$PGLSps <- as.numeric(x[grep("PGLSps", colnames)])
+      }
+      if ("ps" %in% colnames) {
+        gene_ids$CHROM <- as.character(x[grep("CHROM|chr", colnames)])
+        gene_ids$POS <- as.numeric(x[grep("POS|coord", colnames)])
+        gene_ids$ps <- as.numeric(x[grep("ps", colnames)[1]])
       }
       gene_ids$location <- paste(gene_ids$CHROM, gene_ids$POS, sep = ":")
       gene_ids$mut_pos <- ifelse(gene_ids$strand == "+", gene_ids$POS - gene_ids$start, gene_ids$end - gene_ids$POS)
