@@ -113,13 +113,24 @@ fdr_list <- lapply(perchr, function(x) fdrtool(x$pvalue, statistic = "pvalue"))
 fdr_list_pct0 <- lapply(perchr, function(x) fdrtool(x$pvalue, statistic = "pvalue", cutoff.method = "pct0"))
 
 
+### There are def too many markers (44million), and this kills any multiple testing correction (basically none are significant, because I'm testing too many things)
+### What if I do it for 1 chromosome? NC_031970
+### Still so many per chromosome (over a million)
+### The only way might be to reduce the SNPs I'm testing, but that's not ideal
+### I think the best is to just use a cutoff?
+
+perchr_chr <- lapply(perchr, function(x) x[x$chr %in% "NC_031969",])
+fdr_list_chr <- lapply(perchr_chr, function(x) fdrtool(x$pvalue, statistic = "pvalue"))
+bonferroni_chr <- lapply(perchr_chr, function(x) p.adjust(x$pvalue, method = "BH"))
+lapply(bonferroni_chr, function(x) min(x))
+
 ################################################################################################################################################################################################
 #### Find SNPS of interest and annotate genes and exons  #######################################################################################################################################
 ################################################################################################################################################################################################
 
 ### Now for each list, pull the genes
 ### But only those that pass the stricter cutoff
-perchr.list.cut <- lapply(perchr.list, function(x) x[x$pvalue < 0.0001,])
+perchr.list.cut <- lapply(perchr, function(x) x[x$pvalue < 0.0001,])
 saveRDS(perchr.list.cut, file = "../per_chromosome_pvalue_0.0001_list.rds")
 
 # Annotate all the snps that pass the cutoff for more Systemies biology
@@ -139,34 +150,13 @@ lapply(genes1, function(x) length(unique(x[x$distance_to_gene == 0, "location"])
 
 saveRDS(genes1, file = paste("/Volumes/BZ/Scientific Data/RG-AS04-Data01/Cichlid-genomes/cichlid_sleep_gwas/outs/PGLS_genes_AllCategories", "pvalue", "0.0001", "genes_ALL_SNPS.rds", sep = "_"))
 
-
+genes1 <- readRDS(paste("/Volumes/BZ/Scientific Data/RG-AS04-Data01/Cichlid-genomes/cichlid_sleep_gwas/outs/PGLS_genes_AllCategories", "pvalue", "0.0001", "genes_ALL_SNPS.rds", sep = "_"))
 ################################################################################################################################################################################################
 #### Calculate % of snps in various categories  ################################################################################################################################################
 ################################################################################################################################################################################################
 
 genes2 <- lapply(genes1, function(x) x[x$distance_to_gene == 0,])
 lapply(genes2, function(x) length(unique(x[x$distance_to_gene == 0, "location"])))
-# [1] 2399 # out of 3406 are found within 0bp of a feature, the rest should be intergenic (1007), some of which are within the cutoff distance to a gene, and some that are not
-
-
-## The below needs to be rewritten
-
-# SNP_gene_table <- as.data.frame.matrix(table(genes2$location, genes2$feature))
-# 
-# exonic_snps <- row.names(SNP_gene_table[SNP_gene_table$exon > 0 & SNP_gene_table$gene > 0, ]) # 507 exonic
-# intronic_snps <- row.names(SNP_gene_table[SNP_gene_table$exon == 0 & SNP_gene_table$gene > 0, ]) # 1890 in gene but not exon, so intronic?
-# pseudo_snps <- row.names(SNP_gene_table[SNP_gene_table$gene == 0 & SNP_gene_table$pseudogene > 0, ]) # 1890 in gene but not exon, so intronic?
-# intergenic_snps <- setdiff(snps_of_interest, genes$location) # 106
-# intergenic_close_snps <- setdiff(genes$location, genes2$location) # 901
-# 
-# df <- data.frame(category = c("exonic_snps", "intronic_snps", "pseudo_snps", "intergenic_snps", "intergenic_close_snps"), values = unlist(lapply(list(exonic_snps, intronic_snps, pseudo_snps, intergenic_snps, intergenic_close_snps), function(x) length(x))))
-# df <- df %>% arrange(desc(category)) %>% mutate(prop = values / sum(df$values) *100) %>% mutate(ypos = cumsum(prop)- 0.5*prop)
-# df <- df %>% mutate(values2 = values / sum(df$values) * 100)
-# pie.chart <- ggplot(df, aes(x = "", y = values2, fill = category)) + geom_bar(stat = "identity", width = 1) + coord_polar("y", start = 0) + theme_void() + theme(legend.position = "none") + geom_text(aes(y = ypos, label = category)) #+ theme_classic() + theme(axis.text = element_blank(), axis.line = element_blank(), axis.ticks = element_blank(), axis.title = element_blank())
-# 
-# png(paste("/Volumes/BZ/Scientific Data/RG-AS04-Data01/Cichlid-genomes/cichlid_sleep_gwas/outs/GWAS_vs_PGLS", pheno_to_test, cutoff, "PieChart_plot.png", sep = "_"), width = 5, height = 5, units = "in", res = 750)
-# pie.chart
-# dev.off()
 
 
 ################################################################################################################################################################################################
@@ -174,7 +164,6 @@ lapply(genes2, function(x) length(unique(x[x$distance_to_gene == 0, "location"])
 ################################################################################################################################################################################################
 
 exon_genes <- lapply(genes2, function(x) x[x$feature == "exon",])
-
 exon_genes <- lapply(exon_genes, function(x) x[!(duplicated(x$location)),])
 
 ## Find out if they are in wobble or whichever position
