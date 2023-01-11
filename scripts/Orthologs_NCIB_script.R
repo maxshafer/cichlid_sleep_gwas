@@ -71,7 +71,18 @@ lapply(genes, function(x) table(x$Dbxref %in% new_ensembl$NCBI.gene..formerly.En
 ## Terminal commmand to use ncbi's command line tool
 ## This uses a program that I downloaded from here: https://www.ncbi.nlm.nih.gov/datasets/docs/v1/how-tos/genes/download-ortholog-dataset/
 
-datasets download ortholog gene-id --exclude-gene --exclude-protein --exclude-rna --taxon-filter 10090 --inputfile test_genes_2.csv --filename ort2.zip
+# datasets download ortholog gene-id --exclude-gene --exclude-protein --exclude-rna --taxon-filter 10090 --inputfile test_genes_3.csv --filename ort2.zip
+
+
+## OK this for loop works a bit better, makes named folders for each Niloticus gene and puts the ortho inside
+
+## Mouse 10090
+## Zebrafish 7955
+cat test_genes_3.csv | while read GENE; do
+datasets download ortholog gene-id --exclude-gene --exclude-protein --exclude-rna --taxon-filter 7955 "${GENE}" --filename "${GENE}".zip;
+done
+
+
 
 write.csv(genes[[1]]$Dbxref, file = "~/Downloads/test_genes.csv", head = FALSE)
 
