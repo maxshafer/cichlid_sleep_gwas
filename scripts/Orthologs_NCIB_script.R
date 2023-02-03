@@ -47,7 +47,7 @@ genes <- lapply(genes, function(x) {
 # write.table(genes[[4]]$Dbxref, file = "perchr_tr_genes.csv", col.names = F, row.names = F, quote = F)
 # write.table(genes[[5]]$Dbxref, file = "perchr_peak_genes.csv", col.names = F, row.names = F, quote = F)
 
-## Run through each one
+## Run through each
 
 
 ## OK this for loop works a bit better, makes named folders for each Niloticus gene and puts the ortho inside
