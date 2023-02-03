@@ -10,7 +10,7 @@ library(fdrtool)
 # rm(list = list[!(list %in% c("allele_freq", "gtf", "gtf2", "gtf3", "gtf4"))])
 
 # This should be run in the folder with the allele_frequncies
-setwd("/Volumes/BZ/Scientific Data/RG-AS04-Data01/Cichlid-genomes/cichlid_sleep_gwas/sra_reads_nobackup/alleleFreqs")
+setwd("/Volumes/BZ/Scientific Data/RG-AS04-Data01/Cichlid-genomes/cichlid_sleep_gwas")
 
 ## Make a script to read in all of the allelefreq files, combine them, plot the relationships, then subset by p-values
 ## This can then be modified, and re-run if we want other plots produced!
