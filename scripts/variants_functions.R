@@ -335,20 +335,29 @@ getLociEns <- function(gene_list = list("kcnc2","LOC100698148", "LOC100701437"),
 ## These are better then the above, but miss some and should be supplemented
 ## This can be l/apply'd across a list of gene_ids
 
-generateOrthoDBorthologs <- function(dbxrefs = gene_id) {
-  danio_orthos <- list()
+generateOrthoDBorthologs <- function(dbxrefs = gene_id, species = c("zebrafish", "mouse")) {
+  if (species == "zebrafish") {
+    group <- "Actinopterygii"
+    species <- "danio"
+  }
+  if (species == "mouse") {
+    group <- "Vertebrata"
+    species <- "musculus"
+  }
+  
+  tilapia_orthos <- list()
   # Search orthoDB for gene ID and return orthoID
   # This doesn't work if it is a LOC gene (eg LOC102076095) and returns null
   system(paste("curl 'https://data.orthodb.org/current/search?query=", dbxrefs, "' -L -o search.dat", sep = ""))
   orthoID_json <- fromJSON(file = "search.dat")
   
   # If the ID doesn't find anything, try LOC-ID
-  if (is.null(orthoID_json[[4]][grep("Actinopterygii", orthoID_json[[4]])])) {
+  if (is.null(orthoID_json[[4]][grep(group, orthoID_json[[4]])])) {
     system(paste("curl 'https://data.orthodb.org/current/search?query=LOC", dbxrefs, "' -L -o search.dat", sep = ""))
     orthoID_json <- fromJSON(file = "search.dat")
   }
   
-  for (k in grep("Actinopterygii", orthoID_json[[4]])) {
+  for (k in grep(group, orthoID_json[[4]])) {
     orthoID_json_act <- orthoID_json[[4]][k][[1]]$id
     
     # Use orthoID to search for gene IDs
@@ -356,38 +365,38 @@ generateOrthoDBorthologs <- function(dbxrefs = gene_id) {
     orthologs <- fromJSON(file = "orthologs.dat")
     
     # this gives me just danio (could also do mus musculus)
-    if (any(grepl("danio", orthologs[[1]]))) {
-      orthologs <- orthologs[[1]][grep("danio", orthologs[[1]])]
+    if (any(grepl(species, orthologs[[1]]))) {
+      orthologs <- orthologs[[1]][grep(species, orthologs[[1]])]
       orthos <- list()
       for (j in 1:length(orthologs[[1]]$genes)) {
         orthos[j] <- orthologs[[1]]$genes[[j]]$gene_id$id
       }
       
-      danio_orthos[[dbxrefs]] <- c(danio_orthos[[dbxrefs]], orthos)
+      tilapia_orthos[[dbxrefs]] <- c(tilapia_orthos[[dbxrefs]], orthos)
       
     } else { # This is for the occasion where orthoDB can't find the LOC or Dbxref ID #, but the gene name is useful
       
       system(paste("curl 'https://data.orthodb.org/current/search?query=", genes[[1]]$gene[match(dbxrefs, genes[[1]]$Dbxref)], "' -L -o search.dat", sep = ""))
       orthoID_json <- fromJSON(file = "search.dat")
       
-      for (p in grep("Actinopterygii", orthoID_json[[4]])) {
+      for (p in grep(group, orthoID_json[[4]])) {
         orthoID_json_act <- orthoID_json[[4]][p][[1]]$id
         
         system(paste("curl 'https://data.orthodb.org/current/orthologs?id=",orthoID_json_act,"' -L -o orthologs.dat", sep = ""))
         orthologs <- fromJSON(file = "orthologs.dat")
         
-        if (any(grepl("danio", orthologs[[1]]))) {
-          orthologs <- orthologs[[1]][grep("danio", orthologs[[1]])]
+        if (any(grepl(species, orthologs[[1]]))) {
+          orthologs <- orthologs[[1]][grep(species, orthologs[[1]])]
           orthos <- list()
           for (j in 1:length(orthologs[[1]]$genes)) {
             orthos[j] <- orthologs[[1]]$genes[[j]]$dbxrefs$id
           }
-          danio_orthos[[dbxrefs]] <- c(danio_orthos[[dbxrefs]], orthos)
+          tilapia_orthos[[dbxrefs]] <- c(tilapia_orthos[[dbxrefs]], orthos)
         }
       }
     }
   }
-  return(danio_orthos)
+  return(tilapia_orthos)
 }
 
 
