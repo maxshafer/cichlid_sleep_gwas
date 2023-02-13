@@ -130,7 +130,8 @@ lapply(bonferroni_chr, function(x) min(x))
 
 ### Now for each list, pull the genes
 ### But only those that pass the stricter cutoff
-perchr.list.cut <- lapply(perchr, function(x) x[x$pvalue < 0.0001,])
+p_val_cutoff <- 0.0001
+perchr.list.cut <- lapply(perchr, function(x) x[x$pvalue < p_val_cutoff,])
 saveRDS(perchr.list.cut, file = "../per_chromosome_pvalue_0.0001_list.rds")
 
 # Annotate all the snps that pass the cutoff for more Systemies biology

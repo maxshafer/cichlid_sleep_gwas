@@ -141,7 +141,8 @@ for (j in 1:length(orthos_combined_mouse)) {
 saveRDS(orthos_combined_zeb, file = "oreochromis_orthologs_zebrafish.rds")
 saveRDS(orthos_combined_mouse, file = "oreochromis_orthologs_mouse.rds")
 
-
+orthos_combined_zeb <- readRDS(file = "oreochromis_orthologs_zebrafish.rds")
+orthos_combined_mouse <- readRDS(file = "oreochromis_orthologs_mouse.rds")
 
 ## Add them back to the genes dataframes
 ## This selects the first entry in the ortho database as the ortho
@@ -172,36 +173,48 @@ for (i in seq_along(genes)) {
 
 ### Run some GSEA?
 library(org.Mm.eg.db)
+library(fgsea)
 
-gene_list <- genes_new[[1]]$ps
-names(gene_list) <- as.character(genes_new[[1]]$zeb_ortholog)
+gene_list <- genes_new[[4]]$ps
+names(gene_list) <- as.character(genes_new[[4]]$mouse_ortholog)
 gene_list <- gene_list[order(gene_list, decreasing = T)]
 gene_list <- gene_list[!(is.na(names(gene_list)))]
 
-
-gse <- gseGO(gene_list, ont = "BP", keyType = "SYMBOL", OrgDb = org.Dr.eg.db, scoreType = "pos", eps = 1e-300)
-
+gene_list <- gene_list[!(duplicated(names(gene_list)))]
 
 
 
 
+##### OK the below might work, but it requires ENTREZIDs for the orthologs, of which I only have gene symbols
 
-# OK so now I have a list of danio IDs that correspond to the oreochromis ones, and I'm only missing ncRNAs or things that don't have an ortholog in zebrafish!
-# I should also be able to pull mouse orthologs (directly from niloticus)
+### AHH I think the reason this doesn't work is that the gene lists are too short - ugh, that means quite a bit more processing for this orthology...
 
-missing_ids <- genes[[1]]$Dbxref[!(genes[[1]]$Dbxref %in% names(orthos_combined_zeb))]
+# One can also start from .rnk and .gmt files as in original GSEA:
+
+rnk.file <- system.file("extdata", "naive.vs.th1.rnk", package="fgsea")
+gmt.file <- "~/Downloads/mh.all.v2022.1.Mm.symbols.gmt"
+gmt.file <- system.file("extdata", "mouse.reactome.gmt", package="fgsea")
+
+# Loading ranks:
+ranks <- read.table(rnk.file,
+                    header=TRUE, colClasses = c("character", "numeric"))
+ranks <- setNames(ranks$t, ranks$ID)
+str(ranks)
+
+str(ranks)
+##  Named num [1:12000] -63.3 -49.7 -43.6 -41.5 -33.3 ...
+##  - attr(*, "names")= chr [1:12000] "170942" "109711" "18124" "12775" ...
+
+# Loading pathways:
+
+pathways <- gmtPathways(gmt.file)
+str(head(pathways))
 
 
-## One issue that comes to mind - if a gene has two orthologs, they are likely both in the same pathway, and therefore it increases the chances of enrichment of pathways
-## There is also a chance that only one of the orthologs is in a pathway, but not sure - I suppose thats why this isn't common practice...
-# There are also duplicates, which I think doesn't affect it?
-write_clip(unique(unlist(orthos_combined_zeb$tr)))
-
-write_clip(c(unique(unlist(orthos_combined_zeb$dn55)), unique(unlist(orthos_combined_zeb$dn58)), unique(unlist(orthos_combined_zeb$dn60))))
-
-## Can also backtrack to ID the oreo gene id that is associated with a zeb/mouse gene
-## The location of the SNP is in the genes1 list of dfs
-unlist(danio_orthos_combined$dn60)[grep("gnrhr4", unlist(danio_orthos_combined$dn60))]
+# And running fgsea:
+  
+fgseaRes <- fgsea(pathways, gene_list, minSize=15, maxSize=500)
+head(fgseaRes)
 
 
 

@@ -342,7 +342,7 @@ generateOrthoDBorthologs <- function(dbxrefs = gene_id, species = c("zebrafish",
   }
   if (species == "mouse") {
     group <- "Vertebrata"
-    species <- "musculus"
+    species <- "Mus musculus"
   }
   
   tilapia_orthos <- list()
