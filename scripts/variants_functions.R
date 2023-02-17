@@ -66,8 +66,8 @@ getGenesEns <- function(results.table, gene_table = gtf2, window = 25000, gene_t
         chrom <- paste(chrom, ".1", sep = "")
       }
       if (windowed == TRUE) {
-        start <- as.numeric(x[grep("POS|coord", colnames)])-window
-        stop <- as.numeric(x[grep("POS|coord", colnames)])+window
+        start <- as.numeric(x[grep("start|POS|coord", colnames)])-window
+        stop <- as.numeric(x[grep("end|POS|coord", colnames)])+window
         cols <- c("seqname", "feature", "start", "end", "Dbxref", "gene", "gene_biotype", "product")
       } 
       if (windowed == FALSE) {
@@ -84,8 +84,10 @@ getGenesEns <- function(results.table, gene_table = gtf2, window = 25000, gene_t
       cols <- c("seqname", "feature", "start", "end", "Dbxref", "gene", "gene_biotype", "product")
     }
     
-    gene_table <- gene_table[which(gene_table[1] == chrom), ] # 1 not 2
-    gene_table_2 <- gene_table_2[which(gene_table_2[1] == chrom), ] # 1 not 2
+    # the next two lines takes ~0.2 sec for every apply loop, but can be done outside of this function, or minimally outside of the apply
+    #gene_table <- gene_table[which(gene_table[1] == chrom), ] # 1 not 2
+    #gene_table_2 <- gene_table_2[which(gene_table_2[1] == chrom), ] # 1 not 2
+    
     gene_ids.1 <- gene_table[which(start > gene_table$start & start < gene_table$end), cols]
     gene_ids.2 <- gene_table[which(stop > gene_table$start & stop < gene_table$end), cols]
     gene_ids.3 <- gene_table[which(start < gene_table$start & stop > gene_table$end), cols]
@@ -121,13 +123,28 @@ getGenesEns <- function(results.table, gene_table = gtf2, window = 25000, gene_t
         gene_ids$PGLSps <- as.numeric(x[grep("PGLSps", colnames)])
       }
       if ("pvalue" %in% colnames) {
-        gene_ids$CHROM <- as.character(x[grep("chr", colnames)])
-        gene_ids$POS <- as.numeric(x[grep("coord", colnames)])
-        gene_ids$ps <- as.numeric(x[grep("pvalue", colnames)[1]])
+        if (windowed == TRUE) {
+          gene_ids$CHROM <- as.character(x[grep("chr", colnames)])
+          gene_ids$START <- as.numeric(x[grep("start", colnames)])
+          gene_ids$END <- as.numeric(x[grep("end", colnames)])
+          gene_ids$ps <- as.numeric(x[grep("pvalue", colnames)[1]])
+        } else {
+          gene_ids$CHROM <- as.character(x[grep("chr", colnames)])
+          gene_ids$POS <- as.numeric(x[grep("coord", colnames)])
+          gene_ids$ps <- as.numeric(x[grep("pvalue", colnames)[1]])
+        }
       }
-      within_gene <- ifelse(data.table::between(gene_ids$POS,gene_ids$start, gene_ids$end), "within", ifelse(gene_ids$POS < gene_ids$start, "upstream","downstream"))
-      gene_ids$distance_to_gene <- ifelse(within_gene == "upstream", gene_ids$start - gene_ids$POS, ifelse(within_gene == "downstream", gene_ids$POS - gene_ids$end, 0))
-      gene_ids$closest <- ifelse(gene_ids$distance_to_gene == 0, "yes", ifelse(gene_ids$distance_to_gene == min(gene_ids$distance_to_gene), "yes", "no"))
+      
+      if (windowed == TRUE) {
+        require(DescTools)
+        within_gene <- apply(gene_ids, 1, function(x) ifelse( c(x["start"], x["end"]) %overlaps% c(x["START"], x["END"]), "within",  ifelse(x["END"] < x["start"], "upstream", ifelse(x["START"] > x["end"], "downstream", NA))) )
+        gene_ids$distance_to_gene <- ifelse(within_gene == "upstream", gene_ids$start - gene_ids$START, ifelse(within_gene == "downstream", gene_ids$END - gene_ids$end, 0))
+        gene_ids$closest <- ifelse(gene_ids$distance_to_gene == 0, "yes", ifelse(gene_ids$distance_to_gene == min(gene_ids$distance_to_gene), "yes", "no"))
+      } else {
+        within_gene <- ifelse(data.table::between(gene_ids$POS,gene_ids$start, gene_ids$end), "within", ifelse(gene_ids$POS < gene_ids$start, "upstream","downstream"))
+        gene_ids$distance_to_gene <- ifelse(within_gene == "upstream", gene_ids$start - gene_ids$POS, ifelse(within_gene == "downstream", gene_ids$POS - gene_ids$end, 0))
+        gene_ids$closest <- ifelse(gene_ids$distance_to_gene == 0, "yes", ifelse(gene_ids$distance_to_gene == min(gene_ids$distance_to_gene), "yes", "no"))
+      }
     }
     return(gene_ids)
   }))
