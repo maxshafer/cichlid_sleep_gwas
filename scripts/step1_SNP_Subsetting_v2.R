@@ -91,19 +91,16 @@ gtf4 <- gtf[gtf$feature == "CDS",]
 # perchr.list[[3]] <- perchr.dn60
 # perchr.list[[4]] <- perchr.tr
 # perchr.list[[5]] <- perchr.peak
-
+#
+# saveRDS(perchr.list, file = "../per_chromosome_list.rds")
+# 
 # perchr.list <- readRDS("sra_reads_nobackup/per_chromosome_list.rds")
-
+# 
 # perchr.list <- lapply(perchr.list, function(x) {
 #   x$location <- paste(x$chr, x$coord, sep = ":")
 #   return(x)
 # })
 # 
-# perchr.list.10k <- lapply(perchr.list, function(x) x %>% group_by(chr, ints = cut_width(coord, width = 10000, boundary = 0)) %>% summarise(start = min(coord), end = max(coord), mean_pvalue = mean(pvalue), pvalue = min(pvalue)) )
-
-# saveRDS(perchr.list.10k, file = "sra_reads_nobackup/per_chromosome_list_10k.rds")
-
-# saveRDS(perchr.list, file = "../per_chromosome_list.rds")
 # 
 # # lapply(perchr.list, function(x) dim(x[x$pvalue < 0.05,]))
 # 
@@ -126,26 +123,26 @@ gtf4 <- gtf[gtf$feature == "CDS",]
 # fdr_list_chr <- lapply(perchr_chr, function(x) fdrtool(x$pvalue, statistic = "pvalue"))
 # bonferroni_chr <- lapply(perchr_chr, function(x) p.adjust(x$pvalue, method = "BH"))
 # lapply(bonferroni_chr, function(x) min(x))
-# 
-# ################################################################################################################################################################################################
-# #### Find SNPS of interest and annotate genes and exons  #######################################################################################################################################
-# ################################################################################################################################################################################################
-# 
-# ### Now for each list, pull the genes
-# ### But only those that pass the stricter cutoff
-# p_val_cutoff <- 0.0001
-# perchr.list.cut <- lapply(perchr.list, function(x) x[x$pvalue < p_val_cutoff,])
-# saveRDS(perchr.list.cut, file = "../per_chromosome_pvalue_0.0001_list.rds")
-# 
-# # Annotate all the snps that pass the cutoff for more Systemies biology
-# snps_of_interest <- list()
-# snps_of_interest <- lapply(perchr.list.cut, function(x) x$location)
 
-perchr.list.10k <- readRDS(file = "sra_reads_nobackup/per_chromosome_list_10k.rds")
+################################################################################################################################################################################################
+#### Find SNPS of interest and annotate genes and exons  #######################################################################################################################################
+################################################################################################################################################################################################
+
+perchr.list.cut <- readRDS(file = "sra_reads_nobackup/per_chromosome_pvalue_0.05_list.rds")
+
+### Now for each list, pull the genes
+### But only those that pass the stricter cutoff
+p_val_cutoff <- 0.00025
+perchr.list.cut <- lapply(perchr.list.cut, function(x) x[x$pvalue < p_val_cutoff,])
+saveRDS(perchr.list.cut, file = "sra_reads_nobackup/per_chromosome_pvalue_0.00025_list.rds")
+
+# Annotate all the snps that pass the cutoff for more Systemies biology
+snps_of_interest <- list()
+snps_of_interest <- lapply(perchr.list.cut, function(x) x$location)
+
 
 ## I want to run the above per chromosome (which is faster)
-
-## First make lists of gtf2 dataframes
+## First make lists of gtf dataframes for each chromosome
 gtf2_chrs <- unique(gtf2$seqname)[1:23]
 gtf_df <- data.frame(gtf_chrs = gtf2_chrs, vcf_chrs = as.character(substr(gtf2_chrs, 1, 9)))
 list_gtf2_sub <- lapply(gtf2_chrs, function(x) gtf2[gtf2$seqname %in% x,])
@@ -155,47 +152,24 @@ list_gtf3_sub <- lapply(gtf2_chrs, function(x) gtf3[gtf3$seqname %in% x,])
 names(list_gtf3_sub) <- gtf2_chrs
 
 
-library(DescTools)
+### This is what I used for per 10k
+## Works, except for the first chromosome from comparison 4
 
-# To id if a genes' range overlaps with the window range
-
-## This seems to work!
-
-output_mean <- lapply(perchr.list.10k, function(perchr) {
-  perchr <- perchr[,c(1,2,3,4,5)] # 6 is min pvalue, 5 is mean
+output <- lapply(perchr.list.cut, function(perchr) {
+  # perchr <- perchr[,c(1,2,3,4,6)] # 6 is min pvalue, 5 is mean
+  perchr <- as.data.frame(perchr)
   per_chrs <- unique(perchr$chr)
   perchr <- lapply(per_chrs, function(l) perchr[perchr$chr %in% l,])
   names(perchr) <- per_chrs
-  
-  
-  out <- lapply(per_chrs[2:24], function(k) {
-    put <- getGenesEns(results.table = perchr[[grep(k, names(perchr))]], gene_table = list_gtf2_sub[[gtf_df$gtf_chrs[match(k, gtf_df$vcf_chrs)]]], gene_table_2 = list_gtf3_sub[[gtf_df$gtf_chrs[match(k, gtf_df$vcf_chrs)]]], window = 25000, windowed = TRUE, combined = FALSE)
+  out <- lapply(per_chrs[2:23], function(k) {
+    put <- getGenesEns(results.table = perchr[[grep(k, names(perchr))]], gene_table = list_gtf2_sub[[gtf_df$gtf_chrs[match(k, gtf_df$vcf_chrs)]]], gene_table_2 = list_gtf3_sub[[gtf_df$gtf_chrs[match(k, gtf_df$vcf_chrs)]]], window = 25000, windowed = FALSE, combined = FALSE)
   })
   out <- Reduce(rbind, out)
+  return(out)
 })
 
-names(output_mean) <- c("dn55", "dn58", "dn60", "tr", "peak")
 
-output_min <- lapply(perchr.list.10k, function(perchr) {
-  perchr <- perchr[,c(1,2,3,4,6)] # 6 is min pvalue, 5 is mean
-  per_chrs <- unique(perchr$chr)
-  perchr <- lapply(per_chrs, function(l) perchr[perchr$chr %in% l,])
-  names(perchr) <- per_chrs
-  
-  
-  out <- lapply(per_chrs[2:24], function(k) {
-    put <- getGenesEns(results.table = perchr[[grep(k, names(perchr))]], gene_table = list_gtf2_sub[[gtf_df$gtf_chrs[match(k, gtf_df$vcf_chrs)]]], gene_table_2 = list_gtf3_sub[[gtf_df$gtf_chrs[match(k, gtf_df$vcf_chrs)]]], window = 25000, windowed = TRUE, combined = FALSE)
-  })
-  out <- Reduce(rbind, out)
-})
-
-names(output_min) <- c("dn55", "dn58", "dn60", "tr", "peak")
-
-## OK, this seems to work quite well, and returns genes that look similar (at least for total rest)
-
-saveRDS(output_mean, file = "")
-
-saveRDS(output_mean, file = "/Volumes/BZ/Scientific Data/RG-AS04-Data01/Cichlid-genomes/cichlid_sleep_gwas/outs/PGLS_genes_AllCategories.rds")
+saveRDS(output, file = paste("/Volumes/BZ/Scientific Data/RG-AS04-Data01/Cichlid-genomes/cichlid_sleep_gwas/outs/PGLS_genes_AllCategories", "pvalue", "0.00025", "genes_ALL_SNPS.rds", sep = "_"))
 
 
 
@@ -205,85 +179,6 @@ saveRDS(output_mean, file = "/Volumes/BZ/Scientific Data/RG-AS04-Data01/Cichlid-
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## Test some things for speed
-tic()
-gtf_sub <- gtf[gtf$seqname %in% "NC_031965.1",]
-gtf2_sub <- gtf2[gtf2$seqname %in% "NC_031965.1",]
-toc()
-gtf3_sub  <- gtf3[gtf3$seqname %in% "NC_031965.1",]
-
-tic()
-test.cut <- perchr.list.cut[[1]][perchr.list.cut[[1]]$chr %in% "NC_031965",]
-toc()
-
-tic()
-test <- getGenesEns(results.table = test.cut, gene_table = gtf2_sub, gene_table_2 = gtf3_sub, window = 25000, windowed = TRUE, combined = FALSE)
-toc() # 1.781
-
-tic()
-test2 <- getGenesEns(results.table = test.cut, gene_table = gtf2, gene_table_2 = gtf3, window = 25000, windowed = TRUE, combined = FALSE)
-toc() # 1.622, this one usually takes a bit longer then the above
-
-tic()
-test3 <- getGenesEns(results.table = perchr.list.cut[[1]], gene_table = gtf2_sub, gene_table_2 = gtf3_sub, window = 25000, windowed = TRUE, combined = FALSE)
-toc() # 6.38, this wastes some time searching for things that don't exist
-
-
-## Seems fastest to use gtf2 (if I don't care about intronic vs exonic etc), and subset both lists by chr (least headache vs fastest tradeoff - if I go smaller than chr, I will need to rerun some (to catch everything))
-## But let's see
-tic()
-per_chrs <- unique(perchr.list.cut[[1]]$chr)
-gtf2_chrs <- unique(gtf2$seqname)[1:23]
-gtf2_other_chrs <- unique(gtf2$seqname)[24:length(unique(gtf2$seqname))]
-
-list_test.cut <- lapply(per_chrs, function(x) perchr.list.cut[[1]][perchr.list.cut[[1]]$chr %in% x,])
-
-list_gtf2_sub <- lapply(gtf2_chrs, function(x) gtf2[gtf2$seqname %in% x,])
-list_gtf2_sub[[24]] <- gtf2[gtf2$seqname %in% gtf2_other_chrs,]
-
-list_gtf3_sub <- lapply(gtf2_chrs, function(x) gtf3[gtf3$seqname %in% x,])
-list_gtf3_sub[[24]] <- gtf3[gtf3$seqname %in% gtf2_other_chrs,]
-toc()
-
-tic()
-test4 <- getGenesEns(results.table = perchr.list.cut[[1]], gene_table = gtf2, gene_table_2 = gtf3, window = 25000, windowed = TRUE, combined = FALSE)
-toc()
-
-tic()
-test5 <- lapply(seq_along(list_test.cut), function(x) {
-  output <- getGenesEns(results.table = list_test.cut[[x]], gene_table = list_gtf2_sub[[x]], gene_table_2 = list_gtf3_sub[[x]], window = 25000, windowed = TRUE, combined = FALSE)
-})
-test5 <- Reduce(rbind, test5)
-toc()
-
-## 16.846 sec elapsed and 61.177 sec elapsed for 1:100 and 25.039 sec elapsed and 46.227 sec elapsed for the subset which includes just one chromosome
-## Remains about 50% of the time, to use the subsetted gtf
-
-## Definitely speed improvements by subsetting the gtf (even if just by chromosome)
-## If I want to go smaller (which also speeds up), then I would need to double up some of the comps
-## Seems really just a 50% improvement on speed, maybe I should just look into snpsnff...
 
 
 

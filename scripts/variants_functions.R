@@ -352,7 +352,7 @@ getLociEns <- function(gene_list = list("kcnc2","LOC100698148", "LOC100701437"),
 ## These are better then the above, but miss some and should be supplemented
 ## This can be l/apply'd across a list of gene_ids
 
-generateOrthoDBorthologs <- function(dbxrefs = gene_id, species = c("zebrafish", "mouse")) {
+generateOrthoDBorthologs <- function(dbxrefs = Dbxref, gene_ids = gene_id, species = c("zebrafish", "mouse")) {
   if (species == "zebrafish") {
     group <- "Actinopterygii"
     species <- "danio"
@@ -393,7 +393,7 @@ generateOrthoDBorthologs <- function(dbxrefs = gene_id, species = c("zebrafish",
       
     } else { # This is for the occasion where orthoDB can't find the LOC or Dbxref ID #, but the gene name is useful
       
-      system(paste("curl 'https://data.orthodb.org/current/search?query=", genes[[1]]$gene[match(dbxrefs, genes[[1]]$Dbxref)], "' -L -o search.dat", sep = ""))
+      system(paste("curl 'https://data.orthodb.org/current/search?query=", gene_ids, "' -L -o search.dat", sep = ""))
       orthoID_json <- fromJSON(file = "search.dat")
       
       for (p in grep(group, orthoID_json[[4]])) {

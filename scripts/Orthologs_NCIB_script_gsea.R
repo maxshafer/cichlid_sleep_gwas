@@ -8,6 +8,7 @@ library(fdrtool)
 library(stringr)
 library(rjson)
 library(clipr)
+library(tictoc)
 
 library(clusterProfiler)
 library(AnnotationDbi)
@@ -16,6 +17,7 @@ library(org.Dr.eg.db)
 source("/Volumes/BZ/Scientific Data/RG-AS04-Data01/Cichlid-genomes/cichlid_sleep_gwas/scripts/variants_functions.R")
 # This should be run in the folder with the allele_frequncies
 setwd("/Volumes/BZ/Scientific Data/RG-AS04-Data01/Cichlid-genomes/cichlid_sleep_gwas/orthos_gsea")
+# setwd("~/Documents/orthos_gsea/")
 
 # Read in gtf file for finding genes
 gtf <- read.gtf("/Volumes/BZ/Scientific Data/RG-AS04-Data01/Cichlid-genomes/O-niloticus_ASM185804v2/GCF_001858045.1_ASM185804v2_genomic.gff")
@@ -25,16 +27,15 @@ gtf2 <- gtf[gtf$feature == "gene" & gtf$gene_biotype == "protein_coding",]
 
 index <- grepl("LOC", gtf2$Name)
 gtf2$NCBI.GeneID <- NA
-gtf2$NCBI.GeneID[index] <- substr(x$gene[index], start = 4, stop = 15)
+gtf2$NCBI.GeneID[index] <- substr(gtf2$gene[index], start = 4, stop = 15)
 gtf2$gene.name <- NA
-gtf2$gene.name[!(index)] <- x$gene[!(index)]
-return(x)
+gtf2$gene.name[!(index)] <- gtf2$gene[!(index)]
 
 
+gtf2$Dbxref_sub <- substr(gtf2$Dbxref, start = 8, stop = 20)
 
 
-write.table(unique(substr(gtf2$Dbxref, start = 8, stop = 20)), file = "unique_gtf2_genes.csv", col.names = F, row.names = F, quote = F)
-
+write.table(unique(gtf2$Dbxref_sub), file = "unique_gtf2_genes.csv", col.names = F, row.names = F, quote = F)
 
 ################################################################################################################
 ################ Run terminal commands to download NCBI orthologs ##############################################
@@ -50,8 +51,11 @@ write.table(unique(substr(gtf2$Dbxref, start = 8, stop = 20)), file = "unique_gt
 ## Tilapia taxon ID 8128
 
 'cat unique_gtf2_genes.csv | while read GENE; do
-datasets download ortholog gene-id --exclude-gene --exclude-protein --exclude-rna --taxon-filter 10090 "${GENE}" --filename "mouse/${GENE}".zip;
 datasets download ortholog gene-id --exclude-gene --exclude-protein --exclude-rna --taxon-filter 7955 "${GENE}" --filename "zebrafish/${GENE}".zip;
+done'
+
+'cat unique_gtf2_genes.csv | while read GENE; do
+datasets download ortholog gene-id --exclude-gene --exclude-protein --exclude-rna --taxon-filter 10090 "${GENE}" --filename "mouse/${GENE}".zip;
 done'
 
 # Then to unzip all the .zip files in a folder, then the zip files can be deleted
@@ -63,10 +67,13 @@ done'
 
 # For zeb
 ncbi_orthologs_zeb <- generateNCBIorthologs(directory = "zebrafish/")
+ncbi_orthologs_zeb <- Reduce(rbind, ncbi_orthologs_zeb)
+saveRDS(ncbi_orthologs_zeb, file = "ncbi_orthologs_zeb.rds")
 
 # For mouse
 ncbi_orthologs_mouse <- generateNCBIorthologs(directory = "mouse/")
-
+ncbi_orthologs_mouse <- Reduce(rbind, ncbi_orthologs_mouse)
+saveRDS(ncbi_orthologs_mouse, file = "ncbi_orthologs_mouse.rds")
 
 ################################################################################################################
 ################ Query orthoDB database and ID orthologs from output ###########################################
@@ -79,130 +86,134 @@ ncbi_orthologs_mouse <- generateNCBIorthologs(directory = "mouse/")
 
 ## This creates some unnecessary structure, but works
 ## Need to rework this function so I can run it for mouse
-tic()
-orthoDB_orthologs_zeb <- lapply(unique(substr(gtf2$Dbxref, start = 8, stop = 20)), function(y) generateOrthoDBorthologs(dbxrefs = y, species = "zebrafish"))
-toc()
+# then Unlist the unnecessary structure by using a non-recursive unlist
 
-orthoDB_orthologs_mouse <- lapply(unique(substr(gtf2$Dbxref, start = 8, stop = 20)), function(y) generateOrthoDBorthologs(dbxrefs = y, species = "mouse"))
-
-# Unlist the unnecessary structure by using a non-recursive unlist
+orthoDB_orthologs_zeb <- lapply(seq_along(gtf2$Dbxref_sub), function(x) generateOrthoDBorthologs(dbxrefs = gtf2$Dbxref_sub[x], gene_ids = gtf2$gene[x], species = "zebrafish"))
 orthoDB_orthologs_zeb <- unlist(orthoDB_orthologs_zeb, recursive = F)
+saveRDS(orthoDB_orthologs_zeb, file = "orthoDB_orthologs_zeb.rds")
+
+
+orthoDB_orthologs_mouse <- readRDS(file = "orthoDB_orthologs_mouse")
+# orthoDB_orthologs_mouse <- list()
+# orthoDB_orthologs_mouse[length(orthoDB_orthologs_mouse):(length(orthoDB_orthologs_mouse)+1000)] <- lapply(length(orthoDB_orthologs_mouse):(length(orthoDB_orthologs_mouse)+1000), function(x) generateOrthoDBorthologs(dbxrefs = gtf2$Dbxref_sub[x], gene_ids = gtf2$gene[x], species = "mouse"))
+orthoDB_orthologs_mouse[length(orthoDB_orthologs_mouse):(length(gtf2$Dbxref))] <- lapply(length(orthoDB_orthologs_mouse):(length(gtf2$Dbxref)), function(x) generateOrthoDBorthologs(dbxrefs = gtf2$Dbxref_sub[x], gene_ids = gtf2$gene[x], species = "mouse"))
+# Save it out to reload and continue, as long as I don't unlist it recursively, I can keep going like this
+saveRDS(orthoDB_orthologs_mouse, file = "orthoDB_orthologs_mouse")
+
+
 orthoDB_orthologs_mouse <- unlist(orthoDB_orthologs_mouse, recursive = F)
+saveRDS(orthoDB_orthologs_mouse, file = "orthoDB_orthologs_mouse")
+
+# ################################################################################################################
+# ################ Reconcile and combine the two database results together #######################################
+# ################################################################################################################
+# 
+# ### OK, so the ncbi ortho  and orthoDB pipelines retrieve slightly different results (some missing orthos)
+# ### There are X that ncbi retreives that orthoDB doesn't, and X vice versa - combined is more
+# ## I can add the ncbi_orthologs to the orthoDB_orthologs list
+# 
+# ## If ncbi_orthos_zeb$gene_id_oreo is not in names(orthos_combined_zeb), then I want to add it
+# 
+# orthos_combined_zeb <- orthoDB_orthologs_zeb
+# 
+# for (i in 1:nrow(ncbi_orthologs_zeb)) {
+#   if (!(ncbi_orthologs_zeb$gene_id_oreo[i] %in% names(orthos_combined_zeb))) {
+#     orthos_combined_zeb[[ncbi_orthologs_zeb$gene_id_oreo[i]]] <- list(ncbi_orthologs_zeb$gene_symbol[i])
+#   }
+# }
+# 
+# orthos_combined_mouse <- orthoDB_orthologs_mouse
+# 
+# for (i in 1:nrow(ncbi_orthologs_mouse)) {
+#   if (!(ncbi_orthologs_mouse$gene_id_oreo[i] %in% names(orthos_combined_mouse))) {
+#     orthos_combined_mouse[[ncbi_orthologs_mouse$gene_id_oreo[i]]] <- list(ncbi_orthologs_mouse$gene_symbol[i])
+#   }
+# }
+# 
+# ## Save out the list
+# 
+# saveRDS(orthos_combined_zeb, file = "oreochromis_orthologs_zebrafish.rds")
+# saveRDS(orthos_combined_mouse, file = "oreochromis_orthologs_mouse.rds")
+# 
+# orthos_combined_zeb <- readRDS(file = "oreochromis_orthologs_zebrafish.rds")
+# orthos_combined_mouse <- readRDS(file = "oreochromis_orthologs_mouse.rds")
 
 
 ################################################################################################################
 ################ Reconcile and combine the two database results together #######################################
 ################################################################################################################
 
-### OK, so the ncbi ortho  and orthoDB pipelines retrieve slightly different results (some missing orthos)
-### There are X that ncbi retreives that orthoDB doesn't, and X vice versa - combined is more
-## I can add the ncbi_orthologs to the orthoDB_orthologs list
+## I think the best actually would be to take the ncbi orthos first, then supplement with the orthoDBs, since they are less certain (more orthos)
+## Also need to decided how to pick the orthoDB ortholog to use...
 
-orthos_combined_zeb <- orthoDB_orthologs_zeb
-for (j in 1:length(orthos_combined_zeb)) {
-  for (i in 1:nrow(ncbi_orthologs_zeb[[j]])) {
-    if (!(ncbi_orthologs_zeb[[j]]$gene_id_oreo[i] %in% names(orthos_combined_zeb[[j]]))) {
-      orthos_combined_zeb[[j]][[ncbi_orthologs_zeb[[j]]$gene_id_oreo[i]]] <- list(ncbi_orthologs_zeb[[j]]$gene_symbol[i])
-    }
+ncbi_orthologs_zeb <- readRDS("ncbi_orthologs_zeb.rds")
+ncbi_orthologs_mouse <- readRDS("ncbi_orthologs_mouse.rds")
+
+orthoDB_orthologs_zeb <- readRDS("orthoDB_orthologs_zeb.rds")
+orthoDB_orthologs_mouse <- readRDS("orthoDB_orthologs_mouse.rds")
+
+## Maybe I can start with the gtf file, and match first the ncbi results, then the orthoDB results
+
+new_gtf <- gtf2
+
+# Match by new_gtf$Dbxref_sub
+
+new_gtf$zebrafish_ortholog_symbol <- ncbi_orthologs_zeb$gene_symbol[match(new_gtf$Dbxref_sub, ncbi_orthologs_zeb$gene_id_oreo)]
+new_gtf$zebrafish_ortholog_id <- ncbi_orthologs_zeb$gene_id[match(new_gtf$Dbxref_sub, ncbi_orthologs_zeb$gene_id_oreo)]
+
+new_gtf$mouse_ortholog_symbol <- ncbi_orthologs_mouse$gene_symbol[match(new_gtf$Dbxref_sub, ncbi_orthologs_mouse$gene_id_oreo)]
+new_gtf$mouse_ortholog_id <- ncbi_orthologs_mouse$gene_id[match(new_gtf$Dbxref_sub, ncbi_orthologs_mouse$gene_id_oreo)]
+
+
+## Add the orthoDB stuff??
+
+new_gtf2 <- new_gtf
+
+index <- is.na(new_gtf2$zebrafish_ortholog_id)
+new_gtf2$zebrafish_ortholog_symbol[index] <- unlist(lapply(new_gtf2$Dbxref_sub[index], function(x) { 
+  if (length(grep(x, names(orthoDB_orthologs_zeb))) %in% c(1)) {
+    return(orthoDB_orthologs_zeb[[grep(x, names(orthoDB_orthologs_zeb))]][1]) # returning the first entry
+  } else {
+    return(NA)
   }
-}
+  })) # I need to pull the orthoDB results, based on the dbxref id number
 
-orthos_combined_mouse <- orthoDB_orthologs_mouse
-for (j in 1:length(orthos_combined_mouse)) {
-  for (i in 1:nrow(ncbi_orthologs_mouse[[j]])) {
-    if (!(ncbi_orthologs_mouse[[j]]$gene_id_oreo[i] %in% names(orthos_combined_mouse[[j]]))) {
-      orthos_combined_mouse[[j]][[ncbi_orthologs_mouse[[j]]$gene_id_oreo[i]]] <- list(ncbi_orthologs_mouse[[j]]$gene_symbol[i])
-    }
+index <- is.na(new_gtf$mouse_ortholog_id)
+new_gtf2$mouse_ortholog_symbol[index] <- unlist(lapply(new_gtf2$Dbxref_sub[index], function(x) { 
+  if (length(grep(x, names(orthoDB_orthologs_mouse))) %in% c(1)) {
+    return(orthoDB_orthologs_mouse[[grep(x, names(orthoDB_orthologs_mouse))]][1]) # returning the first entry
+  } else {
+    return(NA)
   }
-}
-
+}))
 ## Save out the list
 
-saveRDS(orthos_combined_zeb, file = "oreochromis_orthologs_zebrafish.rds")
-saveRDS(orthos_combined_mouse, file = "oreochromis_orthologs_mouse.rds")
-
-orthos_combined_zeb <- readRDS(file = "oreochromis_orthologs_zebrafish.rds")
-orthos_combined_mouse <- readRDS(file = "oreochromis_orthologs_mouse.rds")
-
-## Add them back to the genes dataframes
-## This selects the first entry in the ortho database as the ortho
-
-genes_new <- list()
-for (i in seq_along(genes)) {
-  
-  zeb_ortholog <- unlist(lapply(orthos_combined_zeb[[i]], function(x) {
-    if (length(x) > 0) {
-      return(x[[1]][[1]][1])
-    } else {
-      return(NA)
-    }}))
-  zeb_ortholog <- data.frame(Dbxref = names(zeb_ortholog), zeb_ortholog = zeb_ortholog)
-  
-  mouse_ortholog <- unlist(lapply(orthos_combined_mouse[[i]], function(x) {
-    if (length(x) > 0) {
-      return(x[[1]][[1]][1])
-    } else {
-      return(NA)
-    }}))
-  mouse_ortholog <- data.frame(Dbxref = names(mouse_ortholog), mouse_ortholog = mouse_ortholog)
-  genes_new[[i]] <- genes[[i]]
-  genes_new[[i]]$zeb_ortholog <- zeb_ortholog$zeb_ortholog[match(genes_new[[i]]$Dbxref, zeb_ortholog$Dbxref)]
-  genes_new[[i]]$mouse_ortholog <- mouse_ortholog$mouse_ortholog[match(genes_new[[i]]$Dbxref, mouse_ortholog$Dbxref)]
-}
+saveRDS(new_gtf, file = "gtf2_oreochromis_orthologs.rds")
 
 
-### Run some GSEA?
-library(org.Mm.eg.db)
-library(fgsea)
+## The problem is that for genes without ncbi based orthologs, orthoDB tends to return more 1:2, and 1:many orthologs (makes sense)
+## 
 
-gene_list <- genes_new[[4]]$ps
-names(gene_list) <- as.character(genes_new[[4]]$mouse_ortholog)
-gene_list <- gene_list[order(gene_list, decreasing = T)]
-gene_list <- gene_list[!(is.na(names(gene_list)))]
+# These are all the orthos
+table(lengths(orthoDB_orthologs_zeb))
 
-gene_list <- gene_list[!(duplicated(names(gene_list)))]
+# With ncbi orthos
+table(  lengths(    orthoDB_orthologs_zeb[names(orthoDB_orthologs_zeb) %in% as.character(new_gtf$Dbxref_sub)[!index]]         )     )
 
-
-
-
-##### OK the below might work, but it requires ENTREZIDs for the orthologs, of which I only have gene symbols
-
-### AHH I think the reason this doesn't work is that the gene lists are too short - ugh, that means quite a bit more processing for this orthology...
-
-# One can also start from .rnk and .gmt files as in original GSEA:
-
-rnk.file <- system.file("extdata", "naive.vs.th1.rnk", package="fgsea")
-gmt.file <- "~/Downloads/mh.all.v2022.1.Mm.symbols.gmt"
-gmt.file <- system.file("extdata", "mouse.reactome.gmt", package="fgsea")
-
-# Loading ranks:
-ranks <- read.table(rnk.file,
-                    header=TRUE, colClasses = c("character", "numeric"))
-ranks <- setNames(ranks$t, ranks$ID)
-str(ranks)
-
-str(ranks)
-##  Named num [1:12000] -63.3 -49.7 -43.6 -41.5 -33.3 ...
-##  - attr(*, "names")= chr [1:12000] "170942" "109711" "18124" "12775" ...
-
-# Loading pathways:
-
-pathways <- gmtPathways(gmt.file)
-str(head(pathways))
-
-
-# And running fgsea:
-  
-fgseaRes <- fgsea(pathways, gene_list, minSize=15, maxSize=500)
-head(fgseaRes)
+# Without ncbi orthos
+table(  lengths(    orthoDB_orthologs_zeb[names(orthoDB_orthologs_zeb) %in% as.character(new_gtf$Dbxref_sub)[index]]         )     )
 
 
 
 
 
 
+## There seem to be quite a few without zebrafish gene_symbols, but with an oreochromis gene symbol (897 to be exact)
+## Can I sub these in (maybe in many cases they will match a real zeb gene symbol)
+table(is.na(new_gtf$zebrafish_ortholog_symbol), is.na(new_gtf$gene.name)) # x by y
 
-
+## 369 after adding orthoDB database
+table(is.na(new_gtf2$zebrafish_ortholog_symbol), is.na(new_gtf2$gene.name)) # x by y
 
 
 
