@@ -6,6 +6,7 @@ library(org.Dr.eg.db)
 library(reshape2)
 library(data.table)
 library(org.Mm.eg.db)
+library(patchwork)
 
 setwd("/Volumes/BZ/Scientific Data/RG-AS04-Data01/Cichlid-genomes/cichlid_sleep_gwas/orthos")
 
@@ -117,7 +118,7 @@ annoCharts.2 <- lapply(annoCharts.2, function(x) splitNames(x))
 saveRDS(annoCharts.2, file = "GO_analysis_all_pvalue_0.00025.rds")
 
 # # If used subcluster markers, but grouped by subtype
-# annoCharts.2 <- readRDS("GO_analysis_all.rds")
+annoCharts.2 <- readRDS("GO_analysis_all_pvalue_0.00025.rds")
 
 # Reshape for plotting
 measure.vars <- matrix(c("Bonferroni", "Benjamini", "FDR", "Count", "Fold.Enrichment", "X.", "Bonferroni", "Benjamini", "FDR", "Count", "FE", "X.", "Bonf.value", "Benj.value", "FDR.value", "Counts.value", "FoldE.value", "X.value"), nrow=6, ncol = 3)
@@ -148,13 +149,13 @@ go_analysis$L1 <- factor(go_analysis$L1, levels = names(genes_new))
 go.plot <- ggplot(data = hCluster(x = go_analysis[go_analysis$L2 == "danio",], measure.var = "FDR.value", category = "KEGG_PATHWAY"), aes(L1, Term, size = Benj.value, fill = FoldE, shape = L2, color = L2)) + geom_point(alpha = 0.75) + scale_shape_manual(values = c(21, 24)) + scale_size_continuous(range = c(6, 2)) + scale_color_manual(values = c("black", "black")) + scale_fill_gradient2(low = "skyblue2", high = "khaki2") + theme_minimal() + theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust = 1, size = 10), axis.text.y = element_text(size = 10), axis.title.x = element_blank(), axis.title.y = element_blank()) + coord_flip()
 go.plot <- ggplot(data = hCluster(x = go_analysis[go_analysis$L2 == "mus",], measure.var = "FDR.value", category = "KEGG_PATHWAY"), aes(L1, Term, size = Benj.value, fill = FoldE, shape = L2, color = L2)) + geom_point(alpha = 0.75) + scale_shape_manual(values = c(21, 24)) + scale_size_continuous(range = c(6, 2)) + scale_color_manual(values = c("black", "black")) + scale_fill_gradient2(low = "skyblue2", high = "khaki2") + theme_minimal() + theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust = 1, size = 10), axis.text.y = element_text(size = 10), axis.title.x = element_blank(), axis.title.y = element_blank()) + coord_flip()
 
-go.plot.all <- ggplot(data = hCluster(x = go_analysis[go_analysis$Bonf.value < 0.0005,], measure.var = "Bonf.value"), aes(L1, Term, size = Benj.value, fill = FoldE, shape = L2, color = L2)) + geom_point(alpha = 0.75) + scale_shape_manual(values = c(21, 24)) + scale_size_continuous(range = c(6, 2)) + scale_color_manual(values = c("black", "black")) + scale_fill_gradient2(low = "skyblue2", high = "khaki2") + theme_minimal() + theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust = 1, size = 10), axis.text.y = element_text(size = 10), axis.title.x = element_blank(), axis.title.y = element_blank()) + coord_flip()
+go.plot.all <- ggplot(data = hCluster(x = go_analysis[go_analysis$Bonf.value < 0.05 & go_analysis$L2 == "danio",], measure.var = "Bonf.value"), aes(L1, Term, size = Benj.value, fill = FoldE, shape = L2, color = L2)) + geom_point(alpha = 0.75) + scale_shape_manual(values = c(21, 24)) + scale_size_continuous(range = c(6, 2)) + scale_color_manual(values = c("black", "black")) + scale_fill_gradient2(low = "skyblue2", high = "khaki2") + theme_minimal() + theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust = 1, size = 10), axis.text.y = element_text(size = 10), axis.title.x = element_blank(), axis.title.y = element_blank()) + coord_flip()
 
 
 dev.new()
 go.plot + plot_layout(width = unit(200, "mm"), height = unit(75, "mm"))
 
-go.plot.all + plot_layout(width = unit(140, "mm"), height = unit(75, "mm"))
+go.plot.all + plot_layout(width = unit(220, "mm"), height = unit(45, "mm"))
 
 
 ## To map back from an enriched category
