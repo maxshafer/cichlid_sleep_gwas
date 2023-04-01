@@ -49,5 +49,6 @@ file_list="/scicore/home/schiera/gizevo30/projects/cichlids_2/genome/GCF_0018580
 # this is the second column of index_array_40x.csv
 INTERVAL=`sed -n "$SLURM_ARRAY_TASK_ID"p "${file_list}" | cut -f 1 -d ','`
 
-Rscript ../../scripts/PGLSrun.R speciesCodesAndGenomeIDs_for_GWAS_2_cohort_db_geno_${INTERVAL}_fromProbabilities_AF.txt ../../pheno_data/combined_cichlid_data_2022-11-17.csv peak
+Rscript ../../scripts/PGLSrun.R speciesCodesAndGenomeIDs_for_GWAS_2_cohort_db_geno_${INTERVAL}_fromProbabilities_AF.txt ../../pheno_data/combined_cichlid_data_2022-11-17_new_peaks.csv peak_dawn
+Rscript ../../scripts/PGLSrun.R speciesCodesAndGenomeIDs_for_GWAS_2_cohort_db_geno_${INTERVAL}_fromProbabilities_AF.txt ../../pheno_data/combined_cichlid_data_2022-11-17_new_peaks.csv peak_dusk
 
