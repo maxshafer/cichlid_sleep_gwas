@@ -19,7 +19,7 @@ source('/Volumes/BZ/Scientific Data/RG-AS04-Data01/Cichlid-genomes/cichlid_sleep
 
 # Read in gtf file for finding genes
 gtf <- read.gtf("/Volumes/BZ/Scientific Data/RG-AS04-Data01/Cichlid-genomes/O-niloticus_ASM185804v2/GCF_001858045.1_ASM185804v2_genomic.gff")
-gtf2 <- gtf[gtf$feature == "gene",]
+gtf2 <- gtf[gtf$feature == "gene" & gtf$gene_biotype == "protein_coding",]
 gtf3 <- gtf[gtf$feature == "mRNA",]
 gtf4 <- gtf[gtf$feature == "CDS",]
 # rm(gtf)
@@ -31,112 +31,156 @@ gtf4 <- gtf[gtf$feature == "CDS",]
 #   stop("must have 3 arguments for Rscript command")
 # }
 
-# Setting arguments for testing script
-# Need to make sure to specify the same phenotype file as was used in the gwas (if testing fewer species)
-args <- c("../../pheno_data/combined_cichlid_data_2022-08-04.csv", 0.00005, "day_night_dif_55-species", "pgls")
-
-Phenofile <- args[1]
-cutoff <- as.numeric(args[2])
-pheno_to_test <- as.character(args[3])
-statistical_test <- args[4]
-
-
-################################################################################################################################################################################################
-#### Load the data  ############################################################################################################################################################################
-################################################################################################################################################################################################
-
-# Retrieve dataset names
-# Should have files per chromosome, per trait, and per test (pi or PGLSpi)
-if (pheno_to_test == "peak") {
-  datasets <- list.files()[grep(pheno_to_test, list.files())]
-  datasets <- datasets[!(grepl("amplitude", datasets))]
-  datasets <- datasets[grep(".txt", datasets)]
-} 
-if (pheno_to_test == "day_night_dif" | pheno_to_test == "day_night_dif_spd") {
-  datasets <- list.files()[grep(pheno_to_test, list.files())]
-  datasets <- datasets[!(grepl("-species", datasets))]
-  datasets <- datasets[grep(".txt", datasets)]
-}  else {
-  datasets <- list.files()[grep(pheno_to_test, list.files())]
-  datasets <- datasets[grep(".txt", datasets)]
-}
-
-if (statistical_test == "pgls") {
-  datasets <- datasets[grep("_PGLSpiVals", datasets)]
-}
-
-if (statistical_test == "gwas") {
-  datasets <- datasets[grep("_piVals", datasets)]
-}
-
-names <- substr(datasets, start = 52, stop = 60)
+# # Setting arguments for testing script
+# # Need to make sure to specify the same phenotype file as was used in the gwas (if testing fewer species)
+# args <- c("../../pheno_data/combined_cichlid_data_2022-08-04.csv", 0.00005, "day_night_dif_55-species", "pgls")
+# 
+# Phenofile <- args[1]
+# cutoff <- as.numeric(args[2])
+# pheno_to_test <- as.character(args[3])
+# statistical_test <- args[4]
 
 
-# The above are all of the GWAS results per chromosome
-# Read in and combine into one dataframe for plotting/subsetting
-
-perchr <- lapply(datasets, function(x) fread(x, showProgress = F, drop = "V1"))
-names(perchr) <- names
-perchr <- Reduce(rbind, perchr)
-colnames(perchr) <- c("chr", "coord", "pvalue")
-
-
-## Run the above for all comparisons, and than use a pvalue cutoff
-## Any multiple testing correction methods seem to fail because of the vast number of tests (44 million) that were run
-## For example, bonferroni multiples the pvalue by the # of tests (44,000,000), which means nothing is significant (or even lower than 0.5) after correction
-
-perchr.list <- list()
-perchr.list[[1]] <- perchr.dn55
-perchr.list[[2]] <- perchr.dn58
-perchr.list[[3]] <- perchr.dn60
-perchr.list[[4]] <- perchr.tr
-perchr.list[[5]] <- perchr.peak
-
-
-perchr.list <- lapply(perchr.list, function(x) {
-  x$location <- paste(x$chr, x$coord, sep = ":")
-  return(x)
-})
-
-
-saveRDS(perchr.list, file = "../per_chromosome_list.rds")
-
-# lapply(perchr.list, function(x) dim(x[x$pvalue < 0.05,]))
-
-perchr.list.cut <- lapply(perchr.list, function(x) x[x$pvalue < 0.05,])
-
-saveRDS(perchr.list.cut, file = "../per_chromosome_pvalue_0.05_list.rds")
-
-perchr <- readRDS("../per_chromosome_list.rds")
-
-fdr_list <- lapply(perchr, function(x) fdrtool(x$pvalue, statistic = "pvalue"))
-fdr_list_pct0 <- lapply(perchr, function(x) fdrtool(x$pvalue, statistic = "pvalue", cutoff.method = "pct0"))
-
-
-### There are def too many markers (44million), and this kills any multiple testing correction (basically none are significant, because I'm testing too many things)
-### What if I do it for 1 chromosome? NC_031970
-### Still so many per chromosome (over a million)
-### The only way might be to reduce the SNPs I'm testing, but that's not ideal
-### I think the best is to just use a cutoff?
-
-perchr_chr <- lapply(perchr, function(x) x[x$chr %in% "NC_031969",])
-fdr_list_chr <- lapply(perchr_chr, function(x) fdrtool(x$pvalue, statistic = "pvalue"))
-bonferroni_chr <- lapply(perchr_chr, function(x) p.adjust(x$pvalue, method = "BH"))
-lapply(bonferroni_chr, function(x) min(x))
+# ################################################################################################################################################################################################
+# #### Load the data  ############################################################################################################################################################################
+# ################################################################################################################################################################################################
+# 
+# # Retrieve dataset names
+# # Should have files per chromosome, per trait, and per test (pi or PGLSpi)
+# if (pheno_to_test == "peak") {
+#   datasets <- list.files()[grep(pheno_to_test, list.files())]
+#   datasets <- datasets[!(grepl("amplitude", datasets))]
+#   datasets <- datasets[grep(".txt", datasets)]
+# } 
+# if (pheno_to_test == "day_night_dif" | pheno_to_test == "day_night_dif_spd") {
+#   datasets <- list.files()[grep(pheno_to_test, list.files())]
+#   datasets <- datasets[!(grepl("-species", datasets))]
+#   datasets <- datasets[grep(".txt", datasets)]
+# }  else {
+#   datasets <- list.files()[grep(pheno_to_test, list.files())]
+#   datasets <- datasets[grep(".txt", datasets)]
+# }
+# 
+# if (statistical_test == "pgls") {
+#   datasets <- datasets[grep("_PGLSpiVals", datasets)]
+# }
+# 
+# if (statistical_test == "gwas") {
+#   datasets <- datasets[grep("_piVals", datasets)]
+# }
+# 
+# names <- substr(datasets, start = 52, stop = 60)
+# 
+# 
+# # The above are all of the GWAS results per chromosome
+# # Read in and combine into one dataframe for plotting/subsetting
+# 
+# perchr <- lapply(datasets, function(x) fread(x, showProgress = F, drop = "V1"))
+# names(perchr) <- names
+# perchr <- Reduce(rbind, perchr)
+# colnames(perchr) <- c("chr", "coord", "pvalue")
+# 
+# 
+# ## Run the above for all comparisons, and than use a pvalue cutoff
+# ## Any multiple testing correction methods seem to fail because of the vast number of tests (44 million) that were run
+# ## For example, bonferroni multiples the pvalue by the # of tests (44,000,000), which means nothing is significant (or even lower than 0.5) after correction
+# 
+# perchr.list <- list()
+# perchr.list[[1]] <- perchr.dn55
+# perchr.list[[2]] <- perchr.dn58
+# perchr.list[[3]] <- perchr.dn60
+# perchr.list[[4]] <- perchr.tr
+# perchr.list[[5]] <- perchr.peak
+#
+# saveRDS(perchr.list, file = "../per_chromosome_list.rds")
+# 
+# perchr.list <- readRDS("sra_reads_nobackup/per_chromosome_list.rds")
+# 
+# perchr.list <- lapply(perchr.list, function(x) {
+#   x$location <- paste(x$chr, x$coord, sep = ":")
+#   return(x)
+# })
+# 
+# 
+# # lapply(perchr.list, function(x) dim(x[x$pvalue < 0.05,]))
+# 
+# perchr.list.cut <- lapply(perchr.list, function(x) x[x$pvalue < 0.05,])
+# 
+# saveRDS(perchr.list.cut, file = "../per_chromosome_pvalue_0.05_list.rds")
+# 
+# 
+# fdr_list <- lapply(perchr.list, function(x) fdrtool(x$pvalue, statistic = "pvalue"))
+# fdr_list_pct0 <- lapply(perchr.list, function(x) fdrtool(x$pvalue, statistic = "pvalue", cutoff.method = "pct0"))
+# 
+# 
+# ### There are def too many markers (44million), and this kills any multiple testing correction (basically none are significant, because I'm testing too many things)
+# ### What if I do it for 1 chromosome? NC_031970
+# ### Still so many per chromosome (over a million)
+# ### The only way might be to reduce the SNPs I'm testing, but that's not ideal
+# ### I think the best is to just use a cutoff?
+# 
+# perchr_chr <- lapply(perchr.list, function(x) x[x$chr %in% "NC_031969",])
+# fdr_list_chr <- lapply(perchr_chr, function(x) fdrtool(x$pvalue, statistic = "pvalue"))
+# bonferroni_chr <- lapply(perchr_chr, function(x) p.adjust(x$pvalue, method = "BH"))
+# lapply(bonferroni_chr, function(x) min(x))
 
 ################################################################################################################################################################################################
 #### Find SNPS of interest and annotate genes and exons  #######################################################################################################################################
 ################################################################################################################################################################################################
 
+perchr.list.cut <- readRDS(file = "sra_reads_nobackup/per_chromosome_pvalue_0.05_list.rds")
+
 ### Now for each list, pull the genes
 ### But only those that pass the stricter cutoff
-p_val_cutoff <- 0.0001
-perchr.list.cut <- lapply(perchr, function(x) x[x$pvalue < p_val_cutoff,])
-saveRDS(perchr.list.cut, file = "../per_chromosome_pvalue_0.0001_list.rds")
+p_val_cutoff <- 0.00025
+perchr.list.cut <- lapply(perchr.list.cut, function(x) x[x$pvalue < p_val_cutoff,])
+saveRDS(perchr.list.cut, file = "sra_reads_nobackup/per_chromosome_pvalue_0.00025_list.rds")
 
 # Annotate all the snps that pass the cutoff for more Systemies biology
 snps_of_interest <- list()
 snps_of_interest <- lapply(perchr.list.cut, function(x) x$location)
+
+
+## I want to run the above per chromosome (which is faster)
+## First make lists of gtf dataframes for each chromosome
+gtf2_chrs <- unique(gtf2$seqname)[1:23]
+gtf_df <- data.frame(gtf_chrs = gtf2_chrs, vcf_chrs = as.character(substr(gtf2_chrs, 1, 9)))
+list_gtf2_sub <- lapply(gtf2_chrs, function(x) gtf2[gtf2$seqname %in% x,])
+names(list_gtf2_sub) <- gtf2_chrs
+
+list_gtf3_sub <- lapply(gtf2_chrs, function(x) gtf3[gtf3$seqname %in% x,])
+names(list_gtf3_sub) <- gtf2_chrs
+
+
+### This is what I used for per 10k
+## Works, except for the first chromosome from comparison 4
+
+output <- lapply(perchr.list.cut, function(perchr) {
+  # perchr <- perchr[,c(1,2,3,4,6)] # 6 is min pvalue, 5 is mean
+  perchr <- as.data.frame(perchr)
+  per_chrs <- unique(perchr$chr)
+  perchr <- lapply(per_chrs, function(l) perchr[perchr$chr %in% l,])
+  names(perchr) <- per_chrs
+  out <- lapply(per_chrs[2:23], function(k) {
+    put <- getGenesEns(results.table = perchr[[grep(k, names(perchr))]], gene_table = list_gtf2_sub[[gtf_df$gtf_chrs[match(k, gtf_df$vcf_chrs)]]], gene_table_2 = list_gtf3_sub[[gtf_df$gtf_chrs[match(k, gtf_df$vcf_chrs)]]], window = 25000, windowed = FALSE, combined = FALSE)
+  })
+  out <- Reduce(rbind, out)
+  return(out)
+})
+
+
+saveRDS(output, file = paste("/Volumes/BZ/Scientific Data/RG-AS04-Data01/Cichlid-genomes/cichlid_sleep_gwas/outs/PGLS_genes_AllCategories", "pvalue", "0.00025", "genes_ALL_SNPS.rds", sep = "_"))
+
+
+
+
+
+
+
+
+
+
+
 
 # Annotate SNPs with close genes and save out csv
 genes <- lapply(seq_along(snps_of_interest), function(x) getGenesEns(results.table = perchr.list.cut[[x]], gene_table = gtf, gene_table_2 = gtf3, window = 25000, windowed = TRUE, combined = FALSE))
