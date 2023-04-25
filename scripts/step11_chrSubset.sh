@@ -13,7 +13,7 @@
 #SBATCH --error=/scicore/home/schiera/gizevo30/projects/cichlids_2/scripts/logs/step11_chrSub_stderr.txt
 
 #You selected an array of jobs from 1 to 9 with 9 simultaneous jobs
-#SBATCH --array=1-25%25
+#SBATCH --array=1-4%4
 #SBATCH --mail-type=END,FAIL,TIME_LIMIT
 #SBATCH --mail-user=max.shafer@gmail.com        #You will be notified via email when your task ends or fails
 
@@ -45,12 +45,15 @@ module load BCFtools/1.12-GCC-10.3.0
 # This queries the list of chromosomes, with the unplaced one last
 
 # comma separated df with rows, samples, interval
-file_list="/scicore/home/schiera/gizevo30/projects/cichlids_2/genome/GCF_001858045.1_ASM185804v2_genomic_edit.chrs"
+# file_list="/scicore/home/schiera/gizevo30/projects/cichlids_2/genome/GCF_001858045.1_ASM185804v2_genomic_edit.chrs"
+file_list="/scicore/home/schiera/gizevo30/projects/cichlids_2/genome/melatonin_genes_loc"
 
 # this is the second column of index_array_40x.csv
 INTERVAL=`sed -n "$SLURM_ARRAY_TASK_ID"p "${file_list}" | cut -f 1 -d ','`
 
 # bcftools view -r $INTERVAL --threads 8 -O z -o cohort_db_geno_${INTERVAL}.hardfiltered_SNPS.biallelic.NoSingletons.g.vcf.gz cohort_db_geno.hardfiltered_SNPS.biallelic.NoSingletons.g.vcf.gz
+bcftools view -r $INTERVAL --threads 8 -O z -o cohort_db_geno_${INTERVAL}.g.vcf.gz cohort_db_geno.g.vcf.gz
 
-~/gatk-4.2.4.0/gatk IndexFeatureFile -I cohort_db_geno_${INTERVAL}.hardfiltered_SNPS.biallelic.NoSingletons.g.vcf.gz
+# ~/gatk-4.2.4.0/gatk IndexFeatureFile -I cohort_db_geno_${INTERVAL}.hardfiltered_SNPS.biallelic.NoSingletons.g.vcf.gz
+~/gatk-4.2.4.0/gatk IndexFeatureFile -I cohort_db_geno_${INTERVAL}.g.vcf.gz
 
