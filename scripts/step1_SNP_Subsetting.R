@@ -23,16 +23,16 @@ gtf3 <- gtf[gtf$feature == "mRNA",]
 gtf4 <- gtf[gtf$feature == "CDS",]
 # rm(gtf)
 
-# This can be run from the command line with trailing arguments, or within IDE by setting them manually
-# Load arguments
-args = commandArgs(trailingOnly=TRUE)
-if (length(args) != 3) {
-  stop("must have 3 arguments for Rscript command")
-}
+# # This can be run from the command line with trailing arguments, or within IDE by setting them manually
+# # Load arguments
+# args = commandArgs(trailingOnly=TRUE)
+# if (length(args) != 3) {
+#   stop("must have 3 arguments for Rscript command")
+# }
 
-# # Setting arguments for testing script
-# # Need to make sure to specify the same phenotype file as was used in the gwas (if testing fewer species)
-# args <- c("../../pheno_data/combined_cichlid_data_2022-08-04.csv", 0.00005, "total_rest")
+# Setting arguments for testing script
+# Need to make sure to specify the same phenotype file as was used in the gwas (if testing fewer species)
+args <- c("../../pheno_data/combined_cichlid_data_2022-11-17_new_peaks.csv", 0.0025, "peak_dawn")
 
 Phenofile <- args[1]
 cutoff <- as.numeric(args[2])
@@ -100,7 +100,7 @@ snps <- intersect(gwas.perchr$location, pgls.perchr$location)
 # Make one dataframe and remove the extras to free up memory
 perchr <- merge(gwas.perchr[gwas.perchr$location %in% snps,], pgls.perchr[pgls.perchr$location %in% snps,])
 
-rm(gwas.perchr, pgls.perchr)
+# rm(gwas.perchr, pgls.perchr)
 
 # Annotate all the snps that pass the cutoff for more Systemies biology
 snps_of_interest <- perchr$location

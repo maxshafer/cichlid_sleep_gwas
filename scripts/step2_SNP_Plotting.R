@@ -25,7 +25,7 @@ source('/Volumes/BZ/Scientific Data/RG-AS04-Data01/Cichlid-genomes/cichlid_sleep
 
 # # Setting arguments for testing script
 # # Need to make sure to specify the same phenotype file as was used in the gwas (if testing fewer species)
-args <- c("../../pheno_data/combined_cichlid_data_2022-08-04.csv", 0.005, "total_rest")
+args <- c("../../pheno_data/combined_cichlid_data_2022-11-17_new_peaks.csv", 0.005, "peak_dawn")
 
 Phenofile <- args[1]
 cutoff <- as.numeric(args[2])
