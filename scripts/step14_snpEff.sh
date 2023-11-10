@@ -1,12 +1,12 @@
 #!/bin/bash
 
-#SBATCH --job-name=alleleFreq                   #This is the name of your job
+#SBATCH --job-name=snpEff                   #This is the name of your job
 #SBATCH --cpus-per-task=1                  #This is the number of cores reserved
-#SBATCH --mem-per-cpu=64G              #This is the memory reserved per core.
-#Total memory reserved: 64GB
+#SBATCH --mem-per-cpu=15G              #This is the memory reserved per core.
+#Total memory reserved: 15GB
 
-#SBATCH --time=24:00:00        #This is the time that your task will run
-#SBATCH --qos=1day           #You will run in this queue
+#SBATCH --time=6:00:00        #This is the time that your task will run
+#SBATCH --qos=6hours           #You will run in this queue
 
 # Paths to STDOUT or STDERR files should be absolute or relative to current working directory
 #SBATCH --output=/scicore/home/schiera/gizevo30/projects/cichlids_2/scripts/logs/step14_snpEff_stdout.txt     #These are the STDOUT and STDERR files
@@ -48,25 +48,35 @@ file_list="/scicore/home/schiera/gizevo30/projects/cichlids_2/genome/GCF_0018580
 INTERVAL=`sed -n "$SLURM_ARRAY_TASK_ID"p "${file_list}" | cut -f 1 -d ','`
 
 # Unzip it
-gzcat cohort_db_geno_${INTERVAL}.hardfiltered_SNPS.biallelic.NoSingletons.g.vcf.gz > $TMPDIR/unzipped_${INTERVAL}_g.vcf
+# gunzip -c cohort_db_geno_${INTERVAL}.hardfiltered_SNPS.biallelic.NoSingletons.g.vcf.gz > unzipped_${INTERVAL}_g.vcf
 
 # Modify it
 
-cat $TMPDIR/unzipped_${INTERVAL}_g.vcf | sed "s/^${INTERVAL}/${INTERVAL}.1/" > $TMPDIR/unzipped_${INTERVAL}_g.vcf
+# cat unzipped_${INTERVAL}_g.vcf | sed "s/^${INTERVAL}/${INTERVAL}.1/" > unzipped_${INTERVAL}_mod.g.vcf
+
+# rm unzipped_${INTERVAL}_g.vcf
 
 # Annotate it
+# java -Xmx8g -jar ~/bin/snpEff/snpEff.jar -v ASM185804v2 unzipped_${INTERVAL}_mod.g.vcf > unzipped_${INTERVAL}_mod.ann.g.vcf
 
-java -Xmx8g -jar ~/bin/snpEff/snpEff.jar -v ASM185804v2 $TMPDIR/unzipped_${INTERVAL}_g.vcf > $TMPDIR/unzipped_${INTERVAL}_g.vcf
+# rm unzipped_${INTERVAL}_mod.g.vcf
+
+# Extract it
+
+# cat unzipped_${INTERVAL}_mod.ann.g.vcf | ~/bin/snpEff/scripts/vcfEffOnePerLine.pl | java -Xmx8g -jar ~/bin/snpEff/SnpSift.jar extractFields - CHROM POS REF ALT "ANN[*].GENE" "ANN[*].IMPACT" "ANN[*].EFFECT" "ANN[*].DISTANCE" > extracted_${INTERVAL}.txt
+gzip extracted_${INTERVAL}.txt
 
 # Cut it
 
-cat $TMPDIR/unzipped_${INTERVAL}_g.vcf | cut -f1 -d: > unzipped_${INTERVAL}_final.g.vcf
+# cat unzipped_${INTERVAL}_mod.ann.g.vcf | cut -f1 -d: > unzipped_${INTERVAL}_final.g.vcf
+
+rm unzipped_${INTERVAL}_mod.ann.g.vcf
 
 # Zip it
 
-gzip unzipped_${INTERVAL}_final.g.vcf > /scicore/home/schiera/gizevo30/projects/cichlids_2/sra_reads_nobackup/final_snps_chr/final_${INTERVAL}.g.vcf
+# gzip -c unzipped_${INTERVAL}_final.g.vcf > final_${INTERVAL}.g.vcf.gz
 
-
+# rm unzipped_${INTERVAL}_final.g.vcf
 
 
 
