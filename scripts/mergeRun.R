@@ -1,7 +1,7 @@
 library(data.table)
 library(stringr)
 
-setwd("~/Documents/R_Projects/cichlid_sleep_gwas/")
+setwd("/scicore/home/schiera/gizevo30/projects/cichlids_2")
 
 ########################################################################
 #######   Defining trailing arguments  #################################
@@ -10,20 +10,21 @@ setwd("~/Documents/R_Projects/cichlid_sleep_gwas/")
 # Arguments would be the alleleFreq table(s) and the snpEff table, as well as the pvalue cutoff
 # Can I just give it the chromosome id, then use that to pull all the tables?
 args = commandArgs(trailingOnly=TRUE)
-if (length(args) != 3) {
-  stop("must have 3 arguments for Rscript command")
+if (length(args) != 1) {
+  stop("must have 1 arguments for Rscript command")
 }
 
 # # Setting arguments for testing script
-args <- c("NC_031965", "0.005")
+# args <- c("NC_031965", "0.005")
 
 chromosome <- args[1]
-cutoff <- as.numeric(args[2])
-
+# cutoff <- as.numeric(args[2])
+print(chromosome)
 
 files <- list.files("sra_reads_nobackup/alleleFreqs/", pattern = chromosome)
 # AF_file <- files[grep("AF.txt", files)]
 snpeff_file <- list.files("sra_reads_nobackup/final_snps_chr/", pattern = chromosome)
+snpeff_file <- snpeff_file[grepl("extracted", snpeff_file)]
 
 gwas_files <- files[grepl("_piVals_", files) & grepl(".txt", files)]
 pgls_files <- files[grepl("_PGLSpiVals_", files) & grepl(".txt", files)]
