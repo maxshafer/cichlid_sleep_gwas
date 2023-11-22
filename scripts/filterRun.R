@@ -15,7 +15,7 @@ if (length(args) != 1) {
   stop("must have 1 arguments for Rscript command")
 }
 
-percentile <- args[1]
+percentile <- as.numeric(args[1])
 
 ########################################################################
 #######   Defining  arguments  #########################################
@@ -59,8 +59,8 @@ per_chr <- lapply(comparison, function(comp) {
   merged$location <- paste(merged$CHROM, merged$POS, sep = ":")
   
   
-  pi <- unique(merged[,c("piVals", "location")]) %>% slice_min(order_by = piVals, prop = 0.0001) %>% pull(location)
-  pgls <- unique(merged[,c("PGLSpiVals", "location")]) %>% slice_min(order_by = PGLSpiVals, prop = 0.0001) %>% pull(location)
+  pi <- unique(merged[,c("piVals", "location")]) %>% slice_min(order_by = piVals, prop = percentile) %>% pull(location)
+  pgls <- unique(merged[,c("PGLSpiVals", "location")]) %>% slice_min(order_by = PGLSpiVals, prop = percentile) %>% pull(location)
   
   merged <- merged[merged$location %in% c(pi, pgls),]
   return(merged)
