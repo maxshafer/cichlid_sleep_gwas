@@ -24,7 +24,7 @@ percentile <- as.numeric(args[1])
 
 files <- list.files("sra_reads_nobackup/combined_ann/", pattern = "_pvals_ann.gz")
 
-comparison <- c("55-species", "58-species", "spd_60-species", "peak_dawn", "peak_dusk", "total_rest")
+comparison <- c("55-species", "58-species", "spd_60-species", "peak_dawn", "peak_dusk", "total_rest", "summary")
 
 # ########################################################################
 # #######   Load in data  ################################################
@@ -79,17 +79,29 @@ per_chr <- lapply(comparison, function(comp) {
     df <- fread(paste("sra_reads_nobackup/combined_ann/", x, sep = ""), showProgress = T)
     columns <- c(c(2:3,16:21, as.numeric(grep(comp, colnames(df)))))
     df <- df[, ..columns] # Change last two numbers to modify which comparison to keep and filter by
-    colnames(df) <- c("CHROM","POS","REF","ALT","ANN_GENE","ANN_IMPACT","ANN_EFFECT","ANN_DISTANCE","piVals","PGLSpiVals")
+    if (comp == "summary") {
+      colnames(df) <- c("CHROM","POS","REF","ALT","ANN_GENE","ANN_IMPACT","ANN_EFFECT","ANN_DISTANCE","summary_mean","summary_min", "summary_prod")
+    } else {
+      colnames(df) <- c("CHROM","POS","REF","ALT","ANN_GENE","ANN_IMPACT","ANN_EFFECT","ANN_DISTANCE","piVals","PGLSpiVals")
+    }
     return(df)
   })
   
   merged <- Reduce(rbind, gwas.datasets)
   merged$location <- paste(merged$CHROM, merged$POS, sep = ":")
   
-  pi <- unique(merged[,c("piVals", "location")]) %>% slice_min(order_by = piVals, prop = percentile) %>% pull(location)
-  pgls <- unique(merged[,c("PGLSpiVals", "location")]) %>% slice_min(order_by = PGLSpiVals, prop = percentile) %>% pull(location)
-  
-  merged <- merged[merged$location %in% c(pi, pgls),]
+  if (comp == "summary") {
+    mean <- unique(merged[,c("summary_mean", "location")]) %>% slice_min(order_by = summary_mean, prop = percentile) %>% pull(location)
+    min <- unique(merged[,c("summary_min", "location")]) %>% slice_min(order_by = summary_min, prop = percentile) %>% pull(location)
+    prod <- unique(merged[,c("summary_prod", "location")]) %>% slice_min(order_by = summary_prod, prop = percentile) %>% pull(location)
+    
+    merged <- merged[merged$location %in% c(mean, min, prod),]
+  } else {
+    pi <- unique(merged[,c("piVals", "location")]) %>% slice_min(order_by = piVals, prop = percentile) %>% pull(location)
+    pgls <- unique(merged[,c("PGLSpiVals", "location")]) %>% slice_min(order_by = PGLSpiVals, prop = percentile) %>% pull(location)
+    
+    merged <- merged[merged$location %in% c(pi, pgls),]
+  }
   
   return(merged)
   

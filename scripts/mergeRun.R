@@ -15,7 +15,7 @@ if (length(args) != 1) {
 }
 
 # # Setting arguments for testing script
-# args <- c("NC_031965", "0.005")
+# args <- c("NC_013663", "0.005")
 
 chromosome <- args[1]
 # cutoff <- as.numeric(args[2])
@@ -71,6 +71,20 @@ pgls <- Reduce(merge, pgls)
 combined <- merge(gwas, pgls)
 rm(gwas, pgls)
 combined <- merge(combined, snpeff)
+
+########################################################################
+#######   Summary statistics  ##########################################
+########################################################################
+
+## I will need to calculate the mean, min/max, and products per chromosome, then retain just these? No, I will probably
+## want to look at the values in each, so I should save these out, then repeat a filtering step
+
+comparison <- c("spd_60-species", "peak_dawn", "peak_dusk", "total_rest")
+columns <- unlist(lapply(comparison, function(x) grep(x, colnames(combined))))
+
+combined$summary_mean <- rowMeans(combined[,..columns])
+combined$summary_min <- apply(combined[,..columns], 1, function(x) min(x))
+combined$summary_prod <- apply(combined[,..columns], 1, function(x) prod(x))
 
 # save out
 gz1 <- gzfile(paste("sra_reads_nobackup/combined_ann/combined_", chromosome, "snps_pvals_ann.gz", sep = ""), "w")
