@@ -1,6 +1,7 @@
 library(stringr)
 library(ggplot2)
 library(data.table)
+library(dplyr)
 
 setwd("/scicore/home/schiera/gizevo30/projects/cichlids_2")
 
@@ -21,7 +22,7 @@ percentile <- as.numeric(args[1])
 #######   Defining  arguments  #########################################
 ########################################################################
 
-files <- list.files("sra_reads_nobackup/combined_ann/")
+files <- list.files("sra_reads_nobackup/combined_ann/", pattern = "_pvals_ann.gz")
 
 comparison <- c("55-species", "58-species", "spd_60-species", "peak_dawn", "peak_dusk", "total_rest")
 

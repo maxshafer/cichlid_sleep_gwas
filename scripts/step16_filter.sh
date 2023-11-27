@@ -5,8 +5,8 @@
 #SBATCH --mem-per-cpu=128G              #This is the memory reserved per core.
 #Total memory reserved: 128GB
 
-#SBATCH --time=6:00:00        #This is the time that your task will run
-#SBATCH --qos=6hours           #You will run in this queue
+#SBATCH --time=24:00:00        #This is the time that your task will run
+#SBATCH --qos=1day           #You will run in this queue
 
 # Paths to STDOUT or STDERR files should be absolute or relative to current working directory
 #SBATCH --output=/scicore/home/schiera/gizevo30/projects/cichlids_2/scripts/logs/step16_filterRun_stdout.txt     #These are the STDOUT and STDERR files
@@ -41,5 +41,6 @@ module load R/4.0.3-foss-2018b
 ## They take awhile to run (especially the PGLS), and require lots of memory
 ## Run in the folder where you want the output to end up
 
-Rscript /scicore/home/schiera/gizevo30/projects/cichlids_2/scripts/filterRun.R 0.0001
+Rscript /scicore/home/schiera/gizevo30/projects/cichlids_2/scripts/filterRun.R 0.00001
+Rscript /scicore/home/schiera/gizevo30/projects/cichlids_2/scripts/filterRun.R 0.00005
 
