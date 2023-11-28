@@ -24,7 +24,7 @@ percentile <- as.numeric(args[1])
 
 files <- list.files("sra_reads_nobackup/combined_ann/", pattern = "_pvals_ann.gz")
 
-comparison <- c("55-species", "58-species", "spd_60-species", "peak_dawn", "peak_dusk", "total_rest", "summary")
+comparison <- c("summary", "55-species", "58-species", "spd_60-species", "peak_dawn", "peak_dusk", "total_rest")
 
 # ########################################################################
 # #######   Load in data  ################################################

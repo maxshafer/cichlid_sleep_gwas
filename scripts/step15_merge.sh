@@ -2,15 +2,15 @@
 
 #SBATCH --job-name=mergeRun                   #This is the name of your job
 #SBATCH --cpus-per-task=1                  #This is the number of cores reserved
-#SBATCH --mem-per-cpu=8G              #This is the memory reserved per core.
-#Total memory reserved: 8GB
+#SBATCH --mem-per-cpu=16G              #This is the memory reserved per core.
+#Total memory reserved: 16GB
 
 #SBATCH --time=6:00:00        #This is the time that your task will run
 #SBATCH --qos=6hours           #You will run in this queue
 
 # Paths to STDOUT or STDERR files should be absolute or relative to current working directory
-#SBATCH --output=/scicore/home/schiera/gizevo30/projects/cichlids_2/scripts/logs/step13a_mergeRun_stdout.txt     #These are the STDOUT and STDERR files
-#SBATCH --error=/scicore/home/schiera/gizevo30/projects/cichlids_2/scripts/logs/step13a_mergeRun_stderr.txt
+#SBATCH --output=/scicore/home/schiera/gizevo30/projects/cichlids_2/scripts/logs/step15_mergeRun_stdout.txt     #These are the STDOUT and STDERR files
+#SBATCH --error=/scicore/home/schiera/gizevo30/projects/cichlids_2/scripts/logs/step15_mergeRun_stderr.txt
 
 #You selected an array of jobs from 1 to 25 with 25 simultaneous jobs
 #SBATCH --array=1-25%25
