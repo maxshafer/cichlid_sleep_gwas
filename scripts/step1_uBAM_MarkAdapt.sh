@@ -51,12 +51,12 @@ SAMPLE=${SAMPLE%.sra}
 java -jar $EBROOTPICARD/picard.jar FastqToSam --FASTQ ${SAMPLE}_1.fastq.gz --FASTQ2 ${SAMPLE}_2.fastq.gz --OUTPUT ${SAMPLE}_1_temp.bam --SAMPLE_NAME ${SAMPLE} --LIBRARY_NAME ${SAMPLE} --PLATFORM illumina --TMP_DIR $TMPDIR
 
 
-rm ${SAMPLE}_1.fastq.gz
-rm ${SAMPLE}_2.fastq.gz
+# rm ${SAMPLE}_1.fastq.gz
+# rm ${SAMPLE}_2.fastq.gz
 
 # Step 2
 
 java -jar $EBROOTPICARD/picard.jar MarkIlluminaAdapters --INPUT ${SAMPLE}_1_temp.bam --OUTPUT ${SAMPLE}_2_marked.bam --METRICS ${SAMPLE}_2_markilluminaadapters_metrics.txt --TMP_DIR $TMPDIR
 
-rm ${SAMPLE}_1_temp.bam
+# rm ${SAMPLE}_1_temp.bam
 

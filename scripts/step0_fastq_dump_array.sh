@@ -49,7 +49,7 @@ SAMPLE=${SAMPLE%.sra}
 
 fastq-dump --gzip --outdir $TMPDIR --split-files /scicore/home/schiera/gizevo30/ncbi/public/sra/${SAMPLE}.sra
 
-cp $TMPDIR/${SAMPLE}_1.fastq.gz /scicore/home/schiera/gizevo30/projects/cichlids_2/sra_reads_nobackup/${SAMPLE}_1.fastq.gz
-cp $TMPDIR/${SAMPLE}_2.fastq.gz /scicore/home/schiera/gizevo30/projects/cichlids_2/sra_reads_nobackup/${SAMPLE}_2.fastq.gz
+cp $TMPDIR/${SAMPLE}_1.fastq.gz /scicore/home/schiera/gizevo30/projects/cichlids_2/sra_reads_nobackup/dump/${SAMPLE}_1.fastq.gz
+cp $TMPDIR/${SAMPLE}_2.fastq.gz /scicore/home/schiera/gizevo30/projects/cichlids_2/sra_reads_nobackup/dump/${SAMPLE}_2.fastq.gz
 
 

@@ -14,7 +14,7 @@
 #SBATCH --error=/scicore/home/schiera/gizevo30/projects/cichlids_2/scripts/logs/step4/step4_HaploCallerG_%a_stderr.txt
 
 #You selected an array of jobs from 1 to 9 with 9 simultaneous jobs
-#SBATCH --array=80,991-3653%400
+#SBATCH --array=1-9520%400
 #SBATCH --mail-type=END,FAIL,TIME_LIMIT
 #SBATCH --mail-user=max.shafer@gmail.com        #You will be notified via email when your task ends or fails
 
@@ -50,5 +50,6 @@ SAMPLE=${SAMPLE%.sra}
 # this is the third column of index_array_**x.csv
 INTERVAL=`sed -n "$SLURM_ARRAY_TASK_ID"p "${file_list}" | cut -f 3 -d ','`
 
-~/gatk-4.2.4.0/gatk HaplotypeCaller -R /scicore/home/schiera/gizevo30/projects/cichlids_2/genome/GCF_001858045.1_ASM185804v2_genomic_edit.fna -L /scicore/home/schiera/gizevo30/projects/cichlids_2/genome/intervals_ASM185804v2_80x/${INTERVAL} --max-alternate-alleles 5 -I bam_files/${SAMPLE}_5_dedup.bam -ERC GVCF -O intervaled_vcfs/${SAMPLE}_${INTERVAL}_variants.g.vcf.gz
+~/gatk-4.2.4.0/gatk HaplotypeCaller -R /scicore/home/schiera/gizevo30/projects/cichlids_2/genome/GCF_001858045.2_O_niloticus_UMD_NMBU_genomic.fna -L /scicore/home/schiera/gizevo30/projects/cichlids_2/genome/intervals_UMD_NMBU_80x/${INTERVAL} --max-alternate-alleles 5 -I ${SAMPLE}_5_dedup.bam -ERC GVCF -O intervaled_vcfs/${SAMPLE}_${INTERVAL}_variants.g.vcf.gz
+
 
