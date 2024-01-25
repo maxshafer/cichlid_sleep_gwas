@@ -10,13 +10,13 @@
 #SBATCH --qos=1day           #You will run in this queue
 
 # Paths to STDOUT or STDERR files should be absolute or relative to current working directory
-#SBATCH --output=/scicore/home/schiera/gizevo30/projects/cichlids_2/scripts/logs/uBAM_MarkAdapt_stdout.txt     #These are the STDOUT and STDERR files
-#SBATCH --error=/scicore/home/schiera/gizevo30/projects/cichlids_2/scripts/logs/uBAM_MarkAdapt_stderr.txt
+#SBATCH --output=$HOME/scratch/logs/uBAM_MarkAdapt_stdout.txt     #These are the STDOUT and STDERR files
+#SBATCH --error=$HOME/scratch/logs/uBAM_MarkAdapt_stderr.txt
 
 #You selected an array of jobs with 102 simultaneous jobs
 #SBATCH --array=1-119%119
 #SBATCH --mail-type=END,FAIL,TIME_LIMIT
-#SBATCH --mail-user=max.shafer@gmail.com        #You will be notified via email when your task ends or fails
+#SBATCH --mail-user=ayasha.abdallawyse@mail.utoronto.ca       #You will be notified via email when your task ends or fails
 
 #This job runs from the current working directory
 
@@ -30,7 +30,7 @@
 #load your required modules below
 #################################
 
-module load picard/2.26.2-Java-1.8
+module load picard/2.26.3
 
 #export your required environment variables below
 #################################################
@@ -40,7 +40,7 @@ module load picard/2.26.2-Java-1.8
 #############################
 
 # comma separated df with rows and samples
-file_list="/scicore/home/schiera/gizevo30/projects/cichlids_2/scripts/index_samples.csv"
+file_list="$HOME/cichlid_sleep_gwas/scripts/index_samples.csv"
 
 # this is the second column of the index
 SAMPLE=`sed -n "$SLURM_ARRAY_TASK_ID"p "${file_list}" | cut -f 2 -d ','`

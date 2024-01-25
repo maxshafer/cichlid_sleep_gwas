@@ -10,13 +10,13 @@
 #SBATCH --qos=6hours           #You will run in this queue
 
 # Paths to STDOUT or STDERR files should be absolute or relative to current working directory
-#SBATCH --output=/scicore/home/schiera/gizevo30/projects/cichlids_2/scripts/logs/fastq_dump_stdout.txt     #These are the STDOUT and STDERR files
-#SBATCH --error=/scicore/home/schiera/gizevo30/projects/cichlids_2/scripts/logs/fastq_dump_stderr.txt
+#SBATCH --output=$HOME/scratch/logs/fastq_dump_stdout.txt     #These are the STDOUT and STDERR files
+#SBATCH --error=$HOME/scratch/logs/fastq_dump_stderr.txt
 
 #You selected an array of jobs from 1 to n with n simultaneous jobs
 #SBATCH --array=1-119%119
 #SBATCH --mail-type=END,FAIL,TIME_LIMIT
-#SBATCH --mail-user=max.shafer@gmail.com        #You will be notified via email when your task ends or fails
+#SBATCH --mail-user=ayasha.abdallawyse@mail.utoronto.ca        #You will be notified via email when your task ends or fails
 
 #This job runs from the current working directory
 
@@ -42,15 +42,15 @@ module load sra-toolkit
 #############################
 
 # comma separated df with rows and samples
-file_list="/scicore/home/schiera/gizevo30/projects/cichlids_2/scripts/index_samples.csv"
+file_list="$HOME/cichlid_sleep_gwas/scripts/index_samples.csv"
 
 # this is the second column of the index
 SAMPLE=`sed -n "$SLURM_ARRAY_TASK_ID"p "${file_list}" | cut -f 2 -d ','`
 SAMPLE=${SAMPLE%.sra}
 
-fastq-dump --gzip --outdir $TMPDIR --split-files /scicore/home/schiera/gizevo30/ncbi/public/sra/${SAMPLE}.sra
+fastq-dump --gzip --outdir $TMPDIR --split-files $HOME/projects/def-mshafer/SRA_files/${SAMPLE}.sra
 
-cp $TMPDIR/${SAMPLE}_1.fastq.gz /scicore/home/schiera/gizevo30/projects/cichlids_2/sra_reads_nobackup/dump/${SAMPLE}_1.fastq.gz
-cp $TMPDIR/${SAMPLE}_2.fastq.gz /scicore/home/schiera/gizevo30/projects/cichlids_2/sra_reads_nobackup/dump/${SAMPLE}_2.fastq.gz
+cp $TMPDIR/${SAMPLE}_1.fastq.gz $HOME/projects/def-mshafer/SRA_files/SRA_reads_nobackup/dump/${SAMPLE}_1.fastq.gz
+cp $TMPDIR/${SAMPLE}_2.fastq.gz $HOME/projects/def-mshafer/SRA_files/SRA_reads_nobackup/dump/${SAMPLE}_2.fastq.gz
 
 
