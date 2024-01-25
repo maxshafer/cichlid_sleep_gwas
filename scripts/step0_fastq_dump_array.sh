@@ -30,8 +30,9 @@
 #load your required modules below
 #################################
 
-# module load SRA-Toolkit/2.11.2-gompi-2021a
-module load SRA-Toolkit/2.8.1-3-centos_linux64
+module load StdEnv
+module load gcc
+module load sra-toolkit
 
 #export your required environment variables below
 #################################################
