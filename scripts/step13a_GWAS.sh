@@ -13,7 +13,7 @@
 #SBATCH --error=/scicore/home/schiera/gizevo30/projects/cichlids_2/scripts/logs/step13a_GWASstderr.txt
 
 #You selected an array of jobs from 1 to 25 with 25 simultaneous jobs
-#SBATCH --array=1-25%25
+#SBATCH --array=1-23%23
 #SBATCH --mail-type=END,FAIL,TIME_LIMIT
 #SBATCH --mail-user=max.shafer@gmail.com        #You will be notified via email when your task ends or fails
 
@@ -44,11 +44,11 @@ module load R/4.0.3-foss-2018b
 ## Run in the folder where you want the output to end up
 
 # comma separated df with rows, samples, interval
-file_list="/scicore/home/schiera/gizevo30/projects/cichlids_2/genome/GCF_001858045.1_ASM185804v2_genomic_edit.chrs"
+file_list="/scicore/home/schiera/gizevo30/projects/cichlids_2/genome/GCF_001858045.2_O_niloticus_UMD_NMBU_genomic.chromosomes"
 
 # this is the second column of index_array_40x.csv
 INTERVAL=`sed -n "$SLURM_ARRAY_TASK_ID"p "${file_list}" | cut -f 1 -d ','`
 
-Rscript ../../scripts/GWASrun.R speciesCodesAndGenomeIDs_for_GWAS_2_cohort_db_geno_${INTERVAL}_fromProbabilities_AF.txt ../../pheno_data/combined_cichlid_data_2022-11-17_new_peaks.csv peak_dawn
-Rscript ../../scripts/GWASrun.R speciesCodesAndGenomeIDs_for_GWAS_2_cohort_db_geno_${INTERVAL}_fromProbabilities_AF.txt ../../pheno_data/combined_cichlid_data_2022-11-17_new_peaks.csv peak_dusk 
+Rscript /scicore/home/schiera/gizevo30/projects/cichlids_2/scripts/GWASrun.R speciesCodesAndGenomeIDs_for_GWAS_2_cohort_db_geno_${INTERVAL}_fromProbabilities_AF.txt /scicore/home/schiera/gizevo30/projects/cichlids_2/pheno_data/combined_cichlid_data_2022-11-17_new_peaks.csv peak_dawn
+Rscript /scicore/home/schiera/gizevo30/projects/cichlids_2/scripts/GWASrun.R speciesCodesAndGenomeIDs_for_GWAS_2_cohort_db_geno_${INTERVAL}_fromProbabilities_AF.txt /scicore/home/schiera/gizevo30/projects/cichlids_2/pheno_data/combined_cichlid_data_2022-11-17_new_peaks.csv peak_dusk 
 

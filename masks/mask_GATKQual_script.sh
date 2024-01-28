@@ -37,9 +37,10 @@ module load BEDTools/2.30.0-GCC-10.3.0
 #add your command lines below
 #############################
 
-~/gatk-4.2.4.1/gatk VariantFiltration -R ~/projects/cichlids_2/genome/GCF_001858045.1_ASM185804v2_genomic_edit.fna -V /scicore/home/schiera/gizevo30/projects/cichlids_2/sra_reads_nobackup/cohort_db_geno.g.vcf.gz --filter-expression "QD < 2.0 || FS > 60.0 || MQ < 40.0 || MQRankSum < -12.5 || ReadPosRankSum < -8.0" --filter-name "LQ_filter" -O /scicore/home/schiera/gizevo30/projects/cichlids_2/sra_reads_nobackup/cohort_db_geno_lq.filt.g.vcf.gz
+# ## This is run in step9_VariantFiltration, so I don't need to redo it here (or make this other file), I just need to extract the bed file from it
+# ~/gatk-4.2.4.1/gatk VariantFiltration -R ~/projects/cichlids_2/genome/GCF_001858045.1_ASM185804v2_genomic_edit.fna -V /scicore/home/schiera/gizevo30/projects/cichlids_2/sra_reads_nobackup/cohort_db_geno.g.vcf.gz --filter-expression "QD < 2.0 || FS > 60.0 || MQ < 40.0 || MQRankSum < -12.5 || ReadPosRankSum < -8.0" --filter-name "LQ_filter" -O /scicore/home/schiera/gizevo30/projects/cichlids_2/sra_reads_nobackup/cohort_db_geno_lq.filt.g.vcf.gz
 
-gunzip -c /scicore/home/schiera/gizevo30/projects/cichlids_2/sra_reads_nobackup/cohort_db_geno_lq.filt.g.vcf.gz | awk '{if ($7=="LQ_filter") { print $1"\t"$2-1"\t"$2; }}' > cohort_db_geno.LQ.tmp.bed
+gunzip -c /scicore/home/schiera/gizevo30/projects/cichlids_2/sra_reads_nobackup/dump/NMBU_cohort_genotyped_whole_filtered.g.vcf.gz | awk '{if ($7=="LQ_filter") { print $1"\t"$2-1"\t"$2; }}' > NMBU_cohort_LQ.tmp.bed
 
-mergeBed -i cohort_db_geno.LQ.tmp.bed > cohort_db_genoLQ.bed
+mergeBed -i NMBU_cohort_LQ.tmp.bed > NMBU_cohort_LQmask.bed
 
