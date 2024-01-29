@@ -10,8 +10,8 @@
 #SBATCH --qos=6hours           #You will run in this queue
 
 # Paths to STDOUT or STDERR files should be absolute or relative to current working directory
-#SBATCH --output=$HOME/scratch/logs/fastq_dump_stdout.txt     #These are the STDOUT and STDERR files
-#SBATCH --error=$HOME/scratch/logs/fastq_dump_stderr.txt
+#SBATCH --output=/home/ayasha/scratch/logs/fastq_dump_stdout.txt     #These are the STDOUT and STDERR files
+#SBATCH --error=/home/ayasha/scratch/logs/fastq_dump_stderr.txt
 
 #You selected an array of jobs from 1 to n with n simultaneous jobs
 #SBATCH --array=1-119%119
@@ -48,9 +48,8 @@ file_list="$HOME/cichlid_sleep_gwas/scripts/index_samples.csv"
 SAMPLE=`sed -n "$SLURM_ARRAY_TASK_ID"p "${file_list}" | cut -f 2 -d ','`
 SAMPLE=${SAMPLE%.sra}
 
-fastq-dump --gzip --outdir $TMPDIR --split-files $HOME/projects/def-mshafer/SRA_files/${SAMPLE}.sra
+fastq-dump --gzip --outdir $TMPDIR --split-files $HOME/projects/def-mshafer/SRA_files/${SAMPLE}/${SAMPLE}.sralite
 
 cp $TMPDIR/${SAMPLE}_1.fastq.gz $HOME/projects/def-mshafer/SRA_files/SRA_reads_nobackup/dump/${SAMPLE}_1.fastq.gz
 cp $TMPDIR/${SAMPLE}_2.fastq.gz $HOME/projects/def-mshafer/SRA_files/SRA_reads_nobackup/dump/${SAMPLE}_2.fastq.gz
-
 

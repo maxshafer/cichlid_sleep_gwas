@@ -10,8 +10,8 @@
 #SBATCH --qos=1day           #You will run in this queue
 
 # Paths to STDOUT or STDERR files should be absolute or relative to current working directory
-#SBATCH --output=$HOME/scratch/logs/uBAM_MarkAdapt_stdout.txt     #These are the STDOUT and STDERR files
-#SBATCH --error=$HOME/scratch/logs/uBAM_MarkAdapt_stderr.txt
+#SBATCH --output=/home/ayasha/scratch/logs/uBAM_MarkAdapt_stdout.txt     #These are the STDOUT and STDERR files
+#SBATCH --error=/home/ayasha/scratch/logs/uBAM_MarkAdapt_stderr.txt
 
 #You selected an array of jobs with 102 simultaneous jobs
 #SBATCH --array=1-119%119
@@ -48,7 +48,7 @@ SAMPLE=${SAMPLE%.sra}
 
 # Step 1 
 
-java -jar $EBROOTPICARD/picard.jar FastqToSam --FASTQ ${SAMPLE}_1.fastq.gz --FASTQ2 ${SAMPLE}_2.fastq.gz --OUTPUT ${SAMPLE}_1_temp.bam --SAMPLE_NAME ${SAMPLE} --LIBRARY_NAME ${SAMPLE} --PLATFORM illumina --TMP_DIR $TMPDIR
+java -jar $EBROOTPICARD/picard.jar FastqToSam --FASTQ /home/ayasha/projects/def-mshafer/SRA_files/SRA_reads_nobackup/dump/${SAMPLE}_1.fastq.gz --FASTQ2 /home/ayasha/projects/def-mshafer/SRA_files/SRA_reads_nobackup/dump/${SAMPLE}_2.fastq.gz --OUTPUT /home/ayasha/scratch/temp_data/${SAMPLE}_1_temp.bam --SAMPLE_NAME ${SAMPLE} --LIBRARY_NAME ${SAMPLE} --PLATFORM illumina --TMP_DIR $TMPDIR
 
 
 # rm ${SAMPLE}_1.fastq.gz
@@ -56,7 +56,7 @@ java -jar $EBROOTPICARD/picard.jar FastqToSam --FASTQ ${SAMPLE}_1.fastq.gz --FAS
 
 # Step 2
 
-java -jar $EBROOTPICARD/picard.jar MarkIlluminaAdapters --INPUT ${SAMPLE}_1_temp.bam --OUTPUT ${SAMPLE}_2_marked.bam --METRICS ${SAMPLE}_2_markilluminaadapters_metrics.txt --TMP_DIR $TMPDIR
+java -jar $EBROOTPICARD/picard.jar MarkIlluminaAdapters --INPUT /home/ayasha/scratch/temp_data/${SAMPLE}_1_temp.bam --OUTPUT ${SAMPLE}_2_marked.bam --METRICS /home/ayasha/scratch/temp_data/${SAMPLE}_2_markilluminaadapters_metrics.txt --TMP_DIR $TMPDIR
 
 # rm ${SAMPLE}_1_temp.bam
 
