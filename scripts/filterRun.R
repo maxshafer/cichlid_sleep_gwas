@@ -22,9 +22,9 @@ percentile <- as.numeric(args[1])
 #######   Defining  arguments  #########################################
 ########################################################################
 
-files <- list.files("sra_reads_nobackup/combined_ann/", pattern = "_pvals_ann.gz")
+files <- list.files("sra_reads_nobackup/dump/combined_ann/", pattern = "_pvals_ann.gz")
 
-comparison <- c("summary", "55-species", "58-species", "spd_60-species", "peak_dawn", "peak_dusk", "total_rest")
+comparison <- c("summary", "pc1", "pc2", "total_rest")
 
 # ########################################################################
 # #######   Load in data  ################################################
@@ -34,7 +34,7 @@ comparison <- c("summary", "55-species", "58-species", "spd_60-species", "peak_d
 # per_chr <- lapply(files, function(file) {
 #   
 #   # read in the chromosome
-#   df <- fread(paste("sra_reads_nobackup/combined_ann/", file, sep = ""), showProgress = T)
+#   df <- fread(paste("sra_reads_nobackup/dump/combined_ann/", file, sep = ""), showProgress = T)
 #   
 #   comp_list <- lapply(comparison, function(comp) {
 #     columns <- c(c(2:3,16:21, as.numeric(grep(comp, colnames(df)))))
@@ -67,7 +67,7 @@ comparison <- c("summary", "55-species", "58-species", "spd_60-species", "peak_d
 #   return(merged)
 # })
 # 
-# saveRDS(per_chr, file = paste("sra_reads_nobackup/combined_ann/filter_SNPs_perchr", percentile, "percentile", sep = "_"))
+# saveRDS(per_chr, file = paste("sra_reads_nobackup/dump/combined_ann/filter_SNPs_perchr", percentile, "percentile", sep = "_"))
 
 ########################################################################
 #######   Load/merge/filter per comparison  ############################
@@ -76,8 +76,8 @@ comparison <- c("summary", "55-species", "58-species", "spd_60-species", "peak_d
 per_chr <- lapply(comparison, function(comp) {
   
   gwas.datasets <- lapply(files, function(x) {
-    df <- fread(paste("sra_reads_nobackup/combined_ann/", x, sep = ""), showProgress = T)
-    columns <- c(c(2:3,16:21, as.numeric(grep(comp, colnames(df)))))
+    df <- fread(paste("sra_reads_nobackup/dump/combined_ann/", x, sep = ""), showProgress = T)
+    columns <- c(c(2:3,10:15, as.numeric(grep(comp, colnames(df)))))
     df <- df[, ..columns] # Change last two numbers to modify which comparison to keep and filter by
     if (comp == "summary") {
       colnames(df) <- c("CHROM","POS","REF","ALT","ANN_GENE","ANN_IMPACT","ANN_EFFECT","ANN_DISTANCE","summary_mean","summary_min", "summary_prod")
@@ -108,6 +108,6 @@ per_chr <- lapply(comparison, function(comp) {
 })
 
 
-saveRDS(per_chr, file = paste("sra_reads_nobackup/combined_ann/filter_SNPs_perchr", percentile, "percentile", sep = "_"))
+saveRDS(per_chr, file = paste("sra_reads_nobackup/dump/combined_ann/filter_SNPs_perchr", percentile, "percentile", sep = "_"))
 
 

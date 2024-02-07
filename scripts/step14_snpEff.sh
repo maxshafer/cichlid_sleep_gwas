@@ -13,7 +13,7 @@
 #SBATCH --error=/scicore/home/schiera/gizevo30/projects/cichlids_2/scripts/logs/step14_snpEff_stderr.txt
 
 #You selected an array of jobs from 1 to 9 with 9 simultaneous jobs
-#SBATCH --array=1-25%25
+#SBATCH --array=1-2,23%23
 #SBATCH --mail-type=END,FAIL,TIME_LIMIT
 #SBATCH --mail-user=max.shafer@gmail.com        #You will be notified via email when your task ends or fails
 
@@ -42,42 +42,36 @@ module load Java
 ## Will need to unzip, modify (".1"), annotate (genes), cut (first column), then rezip
 
 # comma separated df with rows, samples, interval
-file_list="/scicore/home/schiera/gizevo30/projects/cichlids_2/genome/GCF_001858045.1_ASM185804v2_genomic_edit.chrs"
+file_list="/scicore/home/schiera/gizevo30/projects/cichlids_2/genome/GCF_001858045.2_O_niloticus_UMD_NMBU_genomic.chromosomes"
 
 # this is the second column of index_array_40x.csv
 INTERVAL=`sed -n "$SLURM_ARRAY_TASK_ID"p "${file_list}" | cut -f 1 -d ','`
 
 # Unzip it
-# gunzip -c cohort_db_geno_${INTERVAL}.hardfiltered_SNPS.biallelic.NoSingletons.g.vcf.gz > unzipped_${INTERVAL}_g.vcf
+gunzip -c NMBU_cohort_genotyped_whole_${INTERVAL}_HardFilter_BiAllelic_NoSingletons.g.vcf.gz > unzipped_${INTERVAL}.g.vcf
 
 # Modify it
 
 # cat unzipped_${INTERVAL}_g.vcf | sed "s/^${INTERVAL}/${INTERVAL}.1/" > unzipped_${INTERVAL}_mod.g.vcf
 
-# rm unzipped_${INTERVAL}_g.vcf
-
 # Annotate it
-# java -Xmx8g -jar ~/bin/snpEff/snpEff.jar -v ASM185804v2 unzipped_${INTERVAL}_mod.g.vcf > unzipped_${INTERVAL}_mod.ann.g.vcf
+java -Xmx8g -jar ~/bin/snpEff/snpEff.jar -v UMD_NMBU_RefSeq unzipped_${INTERVAL}.g.vcf > unzipped_${INTERVAL}_ann.g.vcf
 
-# rm unzipped_${INTERVAL}_mod.g.vcf
+rm unzipped_${INTERVAL}.g.vcf
 
 # Extract it
 
-# cat unzipped_${INTERVAL}_mod.ann.g.vcf | ~/bin/snpEff/scripts/vcfEffOnePerLine.pl | java -Xmx8g -jar ~/bin/snpEff/SnpSift.jar extractFields - CHROM POS REF ALT "ANN[*].GENE" "ANN[*].IMPACT" "ANN[*].EFFECT" "ANN[*].DISTANCE" > extracted_${INTERVAL}.txt
+cat unzipped_${INTERVAL}_ann.g.vcf | ~/bin/snpEff/scripts/vcfEffOnePerLine.pl | java -Xmx8g -jar ~/bin/snpEff/SnpSift.jar extractFields - CHROM POS REF ALT "ANN[*].GENE" "ANN[*].IMPACT" "ANN[*].EFFECT" "ANN[*].DISTANCE" > extracted_${INTERVAL}.txt
 gzip extracted_${INTERVAL}.txt
 
 # Cut it
 
-# cat unzipped_${INTERVAL}_mod.ann.g.vcf | cut -f1 -d: > unzipped_${INTERVAL}_final.g.vcf
+cat unzipped_${INTERVAL}_ann.g.vcf | cut -f1 -d: > unzipped_${INTERVAL}_final.g.vcf
 
-rm unzipped_${INTERVAL}_mod.ann.g.vcf
+rm unzipped_${INTERVAL}_ann.g.vcf
 
 # Zip it
 
-# gzip -c unzipped_${INTERVAL}_final.g.vcf > final_${INTERVAL}.g.vcf.gz
-
-# rm unzipped_${INTERVAL}_final.g.vcf
-
-
+gzip -c unzipped_${INTERVAL}_final.g.vcf > final_${INTERVAL}.g.vcf.gz
 
 
