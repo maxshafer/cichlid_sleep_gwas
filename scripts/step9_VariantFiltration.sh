@@ -9,11 +9,11 @@
 #SBATCH --qos=1week           #You will run in this queue
 
 # Paths to STDOUT or STDERR files should be absolute or relative to current working directory
-#SBATCH --output=/scicore/home/schiera/gizevo30/projects/cichlids_2/scripts/logs/step9_VarFiltstdout.txt     #These are the STDOUT and STDERR files
-#SBATCH --error=/scicore/home/schiera/gizevo30/projects/cichlids_2/scripts/logs/step9_VarFiltstderr.txt
+#SBATCH --output=/home/ayasha/scratch/logs/step9_VarFiltstdout.txt     #These are the STDOUT and STDERR files
+#SBATCH --error=/home/ayasha/scratch/logs/step9_VarFiltstderr.txt
 
 #SBATCH --mail-type=END,FAIL,TIME_LIMIT
-#SBATCH --mail-user=max.shafer@gmail.com        #You will be notified via email when your task ends or fails
+#SBATCH --mail-user=ayasha.abdallawyse@mail.utoronto.ca        #You will be notified via email when your task ends or fails
 
 #This job runs from the current working directory
 
@@ -27,7 +27,7 @@
 #load your required modules below
 #################################
 
-module load Java
+module load java
 
 #export your required environment variables below
 #################################################
@@ -44,6 +44,6 @@ module load Java
 
 # ~/gatk-4.2.4.1/gatk VariantFiltration -R ~/pro-ects/cichlids_2/genome/GCF_001858045.1_ASM185804v2_genomic_edit.fna -V ~/projects/cichlids_2/sra_reads_nobackup/cohort_geno_gathered.g.vcf.gz -O ~/projects/cichlids_2/sra_reads_nobackup/cohort_geno_gathered_filtered.g.vcf.gz
 
-~/gatk-4.2.4.0/gatk VariantFiltration -R ~/projects/cichlids_2/genome/GCF_001858045.1_ASM185804v2_genomic_edit.fna -V ~/projects/cichlids_2/sra_reads_nobackup/cohort_db_geno.g.vcf.gz --filter-expression "QD < 2.0 || FS > 60.0 || MQ < 40.0 || MQRankSum < -12.5 || ReadPosRankSum < -8.0" --filter-name "LQ_filter" -O ~/projects/cichlids_2/sra_reads_nobackup/cohort_db_geno_filtered.g.vcf.gz
+gatk VariantFiltration -R ~/projects/def-mshafer/genome/Oreochromis_niloticus.O_niloticus_UMD_NMBU.dna.toplevel.fa -V ~/projects/cichlids_2/sra_reads_nobackup/cohort_db_geno.g.vcf.gz --filter-expression "QD < 2.0 || FS > 60.0 || MQ < 40.0 || MQRankSum < -12.5 || ReadPosRankSum < -8.0" --filter-name "LQ_filter" -O ~/projects/cichlids_2/sra_reads_nobackup/cohort_db_geno_filtered.g.vcf.gz
 
 

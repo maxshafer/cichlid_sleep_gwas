@@ -42,7 +42,7 @@ module load bwa/0.7.17
 #############################
 
 # comma separated df with rows and samples
-file_list="/home/ayasha/cichlid_sleep_gwas/scripts/index_samples.csv"
+file_list="~/cichlid_sleep_gwas/scripts/index_samples.csv"
 
 # this is the second column of the index
 SAMPLE=`sed -n "$SLURM_ARRAY_TASK_ID"p "${file_list}" | cut -f 2 -d ','`
@@ -50,10 +50,10 @@ SAMPLE=${SAMPLE%.sra}
 
 set -o pipefail
 
-java -jar $EBROOTPICARD/picard.jar SamToFastq --INPUT /home/ayasha/scratch/temp_data/bams/${SAMPLE}_2_marked.bam --FASTQ /home/ayasha/scratch/temp_data/bams/${SAMPLE}_temp.fastq --CLIPPING_ATTRIBUTE XT --CLIPPING_ACTION 2 --INTERLEAVE true --INCLUDE_NON_PF_READS true --TMP_DIR /home/ayasha/scratch/temp_data/bams/  
+java -jar $EBROOTPICARD/picard.jar SamToFastq --INPUT ~/scratch/temp_data/bams/${SAMPLE}_2_marked.bam --FASTQ ~/scratch/temp_data/bams/${SAMPLE}_temp.fastq --CLIPPING_ATTRIBUTE XT --CLIPPING_ACTION 2 --INTERLEAVE true --INCLUDE_NON_PF_READS true --TMP_DIR ~/scratch/temp_data/bams/  
 
-bwa mem -M -t 7 -p /home/ayasha/projects/def-mshafer/genome/Oreochromis_niloticus.O_niloticus_UMD_NMBU.dna.toplevel.fa /home/ayasha/scratch/temp_data/bams/${SAMPLE}_temp.fastq > /home/ayasha/scratch/temp_data/bams/${SAMPLE}_aln.sam 
+bwa mem -M -t 7 -p ~/projects/def-mshafer/genome/Oreochromis_niloticus.O_niloticus_UMD_NMBU.dna.toplevel.fa ~/scratch/temp_data/bams/${SAMPLE}_temp.fastq > ~/scratch/temp_data/bams/${SAMPLE}_aln.sam 
 
-java -jar $EBROOTPICARD/picard.jar MergeBamAlignment --ALIGNED_BAM /home/ayasha/scratch/temp_data/bams/${SAMPLE}_aln.sam --UNMAPPED_BAM /home/ayasha/scratch/temp_data/bams/${SAMPLE}_2_marked.bam --OUTPUT /home/ayasha/scratch/temp_data/bams/${SAMPLE}_3_piped.bam --REFERENCE_SEQUENCE /home/ayasha/projects/def-mshafer/genome/Oreochromis_niloticus.O_niloticus_UMD_NMBU.dna.toplevel.fa --CREATE_INDEX true --ADD_MATE_CIGAR true --CLIP_ADAPTERS false --CLIP_OVERLAPPING_READS true --INCLUDE_SECONDARY_ALIGNMENTS true --MAX_INSERTIONS_OR_DELETIONS -1 --PRIMARY_ALIGNMENT_STRATEGY MostDistant --ATTRIBUTES_TO_RETAIN XS --TMP_DIR /home/ayasha/scratch/temp_data/bams/
+java -jar $EBROOTPICARD/picard.jar MergeBamAlignment --ALIGNED_BAM ~/scratch/temp_data/bams/${SAMPLE}_aln.sam --UNMAPPED_BAM ~/scratch/temp_data/bams/${SAMPLE}_2_marked.bam --OUTPUT ~/scratch/temp_data/bams/${SAMPLE}_3_piped.bam --REFERENCE_SEQUENCE ~/projects/def-mshafer/genome/Oreochromis_niloticus.O_niloticus_UMD_NMBU.dna.toplevel.fa --CREATE_INDEX true --ADD_MATE_CIGAR true --CLIP_ADAPTERS false --CLIP_OVERLAPPING_READS true --INCLUDE_SECONDARY_ALIGNMENTS true --MAX_INSERTIONS_OR_DELETIONS -1 --PRIMARY_ALIGNMENT_STRATEGY MostDistant --ATTRIBUTES_TO_RETAIN XS --TMP_DIR ~/scratch/temp_data/bams/
 
 # rm ${SAMPLE}_2_marked.bam

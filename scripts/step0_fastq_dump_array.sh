@@ -42,14 +42,14 @@ module load sra-toolkit
 #############################
 
 # comma separated df with rows and samples
-file_list="$HOME/cichlid_sleep_gwas/scripts/index_samples.csv"
+file_list="~/cichlid_sleep_gwas/scripts/index_samples.csv"
 
 # this is the second column of the index
 SAMPLE=`sed -n "$SLURM_ARRAY_TASK_ID"p "${file_list}" | cut -f 2 -d ','`
 SAMPLE=${SAMPLE%.sra}
 
-fastq-dump --gzip --outdir $TMPDIR --split-files $HOME/projects/def-mshafer/SRA_files/${SAMPLE}/${SAMPLE}.sralite
+fastq-dump --gzip --outdir $TMPDIR --split-files ~/projects/def-mshafer/SRA_files/${SAMPLE}/${SAMPLE}.sralite
 
-cp $TMPDIR/${SAMPLE}_1.fastq.gz $HOME/projects/def-mshafer/SRA_files/SRA_reads_nobackup/dump/${SAMPLE}_1.fastq.gz
-cp $TMPDIR/${SAMPLE}_2.fastq.gz $HOME/projects/def-mshafer/SRA_files/SRA_reads_nobackup/dump/${SAMPLE}_2.fastq.gz
+cp $TMPDIR/${SAMPLE}_1.fastq.gz ~/projects/def-mshafer/SRA_files/SRA_reads_nobackup/dump/${SAMPLE}_1.fastq.gz
+cp $TMPDIR/${SAMPLE}_2.fastq.gz ~/projects/def-mshafer/SRA_files/SRA_reads_nobackup/dump/${SAMPLE}_2.fastq.gz
 

@@ -40,7 +40,7 @@ module load picard/2.26.3
 #############################
 
 # comma separated df with rows and samples
-file_list="$HOME/cichlid_sleep_gwas/scripts/index_samples.csv"
+file_list="~/cichlid_sleep_gwas/scripts/index_samples.csv"
 
 # this is the second column of the index
 SAMPLE=`sed -n "$SLURM_ARRAY_TASK_ID"p "${file_list}" | cut -f 2 -d ','`
@@ -48,14 +48,14 @@ SAMPLE=${SAMPLE%.sra}
 
 # Step 1 
 
-java -jar $EBROOTPICARD/picard.jar FastqToSam --FASTQ /home/ayasha/scratch/temp_data/SRA_reads_nobackup/dump/${SAMPLE}_1.fastq.gz --FASTQ2 /home/ayasha/scratch/temp_data/SRA_reads_nobackup/dump/${SAMPLE}_2.fastq.gz --OUTPUT /home/ayasha/scratch/temp_data/bams/${SAMPLE}_1_temp.bam --SAMPLE_NAME ${SAMPLE} --LIBRARY_NAME ${SAMPLE} --PLATFORM illumina 
+java -jar $EBROOTPICARD/picard.jar FastqToSam --FASTQ ~/scratch/temp_data/SRA_reads_nobackup/dump/${SAMPLE}_1.fastq.gz --FASTQ2 ~/scratch/temp_data/SRA_reads_nobackup/dump/${SAMPLE}_2.fastq.gz --OUTPUT ~/scratch/temp_data/bams/${SAMPLE}_1_temp.bam --SAMPLE_NAME ${SAMPLE} --LIBRARY_NAME ${SAMPLE} --PLATFORM illumina 
 
-# rm /home/ayasha/scratch/temp_data/SRA_reads_nobackup/dump/${SAMPLE}_1.fastq.gz
-# rm /home/ayasha/scratch/temp_data/SRA_reads_nobackup/dump/${SAMPLE}_2.fastq.gz
+# rm ~/scratch/temp_data/SRA_reads_nobackup/dump/${SAMPLE}_1.fastq.gz
+# rm ~/scratch/temp_data/SRA_reads_nobackup/dump/${SAMPLE}_2.fastq.gz
 
 # Step 2
 
-java -jar $EBROOTPICARD/picard.jar MarkIlluminaAdapters --INPUT /home/ayasha/scratch/temp_data/bams/${SAMPLE}_1_temp.bam --OUTPUT /home/ayasha/scratch/temp_data/bams/${SAMPLE}_2_marked.bam --METRICS /home/ayasha/scratch/temp_data/bams/${SAMPLE}_2_markilluminaadapters_metrics.txt
+java -jar $EBROOTPICARD/picard.jar MarkIlluminaAdapters --INPUT ~/scratch/temp_data/bams/${SAMPLE}_1_temp.bam --OUTPUT ~/scratch/temp_data/bams/${SAMPLE}_2_marked.bam --METRICS ~/scratch/temp_data/bams/${SAMPLE}_2_markilluminaadapters_metrics.txt
 
 # rm ${SAMPLE}_1_temp.bam
 

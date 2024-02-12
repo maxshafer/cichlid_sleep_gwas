@@ -43,5 +43,5 @@ module load java
 # # this is the second column of index_array_40x.csv
 # INTERVAL=`sed -n "$SLURM_ARRAY_TASK_ID"p "${file_list}" | cut -f 3 -d ','`
 
-gatk GenotypeGVCFs -R /home/ayasha/projects/def-mshafer/genome/Oreochromis_niloticus.O_niloticus_UMD_NMBU.dna.toplevel.fa -V NMBU_cohort_final.g.vcf.gz -O NMBU_cohort_genotyped_whole.g.vcf.gz
+gatk GenotypeGVCFs -R ~/projects/def-mshafer/genome/Oreochromis_niloticus.O_niloticus_UMD_NMBU.dna.toplevel.fa -V NMBU_cohort_final.g.vcf.gz -O NMBU_cohort_genotyped_whole.g.vcf.gz
 

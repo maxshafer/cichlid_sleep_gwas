@@ -42,7 +42,7 @@ module load java
 #############################
 
 # comma separated df with rows, samples, interval
-file_list="/home/ayasha/cichlid_sleep_gwas/scripts/index_array_80x.csv"
+file_list="~/cichlid_sleep_gwas/scripts/index_array_80x.csv"
 
 # This is the second column of index_array_**x.csv
 SAMPLE=`sed -n "$SLURM_ARRAY_TASK_ID"p "${file_list}" | cut -f 2 -d ','`
@@ -50,6 +50,6 @@ SAMPLE=${SAMPLE%.sra}
 # this is the third column of index_array_**x.csv
 INTERVAL=`sed -n "$SLURM_ARRAY_TASK_ID"p "${file_list}" | cut -f 3 -d ','`
 
-~/gatk-4.2.4.0/gatk HaplotypeCaller -R /home/ayasha/projects/def-mshafer/genome/Oreochromis_niloticus.O_niloticus_UMD_NMBU.dna.toplevel.fa -L /home/ayasha/projects/def-mshafer/genome/intervals_UMD_NMBU_80x/${INTERVAL} --max-alternate-alleles 5 -I /home/ayasha/scratch/temp_data/bams/${SAMPLE}_5_dedup.bam -ERC GVCF -O /home/ayasha/scratch/temp_data/intervaled_vcfs/${SAMPLE}_${INTERVAL}_variants.g.vcf.gz
+gatk HaplotypeCaller -R ~/projects/def-mshafer/genome/Oreochromis_niloticus.O_niloticus_UMD_NMBU.dna.toplevel.fa -L ~/projects/def-mshafer/genome/intervals_UMD_NMBU_80x/${INTERVAL} --max-alternate-alleles 5 -I ~/scratch/temp_data/bams/${SAMPLE}_5_dedup.bam -ERC GVCF -O ~/scratch/temp_data/intervaled_vcfs/${SAMPLE}_${INTERVAL}_variants.g.vcf.gz
 
 

@@ -39,16 +39,16 @@ module load picard/2.26.3
 #############################
 
 # comma separated df with rows and samples
-file_list="/home/ayasha/cichlid_sleep_gwas/scripts/index_samples.csv"
+file_list="~/cichlid_sleep_gwas/scripts/index_samples.csv"
 
 # this is the second column of the index
 SAMPLE=`sed -n "$SLURM_ARRAY_TASK_ID"p "${file_list}" | cut -f 2 -d ','`
 SAMPLE=${SAMPLE%.sra}
 
-java -jar $EBROOTPICARD/picard.jar SortSam --INPUT /home/ayasha/scratch/temp_data/bams/${SAMPLE}_3_piped.bam --OUTPUT /home/ayasha/scratch/temp_data/bams/${SAMPLE}_4_sorted_reads.bam --SORT_ORDER coordinate --TMP_DIR /home/ayasha/scratch/temp_data/bams/
+java -jar $EBROOTPICARD/picard.jar SortSam --INPUT ~/scratch/temp_data/bams/${SAMPLE}_3_piped.bam --OUTPUT ~/scratch/temp_data/bams/${SAMPLE}_4_sorted_reads.bam --SORT_ORDER coordinate --TMP_DIR ~/scratch/temp_data/bams/
 
-java -jar $EBROOTPICARD/picard.jar MarkDuplicates --INPUT /home/ayasha/scratch/temp_data/bams/${SAMPLE}_4_sorted_reads.bam --OUTPUT /home/ayasha/scratch/temp_data/bams/${SAMPLE}_5_dedup.bam --METRICS_FILE ${SAMPLE}_5_dedup_metrics.txt --TMP_DIR /home/ayasha/scratch/temp_data/bams/
+java -jar $EBROOTPICARD/picard.jar MarkDuplicates --INPUT ~/scratch/temp_data/bams/${SAMPLE}_4_sorted_reads.bam --OUTPUT ~/scratch/temp_data/bams/${SAMPLE}_5_dedup.bam --METRICS_FILE ~/scratch/temp_data/bams/${SAMPLE}_5_dedup_metrics.txt --TMP_DIR ~/scratch/temp_data/bams/
 
-java -jar $EBROOTPICARD/picard.jar BuildBamIndex --INPUT /home/ayasha/scratch/temp_data/bams/${SAMPLE}_5_dedup.bam
+java -jar $EBROOTPICARD/picard.jar BuildBamIndex --INPUT ~/scratch/temp_data/bams/${SAMPLE}_5_dedup.bam
 
 #rm ${SAMPLE}_3_piped.bam
