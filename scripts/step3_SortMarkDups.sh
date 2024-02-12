@@ -9,8 +9,8 @@
 #SBATCH --qos=6hours           #You will run in this queue
 
 # Paths to STDOUT or STDERR files should be absolute or relative to current working directory
-#SBATCH --output=$HOME/scratch/logs/SortMarkDups_stdout_184-238.txt     #These are the STDOUT and STDERR files
-#SBATCH --error=$HOME/scratch/logs/SortMarkDups_stderr_184-238.txt
+#SBATCH --output=/home/ayasha/scratch/logs/SortMarkDups_stdout_184-238.txt     #These are the STDOUT and STDERR files
+#SBATCH --error=/home/ayasha/scratch/logs/SortMarkDups_stderr_184-238.txt
 
 #You selected an array of jobs from 1 to 9 with 9 simultaneous jobs
 #SBATCH --array=1-119%119
@@ -39,16 +39,16 @@ module load picard/2.26.3
 #############################
 
 # comma separated df with rows and samples
-file_list="$HOME/cichlid_sleep_gwas/scripts/index_samples.csv"
+file_list="/home/ayasha/cichlid_sleep_gwas/scripts/index_samples.csv"
 
 # this is the second column of the index
 SAMPLE=`sed -n "$SLURM_ARRAY_TASK_ID"p "${file_list}" | cut -f 2 -d ','`
 SAMPLE=${SAMPLE%.sra}
 
-java -jar $EBROOTPICARD/picard.jar SortSam --INPUT ${SAMPLE}_3_piped.bam --OUTPUT ${SAMPLE}_4_sorted_reads.bam --SORT_ORDER coordinate --TMP_DIR $TMPDIR
+java -jar $EBROOTPICARD/picard.jar SortSam --INPUT /home/ayasha/scratch/temp_data/bams/${SAMPLE}_3_piped.bam --OUTPUT /home/ayasha/scratch/temp_data/bams/${SAMPLE}_4_sorted_reads.bam --SORT_ORDER coordinate --TMP_DIR /home/ayasha/scratch/temp_data/bams/
 
-java -jar $EBROOTPICARD/picard.jar MarkDuplicates --INPUT ${SAMPLE}_4_sorted_reads.bam --OUTPUT ${SAMPLE}_5_dedup.bam --METRICS_FILE ${SAMPLE}_5_dedup_metrics.txt --TMP_DIR $TMPDIR
+java -jar $EBROOTPICARD/picard.jar MarkDuplicates --INPUT /home/ayasha/scratch/temp_data/bams/${SAMPLE}_4_sorted_reads.bam --OUTPUT /home/ayasha/scratch/temp_data/bams/${SAMPLE}_5_dedup.bam --METRICS_FILE ${SAMPLE}_5_dedup_metrics.txt --TMP_DIR /home/ayasha/scratch/temp_data/bams/
 
-java -jar $EBROOTPICARD/picard.jar BuildBamIndex --INPUT ${SAMPLE}_5_dedup.bam
+java -jar $EBROOTPICARD/picard.jar BuildBamIndex --INPUT /home/ayasha/scratch/temp_data/bams/${SAMPLE}_5_dedup.bam
 
-rm ${SAMPLE}_3_piped.bam
+#rm ${SAMPLE}_3_piped.bam

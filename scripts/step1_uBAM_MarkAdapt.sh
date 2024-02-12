@@ -48,15 +48,14 @@ SAMPLE=${SAMPLE%.sra}
 
 # Step 1 
 
-java -jar $EBROOTPICARD/picard.jar FastqToSam --FASTQ /home/ayasha/projects/def-mshafer/SRA_files/SRA_reads_nobackup/dump/${SAMPLE}_1.fastq.gz --FASTQ2 /home/ayasha/projects/def-mshafer/SRA_files/SRA_reads_nobackup/dump/${SAMPLE}_2.fastq.gz --OUTPUT /home/ayasha/scratch/temp_data/${SAMPLE}_1_temp.bam --SAMPLE_NAME ${SAMPLE} --LIBRARY_NAME ${SAMPLE} --PLATFORM illumina --TMP_DIR $TMPDIR
+java -jar $EBROOTPICARD/picard.jar FastqToSam --FASTQ /home/ayasha/scratch/temp_data/SRA_reads_nobackup/dump/${SAMPLE}_1.fastq.gz --FASTQ2 /home/ayasha/scratch/temp_data/SRA_reads_nobackup/dump/${SAMPLE}_2.fastq.gz --OUTPUT /home/ayasha/scratch/temp_data/bams/${SAMPLE}_1_temp.bam --SAMPLE_NAME ${SAMPLE} --LIBRARY_NAME ${SAMPLE} --PLATFORM illumina 
 
-
-# rm ${SAMPLE}_1.fastq.gz
-# rm ${SAMPLE}_2.fastq.gz
+# rm /home/ayasha/scratch/temp_data/SRA_reads_nobackup/dump/${SAMPLE}_1.fastq.gz
+# rm /home/ayasha/scratch/temp_data/SRA_reads_nobackup/dump/${SAMPLE}_2.fastq.gz
 
 # Step 2
 
-java -jar $EBROOTPICARD/picard.jar MarkIlluminaAdapters --INPUT /home/ayasha/scratch/temp_data/${SAMPLE}_1_temp.bam --OUTPUT ${SAMPLE}_2_marked.bam --METRICS /home/ayasha/scratch/temp_data/${SAMPLE}_2_markilluminaadapters_metrics.txt --TMP_DIR $TMPDIR
+java -jar $EBROOTPICARD/picard.jar MarkIlluminaAdapters --INPUT /home/ayasha/scratch/temp_data/bams/${SAMPLE}_1_temp.bam --OUTPUT /home/ayasha/scratch/temp_data/bams/${SAMPLE}_2_marked.bam --METRICS /home/ayasha/scratch/temp_data/bams/${SAMPLE}_2_markilluminaadapters_metrics.txt
 
 # rm ${SAMPLE}_1_temp.bam
 
