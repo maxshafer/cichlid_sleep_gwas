@@ -9,15 +9,15 @@
 #SBATCH --qos=2weeks           #You will run in this queue
 
 # Paths to STDOUT or STDERR files should be absolute or relative to current working directory
-#SBATCH --output=/scicore/home/schiera/gizevo30/projects/cichlids_2/scripts/logs/7aGenoGVCFstdout.txt     #These are the STDOUT and STDERR files
-#SBATCH --error=/scicore/home/schiera/gizevo30/projects/cichlids_2/scripts/logs/7aGenoGVCFstderr.txt
+#SBATCH --output=/home/ayasha/scratch/logs/7aGenoGVCFstdout.txt     #These are the STDOUT and STDERR files
+#SBATCH --error=/home/ayasha/scratch/logs/7aGenoGVCFstderr.txt
 
 #You selected an array of jobs from 1 to 9 with 9 simultaneous jobs
 #SBATCH --mail-type=END,FAIL,TIME_LIMIT
-#SBATCH --mail-user=max.shafer@gmail.com        #You will be notified via email when your task ends or fails
+#SBATCH --mail-user=ayasha.abdallawyse@mail.utoronto.ca        #You will be notified via email when your task ends or fails
 
 #This job runs from the current working directory
-
+#SBATCH --workdir=/home/ayasha/scratch/temp_data/
 
 #Remember:
 #The variable $TMPDIR points to the local hard disks in the computing nodes.
@@ -28,7 +28,7 @@
 #load your required modules below
 #################################
 
-module load Java
+module load java
 
 #export your required environment variables below
 #################################################
@@ -43,5 +43,5 @@ module load Java
 # # this is the second column of index_array_40x.csv
 # INTERVAL=`sed -n "$SLURM_ARRAY_TASK_ID"p "${file_list}" | cut -f 3 -d ','`
 
-~/gatk-4.2.4.1/gatk GenotypeGVCFs -R /scicore/home/schiera/gizevo30/projects/cichlids_2/genome/GCF_001858045.2_O_niloticus_UMD_NMBU_genomic.fna -V NMBU_cohort_final.g.vcf.gz -O NMBU_cohort_genotyped_whole.g.vcf.gz
+gatk GenotypeGVCFs -R /home/ayasha/projects/def-mshafer/genome/Oreochromis_niloticus.O_niloticus_UMD_NMBU.dna.toplevel.fa -V NMBU_cohort_final.g.vcf.gz -O NMBU_cohort_genotyped_whole.g.vcf.gz
 
