@@ -49,20 +49,23 @@ INTERVAL=`sed -n "$SLURM_ARRAY_TASK_ID"p "${file_list}" | cut -f 1 -d ','`
 # Will need to load in samtools, subset, then purge modules before loading bwa
 module load samtools
 
-samtools faidx /home/ayasha/projects/def-mshafer/genome/Oreochromis_niloticus.O_niloticus_UMD_NMBU.dna.toplevel.fa $INTERVAL > /home/ayasha/projects/def-mshafer/genome/intervals/${INTERVAL}_fasta.fna
+#samtools faidx /home/ayasha/projects/def-mshafer/genome/Oreochromis_niloticus.O_niloticus_UMD_NMBU.dna.toplevel.fa $INTERVAL > /home/ayasha/projects/def-mshafer/genome/intervals/${INTERVAL}_fasta.fna
 
 module purge
 
 module load bwa
 
-bwa index /home/ayasha/projects/def-mshafer/genome/intervals/${INTERVAL}_fasta.fna
+#bwa index /home/ayasha/projects/def-mshafer/genome/intervals/${INTERVAL}_fasta.fna
 
 
 # Run
 # Use the github compiled program (or the old binary from blogpost '~/seqbility-20091110/splitfa')
-/home/ayasha/seqbility-20091110/splitfa.c /home/ayasha/projects/def-mshafer/genome/intervals/${INTERVAL}_fasta.fna 100 > /home/ayasha/projects/def-mshafer/genome/intervals/${INTERVAL}_fasta_split_l100_s1
+#cd /home/ayasha/seqbility-20091110/
+#make
 
-bwa aln -R 1000000 -O 3 -E 3 /home/ayasha/projects/def-mshafer/genome/Oreochromis_niloticus.O_niloticus_UMD_NMBU.dna.toplevel.fa /home/ayasha/projects/def-mshafer/genome/intervals/${INTERVAL}_fasta_split_l100_s1 > /home/ayasha/projects/def-mshafer/genome/intervals/${INTERVAL}_fasta_split_l100_s1.sai
+#/home/ayasha/seqbility-20091110/splitfa /home/ayasha/projects/def-mshafer/genome/intervals/${INTERVAL}_fasta.fna 100 > /home/ayasha/projects/def-mshafer/genome/intervals/${INTERVAL}_fasta_split_l100_s1
+
+#bwa aln -R 1000000 -O 3 -E 3 /home/ayasha/projects/def-mshafer/genome/Oreochromis_niloticus.O_niloticus_UMD_NMBU.dna.toplevel.fa /home/ayasha/projects/def-mshafer/genome/intervals/${INTERVAL}_fasta_split_l100_s1 > /home/ayasha/projects/def-mshafer/genome/intervals/${INTERVAL}_fasta_split_l100_s1.sai
 
 # samse needs also the index and the input reads, as well as the output of aln
 bwa samse /home/ayasha/projects/def-mshafer/genome/Oreochromis_niloticus.O_niloticus_UMD_NMBU.dna.toplevel.fa /home/ayasha/projects/def-mshafer/genome/intervals/${INTERVAL}_fasta_split_l100_s1.sai /home/ayasha/projects/def-mshafer/genome/intervals/${INTERVAL}_fasta_split_l100_s1 > /home/ayasha/projects/def-mshafer/genome/intervals/${INTERVAL}_fasta_split_l100_s1_aln-se.sam
@@ -70,13 +73,13 @@ bwa samse /home/ayasha/projects/def-mshafer/genome/Oreochromis_niloticus.O_nilot
 # generate the raw and non raw mask
 /home/ayasha/seqbility-20091110/gen_raw_mask.pl /home/ayasha/projects/def-mshafer/genome/intervals/${INTERVAL}_fasta_split_l100_s1_aln-se.sam > /home/ayasha/projects/def-mshafer/genome/intervals/${INTERVAL}_fasta_rawMask_l100_s1.fa
 
-/home/ayasha/seqbility-20091110/gen_mask.c -l 100 -r 0.9 /home/ayasha/projects/def-mshafer/genome/intervals/${INTERVAL}_fasta_rawMask_l100_s1.fa > /home/ayasha/projects/def-mshafer/genome/intervals/NMBU_${INTERVAL}_mask_l100_s1_r0.9.fa
+/home/ayasha/seqbility-20091110/gen_mask -l 100 -r 0.9 /home/ayasha/projects/def-mshafer/genome/intervals/${INTERVAL}_fasta_rawMask_l100_s1.fa > /home/ayasha/projects/def-mshafer/genome/intervals/NMBU_${INTERVAL}_mask_l100_s1_r0.9.fa
 
-rm /home/ayasha/projects/def-mshafer/genome/intervals/${INTERVAL}_fasta.fna
-rm /home/ayasha/projects/def-mshafer/genome/intervals/${INTERVAL}_fasta_split_l100_s1
-rm /home/ayasha/projects/def-mshafer/genome/intervals/${INTERVAL}_fasta_split_l100_s1.sai
-rm /home/ayasha/projects/def-mshafer/genome/intervals/${INTERVAL}_fasta_split_l100_s1_aln-se.sam
-rm /home/ayasha/projects/def-mshafer/genome/intervals/${INTERVAL}_fasta_rawMask_l100_s1.fa
+#rm /home/ayasha/projects/def-mshafer/genome/intervals/${INTERVAL}_fasta.fna
+#rm /home/ayasha/projects/def-mshafer/genome/intervals/${INTERVAL}_fasta_split_l100_s1
+#rm /home/ayasha/projects/def-mshafer/genome/intervals/${INTERVAL}_fasta_split_l100_s1.sai
+#rm /home/ayasha/projects/def-mshafer/genome/intervals/${INTERVAL}_fasta_split_l100_s1_aln-se.sam
+#rm /home/ayasha/projects/def-mshafer/genome/intervals/${INTERVAL}_fasta_rawMask_l100_s1.fa
 
 
 ## After running this, cat all output files together into one final mask file, then run the python script from msmc to generate bed files per chromosome, which can also be cat'd together into the final mappability mask

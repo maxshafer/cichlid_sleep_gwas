@@ -23,11 +23,11 @@ class MaskGenerator:
       self.lastStartPos = pos
       self.lastCalledPos = pos
 
-with open("/scicore/home/schiera/gizevo30/projects/cichlids_2/masks/dump/all_chr_mask_l100_s1_r0.9.fa", "r") as f:
+with open("/home/ayasha/projects/def-mshafer/genome/masks/all_chr_mask_l100_s1_r0.9.fa", "r") as f:
   for line in f:
     if line.startswith('>'):
       chr = line.split()[0][1:]
-      mask = MaskGenerator("/scicore/home/schiera/gizevo30/projects/cichlids_2/masks/dump/chr_{}_mask_l100_s1_r0.9.bed.gz".format(chr), chr)
+      mask = MaskGenerator("/home/ayasha/projects/def-mshafer/genome/masks/chr_{}_mask_l100_s1_r0.9.bed.gz".format(chr), chr)
       pos = 0
       continue
     for c in line.strip():
