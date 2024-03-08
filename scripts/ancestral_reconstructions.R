@@ -112,7 +112,7 @@ haplos <- 53
 
 phylo.plot <- ggtree(as.phylo(cichlidTree), layout = "circular") + theme_tree(bgcolor = NA) + geom_tiplab(offset = 2.5)
 
-pc1_plot <- phylo.plot + geom_tile(data = sleepData, aes(y=y, x=x, fill = pc1), width = 2, height = 0.9, size = 1.5, inherit.aes = FALSE) + scale_fill_distiller(palette = "RdBu") #+ scale_color_discrete(na.value = 'transparent')
+pc1_plot <- phylo.plot + geom_tile(data = sleepData, aes(y=y, x=x, fill = pc1), width = 2, height = 0.9, size = 1.5, inherit.aes = FALSE) + scale_fill_distiller(palette = "RdBu", limits = c(-0.19,0.19)) #+ scale_color_discrete(na.value = 'transparent')
 pc2_plot <- phylo.plot + geom_tile(data = sleepData, aes(y=y, x=x, fill = pc2), width = 2, height = 0.9, size = 1.5, inherit.aes = FALSE) + scale_fill_distiller(palette = "BrBG") #+ scale_color_discrete(na.value = 'transparent')
 tr_plot <- phylo.plot + geom_tile(data = sleepData, aes(y=y, x=x, fill = total_rest), width = 2, height = 0.9, size = 1.5, inherit.aes = FALSE) + scale_fill_distiller(palette = "PRGn") #+ scale_color_discrete(na.value = 'transparent')
 inter_plot <- phylo.plot + geom_tile(data = sleepData, aes(y=y, x=x, fill = inter_coef), width = 2, height = 0.9, size = 1.5, inherit.aes = FALSE) + scale_fill_distiller(palette = "YlOrRd", limits = c(0,1)) #+ scale_color_discrete(na.value = 'transparent')
@@ -136,7 +136,7 @@ intra_plot <- phylo.plot + geom_tile(data = sleepData, aes(y=y, x=x, fill = intr
 
 ##### Plot ancestral reconstructions #######
 
-ancestral.plot.pc1 <- ggtree(cichlidTree, layout = "circular", size = 2) %<+% node.data + aes(color = PC1) + scale_color_distiller(palette = "RdBu", direction = 1) + geom_tiplab(color = "black", size = 6, offset = 0.5) + geom_tippoint(aes(color = PC1), shape = 16, size = 6) + scale_color_distiller(palette = "RdBu", direction = 1)
+ancestral.plot.pc1 <- ggtree(cichlidTree, layout = "circular", size = 2) %<+% node.data + aes(color = PC1) + scale_color_distiller(palette = "RdBu", direction = 1) + geom_tiplab(color = "black", size = 6, offset = 0.5) + geom_tippoint(aes(color = PC1), shape = 16, size = 6) + scale_color_distiller(palette = "RdBu", direction = 1, limits = c(-0.19,0.19))
 ancestral.plot.total_rest <- ggtree(cichlidTree, layout = "circular", size = 2) %<+% node.data + aes(color = Total_Rest) + scale_color_distiller(palette = "PRGn", direction = 1) + geom_tiplab(color = "black", size = 6, offset = 0.5) + geom_tippoint(aes(color = Total_Rest), shape = 16, size = 6) + scale_color_distiller(palette = "PRGn", direction = 1)
 ancestral.plot.pc2 <- ggtree(cichlidTree, layout = "circular", size = 2) %<+% node.data + aes(color = PC2) + scale_color_distiller(palette = "BrBG", direction = -1) + geom_tiplab(color = "black", size = 6, offset = 0.5) + geom_tippoint(aes(color = PC2), shape = 16, size = 6) + scale_color_distiller(palette = "BrBG", direction = -1)
 ancestral.plot.inter <- ggtree(cichlidTree, layout = "circular", size = 2) %<+% node.data + aes(color = Inter_Coef) + scale_color_viridis(direction = 1, limits = c(0,1)) + geom_tiplab(color = "black", size = 6, offset = 0.5) + geom_tippoint(aes(color = Inter_Coef), shape = 16, size = 6) + scale_color_viridis(direction = 1, limits = c(0,1))
@@ -165,7 +165,9 @@ dev.off()
 ########################################################################################################
 
 all_pcs <- lapply(c(2:11), function(x) {
-  fitBM <- ace(sleepData[,x], cichlidTree, method = "ML", model = "BM", type = "continuous")
+  x <- sleepData[,x]
+  names(x) <- sleepData$species
+  fitBM <- ace(x, cichlidTree, method = "ML", model = "BM", type = "continuous")
   out <- fitBM$ace
   return(out)
 })

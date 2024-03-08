@@ -345,8 +345,6 @@ getLociEns <- function(gene_list = list("kcnc2","LOC100698148", "LOC100701437"),
 }
 
 
-
-
 ## This one needs to run a bunch of system commands to query the orthoDB database
 ## Takes a Dbxref ID as input, and outputs a list of vectors (matching orthologs)
 ## These are better then the above, but miss some and should be supplemented
@@ -366,12 +364,12 @@ generateOrthoDBorthologs <- function(dbxrefs = Dbxref, gene_ids = gene_id, speci
   # Search orthoDB for gene ID and return orthoID
   # This doesn't work if it is a LOC gene (eg LOC102076095) and returns null
   system(paste("curl 'https://data.orthodb.org/current/search?query=", dbxrefs, "' -L -o search.dat", sep = ""))
-  orthoID_json <- fromJSON(file = "search.dat")
+  orthoID_json <- jsonlite::fromJSON("search.dat")
   
   # If the ID doesn't find anything, try LOC-ID
   if (is.null(orthoID_json[[4]][grep(group, orthoID_json[[4]])])) {
     system(paste("curl 'https://data.orthodb.org/current/search?query=LOC", dbxrefs, "' -L -o search.dat", sep = ""))
-    orthoID_json <- fromJSON(file = "search.dat")
+    orthoID_json <- jsonlite::fromJSON(file = "search.dat")
   }
   
   for (k in grep(group, orthoID_json[[4]])) {
@@ -379,7 +377,7 @@ generateOrthoDBorthologs <- function(dbxrefs = Dbxref, gene_ids = gene_id, speci
     
     # Use orthoID to search for gene IDs
     system(paste("curl 'https://data.orthodb.org/current/orthologs?id=", orthoID_json_act,"' -L -o orthologs.dat", sep = ""))
-    orthologs <- fromJSON(file = "orthologs.dat")
+    orthologs <- jsonlite::fromJSON(file = "orthologs.dat")
     
     # this gives me just danio (could also do mus musculus)
     if (any(grepl(species, orthologs[[1]]))) {
@@ -394,13 +392,13 @@ generateOrthoDBorthologs <- function(dbxrefs = Dbxref, gene_ids = gene_id, speci
     } else { # This is for the occasion where orthoDB can't find the LOC or Dbxref ID #, but the gene name is useful
       
       system(paste("curl 'https://data.orthodb.org/current/search?query=", gene_ids, "' -L -o search.dat", sep = ""))
-      orthoID_json <- fromJSON(file = "search.dat")
+      orthoID_json <- jsonlite::fromJSON(file = "search.dat")
       
       for (p in grep(group, orthoID_json[[4]])) {
         orthoID_json_act <- orthoID_json[[4]][p][[1]]$id
         
         system(paste("curl 'https://data.orthodb.org/current/orthologs?id=",orthoID_json_act,"' -L -o orthologs.dat", sep = ""))
-        orthologs <- fromJSON(file = "orthologs.dat")
+        orthologs <- jsonlite::fromJSON(file = "orthologs.dat")
         
         if (any(grepl(species, orthologs[[1]]))) {
           orthologs <- orthologs[[1]][grep(species, orthologs[[1]])]
@@ -417,10 +415,10 @@ generateOrthoDBorthologs <- function(dbxrefs = Dbxref, gene_ids = gene_id, speci
 }
 
 
-
 ## This one needs to recursively find all the paths
 ## Then load and extract the ortholog from the csv
 ## This output has duplicate entries (because of transcript variants)
+## Two versions, one for the old output of the NCBI tool, and one for the new output
 
 generateNCBIorthologs <- function(directory = dir) {
   files <- list.files(directory, recursive = T, pattern = "data_table.tsv")
@@ -432,5 +430,157 @@ generateNCBIorthologs <- function(directory = dir) {
   return(output)
 }
 
+generateNCBIorthologsJSONL <- function(directory = dir) {
+  files <- list.files(directory, recursive = T, pattern = "data_report.jsonl")
+  output <- lapply(files, function(x) {
+    df <- jsonlite::fromJSON(paste(directory, x, sep = ""))
+    df$gene_id_oreo <- str_split(x, pattern = "/")[[1]][1]
+    if (is.character(df$symbol)) {
+      return(df$symbol)
+    } else {
+      return(NA)
+    }
+  })
+  return(output)
+}
 
+## modified function for running fisher test for enrichment
+
+doFisherExact <- function(set1 = gene_ids$pc1, set2 = gene_ids$pc2, snps = FALSE, total_genes = NA) {
+  
+  if(is.na(total_genes)) {
+    total_genes <- length(unique(gtf$gene))
+  }
+  
+  if(snps) {
+    
+    matrix <- matrix(c(length(intersect(set1, set2)),
+                       length(set2)-length(intersect(set1, set2)),
+                       length(set1)-length(intersect(set1, set2)),
+                       44000000-length(set1)-length(set2)-length(intersect(set1, set2))),
+                     ncol = 2)
+    print(matrix)
+    return(fisher.test(matrix))
+    
+  } else {
+    matrix <- matrix(c(length(intersect(set1, set2)),
+                       length(set2)-length(intersect(set1, set2)),
+                       length(set1)-length(intersect(set1, set2)),
+                       as.numeric(total_genes)-length(set1)-length(set2)-length(intersect(set1, set2))),
+                     ncol = 2)
+    print(matrix)
+    return(fisher.test(matrix))
+  }
+}
+
+## This is an old function for clustering the DAVID GO analysis outputs
+## Should still work, but I no longer cluster the outputs for the graph
+
+hCluster <- function(x = go_analysis, measure.var = "Benj.value", category = c("UP_TISSUE", "UP_SEQ_FEATURE", "KEGG_PATHWAY", "REACTOME_PATHWAY", "DISGENET")) {
+  casted <- acast(x[x$Category %in% category,], formula = L1 + L2 ~ Term, value.var = measure.var)
+  casted[is.na(casted)] <- 0
+  hr <- hclust(as.dist(1-cor(t(casted), method="pearson")), method="complete")
+  hc <- hclust(as.dist(1-cor(casted, method="spearman")), method="complete")
+  clustered <- x[x$Category %in% category,]
+  clustered$Term <- factor(clustered$Term, levels = hc[[4]][hc[[3]]])
+  clustered$L3 <- factor(clustered$L3, levels = hr[[4]][hr[[3]]])
+  return(clustered)
+}
+
+## This is now the replacement, where it determines an order for GO Terms based on the min or mean value across behaviours
+
+subOrder <- function(GO = go_analysis, pvalue = 0.01, species = "human", category = "UP_TISSUE", type = c("min", "mean")) {
+  GO <- GO[GO$L2 == species & GO$Category == category & GO$PValue.value < pvalue,]
+  if(type == "mean") {
+    term_order <- GO %>% group_by(Category, Term, L2) %>% summarise(mean = mean(PValue.value))
+    term_order <- term_order$Term[order(term_order$mean, decreasing = T)]
+  }
+  if(type == "min") {
+    term_order <- GO
+    term_order <- unique(term_order$Term[order(term_order$PValue.value, decreasing = T)])
+  }
+  GO$Term <- factor(GO$Term, levels = term_order)
+  return(GO)
+}
+
+## This plots a VENN Diagram for a go term
+## must use the full term for matching, works for if the term is in 1/2/3 behaviours
+
+plotVennOverlap <- function(category = "C0036341~Schizophrenia") {
+  
+  ## OK need to work in if it only appears in one list, etc
+  if (any(grepl(category, annoCharts.2$pc1$human$Term))) {
+    pc1 <- str_split(annoCharts.2$pc1$human[grep(category, annoCharts.2$pc1$human$Term),"Genes"], ", ")[[1]]
+    pc1 <- AnnotationDbi::select(org.Hs.eg.db, pc1, "SYMBOL", "ENTREZID")[,2]
+  } else {
+    pc1 <- vector()
+  }
+  
+  if (any(grepl(category, annoCharts.2$pc2$human$Term))) {
+    pc2 <- str_split(annoCharts.2$pc2$human[grep(category, annoCharts.2$pc2$human$Term),"Genes"], ", ")[[1]]
+    pc2 <- AnnotationDbi::select(org.Hs.eg.db, pc2, "SYMBOL", "ENTREZID")[,2]
+  } else {
+    pc2 <- vector()
+  }
+  
+  if (any(grepl(category, annoCharts.2$tr$human$Term))) {
+    tr <- str_split(annoCharts.2$tr$human[grep(category, annoCharts.2$tr$human$Term),"Genes"], ", ")[[1]]
+    tr <- AnnotationDbi::select(org.Hs.eg.db, tr, "SYMBOL", "ENTREZID")[,2]
+  } else {
+    tr <- vector()
+  }
+  
+  # Make venn diagrams
+  
+  venn.data <- c(pc1_genes = length(pc1),
+                 pc2_genes = length(pc2),
+                 tr_genes = length(tr),
+                 'pc1_genes&pc2_genes' = length(intersect(pc1, pc2)),
+                 'pc1_genes&tr_genes' = length(intersect(pc1, tr)),
+                 'pc2_genes&tr_genes' = length(intersect(pc2, tr)),
+                 'pc1_genes&pc2_genes&tr_genes' = length(Reduce(intersect, list(pc1, pc2, tr))))
+  
+  print(venn.data)
+  
+  vd1 <- venneuler(venn.data)
+  return(vd1)
+}
+
+## Function for reading in phenotpye data from modPhEA
+
+readModPhEA <- function(file = "orthos/modPhEA/modPhEA_PC1_oreochromis-human_vs_mouse.txt", pvalue = c("FishersExact", "FDR", "Bonferroni")) {
+  
+  modPhEA <- read.csv(file, sep = "\t")
+  colnames(modPhEA) <- c("term_id", "Term", "term_count", "background_count", "FishersExact", "FDR", "Bonferroni")
+  modPhEA$Term <- paste(modPhEA$term_id, modPhEA$Term, sep = "~")
+  modPhEA$PValue <- modPhEA[,pvalue]
+  
+  test_term <- str_split(modPhEA$term_count, pattern = " ")
+  test_term_perc <- lapply(test_term, function(x) str_split(x[[1]], "%"))
+  test_term_perc <- unlist(lapply(seq_along(test_term_perc), function(x) as.numeric(test_term_perc[[x]][[1]][[1]])))
+  test2 <- lapply(test_term, function(x) str_split(x[[2]], pattern = "/"))
+  modPhEA$Count <- unlist(lapply(test2, function(x) substr(x[[1]][1], start = 2, stop = 10)))
+  modPhEA$List.Total <- unlist(lapply(test2, function(x) substr(x[[1]][2], start = 1, stop = 3)))
+  
+  test_bkgd <- str_split(modPhEA$background_count, pattern = " ")
+  test_bkgd_perc <- lapply(test_bkgd, function(x) str_split(x[[1]], "%"))
+  test_bkgd_perc <- unlist(lapply(seq_along(test_bkgd_perc), function(x) as.numeric(test_bkgd_perc[[x]][[1]][[1]])))
+  test2 <- lapply(test_bkgd, function(x) str_split(x[[2]], pattern = "/"))
+  modPhEA$Pop.Hits <- unlist(lapply(test2, function(x) substr(x[[1]][1], start = 2, stop = 10)))
+  modPhEA$Pop.Total <- unlist(lapply(test2, function(x) substr(x[[1]][2], start = 1, stop = 5)))
+  
+  modPhEA$Fold.Enrichment <- test_term_perc/test_bkgd_perc
+  
+  ## Add fold enrichment, which is the odds ratio from the fisher's exact test?
+  modPhEA <- modPhEA[modPhEA$FishersExact < 0.05, ]
+  
+  modPhEA <- subset(modPhEA, select = -c(term_id, term_count, background_count, FishersExact))
+  
+  modPhEA$Category <- "MGI_Phenotype"
+  modPhEA$X. <- NA
+  modPhEA$Genes <- NA
+  modPhEA$Benjamini <- NA
+  
+  return(modPhEA)
+}
 
