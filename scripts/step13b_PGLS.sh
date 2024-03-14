@@ -52,6 +52,6 @@ TEST=`sed -n "$SLURM_ARRAY_TASK_ID"p "${file_list}" | cut -f 2 -d ','`
 INTERVAL=`sed -n "$SLURM_ARRAY_TASK_ID"p "${file_list}" | cut -f 3 -d ','`
 
 
-Rscript /scicore/home/schiera/gizevo30/projects/cichlids_2/scripts/PGLSrun.R speciesCodesAndGenomeIDs_for_GWAS_2_NMBU_cohort_genotyped_whole_${INTERVAL}_fromProbabilities_AF.txt /scicore/home/schiera/gizevo30/projects/cichlids_2/pheno_data/GWAS_data_PCs_TR_2024-01-28.csv ${TEST}
-Rscript /scicore/home/schiera/gizevo30/projects/cichlids_2/scripts/PGLSrun.R speciesCodesAndGenomeIDs_for_GWAS_2_NMBU_cohort_genotyped_whole_${INTERVAL}_fromProbabilities_AF.txt /scicore/home/schiera/gizevo30/projects/cichlids_2/pheno_data/GWAS_data_PCs_TR_2024-01-28.csv ${TEST}
+Rscript /scicore/home/schiera/gizevo30/projects/cichlids_2/scripts/PGLSrun.R speciesCodesAndGenomeIDs_for_GWAS_2_NMBU_cohort_genotyped_whole_${INTERVAL}_fromProbabilities_AF.txt /scicore/home/schiera/gizevo30/projects/cichlids_2/pheno_data/cichlid_pc-loadings_eco-morph_rest_full.csv ${TEST}
+
 

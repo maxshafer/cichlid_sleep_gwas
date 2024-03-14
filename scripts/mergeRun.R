@@ -29,8 +29,8 @@ snpeff_file <- snpeff_file[grepl("extracted", snpeff_file)]
 gwas_files <- files[grepl("_piVals_", files) & grepl(".txt", files)]
 pgls_files <- files[grepl("_PGLSpiVals_", files) & grepl(".txt", files)]
 
-gwas_names <- str_sub(gwas_files, start = 80, end = -5)
-pgls_names <- str_sub(pgls_files, start = 80, end = -5)
+gwas_names <- str_sub(gwas_files, start = 95, end = -5)
+pgls_names <- str_sub(pgls_files, start = 95, end = -5)
 
 
 ########################################################################
