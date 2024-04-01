@@ -12,8 +12,9 @@ library(patchwork)
 
 filter_snps <- readRDS("sra_reads_nobackup/combined_ann/filter_SNPs_perchr_1e-05_percentile")
 
-ggplot(filter_snps[[2]], aes(x = log(piVals)*-1, y = log(PGLSpiVals)*-1)) + geom_point() + theme_classic()
-
+## Load in gtf
+gtf <- read.gtf("genome/GCF_001858045.2_O_niloticus_UMD_NMBU_genomic.fna.gtf")
+gtf <- gtf[gtf$feature == "gene" & gtf$gene_biotype == "protein_coding",]
 
 ########################################################################
 #######   ID'ing circadian genes  ######################################
@@ -35,16 +36,20 @@ clock_genes <- unique(c(cgg, cghg))
 
 files <- list.files("sra_reads_nobackup/combined_ann/", pattern = "_pvals_ann.gz")
 
-comparison <- c("pc1", "pc2", "total_rest")
+comparison <- c("pc1_60-species", "pc2_60-species", "total_rest_60-species")
 
 ### Pulling data from snps
+
+dfs_all <- lapply(files, function(x) fread(paste("sra_reads_nobackup/combined_ann/", x, sep = ""), showProgress = T))
+names(dfs_all) <- files
 
 per_chr <- lapply(comparison, function(comp) {
   
   gwas.datasets <- lapply(files, function(x) {
-    df <- fread(paste("sra_reads_nobackup/combined_ann/", x, sep = ""), showProgress = T)
+    df <- dfs_all[[x]]
+    # df <- fread(paste("sra_reads_nobackup/combined_ann/", x, sep = ""), showProgress = T)
     df <- df[df$`ANN[*].GENE` %in% clock_genes,]
-    columns <- c(c(2:3,10:15, as.numeric(grep(comp, colnames(df)))))
+    columns <- c(c(2:3,16:21, as.numeric(grep(comp, colnames(df)))))
     df <- df[, ..columns] # Change last two numbers to modify which comparison to keep and filter by
     
     if (comp == "summary") {
@@ -68,7 +73,7 @@ per_chr <- lapply(comparison, function(comp) {
   
 })
 
-saveRDS(per_chr, file = "circadian-genes_perchr.rds")
+saveRDS(per_chr, file = "circadian-genes_perchr_60sp.rds")
 
 
 

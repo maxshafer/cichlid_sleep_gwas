@@ -9,6 +9,7 @@ library(patchwork)
 library(viridis)
 library(Rgb)
 library(scales)
+library(ggrepel)
 
 source("scripts/variants_functions.R")
 
@@ -23,7 +24,7 @@ filter_snps <- readRDS(here("sra_reads_nobackup/combined_ann/filter_SNPs_perchr_
 #######   Plot scatter + circadian genes  ##############################
 ########################################################################
 
-per_chr <- readRDS("circadian-genes_perchr.rds")
+per_chr <- readRDS("circadian-genes_perchr_60sp.rds")
 
 theme_set(theme_classic())
 theme_update(axis.text = element_text(colour = "black"))
@@ -32,20 +33,21 @@ theme_update(axis.text = element_text(colour = "black"))
 ### Or can I make some kind of density diagram? Probably too computationally intense?
 
 per_chr[[1]]$label <- "circadian"
-filter_snps[[2]]$label <- "PC1_enriched"
-pc1 <- rbind(filter_snps[[2]], per_chr[[1]])
+filter_snps[[4]]$label <- "PC1_enriched"
+pc1 <- rbind(filter_snps[[4]], per_chr[[1]])
 
 per_chr[[2]]$label <- "circadian"
-filter_snps[[3]]$label <- "PC2_enriched"
-pc2 <- rbind(filter_snps[[3]], per_chr[[2]])
+filter_snps[[5]]$label <- "PC2_enriched"
+pc2 <- rbind(filter_snps[[5]], per_chr[[2]])
 
 per_chr[[3]]$label <- "circadian"
-filter_snps[[4]]$label <- "TR_enriched"
-tr <- rbind(filter_snps[[4]], per_chr[[3]])
+filter_snps[[6]]$label <- "TR_enriched"
+tr <- rbind(filter_snps[[6]], per_chr[[3]])
 
 
 pc1$text <- NA
-pc1$text[1396] <- "crcp - calcitonin gene-related peptide-receptor component protein"
+pc1$text[grep("LOC100691006", pc1$ANN_GENE)] <- "crcp" # - calcitonin gene-related peptide-receptor component protein"
+pc1$text[grep("mgst3", pc1$ANN_GENE)] <- "mgst3" # - microsomal glutathione S-transferase 3"
 pc1_scatter <- ggplot(pc1, aes(x = log(piVals)*-1, y = log(PGLSpiVals)*-1, colour = label, label = text)) + geom_point(size = 0.05) + geom_text_repel() + scale_color_manual(values = c("red", "black")) + xlab("GWAS (log(p-value)*1)") + ylab("PGLS-GWAS (log(p-value)*-1)")
 
 pc2_scatter <- ggplot(pc2, aes(x = log(piVals)*-1, y = log(PGLSpiVals)*-1, colour = label)) + geom_point(size = 0.05) + theme_classic() + scale_color_manual(values = c("red", "black")) + xlab("GWAS (log(p-value)*1)") + ylab("PGLS-GWAS (log(p-value)*-1)")
@@ -58,11 +60,14 @@ tic()
 ggsave("myplot_2.pdf", plot = plot2, width = 4, height = 4, units = "in")
 toc()
 
+########################################################################
+#######   GO Plots  ####################################################
+########################################################################
 
-genes <- readRDS(file = "orthos/orthologs_perchr_1e-05_percentile.rds")
+genes <- readRDS(file = "orthos/orthologs_perchr_60sp_1e-05_percentile.rds")
 genes_new <- genes$gene_names
 
-annoCharts.2 <- readRDS("DAVID-GO_analysis_perchr_1e-05_percentile.rds")
+annoCharts.2 <- readRDS("DAVID-GO_analysis_perchr_60sp_1e-05_percentile.rds")
 
 # Reshape for plotting
 measure.vars <- matrix(c("PValue", "Bonferroni", "Benjamini", "FDR", "Count", "Fold.Enrichment", "X.", "PValue", "Bonferroni", "Benjamini", "FDR", "Count", "FE", "X.", "PValue.value", "Bonf.value", "Benj.value", "FDR.value", "Counts.value", "FoldE.value", "X.value"), nrow=7, ncol = 3)
@@ -115,9 +120,14 @@ disgenet.data <- subOrder(GO = go_analysis, pvalue = 0.01, species = "human", ca
 disgenet <- ggplot(data = disgenet.data, aes(L1, Term_label, size = PValue.value, fill = FoldE, shape = L2)) + geom_point(alpha = 1, shape = 21, colour = "black") + scale_size_continuous(range = c(4, 0.5), limits = c(0, 0.05))
 disgenet <- disgenet + scale_y_discrete(labels = label_wrap(50)) + scale_fill_viridis(limits = c(0,3)) + theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust = 1, size = 10), axis.text.y = element_text(size = 8, lineheight = 0.65), axis.title.x = element_blank(), axis.title.y = element_blank())
 
-mgi.data <- subOrder(GO = go_analysis, pvalue = 0.0001, species = "human", category = "MGI_Phenotype", type = "min")
+mgi.data <- subOrder(GO = go_analysis, pvalue = 0.0001, species = "human", category = "MGD", type = "min")
 mgi <- ggplot(data = mgi.data, aes(L1, Term_label, size = PValue.value, fill = FoldE, shape = L2)) + geom_point(alpha = 1, shape = 21, colour = "black") + scale_size_continuous(range = c(4, 0.5), limits = c(0, 0.05))
 mgi <- mgi + scale_y_discrete(labels = label_wrap(50)) + scale_fill_viridis(limits = c(0,3)) + theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust = 1, size = 10), axis.text.y = element_text(size = 8, lineheight = 0.65), axis.title.x = element_blank(), axis.title.y = element_blank()) 
+
+all.data <- subOrder(GO = go_analysis[go_analysis$FDR.value < 0.05,], pvalue = 0.1, species = "human", category = unique(go_analysis$Category), type = "min")
+all <- ggplot(data = all.data, aes(L1, Term_label, size = PValue.value, fill = FoldE, shape = L2)) + geom_point(alpha = 1, shape = 21, colour = "black") + scale_size_continuous(range = c(4, 0.5), limits = c(0, 0.05))
+all <- all + scale_y_discrete(labels = label_wrap(50)) + scale_fill_viridis(limits = c(0,3)) + theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust = 1, size = 10), axis.text.y = element_text(size = 8, lineheight = 0.65), axis.title.x = element_blank(), axis.title.y = element_blank()) 
+
 
 design1 <- "
 AC

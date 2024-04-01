@@ -9,6 +9,7 @@ library(org.Mm.eg.db)
 library(org.Hs.eg.db)
 library(patchwork)
 library(here)
+library(PhenoExam)
 
 splitNames <- function(x) {
   if (length(x) == 3) {
@@ -31,7 +32,7 @@ source("scripts/variants_functions.R")
 ## Load in results from orthology, it includes lists for human, mouse, and zebrafish, for PC1/PC2/TR
 ## Also have gene names and ensembl IDs
 
-genes <- readRDS(file = "orthos/orthologs_perchr_1e-05_percentile.rds")
+genes <- readRDS(file = "orthos/orthologs_perchr_60sp_1e-05_percentile.rds")
 
 genes_new <- genes$gene_names
 
@@ -76,33 +77,60 @@ names(annoCharts.2) <- names(genes_new)
 annoCharts.2 <- lapply(annoCharts.2, function(x) splitNames(x))
 
 
+### Use PhenoExam to get MGI and others
+pop.totals <- t(data.frame(MGD = 17895, PSYGENET = 19262, HPO = 19248, CGI = 19198, CLINGEN = 19198, CRB = 19274, CTD = 19636, GENOMICS_ENGLAND = 19230, ORPHANET = 19262, UNIPROT = 19204))
+
+pheno_exam <- lapply(genes_new, function(x) {
+  PE_human <- PhenoEnrichGenes(genes= x$human, database = getdbnames())
+  
+  PE_human <- PE_human$alldata
+  PE_human$term_id <- str_replace(PE_human$term_id, ":", "-")
+  PE_human$Term <- paste(PE_human$term_id, PE_human$term_name, sep = ":")
+  colnames(PE_human) <- c("term_id", "term_name", "Category", "Bonferroni", "FDR", "Pop.Hits", "Count", "overlap_ratio", "PValue", "Genes", "Term")
+  PE_human$List.Total <- length(genes_new$pc1$human)
+  
+  PE_human$Pop.Total <- pop.totals[,1][match(PE_human$Category, rownames(pop.totals))]
+  PE_human$Fold.Enrichment <- (PE_human$Count / PE_human$List.Total) / (PE_human$Pop.Hits / PE_human$Pop.Total)
+  PE_human$Benjamini <- NA
+  PE_human$X. <- PE_human$Count / PE_human$Pop.Hits
+  
+  PE_human <- PE_human[, c("Category","Term","Count","X.","PValue","Genes","List.Total","Pop.Hits","Pop.Total","Fold.Enrichment","Bonferroni","Benjamini","FDR")]
+  return(PE_human)
+})
+
+
 ## Read in and append MGI phenotypes in orthos/modPhEA
+## These are manually generated from the website
 
-modPhEA <- list(list(list()), list(list()), list(list()))
-names(modPhEA) <- c("pc1", "pc2", "tr")
+# modPhEA <- list(list(list()), list(list()), list(list()))
+# names(modPhEA) <- c("pc1", "pc2", "tr")
+# 
+# modPhEA$pc1[[1]] <- readModPhEA(file = "orthos/modPhEA/modPhEA_PC1_oreochromis-human_vs_mouse.txt", pvalue = "FishersExact")
+# modPhEA$pc1[[2]] <- readModPhEA(file = "orthos/modPhEA/modPhEA_PC1_oreochromis-mouse_vs_mouse.txt", pvalue = "FishersExact")
+# names(modPhEA$pc1) <- c("human", "mouse")
+# modPhEA$pc2[[1]] <- readModPhEA(file = "orthos/modPhEA/modPhEA_PC2_oreochromis-human_vs_mouse.txt", pvalue = "FishersExact")
+# modPhEA$pc2[[2]] <- readModPhEA(file = "orthos/modPhEA/modPhEA_PC2_oreochromis-mouse_vs_mouse.txt", pvalue = "FishersExact")
+# names(modPhEA$pc2) <- c("human", "mouse")
+# modPhEA$tr[[1]] <- readModPhEA(file = "orthos/modPhEA/modPhEA_TR_oreochromis-human_vs_mouse.txt", pvalue = "FishersExact")
+# modPhEA$tr[[2]] <- readModPhEA(file = "orthos/modPhEA/modPhEA_TR_oreochromis-mouse_vs_mouse.txt", pvalue = "FishersExact")
+# names(modPhEA$tr) <- c("human", "mouse")
+# 
+# 
+# ## Append to annocharts
+# ## This works, but need to combine with annocharts in some way? As it is only some of them?
+# 
+# annoCharts.2$pc1$human <- rbind(annoCharts.2$pc1$human, modPhEA$pc1$human)
+# annoCharts.2$pc1$mouse <- rbind(annoCharts.2$pc1$mouse, modPhEA$pc1$mouse)
+# annoCharts.2$pc2$human <- rbind(annoCharts.2$pc2$human, modPhEA$pc2$human)
+# annoCharts.2$pc2$mouse <- rbind(annoCharts.2$pc2$mouse, modPhEA$pc2$mouse)
+# annoCharts.2$tr$human <- rbind(annoCharts.2$tr$human, modPhEA$tr$human)
+# annoCharts.2$tr$mouse <- rbind(annoCharts.2$tr$mouse, modPhEA$tr$mouse)
 
-modPhEA$pc1[[1]] <- readModPhEA(file = "orthos/modPhEA/modPhEA_PC1_oreochromis-human_vs_mouse.txt", pvalue = "FishersExact")
-modPhEA$pc1[[2]] <- readModPhEA(file = "orthos/modPhEA/modPhEA_PC1_oreochromis-mouse_vs_mouse.txt", pvalue = "FishersExact")
-names(modPhEA$pc1) <- c("human", "mouse")
-modPhEA$pc2[[1]] <- readModPhEA(file = "orthos/modPhEA/modPhEA_PC2_oreochromis-human_vs_mouse.txt", pvalue = "FishersExact")
-modPhEA$pc2[[2]] <- readModPhEA(file = "orthos/modPhEA/modPhEA_PC2_oreochromis-mouse_vs_mouse.txt", pvalue = "FishersExact")
-names(modPhEA$pc2) <- c("human", "mouse")
-modPhEA$tr[[1]] <- readModPhEA(file = "orthos/modPhEA/modPhEA_TR_oreochromis-human_vs_mouse.txt", pvalue = "FishersExact")
-modPhEA$tr[[2]] <- readModPhEA(file = "orthos/modPhEA/modPhEA_TR_oreochromis-mouse_vs_mouse.txt", pvalue = "FishersExact")
-names(modPhEA$tr) <- c("human", "mouse")
+annoCharts.2$pc1$human <- rbind(annoCharts.2$pc1$human, pheno_exam$pc1)
+annoCharts.2$pc2$human <- rbind(annoCharts.2$pc2$human, pheno_exam$pc2)
+annoCharts.2$tr$human <- rbind(annoCharts.2$tr$human, pheno_exam$tr)
 
-
-## Append to annocharts
-## This works, but need to combine with annocharts in some way? As it is only some of them?
-
-annoCharts.2$pc1$human <- rbind(annoCharts.2$pc1$human, modPhEA$pc1$human)
-annoCharts.2$pc1$mouse <- rbind(annoCharts.2$pc1$mouse, modPhEA$pc1$mouse)
-annoCharts.2$pc2$human <- rbind(annoCharts.2$pc2$human, modPhEA$pc2$human)
-annoCharts.2$pc2$mouse <- rbind(annoCharts.2$pc2$mouse, modPhEA$pc2$mouse)
-annoCharts.2$tr$human <- rbind(annoCharts.2$tr$human, modPhEA$tr$human)
-annoCharts.2$tr$mouse <- rbind(annoCharts.2$tr$mouse, modPhEA$tr$mouse)
-
-saveRDS(annoCharts.2, file = "DAVID-GO_analysis_perchr_1e-05_percentile.rds")
+saveRDS(annoCharts.2, file = "DAVID-GO_analysis_perchr_60sp_1e-05_percentile.rds")
 
 
 

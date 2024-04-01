@@ -30,8 +30,9 @@ gtf <- gtf[gtf$feature == "gene" & gtf$gene_biotype == "protein_coding",]
 
 ## Load annotated snps
 filter_snps <- readRDS(here("sra_reads_nobackup/combined_ann/filter_SNPs_perchr_1e-05_percentile"))
+names(filter_snps) <- c("pc1_56-species", "pc2_56-species", "total_rest_56-species", "pc1_60-species", "pc2_60-species", "total_rest_60-species")
 
-## Extrat gene names
+## Extract gene names
 gene_ids <- lapply(filter_snps, function(x) {
   
   gof <- x$ANN_GENE
@@ -66,11 +67,13 @@ dbxrefs <- lapply(filter_snps, function(x) {
 
 ## Ok, for each of these lists, need to output a file without header with the IDs (Dbxref)
 
-write.table(dbxrefs[[1]], file = here("orthos", "perchr_summary_genes.csv"), col.names = F, row.names = F, quote = F)
-write.table(dbxrefs[[2]], file = here("orthos", "perchr_pc1_genes.csv"), col.names = F, row.names = F, quote = F)
-write.table(dbxrefs[[3]], file = here("orthos", "perchr_pc2_genes.csv"), col.names = F, row.names = F, quote = F)
-write.table(dbxrefs[[4]], file = here("orthos", "perchr_tr_genes.csv"), col.names = F, row.names = F, quote = F)
+write.table(dbxrefs[[1]], file = here("orthos", "perchr_56sp_pc1_genes.csv"), col.names = F, row.names = F, quote = F)
+write.table(dbxrefs[[2]], file = here("orthos", "perchr_56sp_pc2_genes.csv"), col.names = F, row.names = F, quote = F)
+write.table(dbxrefs[[3]], file = here("orthos", "perchr_56sp_tr_genes.csv"), col.names = F, row.names = F, quote = F)
 
+write.table(dbxrefs[[4]], file = here("orthos", "perchr_60sp_pc1_genes.csv"), col.names = F, row.names = F, quote = F)
+write.table(dbxrefs[[5]], file = here("orthos", "perchr_60sp_pc2_genes.csv"), col.names = F, row.names = F, quote = F)
+write.table(dbxrefs[[6]], file = here("orthos", "perchr_60sp_tr_genes.csv"), col.names = F, row.names = F, quote = F)
 
 ################################################################################################################
 ################ Run terminal commands to download NCBI orthologs ##############################################
@@ -85,20 +88,21 @@ write.table(dbxrefs[[4]], file = here("orthos", "perchr_tr_genes.csv"), col.name
 
 ## Can just paste a bunch of commands?
 
-human_pc1 <- paste('./datasets download gene gene-id ', dbxrefs[[2]],' --ortholog human --filename ', "'",file.path("pc1", "human", dbxrefs[[2]], fsep = "/"), ".zip'", sep = "")
-human_pc2 <- paste('./datasets download gene gene-id ', dbxrefs[[3]],' --ortholog human --filename ', "'",file.path("pc2", "human", dbxrefs[[2]], fsep = "/"), ".zip'", sep = "")
-human_tr <- paste('./datasets download gene gene-id ', dbxrefs[[4]],' --ortholog human --filename ', "'",file.path("tr", "human", dbxrefs[[2]], fsep = "/"), ".zip'", sep = "")
+human_pc1 <- paste('./datasets download gene gene-id ', dbxrefs[[4]],' --ortholog human --filename ', "'",file.path("pc1", "human", dbxrefs[[4]], fsep = "/"), ".zip'", sep = "")
+human_pc2 <- paste('./datasets download gene gene-id ', dbxrefs[[5]],' --ortholog human --filename ', "'",file.path("pc2", "human", dbxrefs[[5]], fsep = "/"), ".zip'", sep = "")
+human_tr <- paste('./datasets download gene gene-id ', dbxrefs[[6]],' --ortholog human --filename ', "'",file.path("tr", "human", dbxrefs[[6]], fsep = "/"), ".zip'", sep = "")
 
-mouse_pc1 <- paste('./datasets download gene gene-id ', dbxrefs[[2]],' --ortholog 10090 --filename ', "'",file.path("pc1", "mouse", dbxrefs[[2]], fsep = "/"), ".zip'", sep = "")
-mouse_pc2 <- paste('./datasets download gene gene-id ', dbxrefs[[3]],' --ortholog 10090 --filename ', "'",file.path("pc2", "mouse", dbxrefs[[2]], fsep = "/"), ".zip'", sep = "")
-mouse_tr <- paste('./datasets download gene gene-id ', dbxrefs[[4]],' --ortholog 10090 --filename ', "'",file.path("tr", "mouse", dbxrefs[[2]], fsep = "/"), ".zip'", sep = "")
+mouse_pc1 <- paste('./datasets download gene gene-id ', dbxrefs[[4]],' --ortholog 10090 --filename ', "'",file.path("pc1", "mouse", dbxrefs[[4]], fsep = "/"), ".zip'", sep = "")
+mouse_pc2 <- paste('./datasets download gene gene-id ', dbxrefs[[5]],' --ortholog 10090 --filename ', "'",file.path("pc2", "mouse", dbxrefs[[5]], fsep = "/"), ".zip'", sep = "")
+mouse_tr <- paste('./datasets download gene gene-id ', dbxrefs[[6]],' --ortholog 10090 --filename ', "'",file.path("tr", "mouse", dbxrefs[[6]], fsep = "/"), ".zip'", sep = "")
 
-zeb_pc1 <- paste('./datasets download gene gene-id ', dbxrefs[[2]],' --ortholog zebrafish --filename ', "'",file.path("pc1", "zebrafish", dbxrefs[[2]], fsep = "/"), ".zip'", sep = "")
-zeb_pc2 <- paste('./datasets download gene gene-id ', dbxrefs[[3]],' --ortholog zebrafish --filename ', "'",file.path("pc2", "zebrafish", dbxrefs[[2]], fsep = "/"), ".zip'", sep = "")
-zeb_tr <- paste('./datasets download gene gene-id ', dbxrefs[[4]],' --ortholog zebrafish --filename ', "'",file.path("tr", "zebrafish", dbxrefs[[2]], fsep = "/"), ".zip'", sep = "")
+zeb_pc1 <- paste('./datasets download gene gene-id ', dbxrefs[[4]],' --ortholog zebrafish --filename ', "'",file.path("pc1", "zebrafish", dbxrefs[[4]], fsep = "/"), ".zip'", sep = "")
+zeb_pc2 <- paste('./datasets download gene gene-id ', dbxrefs[[5]],' --ortholog zebrafish --filename ', "'",file.path("pc2", "zebrafish", dbxrefs[[5]], fsep = "/"), ".zip'", sep = "")
+zeb_tr <- paste('./datasets download gene gene-id ', dbxrefs[[6]],' --ortholog zebrafish --filename ', "'",file.path("tr", "zebrafish", dbxrefs[[6]], fsep = "/"), ".zip'", sep = "")
 
-write.table(c(human_pc1, human_pc2, human_tr, mouse_pc1, mouse_pc2, mouse_tr, zeb_pc1, zeb_pc2, zeb_tr), file = here("orthos", "test_script.csv"), col.names = F, row.names = F, quote = F)
-write.table(c(mouse_pc1, mouse_pc2, mouse_tr), file = here("orthos", "test_script.csv"), col.names = F, row.names = F, quote = F)
+write.table(c(human_pc1, human_pc2, human_tr), file = here("orthos", "human_script.csv"), col.names = F, row.names = F, quote = F)
+write.table(c(zeb_pc1, zeb_pc2, zeb_tr), file = here("orthos", "zebrafish_script.csv"), col.names = F, row.names = F, quote = F)
+write.table(c(mouse_pc1, mouse_pc2, mouse_tr), file = here("orthos", "mouse_script.csv"), col.names = F, row.names = F, quote = F)
 
 ## Then just run it as a sh in the terminal
 
@@ -254,7 +258,7 @@ str(genes_of_interest_ids, max.level = 2)
 
 genes_of_interest <- list(genes_of_interest_names, genes_of_interest_ids)
 names(genes_of_interest) <- c("gene_names", "gene_ids")
-saveRDS(genes_of_interest, file = "orthos/orthologs_perchr_1e-05_percentile.rds")
+saveRDS(genes_of_interest, file = "orthos/orthologs_perchr_60sp_1e-05_percentile.rds")
 
 ## These lists then get put into Gene Analytics and download, or David
 write_clip(genes_of_interest_names$pc1$human)

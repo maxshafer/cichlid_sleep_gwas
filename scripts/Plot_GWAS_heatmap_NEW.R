@@ -15,11 +15,11 @@ library(ape)
 lt_phylo <- read.nexus("scripts/05_BEAST_RAxML.tre")
 
 # Load phenotype file for plotting and annotating with frequencies
-phenotypes <- read.csv("pheno_data/GWAS_data_PCs_TR_2024-01-28.csv", row.names = "X")
+phenotypes <- read.csv("pheno_data/cichlid_pc-loadings_eco-morph_rest_full.csv")
 
 ## Load in the snps, and subset to unique gene/location matches
 filter_snps <- readRDS(here("sra_reads_nobackup/combined_ann/filter_SNPs_perchr_1e-05_percentile"))
-snps <- filter_snps[2:4]
+snps <- filter_snps[4:6]
 
 snps <- lapply(snps, function(x) {
   x <- x %>% distinct(ANN_GENE, location, .keep_all = T)
@@ -54,13 +54,13 @@ tr_alleles <- Reduce(rbind, lapply(extracted_af, function(x) x[[3]]))
 
 ## Convert allele frequencies into Nocturnal (1) - Diurnal (0) based on lm result
 
-transformAlleleFreqs <- function(alleles = pc1_alleles, pheno_file = phenotypes) {
+transformAlleleFreqs <- function(alleles = pc1_alleles, pheno_file = phenotypes, pheno = "pc1") {
   
   alleles_trans <- t(alleles[,5:65])
   
   test_convert <- apply(alleles_trans, 2, function(x) {
     x <- x[names(x) %in% phenotypes$six_letter_name_Ronco]
-    lm <- lm(phenotypes[,"pc1"] ~ x)
+    lm <- lm(phenotypes[,pheno] ~ x)
     direction <- ifelse(lm$coefficients[2] > 0, 1, -1)
     
     if(direction == 1) {
@@ -77,9 +77,9 @@ transformAlleleFreqs <- function(alleles = pc1_alleles, pheno_file = phenotypes)
   return(alleles_convert)
 }
 
-pc1_convert <- transformAlleleFreqs(alleles = pc1_alleles, pheno_file = phenotypes)
-pc2_convert <- transformAlleleFreqs(alleles = pc2_alleles, pheno_file = phenotypes)
-tr_convert <- transformAlleleFreqs(alleles = tr_alleles, pheno_file = phenotypes)
+pc1_convert <- transformAlleleFreqs(alleles = pc1_alleles, pheno_file = phenotypes, pheno = "pc1")
+pc2_convert <- transformAlleleFreqs(alleles = pc2_alleles, pheno_file = phenotypes, pheno = "pc2")
+tr_convert <- transformAlleleFreqs(alleles = tr_alleles, pheno_file = phenotypes, pheno = "total_rest")
 
 
 ###### ###### ###### ###### ###### ###### ###### ###### ###### 
