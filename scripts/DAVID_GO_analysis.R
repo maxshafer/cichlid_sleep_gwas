@@ -36,8 +36,12 @@ genes <- readRDS(file = "orthos/orthologs_perchr_60sp_1e-05_percentile.rds")
 
 genes_new <- genes$gene_names
 
+ortholog_df <- readRDS("GTF_human_orthologs_all.rds")
 
 ## OK, for each of these data.frames, run DAVID analysis on the gene lists (zebrafish)
+
+background <- unique(ortholog_df$human_ortholog)
+background <- select(org.Hs.eg.db, background, "ENTREZID", "SYMBOL")[,2]
 
 annoCharts <- list(list(), list(), list())
 for (i in 1:length(genes_new)) {
@@ -47,6 +51,7 @@ for (i in 1:length(genes_new)) {
   david <- DAVIDWebService(email="maxshafer@fas.harvard.edu", url = "https://david.ncifcrf.gov/webservice/services/DAVIDWebService")
   setAnnotationCategories(david, c("UP_SEQ_FEATURE", "GOTERM_BP_DIRECT", "GOTERM_CC_DIRECT", "GOTERM_MF_DIRECT", "KEGG_PATHWAY", "REACTOME_PATHWAY", "DISGENET", "GAD_DISEASE", "UP_TISSUE"))
   result <- addList(david, markers, idType = "ENTREZ_GENE_ID", listName = names(genes_new)[i], listType = "Gene")
+  result <- addList(david, background, idType = "ENTREZ_GENE_ID", listName = "backgroundorthos", listType = "Background")
   annoCharts[[i]][[1]] <- getFunctionalAnnotationChart(david, threshold = 0.05)
   
   markers <- genes_new[[i]]$mouse
@@ -54,6 +59,7 @@ for (i in 1:length(genes_new)) {
   david <- DAVIDWebService(email="maxshafer@fas.harvard.edu", url = "https://david.ncifcrf.gov/webservice/services/DAVIDWebService")
   setAnnotationCategories(david, c("UP_SEQ_FEATURE", "GOTERM_BP_DIRECT", "GOTERM_CC_DIRECT", "GOTERM_MF_DIRECT", "KEGG_PATHWAY", "REACTOME_PATHWAY", "DISGENET", "GAD_DISEASE", "UP_TISSUE"))
   result <- addList(david, markers, idType = "ENTREZ_GENE_ID", listName = names(genes_new)[i], listType = "Gene")
+  result <- addList(david, background, idType = "ENTREZ_GENE_ID", listName = "backgroundorthos", listType = "Background")
   annoCharts[[i]][[2]] <- getFunctionalAnnotationChart(david, threshold = 0.05)
   
   markers <- genes_new[[i]]$zebrafish
@@ -61,6 +67,7 @@ for (i in 1:length(genes_new)) {
   david <- DAVIDWebService(email="maxshafer@fas.harvard.edu", url = "https://david.ncifcrf.gov/webservice/services/DAVIDWebService")
   setAnnotationCategories(david, c("UP_SEQ_FEATURE", "GOTERM_BP_DIRECT", "GOTERM_CC_DIRECT", "GOTERM_MF_DIRECT", "KEGG_PATHWAY", "REACTOME_PATHWAY", "DISGENET", "GAD_DISEASE", "UP_TISSUE"))
   result <- addList(david, markers, idType = "ENTREZ_GENE_ID", listName = names(genes_new)[i], listType = "Gene")
+  result <- addList(david, background, idType = "ENTREZ_GENE_ID", listName = "backgroundorthos", listType = "Background")
   annoCharts[[i]][[3]] <- getFunctionalAnnotationChart(david, threshold = 0.05)
   
 }

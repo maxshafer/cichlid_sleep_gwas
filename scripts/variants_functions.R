@@ -433,7 +433,7 @@ generateNCBIorthologs <- function(directory = dir) {
 generateNCBIorthologsJSONL <- function(directory = dir) {
   files <- list.files(directory, recursive = T, pattern = "data_report.jsonl")
   output <- lapply(files, function(x) {
-    df <- jsonlite::fromJSON(paste(directory, x, sep = ""))
+    df <- jsonlite::fromJSON(paste(directory, x, sep = "/"))
     df$gene_id_oreo <- str_split(x, pattern = "/")[[1]][1]
     if (is.character(df$symbol)) {
       return(df$symbol)

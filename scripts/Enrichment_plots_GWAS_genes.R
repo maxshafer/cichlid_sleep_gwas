@@ -69,6 +69,8 @@ genes_new <- genes$gene_names
 
 annoCharts.2 <- readRDS("DAVID-GO_analysis_perchr_60sp_1e-05_percentile.rds")
 
+permute_out <- readRDS(file = "Permutation_corrected_GO_analysis.rds")
+
 # Reshape for plotting
 measure.vars <- matrix(c("PValue", "Bonferroni", "Benjamini", "FDR", "Count", "Fold.Enrichment", "X.", "PValue", "Bonferroni", "Benjamini", "FDR", "Count", "FE", "X.", "PValue.value", "Bonf.value", "Benj.value", "FDR.value", "Counts.value", "FoldE.value", "X.value"), nrow=7, ncol = 3)
 melted <- apply(measure.vars, 1, function(x) reshape2::melt(annoCharts.2, id.vars = c("Category", "Term"), measure.vars = x[1], variable.name = x[2], value.name = x[3]))
