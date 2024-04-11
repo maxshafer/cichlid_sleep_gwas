@@ -253,7 +253,7 @@ dev.off()
 
 plot <- ggplot(phenotypes_dnd_long, aes(x=location, y = measurement, fill = value)) + geom_tile() + theme(axis.title = element_blank(), axis.text.x = element_text(size = 8, angle = 90, hjust = 1, vjust = 0.5)) + scale_fill_distiller(palette = "Greys", direction = 1) + guides(fill=guide_legend(title= paste(pheno_plot, " allele freq", sep = "") ))
 
-plot_combined <- dendro_phylo_pheno + plot + plot_spacer() + dendro_plot_r + plot_layout(design = design, guides = "collect", width = unit(c(200,800), "mm"), height = unit(c(600,100), "mm"))
+plot_combined <- dendro_phylo_pheno + plot + plot_layout(design = design, guides = "collect", width = unit(c(25,75), "in"), height = unit(c(10), "in"))
 
 
 pdf("outs/heatmap_pc1_phylo_labelled_perchr_1e-05_percentile.pdf", width = 100, height = 10)
@@ -265,7 +265,7 @@ dev.off()
 
 ##### Can I modify the function to return a plot with the SNPs of interest also shown?
 
-subset <- keep.tip(phylo_tree, tip = phenotypes$six_letter_name_Ronco[phenotypes$six_letter_name_Ronco %in% phylo_tree$tip.label])
+subset <- keep.tip(lt_phylo, tip = phenotypes$six_letter_name_Ronco[phenotypes$six_letter_name_Ronco %in% lt_phylo$tip.label])
 dendro_phylo <- ggtree(subset) #+ geom_tiplab(offset = 13)
 
 new_pheno <- as.matrix(pc1_convert[,-c(1:5)])
@@ -276,17 +276,17 @@ pheno_data <- phenotypes[match(rownames(new_pheno), phenotypes$six_letter_name_R
 pheno_data$y_phy <- dendro_phylo$data$y[match(pheno_data$six_letter_name_Ronco, dendro_phylo$data$label)]
 pheno_data$x_phy <- dendro_phylo$data$x[match(pheno_data$six_letter_name_Ronco, dendro_phylo$data$label)]
 
-pheno_data$SNP1 <- new_pheno[,grep("NC_031969.2:31739582", colnames(new_pheno))] # NC_031969.2:31739582 Lamps and ectos
-pheno_data$SNP2 <- new_pheno[,grep("NC_031976.2:30604722", colnames(new_pheno))] # NC_031978.2:19381306 NC_031976.2:30604722, NC_031979.2:1797468 (just lampros)
-pheno_data$SNP3 <- new_pheno[,grep("NC_031972.2:22216041", colnames(new_pheno))] # NC_031965.2:37067101, NC_031978.2:10013506, NC_031972.2:22216040, NC_031972.2:22216041, NC_031966.2:13031943 (just ectos)
-pheno_data$SNP4 <- new_pheno[,grep("NC_031969.2:28463972", colnames(new_pheno))] # NC_031987.2:1114119, NC_031973.2:22078731, NC_031973.2:22078731, NC_031969.2:28463972 (just buescheri)
+pheno_data$SNP1 <- new_pheno[,grep("NC_031982.2:23856121", colnames(new_pheno))] # Group i) Ectos/limnos/cyphos + outgroup lamps
+pheno_data$SNP2 <- new_pheno[,grep("NC_031971.2:24810009", colnames(new_pheno))] # Group ii) + iv) Just lamprologini NC_031974.2:29083768
+pheno_data$SNP3 <- new_pheno[,grep("NC_031978.2:6846904", colnames(new_pheno))] # Group iii) Opposite pattern for strong dirunal lampros NC_031972.2:60671126
+pheno_data$SNP4 <- new_pheno[,grep("NC_031975.2:18513666", colnames(new_pheno))] # Group v) all but the mostly diurnal tropheini NC_031975.2:18513666 (crcp)
 
-dendro_phylo_pheno <- dendro_phylo + geom_tile(data = pheno_data, aes_string(y="y_phy", x="x_phy+1.5", fill = pheno_plot), width = 2, height = 0.9, size = 1.5, inherit.aes = FALSE) + scale_fill_distiller(palette = "RdBu", direction = 1)
+dendro_phylo_pheno <- dendro_phylo + geom_tile(data = pheno_data, aes_string(y="y_phy", x="x_phy+1.5", fill = "pc1"), width = 2, height = 0.9, size = 1.5, inherit.aes = FALSE) + scale_fill_distiller(palette = "RdBu", direction = 1)
 
-dendro_phylo_pheno <- dendro_phylo_pheno + new_scale("size") + new_scale("fill") + geom_tile(data = pheno_data, aes(y=y_phy, x=x_phy+4, fill = SNP3), width = 2, height = 0.9, size = 1.5, inherit.aes = FALSE) + scale_fill_distiller(palette = "Greys", direction = 1, name = "Genotype Freq.") 
-dendro_phylo_pheno <- dendro_phylo_pheno + new_scale("size") + new_scale("fill") + geom_tile(data = pheno_data, aes(y=y_phy, x=x_phy+6.5, fill = SNP2), width = 2, height = 0.9, size = 1.5, inherit.aes = FALSE) + scale_fill_distiller(palette = "Greys", direction = 1, name = "Genotype Freq.") 
-dendro_phylo_pheno <- dendro_phylo_pheno + new_scale("size") + new_scale("fill") + geom_tile(data = pheno_data, aes(y=y_phy, x=x_phy+9, fill = SNP1), width = 2, height = 0.9, size = 1.5, inherit.aes = FALSE) + scale_fill_distiller(palette = "Greys", direction = 1, name = "Genotype Freq.") 
-dendro_phylo_pheno <- dendro_phylo_pheno + new_scale("size") + new_scale("fill") + geom_tile(data = pheno_data, aes(y=y_phy, x=x_phy+11.5, fill = SNP4), width = 2, height = 0.9, size = 1.5, inherit.aes = FALSE) + scale_fill_distiller(palette = "Greys", direction = 1, name = "Genotype Freq.") 
+dendro_phylo_pheno <- dendro_phylo_pheno + new_scale("size") + new_scale("fill") + geom_tile(data = pheno_data, aes(y=y_phy, x=x_phy+4, fill = SNP4), width = 2, height = 0.9, size = 1.5, inherit.aes = FALSE) + scale_fill_distiller(palette = "Greys", direction = 1, name = "Genotype Freq.") 
+dendro_phylo_pheno <- dendro_phylo_pheno + new_scale("size") + new_scale("fill") + geom_tile(data = pheno_data, aes(y=y_phy, x=x_phy+6.5, fill = SNP1), width = 2, height = 0.9, size = 1.5, inherit.aes = FALSE) + scale_fill_distiller(palette = "Greys", direction = 1, name = "Genotype Freq.") 
+dendro_phylo_pheno <- dendro_phylo_pheno + new_scale("size") + new_scale("fill") + geom_tile(data = pheno_data, aes(y=y_phy, x=x_phy+9, fill = SNP2), width = 2, height = 0.9, size = 1.5, inherit.aes = FALSE) + scale_fill_distiller(palette = "Greys", direction = 1, name = "Genotype Freq.") 
+dendro_phylo_pheno <- dendro_phylo_pheno + new_scale("size") + new_scale("fill") + geom_tile(data = pheno_data, aes(y=y_phy, x=x_phy+11.5, fill = SNP3), width = 2, height = 0.9, size = 1.5, inherit.aes = FALSE) + scale_fill_distiller(palette = "Greys", direction = 1, name = "Genotype Freq.") 
 
 #dendro_phylo_pheno
 

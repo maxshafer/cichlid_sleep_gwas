@@ -90,7 +90,7 @@ ggplot(GO.wall[!(is.na(GO.wall$permute)),], aes(x = (log(sub_df$nobiaspvalue)*-1
 
 ggplot(GO.wall[!(is.na(GO.wall$permute)),], aes(x = log(over_represented_pvalue)*-1, y = log(nobiaspvalue)*-1, colour = permute)) + geom_point() + scale_colour_viridis()
 
-ggplot(GO.wall[!(is.na(GO.wall$permute)),], aes(x = (log(sub_df$nobiaspvalue)*-1) - (log(sub_df$over_represented_pvalue)*-1), y = 1-permute, colour = 1-permute)) + geom_point() + scale_colour_viridis()
+ggplot(GO.wall[!(is.na(GO.wall$permute)),], aes(x = (log(sub_df$nobiaspvalue)*-1) - (log(sub_df$over_represented_pvalue)*-1), y = 1-permute, colour = 1-permute, label = term)) + geom_point() + geom_text_repel() #+ scale_colour_viridis()
 
 sub_df <- GO.wall[!(is.na(GO.wall$permute)),]
 sub_df$pvalue_diff <- (log(sub_df$nobiaspvalue)*-1) - (log(sub_df$over_represented_pvalue)*-1)

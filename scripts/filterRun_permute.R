@@ -58,4 +58,8 @@ output <- lapply(1:times_pick, function(i) {
 
 saveRDS(output, file = paste("sra_reads_nobackup/dump/combined_ann/Permute_SNPs_perchr", times_pick, "permutations", numb_pick, "SNPs", sep = "_"))
 
-
+# ## Save out the full list of snps
+# 
+# merged <- merged[!duplicated(merged[,c(1:2)]),]
+# 
+# write.table(merged, file = "all_snps_gowinda.txt", quote = F, col.names = F, row.names = F, sep = "\t")

@@ -50,12 +50,12 @@ annoCharts <- lapply(permuted.genes, function(x) {
   david <- DAVIDWebService(email="maxshafer@fas.harvard.edu", url = "https://david.ncifcrf.gov/webservice/services/DAVIDWebService")
   setAnnotationCategories(david, c("UP_SEQ_FEATURE", "GOTERM_BP_DIRECT", "GOTERM_CC_DIRECT", "GOTERM_MF_DIRECT", "KEGG_PATHWAY", "REACTOME_PATHWAY", "DISGENET", "GAD_DISEASE", "UP_TISSUE"))
   result <- addList(david, markers, idType = "ENTREZ_GENE_ID", listName = "permutated_snps", listType = "Gene")
-  result <- addList(david, dbi_out$ENTREZID, idType = "ENTREZ_GENE_ID", listName = "backgroundorthos", listType = "Background")
+  #result <- addList(david, dbi_out$ENTREZID, idType = "ENTREZ_GENE_ID", listName = "backgroundorthos", listType = "Background")
   out <- getFunctionalAnnotationChart(david, threshold = 1)
   return(out)
 })
 ## Temp save out, so I don't have to run this again
-saveRDS(annoCharts, file = "DAVID-GO_analysis_Permute_SNPs_perchr_1000_permutations_800_SNPs_orthoBKGRD.rds")
+saveRDS(annoCharts, file = "DAVID-GO_analysis_Permute_SNPs_perchr_1000_permutations_800_SNPs.rds")
 
 ### Use PhenoExam to get MGI and others
 pop.totals <- t(data.frame(MGD = 17895, PSYGENET = 19262, HPO = 19248, CGI = 19198, CLINGEN = 19198, CRB = 19274, CTD = 19636, GENOMICS_ENGLAND = 19230, ORPHANET = 19262, UNIPROT = 19204))
@@ -91,16 +91,52 @@ permuted_go_analysis <- readRDS("DAVID-GO_analysis_Permute_SNPs_perchr_1000_perm
 annoCharts.2 <- readRDS("DAVID-GO_analysis_perchr_60sp_1e-05_percentile.rds")
 
 
+permuted_go_analysis <- lapply(permuted_go_analysis, function(x) {
+  x$cat_term <- paste(x$Category, x$Term, sep = ":")
+  return(x)
+})
+
+all_terms <- unique(unlist(lapply(permuted_go_analysis, function(x) x$cat_term)))
+
+# brain <- (lapply(permuted_go_analysis, function(x) x$Count[x$cat_term == "UP_TISSUE:brain"]))
+# tud <- (lapply(permuted_go_analysis, function(x) x$PValue[x$cat_term == "GAD_DISEASE:Tobacco Use Disorder"]))
+
+permute_pvalues <- lapply(all_terms, function(term) unlist(lapply(permuted_go_analysis, function(x) x$PValue[x$cat_term == term])))
+names(permute_pvalues) <- all_terms
 
 permute_out <- lapply(annoCharts.2, function(ac2) {
   
-  test_go <- ac2$human[ac2$human$PValue < 0.05,]
+  test_go <- ac2$human
+  
+  test_go$cat_term <- paste(test_go$Category, test_go$Term, sep = ":")
+
+  output <- lapply(seq_along(test_go$cat_term), function(x) {
+    #table(permute_pvalues[[test_go$cat_term[[x]]]] < test_go$Pvalue[[x]])
+    tbl <- permute_pvalues[[test_go$cat_term[[x]]]] < test_go$PValue[[x]]
+    return(length(tbl[tbl == FALSE]) / length(tbl))
+  })
+  
+  test_go$permute_result_pvalues <- unlist(output)
+  
+  return(test_go)
+  
+})
+
+saveRDS(permute_out, file = "Permutation_corrected_GO_analysis_all.rds")
+
+
+
+
+
+permute_out <- lapply(annoCharts.2, function(ac2) {
+  
+  test_go <- ac2$human #[ac2$human$PValue < 0.05,]
   
   ## This returns the matching pvalues for each permutation
-  result <- apply(test_go, 1, function(x) {
+  result <- apply(test_go[1:5,], 1, function(x) {
     
-    test <- unlist(lapply(permuted_go_analysis, function(y) {
-      y <- y[y$Category %in% x[1] & y$Term %in% x[2], "PValue"][1]
+    test <- unlist(lapply(permuted_go_analysis[1:10], function(y) {
+      y <- y[y$Category %in% x[1] & y$Term %in% x[2], "PValue"]#[1]
       return(y)
     }))
     
@@ -123,6 +159,8 @@ permute_out <- lapply(annoCharts.2, function(ac2) {
 })
 
 saveRDS(permute_out, file = "Permutation_corrected_GO_analysis.rds")
+
+permute_out <- readRDS("Permutation_corrected_GO_analysis.rds")
 
 permute_out_fdr <- lapply(annoCharts.2, function(ac2) {
   
