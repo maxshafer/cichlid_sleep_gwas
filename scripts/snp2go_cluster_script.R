@@ -2,7 +2,9 @@ library(SNP2GO)
 library(Rgb)
 library(here)
 library(stringr)
+library(data.table)
 
+setwd("/scicore/home/schiera/gizevo30/projects/cichlids_2")
 # ########################################################################
 # #######   Defining GO file  ############################################
 # ########################################################################
@@ -46,33 +48,50 @@ merged <- Reduce(rbind, dfs_all)
 ########################################################################
 filter_snps <- readRDS(here("sra_reads_nobackup/dump/combined_ann/filter_SNPs_perchr_1e-05_percentile"))
 
-snps <- lapply(filter_snps, function(x) GRanges(seqnames=x[,1],ranges=IRanges(x[,2],x[,2])))
+snps <- lapply(filter_snps, function(x) GRanges(seqnames=x$CHROM,ranges=IRanges(x$POS,x$POS)))
 
 # Make GRanges object from all SNPs               
-bkgrd_snps <- GRanges(seqnames=merged[,1],ranges=IRanges(merged[,2],merged[,2]))
+bkgrd_snps <- GRanges(seqnames=merged$CHROM,ranges=IRanges(merged$POS,merged$POS))
+
+rm(dfs_all)
 
 ########################################################################
 #######   Run the analysis per candidate SNP list  E####################
 ########################################################################
 
-out <- lapply(seq_along(snps), function(i) {
-  
-  # Candidate snps
-  cand <- snps[[i]]
-  # non-candidate snps
-  noncand <- bkgrd_snps[!(merged$location %in% filter_snps[[i]]$location)]
-  
-  y <- snp2go(gtf="genome/GCF_001858045.2_O_niloticus_UMD_NMBU_genomic.fna.gtf",
-              goFile="mart_export_human_go_terms_oreochromis_orthos.txt",
-              candidateSNPs=cand,
-              noncandidateSNPs=noncand,
-              FDR=0.05,
-              runs=10000,
-              extension=50)
-  return(y)
-})
+## Run for pc1
+y <- snp2go(gtf="genome/GCF_001858045.2_O_niloticus_UMD_NMBU_genomic.fna.gtf",
+            goFile="mart_export_human_go_terms_oreochromis_orthos.txt",
+            candidateSNPs=snps[[1]],
+            noncandidateSNPs=bkgrd_snps[!(merged$location %in% filter_snps[[1]]$location)],
+            FDR=0.05,
+            runs=10000,
+            extension=50)
 
-saveRDS(out, file = "snp2go_out.rds")
+saveRDS(y, file = "snp2go_out_pc1.rds")
 
+rm(y)
 
+## Run for pc2
+y <- snp2go(gtf="genome/GCF_001858045.2_O_niloticus_UMD_NMBU_genomic.fna.gtf",
+            goFile="mart_export_human_go_terms_oreochromis_orthos.txt",
+            candidateSNPs=snps[[1]],
+            noncandidateSNPs=bkgrd_snps[!(merged$location %in% filter_snps[[2]]$location)],
+            FDR=0.05,
+            runs=10000,
+            extension=50)
+
+saveRDS(y, file = "snp2go_out_pc2.rds")
+rm(y)
+
+## Run for total_rest
+y <- snp2go(gtf="genome/GCF_001858045.2_O_niloticus_UMD_NMBU_genomic.fna.gtf",
+            goFile="mart_export_human_go_terms_oreochromis_orthos.txt",
+            candidateSNPs=snps[[3]],
+            noncandidateSNPs=bkgrd_snps[!(merged$location %in% filter_snps[[3]]$location)],
+            FDR=0.05,
+            runs=10000,
+            extension=50)
+
+saveRDS(y, file = "snp2go_out_tr.rds")
 
