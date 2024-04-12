@@ -121,6 +121,18 @@ gene_by_go <- lapply(seq_along(concatenated_genes), function(i) {
 
 gene_by_go <- Reduce(rbind, gene_by_go)
 
+library(PhenoExam)
+
+dbs <- getdbnames()
+pheno_genes <- lapply(dbs, function(x) QueryGenes(genes = ortholog_df$human_ortholog, database = x, organism = "human"))
+pheno_genes[[3]]$source <- "MGD"
+pheno_genes <- Reduce(rbind, pheno_genes)
+pheno_genes$term <- paste(pheno_genes$source, ":", pheno_genes$term_id, "~", pheno_genes$term_name, sep = "")
+pheno_genes$ids <- ortholog_df$oreochromis_gene[match(pheno_genes$symbol, ortholog_df$human_ortholog)]
+pheno_genes <- pheno_genes[,c("ids", "term")]
+
+gene_by_go <- rbind(gene_by_go, pheno_genes)
+
 write.table(gene_by_go, file = "custom_gene_set_geneBygo.txt", quote = F, col.names = F, row.names = F, sep = "\t")
 
 
