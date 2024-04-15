@@ -135,6 +135,15 @@ gene_by_go <- rbind(gene_by_go, pheno_genes)
 
 write.table(gene_by_go, file = "custom_gene_set_geneBygo.txt", quote = F, col.names = F, row.names = F, sep = "\t")
 
+## Save out the individual lists for parrallel computing (p values can be bonferroni corrected properly afterwards)
+
+gene_by_go$GO.term.accession <- str_replace(gene_by_go[,2], "'", "Q")
+
+write.table(gene_by_go[grep("DISGENET:", gene_by_go[,2]),], file = "custom_gene_set_geneBygo_DISGENET.txt", quote = F, col.names = F, row.names = F, sep = "\t") # 58144
+write.table(gene_by_go[grep("MGD:", gene_by_go[,2]),], file = "custom_gene_set_geneBygo_MGD.txt", quote = F, col.names = F, row.names = F, sep = "\t") # 181822
+write.table(gene_by_go[grep("HPO:", gene_by_go[,2]),], file = "custom_gene_set_geneBygo_HPO.txt", quote = F, col.names = F, row.names = F, sep = "\t") # 144803
+write.table(gene_by_go[grep("CLINGEN:", gene_by_go[,2]),], file = "custom_gene_set_geneBygo_CLINGEN.txt", quote = F, col.names = F, row.names = F, sep = "\t") # 144803
+write.table(gene_by_go[grep("PSYGENET:", gene_by_go[,2]),], file = "custom_gene_set_geneBygo_PSYGENET.txt", quote = F, col.names = F, row.names = F, sep = "\t") # 144803
 
 
 

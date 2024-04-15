@@ -6,6 +6,18 @@ library(data.table)
 
 setwd("/scicore/home/schiera/gizevo30/projects/cichlids_2")
 
+args = commandArgs(trailingOnly=TRUE)
+if (length(args) != 2) {
+  stop("must have 2 arguments for Rscript command")
+}
+
+args[1] <- as.character(args[1])
+args[2] <- as.character(args[2])
+
+## args[[1]] should be mart file, args[[2]] should be phenotype
+## args[1] can be "mart_export_human_go_terms_oreochromis_orthos.txt" (for everything)
+## or "custom_gene_set_geneBygo_DISGENET.txt" etc
+
 # ########################################################################
 # #######   Defining GO file  ############################################
 # ########################################################################
@@ -26,11 +38,12 @@ setwd("/scicore/home/schiera/gizevo30/projects/cichlids_2")
 # non_go_terms$GO.term.accession <- str_replace(non_go_terms$GO.term.accession, "'", "Q")
 # 
 # 
-# human_go_terms <- rbind(human_go_terms, non_go_terms)
+# human_go_terms_all <- rbind(human_go_terms, non_go_terms)
 # write.table(human_go_terms, file = "mart_export_human_go_terms_oreochromis_orthos.txt", quote = F, row.names = F, sep = "\t")
+# write.table(human_go_terms_all, file = "mart_export_human_go_terms_oreochromis_orthos_all.txt", quote = F, row.names = F, sep = "\t")
 # 
-# human_go_terms_sub <- human_go_terms[sample(1:nrow(human_go_terms), 5000),]
-# write.table(human_go_terms_sub, file = "mart_export_human_go_terms_oreochromis_orthos_sub.txt", quote = F, row.names = F, sep = "\t")
+# human_go_terms_all_sub <- human_go_terms_all[sample(1:nrow(human_go_terms_all), 5000),]
+# write.table(human_go_terms_all_sub, file = "mart_export_human_go_terms_oreochromis_orthos_all_sub.txt", quote = F, row.names = F, sep = "\t")
 
 ## For a vcf file, the first colummn is the CHROM, the 2nd is the position, which I have in not a vcf file
 ## This should be easier than loading in some gigantic vcf file
@@ -305,15 +318,27 @@ dfs_all <- lapply(dfs_all, function(x) {
 # This is the background
 merged <- Reduce(rbind, dfs_all)
 
+bkgrd_snps <- GRanges(seqnames=merged$CHROM,ranges=IRanges(merged$POS,merged$POS))
+
 ########################################################################
 #######   Load significant SNP lists  ##################################
 ########################################################################
 filter_snps <- readRDS(here("sra_reads_nobackup/dump/combined_ann/filter_SNPs_perchr_1e-05_percentile"))
 
-snps <- lapply(filter_snps, function(x) GRanges(seqnames=x$CHROM,ranges=IRanges(x$POS,x$POS)))
+if (args[2] == "pc1") {
+  snps <- filter_snps[[4]]
+  bkgrd_snps <- bkgrd_snps[!(merged$location %in% filter_snps[[4]]$location)]
+}
+if (args[2] == "pc2") {
+  snps <- filter_snps[[5]]
+  bkgrd_snps <- bkgrd_snps[!(merged$location %in% filter_snps[[5]]$location)]
+}
+if (args[2] == "tr") {
+  snps <- filter_snps[[6]]
+  bkgrd_snps <- bkgrd_snps[!(merged$location %in% filter_snps[[6]]$location)]
+}
 
-# Make GRanges object from all SNPs               
-bkgrd_snps <- GRanges(seqnames=merged$CHROM,ranges=IRanges(merged$POS,merged$POS))
+snps <- GRanges(seqnames = snps$CHROM, ranges = IRanges(snps$POS, snps$POS))
 
 rm(dfs_all)
 
@@ -322,41 +347,16 @@ rm(dfs_all)
 ########################################################################
 
 ## Run for pc1
-y <- SNP2GO:::snp2go(gtf="genome/GCF_001858045.2_O_niloticus_UMD_NMBU_genomic.fna.gtf",
-            goFile="mart_export_human_go_terms_oreochromis_orthos.txt",
-            candidateSNPs=snps[[1]],
-            noncandidateSNPs=bkgrd_snps[!(merged$location %in% filter_snps[[1]]$location)],
-            FDR=0.05,
-            runs=10000,
-            extension=50)
+y <- SNP2GO:::snp2go(gtf = "genome/GCF_001858045.2_O_niloticus_UMD_NMBU_genomic.fna.gtf",
+                    goFile = args[1],
+                    candidateSNPs = snps,
+                    noncandidateSNPs = bkgrd_snps,
+                    FDR = 0.05,
+                    runs = 10000,
+                    extension = 50)
 
-saveRDS(y, file = "snp2go_out_pc1_full.rds")
-saveRDS(y$enriched, file = "snp2go_out_pc1_full_enriched.rds")
-rm(y)
+saveRDS(y, file = paste("snp2go_out", args[2], args[1], ".rds", sep = "_"))
+saveRDS(y$enriched, file = paste("snp2go_out", args[2], args[1], "enriched.rds", sep = "_"))
 
-## Run for pc2
-y <- SNP2GO:::snp2go(gtf="genome/GCF_001858045.2_O_niloticus_UMD_NMBU_genomic.fna.gtf",
-            goFile="mart_export_human_go_terms_oreochromis_orthos.txt",
-            candidateSNPs=snps[[1]],
-            noncandidateSNPs=bkgrd_snps[!(merged$location %in% filter_snps[[2]]$location)],
-            FDR=0.05,
-            runs=10000,
-            extension=50)
-
-saveRDS(y, file = "snp2go_out_pc2_full.rds")
-saveRDS(y$enriched, file = "snp2go_out_pc2_full_enriched.rds")
-rm(y)
-
-## Run for total_rest
-y <- SNP2GO:::snp2go(gtf="genome/GCF_001858045.2_O_niloticus_UMD_NMBU_genomic.fna.gtf",
-            goFile="mart_export_human_go_terms_oreochromis_orthos.txt",
-            candidateSNPs=snps[[3]],
-            noncandidateSNPs=bkgrd_snps[!(merged$location %in% filter_snps[[3]]$location)],
-            FDR=0.05,
-            runs=10000,
-            extension=50)
-
-saveRDS(y, file = "snp2go_out_tr_full.rds")
-saveRDS(y$enriched, file = "snp2go_out_tr_full_enriched.rds")
 
 
