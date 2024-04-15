@@ -137,7 +137,7 @@ write.table(gene_by_go, file = "custom_gene_set_geneBygo.txt", quote = F, col.na
 
 ## Save out the individual lists for parrallel computing (p values can be bonferroni corrected properly afterwards)
 
-gene_by_go$GO.term.accession <- str_replace(gene_by_go[,2], "'", "Q")
+gene_by_go[,2] <- str_replace(gene_by_go[,2], "'", "Q")
 
 write.table(gene_by_go[grep("DISGENET:", gene_by_go[,2]),], file = "custom_gene_set_geneBygo_DISGENET.txt", quote = F, col.names = F, row.names = F, sep = "\t") # 58144
 write.table(gene_by_go[grep("MGD:", gene_by_go[,2]),], file = "custom_gene_set_geneBygo_MGD.txt", quote = F, col.names = F, row.names = F, sep = "\t") # 181822
