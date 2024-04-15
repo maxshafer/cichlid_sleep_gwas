@@ -322,7 +322,7 @@ rm(dfs_all)
 ########################################################################
 
 ## Run for pc1
-y <- snp2go(gtf="genome/GCF_001858045.2_O_niloticus_UMD_NMBU_genomic.fna.gtf",
+y <- SNP2GO:::snp2go(gtf="genome/GCF_001858045.2_O_niloticus_UMD_NMBU_genomic.fna.gtf",
             goFile="mart_export_human_go_terms_oreochromis_orthos.txt",
             candidateSNPs=snps[[1]],
             noncandidateSNPs=bkgrd_snps[!(merged$location %in% filter_snps[[1]]$location)],
@@ -335,7 +335,7 @@ saveRDS(y$enriched, file = "snp2go_out_pc1_full_enriched.rds")
 rm(y)
 
 ## Run for pc2
-y <- snp2go(gtf="genome/GCF_001858045.2_O_niloticus_UMD_NMBU_genomic.fna.gtf",
+y <- SNP2GO:::snp2go(gtf="genome/GCF_001858045.2_O_niloticus_UMD_NMBU_genomic.fna.gtf",
             goFile="mart_export_human_go_terms_oreochromis_orthos.txt",
             candidateSNPs=snps[[1]],
             noncandidateSNPs=bkgrd_snps[!(merged$location %in% filter_snps[[2]]$location)],
@@ -348,7 +348,7 @@ saveRDS(y$enriched, file = "snp2go_out_pc2_full_enriched.rds")
 rm(y)
 
 ## Run for total_rest
-y <- snp2go(gtf="genome/GCF_001858045.2_O_niloticus_UMD_NMBU_genomic.fna.gtf",
+y <- SNP2GO:::snp2go(gtf="genome/GCF_001858045.2_O_niloticus_UMD_NMBU_genomic.fna.gtf",
             goFile="mart_export_human_go_terms_oreochromis_orthos.txt",
             candidateSNPs=snps[[3]],
             noncandidateSNPs=bkgrd_snps[!(merged$location %in% filter_snps[[3]]$location)],
