@@ -106,6 +106,9 @@ snp2goNew <- function (gtf, gff, goFile, FDR = 0.05, runs = 1e+05, candidateSNPs
   if (verbose) {
     message("Updating mappings of GO terms to SNPs and genomic regions\nfor inclusive analysis")
   }
+  
+  ## OK this next part is a problem, as it doesn't have support for "other" ontological terms within 'GetAllRegionsAndSNPs'
+  
   progEnvir <- new.env()
   progIncr <- GetProgressBarIncrementer(verbose = verbose, 
                                         environment = progEnvir, min = 0, max = length(inData$goterms), 
@@ -282,11 +285,12 @@ GetStatisticNEW <- function (goterm, gotermsByLevel, snpsByLevel, cc, cn)
   ## I could add an if statement
   if(goterm %in% gotermsByLevel[["other"]][[1]]) {
     o <- "other" # Or whatever I call it above
+    level <- 1
   } else {
     o <- Ontology(goterm)
+    level <- FindLevel(goterm, gotermsByLevel[[o]])
   }
   
-  level <- FindLevel(goterm, gotermsByLevel[[o]])
   allCandidates <- snpsByLevel[[o]][["LengthCandidatesByLevel"]][level]
   allNoncandidates <- snpsByLevel[[o]][["LengthNoncandidatesByLevel"]][level]
   nc <- allCandidates - cc
@@ -298,6 +302,30 @@ GetStatisticNEW <- function (goterm, gotermsByLevel, snpsByLevel, cc, cn)
 environment(GetStatisticNEW) <- asNamespace('SNP2GO')
 assignInNamespace("GetStatistic", GetStatisticNEW, ns = "SNP2GO")
 
+GetCandidateTermsNEW <- function (goterm, allGOTerms) 
+{
+  if (is.na(Ontology(goterm))) {
+    ## Just return the go term if it can't be found with goProflier
+    return(goterm)
+  }
+  else {
+    offspringTerms <- switch(Ontology(goterm), MF = AnnotationDbi::get(goterm, 
+                                                                       GOMFOFFSPRING), BP = AnnotationDbi::get(goterm, 
+                                                                                                               GOBPOFFSPRING), CC = AnnotationDbi::get(goterm, 
+                                                                                                                                                       GOCCOFFSPRING))
+    if (is.na(offspringTerms[1])) {
+      return(goterm)
+    }
+    else {
+      offspringTerms <- offspringTerms[offspringTerms %in% 
+                                         allGOTerms]
+      return(c(goterm, offspringTerms))
+    }
+  }
+}
+
+environment(GetCandidateTermsNEW) <- asNamespace('SNP2GO')
+assignInNamespace("GetCandidateTerms", GetCandidateTermsNEW, ns = "SNP2GO")
 
 ########################################################################
 #######   Load/merge per comparison  ###################################
