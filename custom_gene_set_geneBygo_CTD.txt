@@ -97,7 +97,7 @@ acat2	CTD:C0342735~Cytosolic acetoacetyl-CoA thiolase deficiency
 asic2	CTD:C0004352~Autistic Disorder
 asic1	CTD:C0007786~Brain Ischemia
 asic1	CTD:C0917798~Cerebral Ischemia
-ache	CTD:C0002395~Alzheimer's Disease
+ache	CTD:C0002395~AlzheimerQs Disease
 ache	CTD:C0002726~Amyloidosis
 ache	CTD:C0002871~Anemia
 ache	CTD:C0005684~Malignant neoplasm of urinary bladder
@@ -127,7 +127,7 @@ ache	CTD:C0494475~Tonic - clonic seizures
 ache	CTD:C0546126~Acute Confusional Senile Dementia
 ache	CTD:C0678222~Breast Carcinoma
 ache	CTD:C0700359~Organophosphate poisoning
-ache	CTD:C0750900~Alzheimer's Disease, Focal Onset
+ache	CTD:C0750900~AlzheimerQs Disease, Focal Onset
 ache	CTD:C0750901~Alzheimer Disease, Early Onset
 ache	CTD:C0751110~Single Seizure
 ache	CTD:C0751263~Learning Disturbance
@@ -243,7 +243,7 @@ LOC100698412	CTD:C1262760~Hepatitis, Drug-Induced
 LOC100698412	CTD:C3658290~Drug-Induced Acute Liver Injury
 LOC100698412	CTD:C4277682~Chemical and Drug Induced Liver Injury
 LOC100698412	CTD:C4279912~Chemically-Induced Liver Toxicity
-adam10	CTD:C0002395~Alzheimer's Disease
+adam10	CTD:C0002395~AlzheimerQs Disease
 adam10	CTD:C0006142~Malignant neoplasm of breast
 adam10	CTD:C0011265~Presenile dementia
 adam10	CTD:C0276496~Familial Alzheimer Disease (FAD)
@@ -251,7 +251,7 @@ adam10	CTD:C0406811~Reticulate acropigmentation of Kitamura
 adam10	CTD:C0494463~Alzheimer Disease, Late Onset
 adam10	CTD:C0546126~Acute Confusional Senile Dementia
 adam10	CTD:C0678222~Breast Carcinoma
-adam10	CTD:C0750900~Alzheimer's Disease, Focal Onset
+adam10	CTD:C0750900~AlzheimerQs Disease, Focal Onset
 adam10	CTD:C0750901~Alzheimer Disease, Early Onset
 adam10	CTD:C1257931~Mammary Neoplasms, Human
 adam10	CTD:C3714534~dowling-degos disease
@@ -935,7 +935,7 @@ ampd1	CTD:C3714933~MYOPATHY DUE TO MYOADENYLATE DEAMINASE DEFICIENCY
 LOC100692415	CTD:C3810295~SPASTIC PARAPLEGIA 63, AUTOSOMAL RECESSIVE
 LOC100692415	CTD:C4014354~PONTOCEREBELLAR HYPOPLASIA, TYPE 9
 LOC100697636	CTD:C2752073~Erythrocyte Amp Deaminase Deficiency
-LOC100707182	CTD:C0002395~Alzheimer's Disease
+LOC100707182	CTD:C0002395~AlzheimerQs Disease
 LOC100707182	CTD:C0011265~Presenile dementia
 LOC100707182	CTD:C0175709~Centronuclear myopathy
 LOC100707182	CTD:C0276496~Familial Alzheimer Disease (FAD)
@@ -946,7 +946,7 @@ LOC100707182	CTD:C0410207~Tubular Aggregate Myopathy
 LOC100707182	CTD:C0494463~Alzheimer Disease, Late Onset
 LOC100707182	CTD:C0546126~Acute Confusional Senile Dementia
 LOC100707182	CTD:C0546264~Congenital Fiber Type Disproportion
-LOC100707182	CTD:C0750900~Alzheimer's Disease, Focal Onset
+LOC100707182	CTD:C0750900~AlzheimerQs Disease, Focal Onset
 LOC100707182	CTD:C0750901~Alzheimer Disease, Early Onset
 LOC100707182	CTD:C0752282~Congenital Structural Myopathy
 LOC100707182	CTD:C1270972~Mild cognitive disorder
@@ -1227,7 +1227,7 @@ LOC102079941	CTD:C1848533~Ataxia with vitamin E deficiency
 LOC102079941	CTD:C1862596~Familial hypobetalipoproteinemia
 LOC102079941	CTD:C2711227~Steatohepatitis
 LOC102079941	CTD:C4551990~Acanthocytosis With Hypobetalipoproteinemia
-LOC100712028	CTD:C0002395~Alzheimer's Disease
+LOC100712028	CTD:C0002395~AlzheimerQs Disease
 LOC100712028	CTD:C0011265~Presenile dementia
 LOC100712028	CTD:C0018801~Heart failure
 LOC100712028	CTD:C0018802~Congestive heart failure
@@ -1236,7 +1236,7 @@ LOC100712028	CTD:C0235527~Heart Failure, Right-Sided
 LOC100712028	CTD:C0276496~Familial Alzheimer Disease (FAD)
 LOC100712028	CTD:C0494463~Alzheimer Disease, Late Onset
 LOC100712028	CTD:C0546126~Acute Confusional Senile Dementia
-LOC100712028	CTD:C0750900~Alzheimer's Disease, Focal Onset
+LOC100712028	CTD:C0750900~AlzheimerQs Disease, Focal Onset
 LOC100712028	CTD:C0750901~Alzheimer Disease, Early Onset
 LOC100712028	CTD:C1959583~Myocardial Failure
 LOC100691432	CTD:C0017638~Glioma
@@ -1244,7 +1244,7 @@ LOC100691432	CTD:C0259783~mixed gliomas
 LOC100691432	CTD:C0555198~Malignant Glioma
 LOC100691432	CTD:C0751263~Learning Disturbance
 LOC100691432	CTD:C0751265~Learning Disabilities
-LOC100707019	CTD:C0002395~Alzheimer's Disease
+LOC100707019	CTD:C0002395~AlzheimerQs Disease
 LOC100707019	CTD:C0002726~Amyloidosis
 LOC100707019	CTD:C0003850~Arteriosclerosis
 LOC100707019	CTD:C0004153~Atherosclerosis
@@ -1289,7 +1289,7 @@ LOC100707019	CTD:C0494475~Tonic - clonic seizures
 LOC100707019	CTD:C0546126~Acute Confusional Senile Dementia
 LOC100707019	CTD:C0577631~Carotid Atherosclerosis
 LOC100707019	CTD:C0745103~Hyperlipoproteinemia Type IIa
-LOC100707019	CTD:C0750900~Alzheimer's Disease, Focal Onset
+LOC100707019	CTD:C0750900~AlzheimerQs Disease, Focal Onset
 LOC100707019	CTD:C0750901~Alzheimer Disease, Early Onset
 LOC100707019	CTD:C0750987~Arterial Diseases, Common Carotid
 LOC100707019	CTD:C0751110~Single Seizure
@@ -1316,7 +1316,7 @@ LOC100699343	CTD:C1262760~Hepatitis, Drug-Induced
 LOC100699343	CTD:C3658290~Drug-Induced Acute Liver Injury
 LOC100699343	CTD:C4277682~Chemical and Drug Induced Liver Injury
 LOC100699343	CTD:C4279912~Chemically-Induced Liver Toxicity
-LOC100709268	CTD:C0002395~Alzheimer's Disease
+LOC100709268	CTD:C0002395~AlzheimerQs Disease
 LOC100709268	CTD:C0002622~Amnesia
 LOC100709268	CTD:C0002726~Amyloidosis
 LOC100709268	CTD:C0011265~Presenile dementia
@@ -1335,7 +1335,7 @@ LOC100709268	CTD:C0494463~Alzheimer Disease, Late Onset
 LOC100709268	CTD:C0497327~Dementia
 LOC100709268	CTD:C0546126~Acute Confusional Senile Dementia
 LOC100709268	CTD:C0600467~Neurogenic Inflammation
-LOC100709268	CTD:C0750900~Alzheimer's Disease, Focal Onset
+LOC100709268	CTD:C0750900~AlzheimerQs Disease, Focal Onset
 LOC100709268	CTD:C0750901~Alzheimer Disease, Early Onset
 LOC100709268	CTD:C0751071~Familial Dementia
 LOC100709268	CTD:C0751156~FRAXA Syndrome
@@ -1715,12 +1715,12 @@ LOC100705275	CTD:C0205650~Papillary adenoma
 LOC100705275	CTD:C0205651~Adenoma, Trabecular
 LOC100705275	CTD:C0796205~SPINOCEREBELLAR ATAXIA, X-LINKED 1
 LOC100705275	CTD:C1384514~Conn Syndrome
-atp5f1a	CTD:C0002395~Alzheimer's Disease
+atp5f1a	CTD:C0002395~AlzheimerQs Disease
 atp5f1a	CTD:C0011265~Presenile dementia
 atp5f1a	CTD:C0276496~Familial Alzheimer Disease (FAD)
 atp5f1a	CTD:C0494463~Alzheimer Disease, Late Onset
 atp5f1a	CTD:C0546126~Acute Confusional Senile Dementia
-atp5f1a	CTD:C0750900~Alzheimer's Disease, Focal Onset
+atp5f1a	CTD:C0750900~AlzheimerQs Disease, Focal Onset
 atp5f1a	CTD:C0750901~Alzheimer Disease, Early Onset
 atp5f1a	CTD:C3808899~MITOCHONDRIAL COMPLEX V (ATP SYNTHASE) DEFICIENCY, NUCLEAR TYPE 4
 atp5f1a	CTD:C4015062~COMBINED OXIDATIVE PHOSPHORYLATION DEFICIENCY 22
@@ -1896,7 +1896,7 @@ bckdhb	CTD:C0268568~Classic Maple Syrup Urine Disease
 bckdhb	CTD:C0268569~Intermittent Maple Syrup Urine Disease
 bckdhb	CTD:C0751285~Maple Syrup Urine Disease, Thiamine Responsive
 bckdhb	CTD:C1621920~Intermediate Maple Syrup Urine Disease
-ccnd1	CTD:C0006079~Bowen's Disease
+ccnd1	CTD:C0006079~BowenQs Disease
 ccnd1	CTD:C0006142~Malignant neoplasm of breast
 ccnd1	CTD:C0007102~Malignant tumor of colon
 ccnd1	CTD:C0007137~Squamous cell carcinoma
@@ -2035,7 +2035,7 @@ LOC100691077	CTD:C0014558~Uncinate Epilepsy
 LOC100691077	CTD:C0038433~Streptozotocin Diabetes
 LOC100691077	CTD:C0393672~Epilepsy, Benign Psychomotor, Childhood
 LOC100691077	CTD:C0393682~Epilepsy, Lateral Temporal
-bdnf	CTD:C0002395~Alzheimer's Disease
+bdnf	CTD:C0002395~AlzheimerQs Disease
 bdnf	CTD:C0004352~Autistic Disorder
 bdnf	CTD:C0005586~Bipolar Disorder
 bdnf	CTD:C0005587~Depression, Bipolar
@@ -2083,7 +2083,7 @@ bdnf	CTD:C0494475~Tonic - clonic seizures
 bdnf	CTD:C0546126~Acute Confusional Senile Dementia
 bdnf	CTD:C0600241~heroin abuse
 bdnf	CTD:C0600427~Cocaine Dependence
-bdnf	CTD:C0750900~Alzheimer's Disease, Focal Onset
+bdnf	CTD:C0750900~AlzheimerQs Disease, Focal Onset
 bdnf	CTD:C0750901~Alzheimer Disease, Early Onset
 bdnf	CTD:C0751068~Deafness, Acquired
 bdnf	CTD:C0751110~Single Seizure
@@ -2134,7 +2134,7 @@ prdm1	CTD:C0009324~Ulcerative Colitis
 prdm1	CTD:C0024141~Lupus Erythematosus, Systemic
 prdm1	CTD:C0086981~Sicca Syndrome
 prdm1	CTD:C0242380~Libman-Sacks Disease
-prdm1	CTD:C1527336~Sjogren's Syndrome
+prdm1	CTD:C1527336~SjogrenQs Syndrome
 lck	CTD:C0003873~Rheumatoid Arthritis
 lck	CTD:C0024141~Lupus Erythematosus, Systemic
 lck	CTD:C0026691~Mucocutaneous Lymph Node Syndrome
@@ -2599,7 +2599,7 @@ cacnb4	CTD:C4552768~Myoclonic Epilepsy, Adolescent
 cacnb4	CTD:C4553087~Myoclonic Epilepsy, Juvenile, 1
 cacnb4	CTD:C4553298~Impulsive Petit Mal Epilepsy
 LOC100711277	CTD:C0342791~Carnitine-Acylcarnitine Translocase Deficiency
-cad	CTD:C0002875~Cooley's anemia
+cad	CTD:C0002875~CooleyQs anemia
 cad	CTD:C0002895~Anemia, Sickle Cell
 cad	CTD:C0005283~beta Thalassemia
 cad	CTD:C0019025~Hemoglobin F Disease
@@ -2683,7 +2683,7 @@ casp2	CTD:C1266043~Sarcomatoid Renal Cell Carcinoma
 casp2	CTD:C1266044~Collecting Duct Carcinoma of the Kidney
 casp2	CTD:C1306837~Papillary Renal Cell Carcinoma
 LOC100695417	CTD:C0002152~Alloxan Diabetes
-LOC100695417	CTD:C0002395~Alzheimer's Disease
+LOC100695417	CTD:C0002395~AlzheimerQs Disease
 LOC100695417	CTD:C0007786~Brain Ischemia
 LOC100695417	CTD:C0009324~Ulcerative Colitis
 LOC100695417	CTD:C0010417~Cryptorchidism
@@ -2724,7 +2724,7 @@ LOC100695417	CTD:C0494463~Alzheimer Disease, Late Onset
 LOC100695417	CTD:C0520463~Chronic active hepatitis
 LOC100695417	CTD:C0524611~Cryptogenic Chronic Hepatitis
 LOC100695417	CTD:C0546126~Acute Confusional Senile Dementia
-LOC100695417	CTD:C0750900~Alzheimer's Disease, Focal Onset
+LOC100695417	CTD:C0750900~AlzheimerQs Disease, Focal Onset
 LOC100695417	CTD:C0750901~Alzheimer Disease, Early Onset
 LOC100695417	CTD:C0751074~Diabetic Neuralgia
 LOC100695417	CTD:C0751522~Status Epilepticus, Subclinical
@@ -3481,7 +3481,7 @@ chrna5	CTD:C0494475~Tonic - clonic seizures
 chrna5	CTD:C0740858~Substance abuse problem
 chrna5	CTD:C0751110~Single Seizure
 chrna5	CTD:C1279420~Anxiety neurosis (finding)
-LOC100691116	CTD:C0002395~Alzheimer's Disease
+LOC100691116	CTD:C0002395~AlzheimerQs Disease
 LOC100691116	CTD:C0004352~Autistic Disorder
 LOC100691116	CTD:C0011265~Presenile dementia
 LOC100691116	CTD:C0014548~Epilepsy, Generalized
@@ -3508,7 +3508,7 @@ LOC100691116	CTD:C0347869~Epilepsy, Akinetic
 LOC100691116	CTD:C0494463~Alzheimer Disease, Late Onset
 LOC100691116	CTD:C0494475~Tonic - clonic seizures
 LOC100691116	CTD:C0546126~Acute Confusional Senile Dementia
-LOC100691116	CTD:C0750900~Alzheimer's Disease, Focal Onset
+LOC100691116	CTD:C0750900~AlzheimerQs Disease, Focal Onset
 LOC100691116	CTD:C0750901~Alzheimer Disease, Early Onset
 LOC100691116	CTD:C0751110~Single Seizure
 LOC100691116	CTD:C0795690~Congenital omphalocele
@@ -3520,7 +3520,7 @@ LOC100692189	CTD:C0751883~Congenital Myasthenic Syndromes, Postsynaptic
 LOC100692189	CTD:C0751884~Congenital Myasthenic Syndromes, Presynaptic
 LOC100692189	CTD:C0751885~Myasthenic Syndromes, Congenital, Slow Channel
 LOC100692189	CTD:C1837092~Myasthenic Syndrome, Congenital, with Facial Dysmorphism, associated with Acetylcholine Receptor Deficiency
-chrnb2	CTD:C0002395~Alzheimer's Disease
+chrnb2	CTD:C0002395~AlzheimerQs Disease
 chrnb2	CTD:C0004352~Autistic Disorder
 chrnb2	CTD:C0011265~Presenile dementia
 chrnb2	CTD:C0038587~Substance Withdrawal Syndrome
@@ -3535,7 +3535,7 @@ chrnb2	CTD:C0393684~Epilepsy, Cingulate
 chrnb2	CTD:C0393688~Epilepsy, Opercular
 chrnb2	CTD:C0494463~Alzheimer Disease, Late Onset
 chrnb2	CTD:C0546126~Acute Confusional Senile Dementia
-chrnb2	CTD:C0750900~Alzheimer's Disease, Focal Onset
+chrnb2	CTD:C0750900~AlzheimerQs Disease, Focal Onset
 chrnb2	CTD:C0750901~Alzheimer Disease, Early Onset
 chrnb2	CTD:C0751509~Short Sleeper Syndrome
 chrnb2	CTD:C0751642~Epilepsy, Anterior Fronto-Polar
@@ -3631,7 +3631,7 @@ clcn5	CTD:C0259783~mixed gliomas
 clcn5	CTD:C0403720~X-linked recessive nephrolithiasis with renal failure
 clcn5	CTD:C0555198~Malignant Glioma
 clcn5	CTD:C0733682~Hypophosphatemic Rickets, X-Linked Dominant
-clcn5	CTD:C0878681~Dent's disease
+clcn5	CTD:C0878681~DentQs disease
 clcn5	CTD:C1839874~Low Molecular Weight Proteinuria with Hypercalciuria and Nephrocalcinosis
 clcn5	CTD:C1845168~Hypophosphatemic Rickets, X-Linked Recessive
 clcn5	CTD:C1848336~Dent disease 1
@@ -3643,7 +3643,7 @@ clcn7	CTD:C1969106~Osteopetrosis, Autosomal Recessive 4
 clcn7	CTD:C3179239~Osteopetrosis Autosomal Dominant Type 2
 clcn7	CTD:C3645711~Congenital Osteopetrosis
 LOC100698259	CTD:C2751312~BARTTER SYNDROME, TYPE 4B
-clu	CTD:C0002395~Alzheimer's Disease
+clu	CTD:C0002395~AlzheimerQs Disease
 clu	CTD:C0011265~Presenile dementia
 clu	CTD:C0019193~Hepatitis, Toxic
 clu	CTD:C0022333~Jacksonian Seizure
@@ -3665,7 +3665,7 @@ clu	CTD:C0376358~Malignant neoplasm of prostate
 clu	CTD:C0494463~Alzheimer Disease, Late Onset
 clu	CTD:C0494475~Tonic - clonic seizures
 clu	CTD:C0546126~Acute Confusional Senile Dementia
-clu	CTD:C0750900~Alzheimer's Disease, Focal Onset
+clu	CTD:C0750900~AlzheimerQs Disease, Focal Onset
 clu	CTD:C0750901~Alzheimer Disease, Early Onset
 clu	CTD:C0751110~Single Seizure
 clu	CTD:C1262760~Hepatitis, Drug-Induced
@@ -3694,7 +3694,7 @@ clic1	CTD:C4505456~HIV Coinfection
 clic1	CTD:C4704874~Mammary Carcinoma, Human
 LOC100694858	CTD:C0023893~Liver Cirrhosis, Experimental
 LOC100694858	CTD:C3550913~MENTAL RETARDATION, X-LINKED, SYNDROMIC 32
-tpp1	CTD:C0002395~Alzheimer's Disease
+tpp1	CTD:C0002395~AlzheimerQs Disease
 tpp1	CTD:C0011265~Presenile dementia
 tpp1	CTD:C0022340~Late-Infantile Neuronal Ceroid Lipfuscinosis
 tpp1	CTD:C0022797~Adult Neuronal Ceroid Lipofuscinosis
@@ -3704,7 +3704,7 @@ tpp1	CTD:C0276496~Familial Alzheimer Disease (FAD)
 tpp1	CTD:C0376358~Malignant neoplasm of prostate
 tpp1	CTD:C0494463~Alzheimer Disease, Late Onset
 tpp1	CTD:C0546126~Acute Confusional Senile Dementia
-tpp1	CTD:C0750900~Alzheimer's Disease, Focal Onset
+tpp1	CTD:C0750900~AlzheimerQs Disease, Focal Onset
 tpp1	CTD:C0750901~Alzheimer Disease, Early Onset
 tpp1	CTD:C0751383~Juvenile Neuronal Ceroid Lipofuscinosis
 tpp1	CTD:C1834207~Ceroid Lipofuscinosis, Neuronal, Parry Type
@@ -3963,7 +3963,7 @@ col7a1	CTD:C1843761~TOENAIL DYSTROPHY, ISOLATED
 col7a1	CTD:C1851573~Transient bullous dermolysis of the newborn
 col7a1	CTD:C4704874~Mammary Carcinoma, Human
 col8a1	CTD:C1135196~Heart Failure, Diastolic
-col8a2	CTD:C1850959~Corneal dystrophy, Fuchs' endothelial, 1
+col8a2	CTD:C1850959~Corneal dystrophy, FuchsQ endothelial, 1
 col8a2	CTD:C1852795~CORNEAL DYSTROPHY, POSTERIOR POLYMORPHOUS, 2
 LOC100708902	CTD:C1838429~Epiphyseal dysplasia, multiple, 2
 LOC100708902	CTD:C3280342~STICKLER SYNDROME, TYPE V
@@ -4205,7 +4205,7 @@ LOC100708638	CTD:C3714758~Juvenile psoriatic arthritis
 LOC100708638	CTD:C4552091~Polyarthritis, Juvenile, Rheumatoid Factor Negative
 LOC100708638	CTD:C4704862~Polyarthritis, Juvenile, Rheumatoid Factor Positive
 crh	CTD:C0002170~Alopecia
-crh	CTD:C0002395~Alzheimer's Disease
+crh	CTD:C0002395~AlzheimerQs Disease
 crh	CTD:C0003123~Anorexia
 crh	CTD:C0009171~Cocaine Abuse
 crh	CTD:C0010481~Cushing Syndrome
@@ -4244,7 +4244,7 @@ crh	CTD:C0546126~Acute Confusional Senile Dementia
 crh	CTD:C0546878~Nodding spasm
 crh	CTD:C0553558~Jackknife Seizures
 crh	CTD:C0600427~Cocaine Dependence
-crh	CTD:C0750900~Alzheimer's Disease, Focal Onset
+crh	CTD:C0750900~AlzheimerQs Disease, Focal Onset
 crh	CTD:C0750901~Alzheimer Disease, Early Onset
 crh	CTD:C0751110~Single Seizure
 crh	CTD:C0751522~Status Epilepticus, Subclinical
@@ -4367,7 +4367,7 @@ slc25a10	CTD:C0205696~Anaplastic carcinoma
 slc25a10	CTD:C0205697~Carcinoma, Spindle-Cell
 slc25a10	CTD:C0205698~Undifferentiated carcinoma
 slc25a10	CTD:C1257925~Mammary Carcinoma, Animal
-LOC100711094	CTD:C0002395~Alzheimer's Disease
+LOC100711094	CTD:C0002395~AlzheimerQs Disease
 LOC100711094	CTD:C0011265~Presenile dementia
 LOC100711094	CTD:C0022660~Kidney Failure, Acute
 LOC100711094	CTD:C0023467~Leukemia, Myelocytic, Acute
@@ -4392,7 +4392,7 @@ LOC100711094	CTD:C0431121~Clear Cell Meningioma
 LOC100711094	CTD:C0457190~Xanthomatous Meningioma
 LOC100711094	CTD:C0494463~Alzheimer Disease, Late Onset
 LOC100711094	CTD:C0546126~Acute Confusional Senile Dementia
-LOC100711094	CTD:C0750900~Alzheimer's Disease, Focal Onset
+LOC100711094	CTD:C0750900~AlzheimerQs Disease, Focal Onset
 LOC100711094	CTD:C0750901~Alzheimer Disease, Early Onset
 LOC100711094	CTD:C0751303~Cerebral Convexity Meningioma
 LOC100711094	CTD:C0751304~Parasagittal Meningioma
@@ -4823,7 +4823,7 @@ dag1	CTD:C4284790~Muscular Dystrophy-Dystroglycanopathy (Congenital with Brain a
 dgkb	CTD:C0004238~Atrial Fibrillation
 dgkb	CTD:C0235480~Paroxysmal atrial fibrillation
 dgkq	CTD:C0086981~Sicca Syndrome
-dgkq	CTD:C1527336~Sjogren's Syndrome
+dgkq	CTD:C1527336~SjogrenQs Syndrome
 dao	CTD:C0004352~Autistic Disorder
 dao	CTD:C0023893~Liver Cirrhosis, Experimental
 dao	CTD:C0036341~Schizophrenia
@@ -4900,7 +4900,7 @@ dcn	CTD:C1623038~Cirrhosis
 dcn	CTD:C1864738~Corneal Dystrophy, Congenital Stromal
 dcn	CTD:C2239176~Liver carcinoma
 ace	CTD:C0002152~Alloxan Diabetes
-ace	CTD:C0002395~Alzheimer's Disease
+ace	CTD:C0002395~AlzheimerQs Disease
 ace	CTD:C0004238~Atrial Fibrillation
 ace	CTD:C0004352~Autistic Disorder
 ace	CTD:C0005138~Berylliosis
@@ -4943,7 +4943,7 @@ ace	CTD:C0376358~Malignant neoplasm of prostate
 ace	CTD:C0400966~Non-alcoholic Fatty Liver Disease
 ace	CTD:C0494463~Alzheimer Disease, Late Onset
 ace	CTD:C0546126~Acute Confusional Senile Dementia
-ace	CTD:C0750900~Alzheimer's Disease, Focal Onset
+ace	CTD:C0750900~AlzheimerQs Disease, Focal Onset
 ace	CTD:C0750901~Alzheimer Disease, Early Onset
 ace	CTD:C0751956~Acute Cerebrovascular Accidents
 ace	CTD:C0917798~Cerebral Ischemia
@@ -5094,14 +5094,14 @@ dhcr7	CTD:C0239946~Fibrosis, Liver
 dhcr7	CTD:C0282643~Smith-Lemli-Opitz Syndrome, Type I
 dhcr7	CTD:C0282644~Smith-Lemli-Opitz Syndrome, Type II
 dhcr7	CTD:C2713347~7-Dehydrocholesterol Reductase Deficiency
-dhcr24	CTD:C0002395~Alzheimer's Disease
+dhcr24	CTD:C0002395~AlzheimerQs Disease
 dhcr24	CTD:C0011265~Presenile dementia
 dhcr24	CTD:C0034362~Q Fever
 dhcr24	CTD:C0276496~Familial Alzheimer Disease (FAD)
 dhcr24	CTD:C0494463~Alzheimer Disease, Late Onset
 dhcr24	CTD:C0519066~Acute Q fever
 dhcr24	CTD:C0546126~Acute Confusional Senile Dementia
-dhcr24	CTD:C0750900~Alzheimer's Disease, Focal Onset
+dhcr24	CTD:C0750900~AlzheimerQs Disease, Focal Onset
 dhcr24	CTD:C0750901~Alzheimer Disease, Early Onset
 dhcr24	CTD:C1443892~Chronic Q Fever
 dhcr24	CTD:C1510586~Autism Spectrum Disorders
@@ -5126,7 +5126,7 @@ dhfr	CTD:C4277682~Chemical and Drug Induced Liver Injury
 dhfr	CTD:C4279912~Chemically-Induced Liver Toxicity
 dhfr	CTD:C4552766~Miscarriage
 dhfr	CTD:C4704874~Mammary Carcinoma, Human
-dhodh	CTD:C0002875~Cooley's anemia
+dhodh	CTD:C0002875~CooleyQs anemia
 dhodh	CTD:C0002895~Anemia, Sickle Cell
 dhodh	CTD:C0005283~beta Thalassemia
 dhodh	CTD:C0019025~Hemoglobin F Disease
@@ -5320,7 +5320,7 @@ dpyd	CTD:C3495551~Dihydropyrimidinuria
 dpyd	CTD:C4704874~Mammary Carcinoma, Human
 dpys	CTD:C0023893~Liver Cirrhosis, Experimental
 dpys	CTD:C0342803~Dihydropyrimidinase deficiency
-LOC100705567	CTD:C0002395~Alzheimer's Disease
+LOC100705567	CTD:C0002395~AlzheimerQs Disease
 LOC100705567	CTD:C0011265~Presenile dementia
 LOC100705567	CTD:C0029408~Degenerative polyarthritis
 LOC100705567	CTD:C0036349~Paranoid Schizophrenia
@@ -5328,7 +5328,7 @@ LOC100705567	CTD:C0086743~Osteoarthrosis Deformans
 LOC100705567	CTD:C0276496~Familial Alzheimer Disease (FAD)
 LOC100705567	CTD:C0494463~Alzheimer Disease, Late Onset
 LOC100705567	CTD:C0546126~Acute Confusional Senile Dementia
-LOC100705567	CTD:C0750900~Alzheimer's Disease, Focal Onset
+LOC100705567	CTD:C0750900~AlzheimerQs Disease, Focal Onset
 LOC100705567	CTD:C0750901~Alzheimer Disease, Early Onset
 drd2	CTD:C0007370~Catalepsy
 drd2	CTD:C0009171~Cocaine Abuse
@@ -5925,7 +5925,7 @@ ehhadh	CTD:C0740858~Substance abuse problem
 ehhadh	CTD:C1857395~De Toni-Debre-Fanconi Syndrome
 ehhadh	CTD:C3495427~Fanconi-Bickel Syndrome
 eif1ax	CTD:C0220633~Uveal melanoma
-eif2s1	CTD:C0002395~Alzheimer's Disease
+eif2s1	CTD:C0002395~AlzheimerQs Disease
 eif2s1	CTD:C0011265~Presenile dementia
 eif2s1	CTD:C0029463~Osteosarcoma
 eif2s1	CTD:C0038220~Status Epilepticus
@@ -5935,7 +5935,7 @@ eif2s1	CTD:C0311335~Grand Mal Status Epilepticus
 eif2s1	CTD:C0393734~Complex Partial Status Epilepticus
 eif2s1	CTD:C0494463~Alzheimer Disease, Late Onset
 eif2s1	CTD:C0546126~Acute Confusional Senile Dementia
-eif2s1	CTD:C0750900~Alzheimer's Disease, Focal Onset
+eif2s1	CTD:C0750900~AlzheimerQs Disease, Focal Onset
 eif2s1	CTD:C0750901~Alzheimer Disease, Early Onset
 eif2s1	CTD:C0751522~Status Epilepticus, Subclinical
 eif2s1	CTD:C0751523~Non-Convulsive Status Epilepticus
@@ -6004,7 +6004,7 @@ LOC100701586	CTD:C0220636~Malignant neoplasm of salivary gland
 LOC100706716	CTD:C0004352~Autistic Disorder
 LOC100706716	CTD:C1510586~Autism Spectrum Disorders
 eno1	CTD:C0001787~Osteoporosis, Age-Related
-eno1	CTD:C0002395~Alzheimer's Disease
+eno1	CTD:C0002395~AlzheimerQs Disease
 eno1	CTD:C0003873~Rheumatoid Arthritis
 eno1	CTD:C0006142~Malignant neoplasm of breast
 eno1	CTD:C0007131~Non-Small Cell Lung Carcinoma
@@ -6031,7 +6031,7 @@ eno1	CTD:C0520459~Necrotizing Enterocolitis
 eno1	CTD:C0546126~Acute Confusional Senile Dementia
 eno1	CTD:C0546837~Malignant neoplasm of esophagus
 eno1	CTD:C0678222~Breast Carcinoma
-eno1	CTD:C0750900~Alzheimer's Disease, Focal Onset
+eno1	CTD:C0750900~AlzheimerQs Disease, Focal Onset
 eno1	CTD:C0750901~Alzheimer Disease, Early Onset
 eno1	CTD:C0751406~Post-Traumatic Osteoporosis
 eno1	CTD:C0948089~Acute Coronary Syndrome
@@ -6156,7 +6156,7 @@ ephx2	CTD:C2609414~Acute kidney injury
 cln8	CTD:C1838570~CEROID LIPOFUSCINOSIS, NEURONAL, 8
 cln8	CTD:C1864923~Northern epilepsy syndrome
 epo	CTD:C0002871~Anemia
-epo	CTD:C0002875~Cooley's anemia
+epo	CTD:C0002875~CooleyQs anemia
 epo	CTD:C0002878~Anemia, Hemolytic
 epo	CTD:C0002879~Anemia, Hemolytic, Acquired
 epo	CTD:C0002889~Anemia, Microangiopathic
@@ -6538,7 +6538,7 @@ ezh2	CTD:C2239176~Liver carcinoma
 ezh2	CTD:C2931150~Synostotic Anterior Plagiocephaly
 ezh2	CTD:C4551902~Craniosynostosis, Type 1
 ezh2	CTD:C4704874~Mammary Carcinoma, Human
-LOC100702313	CTD:C0002395~Alzheimer's Disease
+LOC100702313	CTD:C0002395~AlzheimerQs Disease
 LOC100702313	CTD:C0003873~Rheumatoid Arthritis
 LOC100702313	CTD:C0007785~Cerebral Infarction
 LOC100702313	CTD:C0007786~Brain Ischemia
@@ -6561,7 +6561,7 @@ LOC100702313	CTD:C0398623~Thrombophilia
 LOC100702313	CTD:C0400966~Non-alcoholic Fatty Liver Disease
 LOC100702313	CTD:C0494463~Alzheimer Disease, Late Onset
 LOC100702313	CTD:C0546126~Acute Confusional Senile Dementia
-LOC100702313	CTD:C0750900~Alzheimer's Disease, Focal Onset
+LOC100702313	CTD:C0750900~AlzheimerQs Disease, Focal Onset
 LOC100702313	CTD:C0750901~Alzheimer Disease, Early Onset
 LOC100702313	CTD:C0751014~Subcortical Infarction
 LOC100702313	CTD:C0751500~Petrous Sinus Thrombophlebitis
@@ -7196,11 +7196,11 @@ LOC100689834	CTD:C0017668~Focal glomerulosclerosis
 LOC100689834	CTD:C0034069~Pulmonary Fibrosis
 LOC100689834	CTD:C0086432~Hyalinosis, Segmental Glomerular
 LOC100689834	CTD:C0149721~Left Ventricular Hypertrophy
-LOC100689834	CTD:C0156147~Crohn's disease of large bowel
+LOC100689834	CTD:C0156147~CrohnQs disease of large bowel
 LOC100689834	CTD:C0205696~Anaplastic carcinoma
 LOC100689834	CTD:C0205697~Carcinoma, Spindle-Cell
 LOC100689834	CTD:C0205698~Undifferentiated carcinoma
-LOC100689834	CTD:C0267380~Crohn's disease of the ileum
+LOC100689834	CTD:C0267380~CrohnQs disease of the ileum
 LOC100689834	CTD:C0334588~Giant Cell Glioblastoma
 LOC100689834	CTD:C0345967~Malignant mesothelioma
 LOC100689834	CTD:C0678202~Regional enteritis
@@ -8068,7 +8068,7 @@ glra1	CTD:C0752206~Dystonias, Sporadic
 glra1	CTD:C0752207~Familial Dystonia
 glra1	CTD:C0752208~Pseudodystonia
 glra1	CTD:C1835614~Hereditary Hyperexplexia
-glra1	CTD:C4316810~Writer's Cramp
+glra1	CTD:C4316810~WriterQs Cramp
 glrb	CTD:C1835614~Hereditary Hyperexplexia
 LOC100711430	CTD:C0023893~Liver Cirrhosis, Experimental
 LOC100711430	CTD:C0029408~Degenerative polyarthritis
@@ -8119,7 +8119,7 @@ gnal	CTD:C0752205~Dystonia, Secondary
 gnal	CTD:C0752206~Dystonias, Sporadic
 gnal	CTD:C0752207~Familial Dystonia
 gnal	CTD:C0752208~Pseudodystonia
-gnal	CTD:C4316810~Writer's Cramp
+gnal	CTD:C4316810~WriterQs Cramp
 LOC100707702	CTD:C0014544~Epilepsy
 LOC100707702	CTD:C0038587~Substance Withdrawal Syndrome
 LOC100707702	CTD:C0086237~Epilepsy, Cryptogenic
@@ -8162,7 +8162,7 @@ gnas	CTD:C1504412~Testotoxicosis
 gnas	CTD:C1857451~Acth-Independent Macronodular Adrenal Hyperplasia
 gnas	CTD:C1864100~PSEUDOHYPOPARATHYROIDISM, TYPE IB
 gnas	CTD:C2713447~Hyperpotassemia and Hypertension, Familial
-gnas	CTD:C2931404~Albright's hereditary osteodystrophy
+gnas	CTD:C2931404~AlbrightQs hereditary osteodystrophy
 gnas	CTD:C2932715~Pseudohypoparathyroidism Type 1B
 gnas	CTD:C3489630~Somatotrophinoma, Familial
 gnas	CTD:C3494506~Pseudohypoparathyroidism, Type Ia
@@ -8662,7 +8662,7 @@ pdia3	CTD:C1846707~SPINOCEREBELLAR ATAXIA 17
 pdia3	CTD:C2239176~Liver carcinoma
 LOC100698579	CTD:C0025261~Memory Disorders
 LOC100698579	CTD:C0376358~Malignant neoplasm of prostate
-gsk3b	CTD:C0002395~Alzheimer's Disease
+gsk3b	CTD:C0002395~AlzheimerQs Disease
 gsk3b	CTD:C0003865~Arthritis, Adjuvant-Induced
 gsk3b	CTD:C0005586~Bipolar Disorder
 gsk3b	CTD:C0005587~Depression, Bipolar
@@ -8688,7 +8688,7 @@ gsk3b	CTD:C0338831~Manic
 gsk3b	CTD:C0376358~Malignant neoplasm of prostate
 gsk3b	CTD:C0494463~Alzheimer Disease, Late Onset
 gsk3b	CTD:C0546126~Acute Confusional Senile Dementia
-gsk3b	CTD:C0750900~Alzheimer's Disease, Focal Onset
+gsk3b	CTD:C0750900~AlzheimerQs Disease, Focal Onset
 gsk3b	CTD:C0750901~Alzheimer Disease, Early Onset
 gsk3b	CTD:C0751958~Lymphoma, Lymphocytic, Intermediate
 gsk3b	CTD:C0971858~Arthritis, Collagen-Induced
@@ -8834,7 +8834,7 @@ hars	CTD:C4225265~CHARCOT-MARIE-TOOTH DISEASE, AXONAL, TYPE 2W
 has3	CTD:C0015695~Fatty Liver
 has3	CTD:C2711227~Steatohepatitis
 LOC100703774	CTD:C0002312~alpha-Thalassemia
-LOC100703774	CTD:C0002875~Cooley's anemia
+LOC100703774	CTD:C0002875~CooleyQs anemia
 LOC100703774	CTD:C0005283~beta Thalassemia
 LOC100703774	CTD:C0019025~Hemoglobin F Disease
 LOC100703774	CTD:C0085578~Thalassemia Minor
@@ -9134,7 +9134,7 @@ hmmr	CTD:C1257931~Mammary Neoplasms, Human
 hmmr	CTD:C2239176~Liver carcinoma
 hmmr	CTD:C4704874~Mammary Carcinoma, Human
 LOC100710567	CTD:C0002152~Alloxan Diabetes
-LOC100710567	CTD:C0002395~Alzheimer's Disease
+LOC100710567	CTD:C0002395~AlzheimerQs Disease
 LOC100710567	CTD:C0002878~Anemia, Hemolytic
 LOC100710567	CTD:C0002879~Anemia, Hemolytic, Acquired
 LOC100710567	CTD:C0002889~Anemia, Microangiopathic
@@ -9192,7 +9192,7 @@ LOC100710567	CTD:C0494463~Alzheimer Disease, Late Onset
 LOC100710567	CTD:C0546126~Acute Confusional Senile Dementia
 LOC100710567	CTD:C0577631~Carotid Atherosclerosis
 LOC100710567	CTD:C0678222~Breast Carcinoma
-LOC100710567	CTD:C0750900~Alzheimer's Disease, Focal Onset
+LOC100710567	CTD:C0750900~AlzheimerQs Disease, Focal Onset
 LOC100710567	CTD:C0750901~Alzheimer Disease, Early Onset
 LOC100710567	CTD:C0750987~Arterial Diseases, Common Carotid
 LOC100710567	CTD:C0751263~Learning Disturbance
@@ -9820,7 +9820,7 @@ LOC100706678	CTD:C0205696~Anaplastic carcinoma
 LOC100706678	CTD:C0205697~Carcinoma, Spindle-Cell
 LOC100706678	CTD:C0205698~Undifferentiated carcinoma
 LOC100706678	CTD:C0242379~Malignant neoplasm of lung
-LOC100706678	CTD:C0343640~African Burkitt's lymphoma
+LOC100706678	CTD:C0343640~African BurkittQs lymphoma
 LOC100706678	CTD:C0376358~Malignant neoplasm of prostate
 LOC100706678	CTD:C1257925~Mammary Carcinoma, Animal
 LOC100706678	CTD:C4721444~Burkitt Leukemia
@@ -9832,12 +9832,12 @@ LOC100704141	CTD:C0205697~Carcinoma, Spindle-Cell
 LOC100704141	CTD:C0205698~Undifferentiated carcinoma
 LOC100704141	CTD:C1257925~Mammary Carcinoma, Animal
 LOC100704141	CTD:C1708349~Hereditary Diffuse Gastric Cancer
-LOC100706901	CTD:C0002395~Alzheimer's Disease
+LOC100706901	CTD:C0002395~AlzheimerQs Disease
 LOC100706901	CTD:C0011265~Presenile dementia
 LOC100706901	CTD:C0276496~Familial Alzheimer Disease (FAD)
 LOC100706901	CTD:C0494463~Alzheimer Disease, Late Onset
 LOC100706901	CTD:C0546126~Acute Confusional Senile Dementia
-LOC100706901	CTD:C0750900~Alzheimer's Disease, Focal Onset
+LOC100706901	CTD:C0750900~AlzheimerQs Disease, Focal Onset
 LOC100706901	CTD:C0750901~Alzheimer Disease, Early Onset
 idh1	CTD:C0014084~Enchondromatosis
 idh1	CTD:C0017638~Glioma
@@ -9960,7 +9960,7 @@ igbp1	CTD:C2239176~Liver carcinoma
 igbp1	CTD:C4704874~Mammary Carcinoma, Human
 igf1	CTD:C0001206~Acromegaly
 igf1	CTD:C0002152~Alloxan Diabetes
-igf1	CTD:C0002395~Alzheimer's Disease
+igf1	CTD:C0002395~AlzheimerQs Disease
 igf1	CTD:C0004352~Autistic Disorder
 igf1	CTD:C0005684~Malignant neoplasm of urinary bladder
 igf1	CTD:C0005695~Bladder Neoplasm
@@ -9983,7 +9983,7 @@ igf1	CTD:C0034013~Precocious Puberty
 igf1	CTD:C0034069~Pulmonary Fibrosis
 igf1	CTD:C0038433~Streptozotocin Diabetes
 igf1	CTD:C0151744~Myocardial Ischemia
-igf1	CTD:C0156147~Crohn's disease of large bowel
+igf1	CTD:C0156147~CrohnQs disease of large bowel
 igf1	CTD:C0205646~Adenoma, Basal Cell
 igf1	CTD:C0205647~Follicular adenoma
 igf1	CTD:C0205648~Adenoma, Microcystic
@@ -9991,7 +9991,7 @@ igf1	CTD:C0205649~Adenoma, Monomorphic
 igf1	CTD:C0205650~Papillary adenoma
 igf1	CTD:C0205651~Adenoma, Trabecular
 igf1	CTD:C0205734~Diabetes, Autoimmune
-igf1	CTD:C0267380~Crohn's disease of the ileum
+igf1	CTD:C0267380~CrohnQs disease of the ileum
 igf1	CTD:C0269102~Endometrioma
 igf1	CTD:C0276496~Familial Alzheimer Disease (FAD)
 igf1	CTD:C0342302~Brittle diabetes
@@ -10005,7 +10005,7 @@ igf1	CTD:C0678222~Breast Carcinoma
 igf1	CTD:C0740376~Middle Cerebral Artery Thrombosis
 igf1	CTD:C0740391~Middle Cerebral Artery Occlusion
 igf1	CTD:C0740392~Infarction, Middle Cerebral Artery
-igf1	CTD:C0750900~Alzheimer's Disease, Focal Onset
+igf1	CTD:C0750900~AlzheimerQs Disease, Focal Onset
 igf1	CTD:C0750901~Alzheimer Disease, Early Onset
 igf1	CTD:C0853897~Diabetic Cardiomyopathies
 igf1	CTD:C0949272~IIeocolitis
@@ -10026,7 +10026,7 @@ igf1	CTD:C4552766~Miscarriage
 igf1	CTD:C4554117~Diabetes Mellitus, Sudden-Onset
 igf1	CTD:C4704874~Mammary Carcinoma, Human
 igf1	CTD:C4721507~Alveolitis, Fibrosing
-LOC100707581	CTD:C0002395~Alzheimer's Disease
+LOC100707581	CTD:C0002395~AlzheimerQs Disease
 LOC100707581	CTD:C0004238~Atrial Fibrillation
 LOC100707581	CTD:C0006142~Malignant neoplasm of breast
 LOC100707581	CTD:C0007114~Malignant neoplasm of skin
@@ -10043,7 +10043,7 @@ LOC100707581	CTD:C0476089~Endometrial Carcinoma
 LOC100707581	CTD:C0494463~Alzheimer Disease, Late Onset
 LOC100707581	CTD:C0546126~Acute Confusional Senile Dementia
 LOC100707581	CTD:C0678222~Breast Carcinoma
-LOC100707581	CTD:C0750900~Alzheimer's Disease, Focal Onset
+LOC100707581	CTD:C0750900~AlzheimerQs Disease, Focal Onset
 LOC100707581	CTD:C0750901~Alzheimer Disease, Early Onset
 LOC100707581	CTD:C0752347~Lewy Body Disease
 LOC100707581	CTD:C1145670~Respiratory Failure
@@ -10055,7 +10055,7 @@ LOC100707581	CTD:C3714758~Juvenile psoriatic arthritis
 LOC100707581	CTD:C4552091~Polyarthritis, Juvenile, Rheumatoid Factor Negative
 LOC100707581	CTD:C4704862~Polyarthritis, Juvenile, Rheumatoid Factor Positive
 LOC100707581	CTD:C4704874~Mammary Carcinoma, Human
-igf2r	CTD:C0002395~Alzheimer's Disease
+igf2r	CTD:C0002395~AlzheimerQs Disease
 igf2r	CTD:C0011265~Presenile dementia
 igf2r	CTD:C0023893~Liver Cirrhosis, Experimental
 igf2r	CTD:C0030567~Parkinson Disease
@@ -10066,7 +10066,7 @@ igf2r	CTD:C0276496~Familial Alzheimer Disease (FAD)
 igf2r	CTD:C0376358~Malignant neoplasm of prostate
 igf2r	CTD:C0494463~Alzheimer Disease, Late Onset
 igf2r	CTD:C0546126~Acute Confusional Senile Dementia
-igf2r	CTD:C0750900~Alzheimer's Disease, Focal Onset
+igf2r	CTD:C0750900~AlzheimerQs Disease, Focal Onset
 igf2r	CTD:C0750901~Alzheimer Disease, Early Onset
 igf2r	CTD:C0752347~Lewy Body Disease
 igf2r	CTD:C2239176~Liver carcinoma
@@ -10251,14 +10251,14 @@ il10	CTD:C0086196~Eczema, Infantile
 il10	CTD:C0086457~Industrial Dermatosis
 il10	CTD:C0086540~Leishmaniasis, New World
 il10	CTD:C0086541~Urban cutaneous leishmaniasis
-il10	CTD:C0156147~Crohn's disease of large bowel
+il10	CTD:C0156147~CrohnQs disease of large bowel
 il10	CTD:C0162820~Dermatitis, Allergic Contact
 il10	CTD:C0205734~Diabetes, Autoimmune
 il10	CTD:C0241910~Autoimmune Chronic Hepatitis
 il10	CTD:C0242379~Malignant neoplasm of lung
 il10	CTD:C0242380~Libman-Sacks Disease
 il10	CTD:C0243026~Sepsis
-il10	CTD:C0267380~Crohn's disease of the ileum
+il10	CTD:C0267380~CrohnQs disease of the ileum
 il10	CTD:C0269102~Endometrioma
 il10	CTD:C0342302~Brittle diabetes
 il10	CTD:C0376358~Malignant neoplasm of prostate
@@ -10310,11 +10310,11 @@ LOC100706746	CTD:C0030246~Pustulosis of Palms and Soles
 LOC100706746	CTD:C0033860~Psoriasis
 LOC100706746	CTD:C0034069~Pulmonary Fibrosis
 LOC100706746	CTD:C0038013~Ankylosing spondylitis
-LOC100706746	CTD:C0156147~Crohn's disease of large bowel
+LOC100706746	CTD:C0156147~CrohnQs disease of large bowel
 LOC100706746	CTD:C0238065~Secondary Biliary Cholangitis
 LOC100706746	CTD:C0242380~Libman-Sacks Disease
 LOC100706746	CTD:C0259783~mixed gliomas
-LOC100706746	CTD:C0267380~Crohn's disease of the ileum
+LOC100706746	CTD:C0267380~CrohnQs disease of the ileum
 LOC100706746	CTD:C0345904~Malignant neoplasm of liver
 LOC100706746	CTD:C0345967~Malignant mesothelioma
 LOC100706746	CTD:C0555198~Malignant Glioma
@@ -10375,7 +10375,7 @@ LOC100704395	CTD:C0162557~Liver Failure, Acute
 LOC100705058	CTD:C0342549~Familial Testotoxicosis
 LOC100710422	CTD:C0023893~Liver Cirrhosis, Experimental
 inpp1	CTD:C0004352~Autistic Disorder
-ins	CTD:C0002395~Alzheimer's Disease
+ins	CTD:C0002395~AlzheimerQs Disease
 ins	CTD:C0005586~Bipolar Disorder
 ins	CTD:C0005587~Depression, Bipolar
 ins	CTD:C0007194~Hypertrophic Cardiomyopathy
@@ -10440,7 +10440,7 @@ ins	CTD:C0494475~Tonic - clonic seizures
 ins	CTD:C0524620~Metabolic Syndrome X
 ins	CTD:C0546126~Acute Confusional Senile Dementia
 ins	CTD:C0702169~Acrania
-ins	CTD:C0750900~Alzheimer's Disease, Focal Onset
+ins	CTD:C0750900~AlzheimerQs Disease, Focal Onset
 ins	CTD:C0750901~Alzheimer Disease, Early Onset
 ins	CTD:C0751110~Single Seizure
 ins	CTD:C0751864~MPTP-Induced Degeneration of the Striatum
@@ -10471,14 +10471,14 @@ inpp5a	CTD:C0274862~Nervous System, Organic Arsenic Poisoning
 inpp5a	CTD:C0311375~Arsenic Poisoning
 inpp5a	CTD:C0751851~Arsenic Encephalopathy
 inpp5a	CTD:C0751852~Arsenic Induced Polyneuropathy
-inpp5d	CTD:C0002395~Alzheimer's Disease
+inpp5d	CTD:C0002395~AlzheimerQs Disease
 inpp5d	CTD:C0011265~Presenile dementia
 inpp5d	CTD:C0023893~Liver Cirrhosis, Experimental
 inpp5d	CTD:C0035126~Reperfusion Injury
 inpp5d	CTD:C0276496~Familial Alzheimer Disease (FAD)
 inpp5d	CTD:C0494463~Alzheimer Disease, Late Onset
 inpp5d	CTD:C0546126~Acute Confusional Senile Dementia
-inpp5d	CTD:C0750900~Alzheimer's Disease, Focal Onset
+inpp5d	CTD:C0750900~AlzheimerQs Disease, Focal Onset
 inpp5d	CTD:C0750901~Alzheimer Disease, Early Onset
 inppl1	CTD:C0011860~Diabetes Mellitus, Non-Insulin-Dependent
 inppl1	CTD:C0023893~Liver Cirrhosis, Experimental
@@ -10490,7 +10490,7 @@ insig1	CTD:C0205698~Undifferentiated carcinoma
 insig1	CTD:C1257925~Mammary Carcinoma, Animal
 insm1	CTD:C0149925~Small cell carcinoma of lung
 LOC100696191	CTD:C0002152~Alloxan Diabetes
-LOC100696191	CTD:C0002395~Alzheimer's Disease
+LOC100696191	CTD:C0002395~AlzheimerQs Disease
 LOC100696191	CTD:C0011265~Presenile dementia
 LOC100696191	CTD:C0011853~Diabetes Mellitus, Experimental
 LOC100696191	CTD:C0020456~Hyperglycemia
@@ -10515,7 +10515,7 @@ LOC100696191	CTD:C0393835~Diabetic Asymmetric Polyneuropathy
 LOC100696191	CTD:C0494463~Alzheimer Disease, Late Onset
 LOC100696191	CTD:C0546126~Acute Confusional Senile Dementia
 LOC100696191	CTD:C0740858~Substance abuse problem
-LOC100696191	CTD:C0750900~Alzheimer's Disease, Focal Onset
+LOC100696191	CTD:C0750900~AlzheimerQs Disease, Focal Onset
 LOC100696191	CTD:C0750901~Alzheimer Disease, Early Onset
 LOC100696191	CTD:C0751074~Diabetic Neuralgia
 LOC100696191	CTD:C0752347~Lewy Body Disease
@@ -10923,7 +10923,7 @@ kcnj8	CTD:C0042510~Ventricular Fibrillation
 kcnj8	CTD:C0151744~Myocardial Ischemia
 kcnj8	CTD:C0795905~Cantu syndrome
 LOC100694690	CTD:C0026769~Multiple Sclerosis
-LOC100694690	CTD:C0271829~Pendred's syndrome
+LOC100694690	CTD:C0271829~PendredQs syndrome
 LOC100694690	CTD:C0751324~Multiple Sclerosis, Acute Fulminating
 LOC100694690	CTD:C2748572~SeSAME syndrome
 LOC100694690	CTD:C3538946~DEAFNESS, AUTOSOMAL RECESSIVE 4, WITH ENLARGED VESTIBULAR AQUEDUCT
@@ -11679,9 +11679,9 @@ LOC100692385	CTD:C0029410~Osteoarthritis of hip
 LOC100692385	CTD:C0086743~Osteoarthrosis Deformans
 LOC100692385	CTD:C0087031~Juvenile-Onset Still Disease
 LOC100692385	CTD:C0153567~Uterine Cancer
-LOC100692385	CTD:C0156147~Crohn's disease of large bowel
+LOC100692385	CTD:C0156147~CrohnQs disease of large bowel
 LOC100692385	CTD:C0239946~Fibrosis, Liver
-LOC100692385	CTD:C0267380~Crohn's disease of the ileum
+LOC100692385	CTD:C0267380~CrohnQs disease of the ileum
 LOC100692385	CTD:C0340643~Dissection of aorta
 LOC100692385	CTD:C0600427~Cocaine Dependence
 LOC100692385	CTD:C0678202~Regional enteritis
@@ -11742,7 +11742,7 @@ man2c1	CTD:C4704874~Mammary Carcinoma, Human
 man2b1	CTD:C0017661~IGA Glomerulonephritis
 man2b1	CTD:C0024748~alpha-Mannosidosis
 manba	CTD:C4048196~beta-Mannosidosis
-LOC100706625	CTD:C0002395~Alzheimer's Disease
+LOC100706625	CTD:C0002395~AlzheimerQs Disease
 LOC100706625	CTD:C0002888~Anemia, Megaloblastic
 LOC100706625	CTD:C0004352~Autistic Disorder
 LOC100706625	CTD:C0007102~Malignant tumor of colon
@@ -11760,7 +11760,7 @@ LOC100706625	CTD:C0333463~Senile Plaques
 LOC100706625	CTD:C0393574~Huntington Disease, Late Onset
 LOC100706625	CTD:C0494463~Alzheimer Disease, Late Onset
 LOC100706625	CTD:C0546126~Acute Confusional Senile Dementia
-LOC100706625	CTD:C0750900~Alzheimer's Disease, Focal Onset
+LOC100706625	CTD:C0750900~AlzheimerQs Disease, Focal Onset
 LOC100706625	CTD:C0750901~Alzheimer Disease, Early Onset
 LOC100706625	CTD:C0751197~Fulminant Hepatic Failure with Cerebral Edema
 LOC100706625	CTD:C0751198~Hepatic Stupor
@@ -12583,8 +12583,8 @@ mst1	CTD:C0008313~Cholangitis, Sclerosing
 mst1	CTD:C0009324~Ulcerative Colitis
 mst1	CTD:C0010346~Crohn Disease
 mst1	CTD:C0019193~Hepatitis, Toxic
-mst1	CTD:C0156147~Crohn's disease of large bowel
-mst1	CTD:C0267380~Crohn's disease of the ileum
+mst1	CTD:C0156147~CrohnQs disease of large bowel
+mst1	CTD:C0267380~CrohnQs disease of the ileum
 mst1	CTD:C0566602~Primary sclerosing cholangitis
 mst1	CTD:C0678202~Regional enteritis
 mst1	CTD:C0678222~Breast Carcinoma
@@ -12624,7 +12624,7 @@ mtap	CTD:C0376358~Malignant neoplasm of prostate
 mtap	CTD:C1862177~Diaphyseal medullary stenosis with malignant fibrous histiocytoma
 mtf1	CTD:C0004352~Autistic Disorder
 mthfr	CTD:C0002170~Alopecia
-mthfr	CTD:C0002395~Alzheimer's Disease
+mthfr	CTD:C0002395~AlzheimerQs Disease
 mthfr	CTD:C0002871~Anemia
 mthfr	CTD:C0003873~Rheumatoid Arthritis
 mthfr	CTD:C0004352~Autistic Disorder
@@ -12689,7 +12689,7 @@ mthfr	CTD:C0086873~Pseudopelade
 mthfr	CTD:C0149871~Deep Vein Thrombosis
 mthfr	CTD:C0152234~Iniencephaly
 mthfr	CTD:C0152426~Craniorachischisis
-mthfr	CTD:C0156147~Crohn's disease of large bowel
+mthfr	CTD:C0156147~CrohnQs disease of large bowel
 mthfr	CTD:C0162311~Androgenetic Alopecia
 mthfr	CTD:C0162429~Malnutrition
 mthfr	CTD:C0206064~Microvascular Angina
@@ -12697,7 +12697,7 @@ mthfr	CTD:C0206708~Cervical Intraepithelial Neoplasia
 mthfr	CTD:C0242379~Malignant neoplasm of lung
 mthfr	CTD:C0266453~Exencephaly
 mthfr	CTD:C0266508~Rachischisis
-mthfr	CTD:C0267380~Crohn's disease of the ileum
+mthfr	CTD:C0267380~CrohnQs disease of the ileum
 mthfr	CTD:C0274861~Arsenic Poisoning, Inorganic
 mthfr	CTD:C0274862~Nervous System, Organic Arsenic Poisoning
 mthfr	CTD:C0276496~Familial Alzheimer Disease (FAD)
@@ -12721,7 +12721,7 @@ mthfr	CTD:C0598608~Hyperhomocysteinemia
 mthfr	CTD:C0678202~Regional enteritis
 mthfr	CTD:C0678222~Breast Carcinoma
 mthfr	CTD:C0702169~Acrania
-mthfr	CTD:C0750900~Alzheimer's Disease, Focal Onset
+mthfr	CTD:C0750900~AlzheimerQs Disease, Focal Onset
 mthfr	CTD:C0750901~Alzheimer Disease, Early Onset
 mthfr	CTD:C0751081~Trisomy 21, Mitotic Nondisjunction
 mthfr	CTD:C0751500~Petrous Sinus Thrombophlebitis
@@ -12900,7 +12900,7 @@ myd88	CTD:C1956131~Lymphoma, Follicular, Grade 3
 myd88	CTD:C1956132~Lymphoma, Follicular, Grade 2
 myd88	CTD:C2350879~Tropical Eosinophilic Pneumonia
 myd88	CTD:C2677092~MYD88 Deficiency
-myd88	CTD:C2936755~Familial Waldenstrom's Macroglobulinaemia
+myd88	CTD:C2936755~Familial WaldenstromQs Macroglobulinaemia
 myd88	CTD:C3714636~Pneumonitis
 gadd45b	CTD:C0274861~Arsenic Poisoning, Inorganic
 gadd45b	CTD:C0274862~Nervous System, Organic Arsenic Poisoning
@@ -13066,8 +13066,8 @@ LOC100694804	CTD:C4552766~Miscarriage
 LOC100711071	CTD:C0003873~Rheumatoid Arthritis
 LOC100711071	CTD:C1856245~Granulomatous Disease, Chronic, Autosomal Recessive, Cytochrome B-Positive, Type II
 ncf4	CTD:C0010346~Crohn Disease
-ncf4	CTD:C0156147~Crohn's disease of large bowel
-ncf4	CTD:C0267380~Crohn's disease of the ileum
+ncf4	CTD:C0156147~CrohnQs disease of large bowel
+ncf4	CTD:C0267380~CrohnQs disease of the ileum
 ncf4	CTD:C0678202~Regional enteritis
 ncf4	CTD:C0949272~IIeocolitis
 ncf4	CTD:C3151409~GRANULOMATOUS DISEASE, CHRONIC, AUTOSOMAL RECESSIVE, CYTOCHROME b-POSITIVE, TYPE III
@@ -13494,7 +13494,7 @@ LOC100703553	CTD:C4551482~Adams-Oliver syndrome 1
 LOC100703553	CTD:C4704874~Mammary Carcinoma, Human
 npy	CTD:C0001956~Alcohol Use Disorder
 npy	CTD:C0001973~Alcoholic Intoxication, Chronic
-npy	CTD:C0002395~Alzheimer's Disease
+npy	CTD:C0002395~AlzheimerQs Disease
 npy	CTD:C0003123~Anorexia
 npy	CTD:C0004096~Asthma
 npy	CTD:C0007785~Cerebral Infarction
@@ -13532,7 +13532,7 @@ npy	CTD:C0494475~Tonic - clonic seizures
 npy	CTD:C0546126~Acute Confusional Senile Dementia
 npy	CTD:C0600427~Cocaine Dependence
 npy	CTD:C0740858~Substance abuse problem
-npy	CTD:C0750900~Alzheimer's Disease, Focal Onset
+npy	CTD:C0750900~AlzheimerQs Disease, Focal Onset
 npy	CTD:C0750901~Alzheimer Disease, Early Onset
 npy	CTD:C0751014~Subcortical Infarction
 npy	CTD:C0751110~Single Seizure
@@ -13713,7 +13713,7 @@ LOC100708883	CTD:C0678222~Breast Carcinoma
 LOC100708883	CTD:C0740858~Substance abuse problem
 LOC100708883	CTD:C1257931~Mammary Neoplasms, Human
 LOC100708883	CTD:C4704874~Mammary Carcinoma, Human
-nrf1	CTD:C0006079~Bowen's Disease
+nrf1	CTD:C0006079~BowenQs Disease
 LOC100690715	CTD:C0028077~Nyctalopia
 LOC100690715	CTD:C0035334~Retinitis Pigmentosa
 LOC100690715	CTD:C1834329~RETINITIS PIGMENTOSA 27
@@ -14192,7 +14192,7 @@ pax3	CTD:C0011052~Prelingual Deafness
 pax3	CTD:C0011999~Diastematomyelia
 pax3	CTD:C0027806~Neurenteric Cyst
 pax3	CTD:C0038219~Status Dysraphicus
-pax3	CTD:C0079661~Klein's Syndrome
+pax3	CTD:C0079661~KleinQs Syndrome
 pax3	CTD:C0080178~Spina Bifida
 pax3	CTD:C0080218~Tethered Cord Syndrome
 pax3	CTD:C0152234~Iniencephaly
@@ -14235,7 +14235,7 @@ pc	CTD:C0023893~Liver Cirrhosis, Experimental
 pc	CTD:C0024713~Manic Disorder
 pc	CTD:C0034341~Pyruvate Carboxylase Deficiency Disease
 pc	CTD:C0338831~Manic
-pc	CTD:C0343640~African Burkitt's lymphoma
+pc	CTD:C0343640~African BurkittQs lymphoma
 pc	CTD:C1262760~Hepatitis, Drug-Induced
 pc	CTD:C3658290~Drug-Induced Acute Liver Injury
 pc	CTD:C4277682~Chemical and Drug Induced Liver Injury
@@ -14402,7 +14402,7 @@ pdgfra	CTD:C0080178~Spina Bifida
 pdgfra	CTD:C0205833~Medullomyoblastoma
 pdgfra	CTD:C0206141~Idiopathic Hypereosinophilic Syndrome
 pdgfra	CTD:C0206142~Eosinophilic leukemia
-pdgfra	CTD:C0206143~Loeffler's Endocarditis
+pdgfra	CTD:C0206143~LoefflerQs Endocarditis
 pdgfra	CTD:C0206637~Mesenchymal Chondrosarcoma
 pdgfra	CTD:C0235527~Heart Failure, Right-Sided
 pdgfra	CTD:C0266508~Rachischisis
@@ -14811,7 +14811,7 @@ pik3r1	CTD:C0042900~Vitiligo
 pik3r1	CTD:C0205696~Anaplastic carcinoma
 pik3r1	CTD:C0205697~Carcinoma, Spindle-Cell
 pik3r1	CTD:C0205698~Undifferentiated carcinoma
-pik3r1	CTD:C0343640~African Burkitt's lymphoma
+pik3r1	CTD:C0343640~African BurkittQs lymphoma
 pik3r1	CTD:C0376358~Malignant neoplasm of prostate
 pik3r1	CTD:C0878684~SHORT syndrome
 pik3r1	CTD:C1257925~Mammary Carcinoma, Animal
@@ -14937,7 +14937,7 @@ plat	CTD:C2676721~Thrombophilia, Familial, Due To Decreased Release Of Tissue Pl
 plat	CTD:C3658290~Drug-Induced Acute Liver Injury
 plat	CTD:C4277682~Chemical and Drug Induced Liver Injury
 plat	CTD:C4279912~Chemically-Induced Liver Toxicity
-LOC100700080	CTD:C0002395~Alzheimer's Disease
+LOC100700080	CTD:C0002395~AlzheimerQs Disease
 LOC100700080	CTD:C0002965~Angina, Unstable
 LOC100700080	CTD:C0004096~Asthma
 LOC100700080	CTD:C0007138~Carcinoma, Transitional Cell
@@ -14981,7 +14981,7 @@ LOC100700080	CTD:C0596298~Cerebrovascular Occlusion
 LOC100700080	CTD:C0740376~Middle Cerebral Artery Thrombosis
 LOC100700080	CTD:C0740391~Middle Cerebral Artery Occlusion
 LOC100700080	CTD:C0740392~Infarction, Middle Cerebral Artery
-LOC100700080	CTD:C0750900~Alzheimer's Disease, Focal Onset
+LOC100700080	CTD:C0750900~AlzheimerQs Disease, Focal Onset
 LOC100700080	CTD:C0750901~Alzheimer Disease, Early Onset
 LOC100700080	CTD:C0750987~Arterial Diseases, Common Carotid
 LOC100700080	CTD:C0751014~Subcortical Infarction
@@ -15004,7 +15004,7 @@ plcg1	CTD:C0023493~Adult T-Cell Lymphoma/Leukemia
 plcg1	CTD:C0036920~Sezary Syndrome
 plcg1	CTD:C0079773~Lymphoma, T-Cell, Cutaneous
 plcg1	CTD:C0376407~Granulomatous Slack Skin
-plcg2	CTD:C0002395~Alzheimer's Disease
+plcg2	CTD:C0002395~AlzheimerQs Disease
 plcg2	CTD:C0011265~Presenile dementia
 plcg2	CTD:C0023434~Chronic Lymphocytic Leukemia
 plcg2	CTD:C0268390~Muckle-Wells Syndrome
@@ -15013,7 +15013,7 @@ plcg2	CTD:C0343068~Familial cold urticaria
 plcg2	CTD:C0409818~Chronic Infantile Neurological, Cutaneous, and Articular Syndrome
 plcg2	CTD:C0494463~Alzheimer Disease, Late Onset
 plcg2	CTD:C0546126~Acute Confusional Senile Dementia
-plcg2	CTD:C0750900~Alzheimer's Disease, Focal Onset
+plcg2	CTD:C0750900~AlzheimerQs Disease, Focal Onset
 plcg2	CTD:C0750901~Alzheimer Disease, Early Onset
 plcg2	CTD:C2316212~Cryopyrin-Associated Periodic Syndromes
 plcg2	CTD:C3553961~AUTOINFLAMMATION, ANTIBODY DEFICIENCY, AND IMMUNE DYSREGULATION, PLCG2-ASSOCIATED
@@ -15159,7 +15159,7 @@ pold1	CTD:C3715192~ANDIBULAR HYPOPLASIA, DEAFNESS, PROGEROID FEATURES, AND LIPOD
 pold1	CTD:C4082305~Deaf Mutism
 pole	CTD:C0009402~Colorectal Carcinoma
 pole	CTD:C3554576~FACIAL DYSMORPHISM, IMMUNODEFICIENCY, LIVEDO, AND SHORT STATURE
-polg	CTD:C0004712~Balo's Concentric Sclerosis
+polg	CTD:C0004712~BaloQs Concentric Sclerosis
 polg	CTD:C0007795~Diffuse Cerebral Sclerosis of Schilder
 polg	CTD:C0014544~Epilepsy
 polg	CTD:C0019193~Hepatitis, Toxic
@@ -15235,7 +15235,7 @@ LOC100708840	CTD:C0022650~Kidney Calculi
 LOC100708840	CTD:C0022660~Kidney Failure, Acute
 LOC100708840	CTD:C0022672~Acute Kidney Tubular Necrosis
 LOC100708840	CTD:C0023212~Left-Sided Heart Failure
-LOC100708840	CTD:C0023882~Little's Disease
+LOC100708840	CTD:C0023882~LittleQs Disease
 LOC100708840	CTD:C0023893~Liver Cirrhosis, Experimental
 LOC100708840	CTD:C0023976~Long QT Syndrome
 LOC100708840	CTD:C0024713~Manic Disorder
@@ -15264,7 +15264,7 @@ LOC100708840	CTD:C0154695~Diplegic Infantile Cerebral Palsy
 LOC100708840	CTD:C0154697~Cerebral Palsy, Quadriplegic, Infantile
 LOC100708840	CTD:C0154698~Monoplegic Infantile Cerebral Palsy
 LOC100708840	CTD:C0162557~Liver Failure, Acute
-LOC100708840	CTD:C0221406~Pituitary-dependent Cushing's disease
+LOC100708840	CTD:C0221406~Pituitary-dependent CushingQs disease
 LOC100708840	CTD:C0234533~Generalized seizures
 LOC100708840	CTD:C0234535~Clonic Seizures
 LOC100708840	CTD:C0235527~Heart Failure, Right-Sided
@@ -15457,11 +15457,11 @@ LOC100709869	CTD:C0028754~Obesity
 LOC100709869	CTD:C0035126~Reperfusion Injury
 LOC100709869	CTD:C0038433~Streptozotocin Diabetes
 LOC100709869	CTD:C0086196~Eczema, Infantile
-LOC100709869	CTD:C0156147~Crohn's disease of large bowel
+LOC100709869	CTD:C0156147~CrohnQs disease of large bowel
 LOC100709869	CTD:C0205696~Anaplastic carcinoma
 LOC100709869	CTD:C0205697~Carcinoma, Spindle-Cell
 LOC100709869	CTD:C0205698~Undifferentiated carcinoma
-LOC100709869	CTD:C0267380~Crohn's disease of the ileum
+LOC100709869	CTD:C0267380~CrohnQs disease of the ileum
 LOC100709869	CTD:C0271710~Reactive hypoglycemia
 LOC100709869	CTD:C0345904~Malignant neoplasm of liver
 LOC100709869	CTD:C0376358~Malignant neoplasm of prostate
@@ -15485,7 +15485,7 @@ ppard	CTD:C0400966~Non-alcoholic Fatty Liver Disease
 ppard	CTD:C2711227~Steatohepatitis
 ppard	CTD:C3241937~Nonalcoholic Steatohepatitis
 pparg	CTD:C0002152~Alloxan Diabetes
-pparg	CTD:C0002395~Alzheimer's Disease
+pparg	CTD:C0002395~AlzheimerQs Disease
 pparg	CTD:C0004153~Atherosclerosis
 pparg	CTD:C0004763~Barrett Esophagus
 pparg	CTD:C0007102~Malignant tumor of colon
@@ -15519,16 +15519,16 @@ pparg	CTD:C0085278~Antiphospholipid Syndrome
 pparg	CTD:C0085413~Polycystic Kidney, Autosomal Dominant
 pparg	CTD:C0086743~Osteoarthrosis Deformans
 pparg	CTD:C0151468~Thyroid Gland Follicular Adenoma
-pparg	CTD:C0156147~Crohn's disease of large bowel
+pparg	CTD:C0156147~CrohnQs disease of large bowel
 pparg	CTD:C0205641~Adenocarcinoma, Basal Cell
 pparg	CTD:C0205642~Adenocarcinoma, Oxyphilic
 pparg	CTD:C0205643~Carcinoma, Cribriform
 pparg	CTD:C0205644~Carcinoma, Granular Cell
 pparg	CTD:C0205645~Adenocarcinoma, Tubular
-pparg	CTD:C0221406~Pituitary-dependent Cushing's disease
+pparg	CTD:C0221406~Pituitary-dependent CushingQs disease
 pparg	CTD:C0235527~Heart Failure, Right-Sided
 pparg	CTD:C0242488~Acute Lung Injury
-pparg	CTD:C0267380~Crohn's disease of the ileum
+pparg	CTD:C0267380~CrohnQs disease of the ileum
 pparg	CTD:C0271694~Familial partial lipodystrophy
 pparg	CTD:C0276496~Familial Alzheimer Disease (FAD)
 pparg	CTD:C0282548~Leukostasis
@@ -15538,7 +15538,7 @@ pparg	CTD:C0494463~Alzheimer Disease, Late Onset
 pparg	CTD:C0546126~Acute Confusional Senile Dementia
 pparg	CTD:C0549473~Thyroid carcinoma
 pparg	CTD:C0678202~Regional enteritis
-pparg	CTD:C0750900~Alzheimer's Disease, Focal Onset
+pparg	CTD:C0750900~AlzheimerQs Disease, Focal Onset
 pparg	CTD:C0750901~Alzheimer Disease, Early Onset
 pparg	CTD:C0751220~Inappropriate ACTH Secretion Syndrome
 pparg	CTD:C0813142~Circadian Rhythm Disorders
@@ -16010,7 +16010,7 @@ LOC100694109	CTD:C0022283~Incontinentia Pigmenti Achromians
 LOC100694109	CTD:C0796032~Malpuech facial clefting syndrome
 LOC100694109	CTD:C0796059~Oculopalatoskeletal syndrome
 LOC100694109	CTD:C0796279~Carnevale syndrome
-reln	CTD:C0002395~Alzheimer's Disease
+reln	CTD:C0002395~AlzheimerQs Disease
 reln	CTD:C0004352~Autistic Disorder
 reln	CTD:C0005586~Bipolar Disorder
 reln	CTD:C0005587~Depression, Bipolar
@@ -16028,7 +16028,7 @@ reln	CTD:C0282126~Depression, Neurotic
 reln	CTD:C0338831~Manic
 reln	CTD:C0494463~Alzheimer Disease, Late Onset
 reln	CTD:C0546126~Acute Confusional Senile Dementia
-reln	CTD:C0750900~Alzheimer's Disease, Focal Onset
+reln	CTD:C0750900~AlzheimerQs Disease, Focal Onset
 reln	CTD:C0750901~Alzheimer Disease, Early Onset
 reln	CTD:C0796089~LISSENCEPHALY SYNDROME, NORMAN-ROBERTS TYPE
 reln	CTD:C1269683~Major Depressive Disorder
@@ -16056,13 +16056,13 @@ psap	CTD:C0268262~Metachromatic Leukodystrophy due to Saposin B Deficiency
 psap	CTD:C1864651~GAUCHER DISEASE, ATYPICAL, DUE TO SAPOSIN C DEFICIENCY
 psap	CTD:C2673266~KRABBE DISEASE, ATYPICAL, DUE TO SAPOSIN A DEFICIENCY
 psap	CTD:C2673635~Combined Saposin Deficiency
-LOC100710620	CTD:C0002395~Alzheimer's Disease
+LOC100710620	CTD:C0002395~AlzheimerQs Disease
 LOC100710620	CTD:C0004045~Asphyxia Neonatorum
 LOC100710620	CTD:C0011265~Presenile dementia
 LOC100710620	CTD:C0276496~Familial Alzheimer Disease (FAD)
 LOC100710620	CTD:C0494463~Alzheimer Disease, Late Onset
 LOC100710620	CTD:C0546126~Acute Confusional Senile Dementia
-LOC100710620	CTD:C0750900~Alzheimer's Disease, Focal Onset
+LOC100710620	CTD:C0750900~AlzheimerQs Disease, Focal Onset
 LOC100710620	CTD:C0750901~Alzheimer Disease, Early Onset
 LOC100710620	CTD:C1449563~Cardiomyopathy, Familial Idiopathic
 LOC100710620	CTD:C1847200~ALZHEIMER DISEASE 4
@@ -16098,7 +16098,7 @@ psmb7	CTD:C0004238~Atrial Fibrillation
 psmb7	CTD:C0235480~Paroxysmal atrial fibrillation
 psmb8	CTD:C0023893~Liver Cirrhosis, Experimental
 psmb8	CTD:C4746851~PROTEASOME-ASSOCIATED AUTOINFLAMMATORY SYNDROME 1
-LOC100702181	CTD:C0002395~Alzheimer's Disease
+LOC100702181	CTD:C0002395~AlzheimerQs Disease
 LOC100702181	CTD:C0003123~Anorexia
 LOC100702181	CTD:C0011265~Presenile dementia
 LOC100702181	CTD:C0011999~Diastematomyelia
@@ -16113,7 +16113,7 @@ LOC100702181	CTD:C0344479~Spinal Cord Myelodysplasia
 LOC100702181	CTD:C0494463~Alzheimer Disease, Late Onset
 LOC100702181	CTD:C0546126~Acute Confusional Senile Dementia
 LOC100702181	CTD:C0702169~Acrania
-LOC100702181	CTD:C0750900~Alzheimer's Disease, Focal Onset
+LOC100702181	CTD:C0750900~AlzheimerQs Disease, Focal Onset
 LOC100702181	CTD:C0750901~Alzheimer Disease, Early Onset
 LOC100696839	CTD:C0001197~Acrodermatitis
 LOC100696839	CTD:C0023893~Liver Cirrhosis, Experimental
@@ -16448,8 +16448,8 @@ LOC100702382	CTD:C0003873~Rheumatoid Arthritis
 LOC100702382	CTD:C0009324~Ulcerative Colitis
 LOC100702382	CTD:C0010346~Crohn Disease
 LOC100702382	CTD:C0023492~Leukemia, T-Cell
-LOC100702382	CTD:C0156147~Crohn's disease of large bowel
-LOC100702382	CTD:C0267380~Crohn's disease of the ileum
+LOC100702382	CTD:C0156147~CrohnQs disease of large bowel
+LOC100702382	CTD:C0267380~CrohnQs disease of the ileum
 LOC100702382	CTD:C0678202~Regional enteritis
 LOC100702382	CTD:C0949272~IIeocolitis
 LOC100702382	CTD:C1961099~Precursor T-Cell Lymphoblastic Leukemia-Lymphoma
@@ -16979,7 +16979,7 @@ ret	CTD:C0238462~Medullary carcinoma of thyroid
 ret	CTD:C0238463~Papillary thyroid carcinoma
 ret	CTD:C0270823~Petit mal status
 ret	CTD:C0311335~Grand Mal Status Epilepticus
-ret	CTD:C0343640~African Burkitt's lymphoma
+ret	CTD:C0343640~African BurkittQs lymphoma
 ret	CTD:C0393734~Complex Partial Status Epilepticus
 ret	CTD:C0549473~Thyroid carcinoma
 ret	CTD:C0740340~Amyloidosis, Familial
@@ -17753,7 +17753,7 @@ LOC100707797	CTD:C3714758~Juvenile psoriatic arthritis
 LOC100707797	CTD:C4552091~Polyarthritis, Juvenile, Rheumatoid Factor Negative
 LOC100707797	CTD:C4704862~Polyarthritis, Juvenile, Rheumatoid Factor Positive
 slc2a4	CTD:C0002152~Alloxan Diabetes
-slc2a4	CTD:C0002395~Alzheimer's Disease
+slc2a4	CTD:C0002395~AlzheimerQs Disease
 slc2a4	CTD:C0011265~Presenile dementia
 slc2a4	CTD:C0011853~Diabetes Mellitus, Experimental
 slc2a4	CTD:C0011860~Diabetes Mellitus, Non-Insulin-Dependent
@@ -17761,7 +17761,7 @@ slc2a4	CTD:C0038433~Streptozotocin Diabetes
 slc2a4	CTD:C0276496~Familial Alzheimer Disease (FAD)
 slc2a4	CTD:C0494463~Alzheimer Disease, Late Onset
 slc2a4	CTD:C0546126~Acute Confusional Senile Dementia
-slc2a4	CTD:C0750900~Alzheimer's Disease, Focal Onset
+slc2a4	CTD:C0750900~AlzheimerQs Disease, Focal Onset
 slc2a4	CTD:C0750901~Alzheimer Disease, Early Onset
 slc2a5	CTD:C0006142~Malignant neoplasm of breast
 slc2a5	CTD:C0678222~Breast Carcinoma
@@ -18092,7 +18092,7 @@ smarca4	CTD:C0205944~Sarcoma, Epithelioid
 smarca4	CTD:C0205945~Sarcoma, Spindle Cell
 smarca4	CTD:C0262584~Carcinoma, Small Cell
 smarca4	CTD:C0265338~Coffin-Siris syndrome
-smarca4	CTD:C0343640~African Burkitt's lymphoma
+smarca4	CTD:C0343640~African BurkittQs lymphoma
 smarca4	CTD:C0600427~Cocaine Dependence
 smarca4	CTD:C0919267~ovarian neoplasm
 smarca4	CTD:C1140680~Malignant neoplasm of ovary
@@ -18348,7 +18348,7 @@ sod1	CTD:C4721507~Alveolitis, Fibrosing
 sod1	CTD:C4721845~Marfan Syndrome, Type I
 sod2	CTD:C0001787~Osteoporosis, Age-Related
 sod2	CTD:C0002152~Alloxan Diabetes
-sod2	CTD:C0002395~Alzheimer's Disease
+sod2	CTD:C0002395~AlzheimerQs Disease
 sod2	CTD:C0002736~Amyotrophic Lateral Sclerosis
 sod2	CTD:C0002871~Anemia
 sod2	CTD:C0002896~Sideroblastic anemia
@@ -18469,7 +18469,7 @@ sod2	CTD:C0740376~Middle Cerebral Artery Thrombosis
 sod2	CTD:C0740391~Middle Cerebral Artery Occlusion
 sod2	CTD:C0740392~Infarction, Middle Cerebral Artery
 sod2	CTD:C0740457~Malignant neoplasm of kidney
-sod2	CTD:C0750900~Alzheimer's Disease, Focal Onset
+sod2	CTD:C0750900~AlzheimerQs Disease, Focal Onset
 sod2	CTD:C0750901~Alzheimer Disease, Early Onset
 sod2	CTD:C0750974~Brain Tumor, Primary
 sod2	CTD:C0750977~Recurrent Brain Neoplasm
@@ -18875,7 +18875,7 @@ stat4	CTD:C0086981~Sicca Syndrome
 stat4	CTD:C0238065~Secondary Biliary Cholangitis
 stat4	CTD:C0242380~Libman-Sacks Disease
 stat4	CTD:C0751324~Multiple Sclerosis, Acute Fulminating
-stat4	CTD:C1527336~Sjogren's Syndrome
+stat4	CTD:C1527336~SjogrenQs Syndrome
 stat4	CTD:C2239176~Liver carcinoma
 stat4	CTD:C4551595~Biliary Cirrhosis, Primary, 1
 LOC100692331	CTD:C0023494~Leukemia, T-Cell, Chronic
@@ -19177,7 +19177,7 @@ tbp	CTD:C3160718~PARKINSON DISEASE, LATE-ONSET
 tbx2	CTD:C0027819~Neuroblastoma
 LOC100698703	CTD:C0004238~Atrial Fibrillation
 LOC100698703	CTD:C0235480~Paroxysmal atrial fibrillation
-LOC100698703	CTD:C0265239~Wildervanck's syndrome
+LOC100698703	CTD:C0265239~WildervanckQs syndrome
 LOC100698703	CTD:C0265264~Holt-Oram syndrome
 tbx15	CTD:C1850040~Pelviscapular dysplasia
 tbxa2r	CTD:C0019193~Hepatitis, Toxic
@@ -19257,14 +19257,14 @@ LOC100707414	CTD:C0023452~Childhood Acute Lymphoblastic Leukemia
 LOC100707414	CTD:C0023453~L2 Acute Lymphoblastic Leukemia
 LOC100707414	CTD:C0023485~Precursor B-Cell Lymphoblastic Leukemia-Lymphoma
 LOC100707414	CTD:C0086438~Hypogammaglobulinemia
-LOC100707414	CTD:C0343640~African Burkitt's lymphoma
+LOC100707414	CTD:C0343640~African BurkittQs lymphoma
 LOC100707414	CTD:C1961102~Precursor Cell Lymphoblastic Leukemia Lymphoma
 LOC100707414	CTD:C4721444~Burkitt Leukemia
 tcf7	CTD:C0010346~Crohn Disease
 tcf7	CTD:C0024141~Lupus Erythematosus, Systemic
-tcf7	CTD:C0156147~Crohn's disease of large bowel
+tcf7	CTD:C0156147~CrohnQs disease of large bowel
 tcf7	CTD:C0242380~Libman-Sacks Disease
-tcf7	CTD:C0267380~Crohn's disease of the ileum
+tcf7	CTD:C0267380~CrohnQs disease of the ileum
 tcf7	CTD:C0678202~Regional enteritis
 tcf7	CTD:C0949272~IIeocolitis
 tcf7l2	CTD:C0007102~Malignant tumor of colon
@@ -19407,14 +19407,14 @@ tert	CTD:C4721508~Hamman-Rich Disease
 tert	CTD:C4721509~Usual Interstitial Pneumonia
 tert	CTD:C4721806~Carcinoma, Basal Cell
 tert	CTD:C4721952~Familial Idiopathic Pulmonary Fibrosis
-tfam	CTD:C0002395~Alzheimer's Disease
-tfam	CTD:C0006079~Bowen's Disease
+tfam	CTD:C0002395~AlzheimerQs Disease
+tfam	CTD:C0006079~BowenQs Disease
 tfam	CTD:C0011265~Presenile dementia
 tfam	CTD:C0030569~Secondary Parkinson Disease
 tfam	CTD:C0276496~Familial Alzheimer Disease (FAD)
 tfam	CTD:C0494463~Alzheimer Disease, Late Onset
 tfam	CTD:C0546126~Acute Confusional Senile Dementia
-tfam	CTD:C0750900~Alzheimer's Disease, Focal Onset
+tfam	CTD:C0750900~AlzheimerQs Disease, Focal Onset
 tfam	CTD:C0750901~Alzheimer Disease, Early Onset
 tfam	CTD:C0751414~Parkinson Disease, Secondary Vascular
 tfam	CTD:C0751415~Atherosclerotic Parkinsonism
@@ -19460,7 +19460,7 @@ LOC100705007	CTD:C1266042~Chromophobe Renal Cell Carcinoma
 LOC100705007	CTD:C1266043~Sarcomatoid Renal Cell Carcinoma
 LOC100705007	CTD:C1266044~Collecting Duct Carcinoma of the Kidney
 LOC100705007	CTD:C1306837~Papillary Renal Cell Carcinoma
-tfr2	CTD:C0002875~Cooley's anemia
+tfr2	CTD:C0002875~CooleyQs anemia
 tfr2	CTD:C0005283~beta Thalassemia
 tfr2	CTD:C0018995~Hemochromatosis
 tfr2	CTD:C0019025~Hemoglobin F Disease
@@ -19468,7 +19468,7 @@ tfr2	CTD:C0085578~Thalassemia Minor
 tfr2	CTD:C0271979~Thalassemia Intermedia
 tfr2	CTD:C0392514~Hereditary hemochromatosis
 tfr2	CTD:C1858664~HEMOCHROMATOSIS, TYPE 3
-LOC100702695	CTD:C0002875~Cooley's anemia
+LOC100702695	CTD:C0002875~CooleyQs anemia
 LOC100702695	CTD:C0005283~beta Thalassemia
 LOC100702695	CTD:C0005684~Malignant neoplasm of urinary bladder
 LOC100702695	CTD:C0005695~Bladder Neoplasm
@@ -19698,7 +19698,7 @@ tgfbi	CTD:C0011881~Diabetic Nephropathy
 tgfbi	CTD:C0017667~Nodular glomerulosclerosis
 tgfbi	CTD:C0036690~Septicemia
 tgfbi	CTD:C0243026~Sepsis
-tgfbi	CTD:C0339278~Reis-Bucklers' corneal dystrophy
+tgfbi	CTD:C0339278~Reis-BucklersQ corneal dystrophy
 tgfbi	CTD:C0521723~Corneal dystrophy, epithelial basement membrane
 tgfbi	CTD:C1275685~Avellino corneal dystrophy
 tgfbi	CTD:C1562894~Thiel-Behnke corneal dystrophy
@@ -19953,7 +19953,7 @@ tnfaip3	CTD:C0086981~Sicca Syndrome
 tnfaip3	CTD:C0242380~Libman-Sacks Disease
 tnfaip3	CTD:C0376407~Granulomatous Slack Skin
 tnfaip3	CTD:C0751324~Multiple Sclerosis, Acute Fulminating
-tnfaip3	CTD:C1527336~Sjogren's Syndrome
+tnfaip3	CTD:C1527336~SjogrenQs Syndrome
 tnfaip3	CTD:C1956130~Lymphoma, Follicular, Grade 1
 tnfaip3	CTD:C1956131~Lymphoma, Follicular, Grade 3
 tnfaip3	CTD:C1956132~Lymphoma, Follicular, Grade 2
@@ -20195,8 +20195,8 @@ tph1	CTD:C0022665~Kidney Neoplasm
 tph1	CTD:C0036341~Schizophrenia
 tph1	CTD:C0740457~Malignant neoplasm of kidney
 tpi	CTD:C0001787~Osteoporosis, Age-Related
-tpi	CTD:C0002395~Alzheimer's Disease
-tpi	CTD:C0002735~Oppenheim's Disease
+tpi	CTD:C0002395~AlzheimerQs Disease
+tpi	CTD:C0002735~OppenheimQs Disease
 tpi	CTD:C0002878~Anemia, Hemolytic
 tpi	CTD:C0002879~Anemia, Hemolytic, Acquired
 tpi	CTD:C0002882~Anemia, Hemolytic, Congenital Nonspherocytic
@@ -20211,7 +20211,7 @@ tpi	CTD:C0276496~Familial Alzheimer Disease (FAD)
 tpi	CTD:C0279626~Squamous cell carcinoma of esophagus
 tpi	CTD:C0494463~Alzheimer Disease, Late Onset
 tpi	CTD:C0546126~Acute Confusional Senile Dementia
-tpi	CTD:C0750900~Alzheimer's Disease, Focal Onset
+tpi	CTD:C0750900~AlzheimerQs Disease, Focal Onset
 tpi	CTD:C0750901~Alzheimer Disease, Early Onset
 tpi	CTD:C0751381~Foley-Denny-Brown Syndrome
 tpi	CTD:C0751406~Post-Traumatic Osteoporosis
@@ -20501,10 +20501,10 @@ tyk2	CTD:C0023892~Biliary cirrhosis
 tyk2	CTD:C0026769~Multiple Sclerosis
 tyk2	CTD:C0030246~Pustulosis of Palms and Soles
 tyk2	CTD:C0033860~Psoriasis
-tyk2	CTD:C0156147~Crohn's disease of large bowel
+tyk2	CTD:C0156147~CrohnQs disease of large bowel
 tyk2	CTD:C0205734~Diabetes, Autoimmune
 tyk2	CTD:C0238065~Secondary Biliary Cholangitis
-tyk2	CTD:C0267380~Crohn's disease of the ileum
+tyk2	CTD:C0267380~CrohnQs disease of the ileum
 tyk2	CTD:C0342302~Brittle diabetes
 tyk2	CTD:C0600427~Cocaine Dependence
 tyk2	CTD:C0678202~Regional enteritis
@@ -20643,7 +20643,7 @@ ugcg	CTD:C0151744~Myocardial Ischemia
 ugdh	CTD:C0345904~Malignant neoplasm of liver
 LOC100698935	CTD:C0152013~Adenocarcinoma of lung (disorder)
 LOC100698935	CTD:C0376358~Malignant neoplasm of prostate
-LOC100695554	CTD:C0002875~Cooley's anemia
+LOC100695554	CTD:C0002875~CooleyQs anemia
 LOC100695554	CTD:C0002895~Anemia, Sickle Cell
 LOC100695554	CTD:C0005283~beta Thalassemia
 LOC100695554	CTD:C0006142~Malignant neoplasm of breast
@@ -20855,18 +20855,18 @@ LOC100701681	CTD:C0393682~Epilepsy, Lateral Temporal
 vrk1	CTD:C0020796~Profound Mental Retardation
 vrk1	CTD:C0917816~Mental deficiency
 vrk1	CTD:C1843504~Pontocerebellar Hypoplasia Type 1
-LOC100694666	CTD:C0002395~Alzheimer's Disease
+LOC100694666	CTD:C0002395~AlzheimerQs Disease
 LOC100694666	CTD:C0011265~Presenile dementia
 LOC100694666	CTD:C0276496~Familial Alzheimer Disease (FAD)
 LOC100694666	CTD:C0494463~Alzheimer Disease, Late Onset
 LOC100694666	CTD:C0546126~Acute Confusional Senile Dementia
-LOC100694666	CTD:C0750900~Alzheimer's Disease, Focal Onset
+LOC100694666	CTD:C0750900~AlzheimerQs Disease, Focal Onset
 LOC100694666	CTD:C0750901~Alzheimer Disease, Early Onset
 LOC100692624	CTD:C0010346~Crohn Disease
 LOC100692624	CTD:C0023890~Liver Cirrhosis
-LOC100692624	CTD:C0156147~Crohn's disease of large bowel
+LOC100692624	CTD:C0156147~CrohnQs disease of large bowel
 LOC100692624	CTD:C0239946~Fibrosis, Liver
-LOC100692624	CTD:C0267380~Crohn's disease of the ileum
+LOC100692624	CTD:C0267380~CrohnQs disease of the ileum
 LOC100692624	CTD:C0678202~Regional enteritis
 LOC100692624	CTD:C0949272~IIeocolitis
 vwf	CTD:C0004238~Atrial Fibrillation
@@ -21025,7 +21025,7 @@ xdh	CTD:C1269683~Major Depressive Disorder
 xdh	CTD:C1571983~Involutional paraphrenia
 xdh	CTD:C1571984~Psychosis, Involutional
 xdh	CTD:C1959583~Myocardial Failure
-xk	CTD:C0002735~Oppenheim's Disease
+xk	CTD:C0002735~OppenheimQs Disease
 xk	CTD:C0266487~Etat Marbre
 xk	CTD:C0376338~Diagnosis, Psychiatric
 xk	CTD:C0393576~Chorea Acanthocytosis Syndrome
@@ -21153,12 +21153,12 @@ slc30a1	CTD:C0270846~Epileptic drop attack
 slc30a1	CTD:C0494475~Tonic - clonic seizures
 slc30a1	CTD:C0751110~Single Seizure
 slc30a3	CTD:C1842486~Zinc Deficiency, Neonatal, due to Low Breast Milk Zinc
-slc30a4	CTD:C0002395~Alzheimer's Disease
+slc30a4	CTD:C0002395~AlzheimerQs Disease
 slc30a4	CTD:C0011265~Presenile dementia
 slc30a4	CTD:C0276496~Familial Alzheimer Disease (FAD)
 slc30a4	CTD:C0494463~Alzheimer Disease, Late Onset
 slc30a4	CTD:C0546126~Acute Confusional Senile Dementia
-slc30a4	CTD:C0750900~Alzheimer's Disease, Focal Onset
+slc30a4	CTD:C0750900~AlzheimerQs Disease, Focal Onset
 slc30a4	CTD:C0750901~Alzheimer Disease, Early Onset
 prdm2	CTD:C0005684~Malignant neoplasm of urinary bladder
 prdm2	CTD:C0005695~Bladder Neoplasm
@@ -21248,7 +21248,7 @@ LOC100695178	CTD:C0752206~Dystonias, Sporadic
 LOC100695178	CTD:C0752207~Familial Dystonia
 LOC100695178	CTD:C0752208~Pseudodystonia
 LOC100695178	CTD:C0917816~Mental deficiency
-LOC100695178	CTD:C4316810~Writer's Cramp
+LOC100695178	CTD:C4316810~WriterQs Cramp
 pla2g7	CTD:C0004096~Asthma
 pla2g7	CTD:C0010068~Coronary heart disease
 pla2g7	CTD:C0751956~Acute Cerebrovascular Accidents
@@ -21550,7 +21550,7 @@ LOC100696470	CTD:C0206656~Embryonal Rhabdomyosarcoma
 LOC100696470	CTD:C0206698~Cholangiocarcinoma
 LOC100696470	CTD:C0265338~Coffin-Siris syndrome
 LOC100696470	CTD:C0279628~Adenocarcinoma Of Esophagus
-LOC100696470	CTD:C0343640~African Burkitt's lymphoma
+LOC100696470	CTD:C0343640~African BurkittQs lymphoma
 LOC100696470	CTD:C0345905~Intrahepatic Cholangiocarcinoma
 LOC100696470	CTD:C0376358~Malignant neoplasm of prostate
 LOC100696470	CTD:C0376407~Granulomatous Slack Skin
@@ -21574,7 +21574,7 @@ colq	CTD:C1864233~ENDPLATE ACETYLCHOLINESTERASE DEFICIENCY (disorder)
 colq	CTD:C4505353~Diverticular Bleeding
 trrap	CTD:C0025202~melanoma
 trrap	CTD:C0036341~Schizophrenia
-LOC100697286	CTD:C0002395~Alzheimer's Disease
+LOC100697286	CTD:C0002395~AlzheimerQs Disease
 LOC100697286	CTD:C0011265~Presenile dementia
 LOC100697286	CTD:C0023467~Leukemia, Myelocytic, Acute
 LOC100697286	CTD:C0026998~Acute Myeloid Leukemia, M1
@@ -21582,7 +21582,7 @@ LOC100697286	CTD:C0276496~Familial Alzheimer Disease (FAD)
 LOC100697286	CTD:C0338656~Impaired cognition
 LOC100697286	CTD:C0494463~Alzheimer Disease, Late Onset
 LOC100697286	CTD:C0546126~Acute Confusional Senile Dementia
-LOC100697286	CTD:C0750900~Alzheimer's Disease, Focal Onset
+LOC100697286	CTD:C0750900~AlzheimerQs Disease, Focal Onset
 LOC100697286	CTD:C0750901~Alzheimer Disease, Early Onset
 LOC100697286	CTD:C1270972~Mild cognitive disorder
 LOC100697286	CTD:C1879321~Acute Myeloid Leukemia (AML-M2)
@@ -21946,7 +21946,7 @@ prkra	CTD:C0752207~Familial Dystonia
 prkra	CTD:C0752208~Pseudodystonia
 prkra	CTD:C0917816~Mental deficiency
 prkra	CTD:C1868675~PARKINSON DISEASE 2, AUTOSOMAL RECESSIVE JUVENILE
-prkra	CTD:C4316810~Writer's Cramp
+prkra	CTD:C4316810~WriterQs Cramp
 LOC100690570	CTD:C0001787~Osteoporosis, Age-Related
 LOC100690570	CTD:C0002382~Alveolar Bone Loss
 LOC100690570	CTD:C0020437~Hypercalcemia
@@ -22263,7 +22263,7 @@ LOC100704516	CTD:C0086743~Osteoarthrosis Deformans
 LOC100704516	CTD:C0345967~Malignant mesothelioma
 LOC100704516	CTD:C1136382~Sclerocystic Ovaries
 dpm2	CTD:C3554385~CONGENITAL DISORDER OF GLYCOSYLATION, TYPE Iu
-hesx1	CTD:C2930844~Hypopituitarism and septooptic 'dysplasia'
+hesx1	CTD:C2930844~Hypopituitarism and septooptic QdysplasiaQ
 inpp4b	CTD:C0005684~Malignant neoplasm of urinary bladder
 inpp4b	CTD:C0005695~Bladder Neoplasm
 inpp4b	CTD:C0007134~Renal Cell Carcinoma
@@ -22333,7 +22333,7 @@ prom1	CTD:C0017636~Glioblastoma
 prom1	CTD:C0153567~Uterine Cancer
 prom1	CTD:C0206627~Mixed Tumor, Mullerian
 prom1	CTD:C0334588~Giant Cell Glioblastoma
-prom1	CTD:C0339512~Bull's eye macular dystrophy
+prom1	CTD:C0339512~BullQs eye macular dystrophy
 prom1	CTD:C1621958~Glioblastoma Multiforme
 prom1	CTD:C1863534~Stargardt disease 4
 prom1	CTD:C2675210~CONE-ROD DYSTROPHY 12 (disorder)
@@ -22458,8 +22458,8 @@ herc1	CTD:C4310766~MACROCEPHALY, DYSMORPHIC FACIES, AND PSYCHOMOTOR RETARDATION
 LOC100709151	CTD:C0039685~Tetralogy of Fallot
 phox2b	CTD:C0010346~Crohn Disease
 phox2b	CTD:C0027819~Neuroblastoma
-phox2b	CTD:C0156147~Crohn's disease of large bowel
-phox2b	CTD:C0267380~Crohn's disease of the ileum
+phox2b	CTD:C0156147~CrohnQs disease of large bowel
+phox2b	CTD:C0267380~CrohnQs disease of the ileum
 phox2b	CTD:C0678202~Regional enteritis
 phox2b	CTD:C0949272~IIeocolitis
 phox2b	CTD:C1275808~Congenital central hypoventilation
@@ -22567,7 +22567,7 @@ LOC100702271	CTD:C0206744~T-Lymphocytopenia, Idiopathic CD4-Positive
 LOC100702161	CTD:C1840451~MULTICYSTIC RENAL DYSPLASIA, BILATERAL
 LOC100702161	CTD:C4048262~Hydronephrosis Due To Pujo
 LOC100708948	CTD:C2239176~Liver carcinoma
-usp8	CTD:C0221406~Pituitary-dependent Cushing's disease
+usp8	CTD:C0221406~Pituitary-dependent CushingQs disease
 usp8	CTD:C0751220~Inappropriate ACTH Secretion Syndrome
 usp8	CTD:C1306214~ACTH-Secreting Pituitary Adenoma
 rgn	CTD:C0019193~Hepatitis, Toxic
@@ -22957,7 +22957,7 @@ LOC100708185	CTD:C0152013~Adenocarcinoma of lung (disorder)
 adamts3	CTD:C0036341~Schizophrenia
 LOC100711611	CTD:C0345967~Malignant mesothelioma
 LOC100711611	CTD:C2700425~EHLERS-DANLOS SYNDROME, DERMATOSPARAXIS TYPE
-adamts1	CTD:C0002395~Alzheimer's Disease
+adamts1	CTD:C0002395~AlzheimerQs Disease
 adamts1	CTD:C0006142~Malignant neoplasm of breast
 adamts1	CTD:C0007131~Non-Small Cell Lung Carcinoma
 adamts1	CTD:C0011265~Presenile dementia
@@ -22965,7 +22965,7 @@ adamts1	CTD:C0276496~Familial Alzheimer Disease (FAD)
 adamts1	CTD:C0494463~Alzheimer Disease, Late Onset
 adamts1	CTD:C0546126~Acute Confusional Senile Dementia
 adamts1	CTD:C0678222~Breast Carcinoma
-adamts1	CTD:C0750900~Alzheimer's Disease, Focal Onset
+adamts1	CTD:C0750900~AlzheimerQs Disease, Focal Onset
 adamts1	CTD:C0750901~Alzheimer Disease, Early Onset
 adamts1	CTD:C1257931~Mammary Neoplasms, Human
 adamts1	CTD:C2239176~Liver carcinoma
@@ -23200,7 +23200,7 @@ kmt2b	CTD:C0752206~Dystonias, Sporadic
 kmt2b	CTD:C0752207~Familial Dystonia
 kmt2b	CTD:C0752208~Pseudodystonia
 kmt2b	CTD:C2239176~Liver carcinoma
-kmt2b	CTD:C4316810~Writer's Cramp
+kmt2b	CTD:C4316810~WriterQs Cramp
 LOC100710969	CTD:C4310817~MENTAL RETARDATION, X-LINKED 104
 LOC100702792	CTD:C0005684~Malignant neoplasm of urinary bladder
 LOC100702792	CTD:C0005695~Bladder Neoplasm
@@ -23441,8 +23441,8 @@ nr1h4	CTD:C0008370~Cholestasis
 nr1h4	CTD:C0010346~Crohn Disease
 nr1h4	CTD:C0015695~Fatty Liver
 nr1h4	CTD:C0019193~Hepatitis, Toxic
-nr1h4	CTD:C0156147~Crohn's disease of large bowel
-nr1h4	CTD:C0267380~Crohn's disease of the ileum
+nr1h4	CTD:C0156147~CrohnQs disease of large bowel
+nr1h4	CTD:C0267380~CrohnQs disease of the ileum
 nr1h4	CTD:C0345904~Malignant neoplasm of liver
 nr1h4	CTD:C0346627~Intestinal Cancer
 nr1h4	CTD:C0400966~Non-alcoholic Fatty Liver Disease
@@ -23857,7 +23857,7 @@ tnip1	CTD:C0086981~Sicca Syndrome
 tnip1	CTD:C0242380~Libman-Sacks Disease
 tnip1	CTD:C0678222~Breast Carcinoma
 tnip1	CTD:C1257931~Mammary Neoplasms, Human
-tnip1	CTD:C1527336~Sjogren's Syndrome
+tnip1	CTD:C1527336~SjogrenQs Syndrome
 tnip1	CTD:C4704874~Mammary Carcinoma, Human
 ikzf1	CTD:C0009324~Ulcerative Colitis
 ikzf1	CTD:C0009447~Common Variable Immunodeficiency
@@ -24009,13 +24009,13 @@ acaa2	CTD:C0035222~Respiratory Distress Syndrome, Adult
 acaa2	CTD:C0086743~Osteoarthrosis Deformans
 vav3	CTD:C0017661~IGA Glomerulonephritis
 vav3	CTD:C0376358~Malignant neoplasm of prostate
-LOC100696843	CTD:C0002395~Alzheimer's Disease
+LOC100696843	CTD:C0002395~AlzheimerQs Disease
 LOC100696843	CTD:C0011265~Presenile dementia
 LOC100696843	CTD:C0152013~Adenocarcinoma of lung (disorder)
 LOC100696843	CTD:C0276496~Familial Alzheimer Disease (FAD)
 LOC100696843	CTD:C0494463~Alzheimer Disease, Late Onset
 LOC100696843	CTD:C0546126~Acute Confusional Senile Dementia
-LOC100696843	CTD:C0750900~Alzheimer's Disease, Focal Onset
+LOC100696843	CTD:C0750900~AlzheimerQs Disease, Focal Onset
 LOC100696843	CTD:C0750901~Alzheimer Disease, Early Onset
 tab1	CTD:C0032460~Polycystic Ovary Syndrome
 tab1	CTD:C1136382~Sclerocystic Ovaries
@@ -24281,7 +24281,7 @@ fars2	CTD:C3554168~COMBINED OXIDATIVE PHOSPHORYLATION DEFICIENCY 14
 fars2	CTD:C4310750~SPASTIC PARAPLEGIA 77, AUTOSOMAL RECESSIVE
 cgref1	CTD:C0345904~Malignant neoplasm of liver
 LOC100701321	CTD:C0006413~Burkitt Lymphoma
-LOC100701321	CTD:C0343640~African Burkitt's lymphoma
+LOC100701321	CTD:C0343640~African BurkittQs lymphoma
 LOC100701321	CTD:C4721444~Burkitt Leukemia
 b3gnt2	CTD:C0003873~Rheumatoid Arthritis
 b3gnt2	CTD:C0018213~Graves Disease
@@ -24447,7 +24447,7 @@ LOC100704523	CTD:C0028754~Obesity
 ftcd	CTD:C0006413~Burkitt Lymphoma
 ftcd	CTD:C0023893~Liver Cirrhosis, Experimental
 ftcd	CTD:C0268609~Glutamate formiminotransferase deficiency
-ftcd	CTD:C0343640~African Burkitt's lymphoma
+ftcd	CTD:C0343640~African BurkittQs lymphoma
 ftcd	CTD:C4721444~Burkitt Leukemia
 pde10a	CTD:C4310791~STRIATAL DEGENERATION, AUTOSOMAL DOMINANT 2
 pde10a	CTD:C4310792~DYSKINESIA, LIMB AND OROFACIAL, INFANTILE-ONSET
@@ -24462,25 +24462,25 @@ hpse	CTD:C0027720~Nephrosis
 hpse	CTD:C0678222~Breast Carcinoma
 hpse	CTD:C1257931~Mammary Neoplasms, Human
 hpse	CTD:C4704874~Mammary Carcinoma, Human
-pgrmc1	CTD:C0002395~Alzheimer's Disease
+pgrmc1	CTD:C0002395~AlzheimerQs Disease
 pgrmc1	CTD:C0011265~Presenile dementia
 pgrmc1	CTD:C0276496~Familial Alzheimer Disease (FAD)
 pgrmc1	CTD:C0376358~Malignant neoplasm of prostate
 pgrmc1	CTD:C0494463~Alzheimer Disease, Late Onset
 pgrmc1	CTD:C0546126~Acute Confusional Senile Dementia
-pgrmc1	CTD:C0750900~Alzheimer's Disease, Focal Onset
+pgrmc1	CTD:C0750900~AlzheimerQs Disease, Focal Onset
 pgrmc1	CTD:C0750901~Alzheimer Disease, Early Onset
-LOC100704054	CTD:C0002395~Alzheimer's Disease
+LOC100704054	CTD:C0002395~AlzheimerQs Disease
 LOC100704054	CTD:C0011265~Presenile dementia
 LOC100704054	CTD:C0276496~Familial Alzheimer Disease (FAD)
 LOC100704054	CTD:C0494463~Alzheimer Disease, Late Onset
 LOC100704054	CTD:C0546126~Acute Confusional Senile Dementia
-LOC100704054	CTD:C0750900~Alzheimer's Disease, Focal Onset
+LOC100704054	CTD:C0750900~AlzheimerQs Disease, Focal Onset
 LOC100704054	CTD:C0750901~Alzheimer Disease, Early Onset
 fgl2	CTD:C0023893~Liver Cirrhosis, Experimental
 fgl2	CTD:C0162820~Dermatitis, Allergic Contact
 ppargc1a	CTD:C0002152~Alloxan Diabetes
-ppargc1a	CTD:C0006079~Bowen's Disease
+ppargc1a	CTD:C0006079~BowenQs Disease
 ppargc1a	CTD:C0011853~Diabetes Mellitus, Experimental
 ppargc1a	CTD:C0011860~Diabetes Mellitus, Non-Insulin-Dependent
 ppargc1a	CTD:C0018801~Heart failure
@@ -25298,12 +25298,12 @@ crtc1	CTD:C0279628~Adenocarcinoma Of Esophagus
 ahcyl2	CTD:C0376358~Malignant neoplasm of prostate
 specc1l	CTD:C1801950~Opitz-G syndrome, type 2
 specc1l	CTD:C1838348~Oculomaxillofacial dysostosis
-ncstn	CTD:C0002395~Alzheimer's Disease
+ncstn	CTD:C0002395~AlzheimerQs Disease
 ncstn	CTD:C0011265~Presenile dementia
 ncstn	CTD:C0276496~Familial Alzheimer Disease (FAD)
 ncstn	CTD:C0494463~Alzheimer Disease, Late Onset
 ncstn	CTD:C0546126~Acute Confusional Senile Dementia
-ncstn	CTD:C0750900~Alzheimer's Disease, Focal Onset
+ncstn	CTD:C0750900~AlzheimerQs Disease, Focal Onset
 ncstn	CTD:C0750901~Alzheimer Disease, Early Onset
 ncstn	CTD:C1840560~Hidradenitis suppurativa, familial
 nudcd3	CTD:C0345904~Malignant neoplasm of liver
@@ -25597,21 +25597,21 @@ amacr	CTD:C0376358~Malignant neoplasm of prostate
 amacr	CTD:C1858328~Bile acid synthesis defect, congenital, 4
 amacr	CTD:C3280428~Alpha-Methylacyl-CoA Racemase Deficiency
 LOC100701596	CTD:C0023487~Acute Promyelocytic Leukemia
-cd2ap	CTD:C0002395~Alzheimer's Disease
+cd2ap	CTD:C0002395~AlzheimerQs Disease
 cd2ap	CTD:C0011265~Presenile dementia
 cd2ap	CTD:C0017668~Focal glomerulosclerosis
 cd2ap	CTD:C0086432~Hyalinosis, Segmental Glomerular
 cd2ap	CTD:C0276496~Familial Alzheimer Disease (FAD)
 cd2ap	CTD:C0494463~Alzheimer Disease, Late Onset
 cd2ap	CTD:C0546126~Acute Confusional Senile Dementia
-cd2ap	CTD:C0750900~Alzheimer's Disease, Focal Onset
+cd2ap	CTD:C0750900~AlzheimerQs Disease, Focal Onset
 cd2ap	CTD:C0750901~Alzheimer Disease, Early Onset
-bace1	CTD:C0002395~Alzheimer's Disease
+bace1	CTD:C0002395~AlzheimerQs Disease
 bace1	CTD:C0011265~Presenile dementia
 bace1	CTD:C0276496~Familial Alzheimer Disease (FAD)
 bace1	CTD:C0494463~Alzheimer Disease, Late Onset
 bace1	CTD:C0546126~Acute Confusional Senile Dementia
-bace1	CTD:C0750900~Alzheimer's Disease, Focal Onset
+bace1	CTD:C0750900~AlzheimerQs Disease, Focal Onset
 bace1	CTD:C0750901~Alzheimer Disease, Early Onset
 ssbp2	CTD:C0005586~Bipolar Disorder
 ssbp2	CTD:C0005587~Depression, Bipolar
@@ -26001,12 +26001,12 @@ ak5	CTD:C0236804~Amphetamine Addiction
 ak5	CTD:C0236807~Amphetamine Abuse
 LOC100696814	CTD:C0010606~Adenoid Cystic Carcinoma
 ehf	CTD:C0376358~Malignant neoplasm of prostate
-gapdhs	CTD:C0002395~Alzheimer's Disease
+gapdhs	CTD:C0002395~AlzheimerQs Disease
 gapdhs	CTD:C0011265~Presenile dementia
 gapdhs	CTD:C0276496~Familial Alzheimer Disease (FAD)
 gapdhs	CTD:C0494463~Alzheimer Disease, Late Onset
 gapdhs	CTD:C0546126~Acute Confusional Senile Dementia
-gapdhs	CTD:C0750900~Alzheimer's Disease, Focal Onset
+gapdhs	CTD:C0750900~AlzheimerQs Disease, Focal Onset
 gapdhs	CTD:C0750901~Alzheimer Disease, Early Onset
 hspb8	CTD:C1834692~NEURONOPATHY, DISTAL HEREDITARY MOTOR, TYPE IIA
 hspb8	CTD:C1837552~CHARCOT-MARIE-TOOTH DISEASE, AXONAL, TYPE 2L (disorder)
@@ -26166,7 +26166,7 @@ LOC100708747	CTD:C0023470~Myeloid Leukemia
 LOC100708747	CTD:C0345967~Malignant mesothelioma
 LOC100708747	CTD:C0600427~Cocaine Dependence
 sall3	CTD:C0006413~Burkitt Lymphoma
-sall3	CTD:C0343640~African Burkitt's lymphoma
+sall3	CTD:C0343640~African BurkittQs lymphoma
 sall3	CTD:C3179349~Gastrointestinal Stromal Sarcoma
 sall3	CTD:C4721444~Burkitt Leukemia
 LOC100694977	CTD:C0023893~Liver Cirrhosis, Experimental
@@ -26250,12 +26250,12 @@ tnrc6a	CTD:C0438414~Myoclonic Encephalopathy
 tnrc6a	CTD:C0751120~Benign Infantile Myoclonic Epilepsy
 tnrc6a	CTD:C0751122~Infantile Severe Myoclonic Epilepsy
 tnrc6a	CTD:C0917800~Epilepsy, Myoclonic, Infantile
-LOC100697944	CTD:C0002395~Alzheimer's Disease
+LOC100697944	CTD:C0002395~AlzheimerQs Disease
 LOC100697944	CTD:C0011265~Presenile dementia
 LOC100697944	CTD:C0276496~Familial Alzheimer Disease (FAD)
 LOC100697944	CTD:C0494463~Alzheimer Disease, Late Onset
 LOC100697944	CTD:C0546126~Acute Confusional Senile Dementia
-LOC100697944	CTD:C0750900~Alzheimer's Disease, Focal Onset
+LOC100697944	CTD:C0750900~AlzheimerQs Disease, Focal Onset
 LOC100697944	CTD:C0750901~Alzheimer Disease, Early Onset
 angptl3	CTD:C0023893~Liver Cirrhosis, Experimental
 angptl3	CTD:C1857970~Hypobetalipoproteinemia, Familial, 2
@@ -26478,7 +26478,7 @@ LOC100711859	CTD:C1970237~Microphthalmia, Isolated 3
 vsx1	CTD:C0010035~Hereditary corneal dystrophy
 vsx1	CTD:C0014008~Empty Sella Syndrome
 vsx1	CTD:C0018179~Granular Dystrophy, Corneal
-vsx1	CTD:C0018245~Groenouw's Dystrophies
+vsx1	CTD:C0018245~GroenouwQs Dystrophies
 vsx1	CTD:C0022578~Keratoconus
 vsx1	CTD:C0024439~Macular corneal dystrophy
 vsx1	CTD:C0271574~Empty Sella Syndrome, Primary
@@ -26936,7 +26936,7 @@ upb1	CTD:C0553558~Jackknife Seizures
 upb1	CTD:C1291512~Beta-Ureidopropionase Deficiency
 upb1	CTD:C1527306~spasmus nutans
 upb1	CTD:C1527366~Salaam Seizures
-wwox	CTD:C0002395~Alzheimer's Disease
+wwox	CTD:C0002395~AlzheimerQs Disease
 wwox	CTD:C0006142~Malignant neoplasm of breast
 wwox	CTD:C0007137~Squamous cell carcinoma
 wwox	CTD:C0011265~Presenile dementia
@@ -26949,7 +26949,7 @@ wwox	CTD:C0494463~Alzheimer Disease, Late Onset
 wwox	CTD:C0546126~Acute Confusional Senile Dementia
 wwox	CTD:C0546837~Malignant neoplasm of esophagus
 wwox	CTD:C0678222~Breast Carcinoma
-wwox	CTD:C0750900~Alzheimer's Disease, Focal Onset
+wwox	CTD:C0750900~AlzheimerQs Disease, Focal Onset
 wwox	CTD:C0750901~Alzheimer Disease, Early Onset
 wwox	CTD:C0751571~Cancer of Urinary Tract
 wwox	CTD:C0752120~Spinocerebellar Ataxia Type 1
@@ -27345,7 +27345,7 @@ stx17	CTD:C0025202~melanoma
 phip	CTD:C0020796~Profound Mental Retardation
 phip	CTD:C0086981~Sicca Syndrome
 phip	CTD:C0917816~Mental deficiency
-phip	CTD:C1527336~Sjogren's Syndrome
+phip	CTD:C1527336~SjogrenQs Syndrome
 fkbp14	CTD:C3281160~EHLERS-DANLOS SYNDROME, KYPHOSCOLIOTIC TYPE, 2
 mocos	CTD:C0030312~Pancytopenia
 mocos	CTD:C0042384~Vasculitis
@@ -27357,8 +27357,8 @@ ccdc40	CTD:C4317124~Polynesian Bronchiectasis
 ccdc40	CTD:C4551906~Ciliary Dyskinesia, Primary, 1, With Or Without Situs Inversus
 LOC100690812	CTD:C1135196~Heart Failure, Diastolic
 atg16l1	CTD:C0010346~Crohn Disease
-atg16l1	CTD:C0156147~Crohn's disease of large bowel
-atg16l1	CTD:C0267380~Crohn's disease of the ileum
+atg16l1	CTD:C0156147~CrohnQs disease of large bowel
+atg16l1	CTD:C0267380~CrohnQs disease of the ileum
 atg16l1	CTD:C0678202~Regional enteritis
 atg16l1	CTD:C0949272~IIeocolitis
 atg16l1	CTD:C1970207~Inflammatory Bowel Disease 10
@@ -27584,12 +27584,12 @@ pex26	CTD:C1527231~Adrenomyeloneuropathy
 pex26	CTD:C3553951~PEROXISOME BIOGENESIS DISORDER 7B
 pex26	CTD:C3658299~Zellweger Spectrum
 pex26	CTD:C3888385~PEROXISOME BIOGENESIS DISORDER 7A (ZELLWEGER)
-slc30a6	CTD:C0002395~Alzheimer's Disease
+slc30a6	CTD:C0002395~AlzheimerQs Disease
 slc30a6	CTD:C0011265~Presenile dementia
 slc30a6	CTD:C0276496~Familial Alzheimer Disease (FAD)
 slc30a6	CTD:C0494463~Alzheimer Disease, Late Onset
 slc30a6	CTD:C0546126~Acute Confusional Senile Dementia
-slc30a6	CTD:C0750900~Alzheimer's Disease, Focal Onset
+slc30a6	CTD:C0750900~AlzheimerQs Disease, Focal Onset
 slc30a6	CTD:C0750901~Alzheimer Disease, Early Onset
 trmu	CTD:C1838854~DEAFNESS, AMINOGLYCOSIDE-INDUCED
 trmu	CTD:C3278664~LIVER FAILURE, INFANTILE, TRANSIENT
@@ -27940,12 +27940,12 @@ knl1	CTD:C4722327~PROSTATE CANCER, HEREDITARY, 1
 LOC100704341	CTD:C0025261~Memory Disorders
 LOC100704341	CTD:C0751263~Learning Disturbance
 LOC100704341	CTD:C0751265~Learning Disabilities
-cass4	CTD:C0002395~Alzheimer's Disease
+cass4	CTD:C0002395~AlzheimerQs Disease
 cass4	CTD:C0011265~Presenile dementia
 cass4	CTD:C0276496~Familial Alzheimer Disease (FAD)
 cass4	CTD:C0494463~Alzheimer Disease, Late Onset
 cass4	CTD:C0546126~Acute Confusional Senile Dementia
-cass4	CTD:C0750900~Alzheimer's Disease, Focal Onset
+cass4	CTD:C0750900~AlzheimerQs Disease, Focal Onset
 cass4	CTD:C0750901~Alzheimer Disease, Early Onset
 cpa6	CTD:C3280730~EPILEPSY, FAMILIAL TEMPORAL LOBE, 5
 cpa6	CTD:C3280734~FEBRILE SEIZURES, FAMILIAL, 11
@@ -27974,7 +27974,7 @@ gjc2	CTD:C1837355~Leukodystrophy, Hypomyelinating, 2
 gjc2	CTD:C2750784~SPASTIC PARAPLEGIA 44, AUTOSOMAL RECESSIVE (disorder)
 gjc2	CTD:C4747646~LYMPHATIC MALFORMATION 3
 sall4	CTD:C0013261~Duane Retraction Syndrome
-sall4	CTD:C0265239~Wildervanck's syndrome
+sall4	CTD:C0265239~WildervanckQs syndrome
 sall4	CTD:C0265264~Holt-Oram syndrome
 sall4	CTD:C0279626~Squamous cell carcinoma of esophagus
 sall4	CTD:C0751083~Duane Retraction Syndrome, Type 2
@@ -28100,7 +28100,7 @@ tbc1d24	CTD:C0751780~Biotin-Responsive Encephalopathy
 tbc1d24	CTD:C0751781~Dentatorubral-Pallidoluysian Atrophy
 tbc1d24	CTD:C0751782~May-White Syndrome
 tbc1d24	CTD:C0917800~Epilepsy, Myoclonic, Infantile
-tbc1d24	CTD:C1842531~Epilepsy, rolandic with paroxysmal exercise-induced dystonia and writer's cramp
+tbc1d24	CTD:C1842531~Epilepsy, rolandic with paroxysmal exercise-induced dystonia and writerQs cramp
 tbc1d24	CTD:C2829265~DEAFNESS, AUTOSOMAL RECESSIVE 86
 tbc1d24	CTD:C3892048~DEAFNESS, AUTOSOMAL DOMINANT 65
 LOC100695820	CTD:C0023893~Liver Cirrhosis, Experimental
@@ -28265,7 +28265,7 @@ LOC100700105	CTD:C0524620~Metabolic Syndrome X
 LOC100700105	CTD:C3241937~Nonalcoholic Steatohepatitis
 gatad1	CTD:C3553409~CARDIOMYOPATHY, DILATED, 2B
 LOC100698871	CTD:C0002871~Anemia
-LOC100698871	CTD:C0002875~Cooley's anemia
+LOC100698871	CTD:C0002875~CooleyQs anemia
 LOC100698871	CTD:C0005283~beta Thalassemia
 LOC100698871	CTD:C0005411~Biliary Atresia
 LOC100698871	CTD:C0018995~Hemochromatosis
@@ -28375,9 +28375,9 @@ bach2	CTD:C0011854~Diabetes Mellitus, Insulin-Dependent
 bach2	CTD:C0023467~Leukemia, Myelocytic, Acute
 bach2	CTD:C0026998~Acute Myeloid Leukemia, M1
 bach2	CTD:C0042900~Vitiligo
-bach2	CTD:C0156147~Crohn's disease of large bowel
+bach2	CTD:C0156147~CrohnQs disease of large bowel
 bach2	CTD:C0205734~Diabetes, Autoimmune
-bach2	CTD:C0267380~Crohn's disease of the ileum
+bach2	CTD:C0267380~CrohnQs disease of the ileum
 bach2	CTD:C0342302~Brittle diabetes
 bach2	CTD:C0678202~Regional enteritis
 bach2	CTD:C0949272~IIeocolitis
@@ -28525,9 +28525,9 @@ nod2	CTD:C0009324~Ulcerative Colitis
 nod2	CTD:C0010346~Crohn Disease
 nod2	CTD:C0011603~Dermatitis
 nod2	CTD:C0085652~Pyoderma Gangrenosum
-nod2	CTD:C0156147~Crohn's disease of large bowel
+nod2	CTD:C0156147~CrohnQs disease of large bowel
 nod2	CTD:C0162836~Hidradenitis Suppurativa
-nod2	CTD:C0267380~Crohn's disease of the ileum
+nod2	CTD:C0267380~CrohnQs disease of the ileum
 nod2	CTD:C0678202~Regional enteritis
 nod2	CTD:C0702166~Acne
 nod2	CTD:C0949272~IIeocolitis
@@ -28559,8 +28559,8 @@ ifih1	CTD:C3489724~Aicardi-Goutieres Syndrome 2
 ifih1	CTD:C3489725~Pseudo-TORCH syndrome
 ncapg	CTD:C2239176~Liver carcinoma
 erap2	CTD:C0010346~Crohn Disease
-erap2	CTD:C0156147~Crohn's disease of large bowel
-erap2	CTD:C0267380~Crohn's disease of the ileum
+erap2	CTD:C0156147~CrohnQs disease of large bowel
+erap2	CTD:C0267380~CrohnQs disease of the ileum
 erap2	CTD:C0678202~Regional enteritis
 erap2	CTD:C0949272~IIeocolitis
 LOC102078975	CTD:C0009324~Ulcerative Colitis
@@ -28610,7 +28610,7 @@ LOC100692734	CTD:C0010606~Adenoid Cystic Carcinoma
 LOC100692734	CTD:C0020796~Profound Mental Retardation
 LOC100692734	CTD:C0023467~Leukemia, Myelocytic, Acute
 LOC100692734	CTD:C0026998~Acute Myeloid Leukemia, M1
-LOC100692734	CTD:C0175695~Sotos' syndrome
+LOC100692734	CTD:C0175695~SotosQ syndrome
 LOC100692734	CTD:C0265210~Weaver syndrome
 LOC100692734	CTD:C0917816~Mental deficiency
 LOC100692734	CTD:C1879321~Acute Myeloid Leukemia (AML-M2)
@@ -29295,7 +29295,7 @@ fip1l1	CTD:C0018802~Congestive heart failure
 fip1l1	CTD:C0023212~Left-Sided Heart Failure
 fip1l1	CTD:C0206141~Idiopathic Hypereosinophilic Syndrome
 fip1l1	CTD:C0206142~Eosinophilic leukemia
-fip1l1	CTD:C0206143~Loeffler's Endocarditis
+fip1l1	CTD:C0206143~LoefflerQs Endocarditis
 fip1l1	CTD:C0235527~Heart Failure, Right-Sided
 fip1l1	CTD:C1540912~Hypereosinophilic syndrome
 fip1l1	CTD:C1959583~Myocardial Failure
@@ -30121,8 +30121,8 @@ LOC100693073	CTD:C0003873~Rheumatoid Arthritis
 LOC100693073	CTD:C0010346~Crohn Disease
 LOC100693073	CTD:C0030246~Pustulosis of Palms and Soles
 LOC100693073	CTD:C0033860~Psoriasis
-LOC100693073	CTD:C0156147~Crohn's disease of large bowel
-LOC100693073	CTD:C0267380~Crohn's disease of the ileum
+LOC100693073	CTD:C0156147~CrohnQs disease of large bowel
+LOC100693073	CTD:C0267380~CrohnQs disease of the ileum
 LOC100693073	CTD:C0678202~Regional enteritis
 LOC100693073	CTD:C0949272~IIeocolitis
 LOC100712567	CTD:C0151744~Myocardial Ischemia
@@ -30243,12 +30243,12 @@ ccdc78	CTD:C1834558~Myopathy, Centronuclear, Autosomal Dominant
 ccdc78	CTD:C3645536~Autosomal Recessive Centronuclear Myopathy
 ccdc78	CTD:C3661489~Autosomal Dominant Myotubular Myopathy
 ccdc78	CTD:C4551952~Myopathy, Centronuclear, 1
-iqck	CTD:C0002395~Alzheimer's Disease
+iqck	CTD:C0002395~AlzheimerQs Disease
 iqck	CTD:C0011265~Presenile dementia
 iqck	CTD:C0276496~Familial Alzheimer Disease (FAD)
 iqck	CTD:C0494463~Alzheimer Disease, Late Onset
 iqck	CTD:C0546126~Acute Confusional Senile Dementia
-iqck	CTD:C0750900~Alzheimer's Disease, Focal Onset
+iqck	CTD:C0750900~AlzheimerQs Disease, Focal Onset
 iqck	CTD:C0750901~Alzheimer Disease, Early Onset
 LOC100692151	CTD:C0376358~Malignant neoplasm of prostate
 ears2	CTD:C3554079~COMBINED OXIDATIVE PHOSPHORYLATION DEFICIENCY 12
@@ -30340,7 +30340,7 @@ ublcp1	CTD:C0678222~Breast Carcinoma
 ublcp1	CTD:C1257931~Mammary Neoplasms, Human
 ublcp1	CTD:C4704874~Mammary Carcinoma, Human
 irak1bp1	CTD:C0086981~Sicca Syndrome
-irak1bp1	CTD:C1527336~Sjogren's Syndrome
+irak1bp1	CTD:C1527336~SjogrenQs Syndrome
 LOC100710064	CTD:C0376358~Malignant neoplasm of prostate
 cd109	CTD:C0006142~Malignant neoplasm of breast
 cd109	CTD:C0009402~Colorectal Carcinoma
@@ -30584,8 +30584,8 @@ faah2	CTD:C1266044~Collecting Duct Carcinoma of the Kidney
 faah2	CTD:C1306837~Papillary Renal Cell Carcinoma
 nkx2-3	CTD:C0009324~Ulcerative Colitis
 nkx2-3	CTD:C0010346~Crohn Disease
-nkx2-3	CTD:C0156147~Crohn's disease of large bowel
-nkx2-3	CTD:C0267380~Crohn's disease of the ileum
+nkx2-3	CTD:C0156147~CrohnQs disease of large bowel
+nkx2-3	CTD:C0267380~CrohnQs disease of the ileum
 nkx2-3	CTD:C0678202~Regional enteritis
 nkx2-3	CTD:C0949272~IIeocolitis
 LOC100694244	CTD:C0011052~Prelingual Deafness
@@ -30631,9 +30631,9 @@ phospho1	CTD:C0029453~Osteopenia
 LOC100699238	CTD:C0008312~Primary biliary cirrhosis
 LOC100699238	CTD:C0010346~Crohn Disease
 LOC100699238	CTD:C0023892~Biliary cirrhosis
-LOC100699238	CTD:C0156147~Crohn's disease of large bowel
+LOC100699238	CTD:C0156147~CrohnQs disease of large bowel
 LOC100699238	CTD:C0238065~Secondary Biliary Cholangitis
-LOC100699238	CTD:C0267380~Crohn's disease of the ileum
+LOC100699238	CTD:C0267380~CrohnQs disease of the ileum
 LOC100699238	CTD:C0678202~Regional enteritis
 LOC100699238	CTD:C0949272~IIeocolitis
 LOC100699238	CTD:C4551595~Biliary Cirrhosis, Primary, 1
@@ -30794,8 +30794,8 @@ LOC100706350	CTD:C3179349~Gastrointestinal Stromal Sarcoma
 unc5b	CTD:C0038525~Subarachnoid Hemorrhage
 ccny	CTD:C0009324~Ulcerative Colitis
 ccny	CTD:C0010346~Crohn Disease
-ccny	CTD:C0156147~Crohn's disease of large bowel
-ccny	CTD:C0267380~Crohn's disease of the ileum
+ccny	CTD:C0156147~CrohnQs disease of large bowel
+ccny	CTD:C0267380~CrohnQs disease of the ileum
 ccny	CTD:C0678202~Regional enteritis
 ccny	CTD:C0949272~IIeocolitis
 hyls1	CTD:C1856016~HYDROLETHALUS SYNDROME 1
@@ -31284,7 +31284,7 @@ ncf1	CTD:C0751003~Brain Aneurysm
 ncf1	CTD:C0751004~Giant Intracranial Aneurysm
 ncf1	CTD:C0751005~Mycotic Aneurysm, Intracranial
 ncf1	CTD:C0917996~Cerebral Aneurysm
-ncf1	CTD:C1527336~Sjogren's Syndrome
+ncf1	CTD:C1527336~SjogrenQs Syndrome
 ncf1	CTD:C1856251~Granulomatous Disease, Chronic, Autosomal Recessive, Cytochrome B-Positive, Type I
 bhlha9	CTD:C1836206~Syndactyly, Mesoaxial Synostotic, with Phalangeal Reduction
 bhlha9	CTD:C1843758~Camptosynpolydactyly, Complex

@@ -55441,7 +55441,7 @@ igf2bp3	UP_TISSUE:Pancreatic cancer
 nelfa	UP_TISSUE:Pancreatic cancer
 LOC100694737	UP_TISSUE:Pancreatic cancer
 LOC100694473	UP_TISSUE:Esophagus squamous cell carcinoma
-LOC100694473	UP_TISSUE:Wilms'tumor
+LOC100694473	UP_TISSUE:WilmsQtumor
 wnt4	UP_TISSUE:Fetal tissues
 xpnpep1	UP_TISSUE:Pancreatic adenocarcinoma
 atp6v1d	UP_TISSUE:Pancreatic adenocarcinoma
