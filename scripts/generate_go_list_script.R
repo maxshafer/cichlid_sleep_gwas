@@ -136,6 +136,7 @@ gene_by_go <- rbind(gene_by_go, pheno_genes)
 write.table(gene_by_go, file = "custom_gene_set_geneBygo.txt", quote = F, col.names = F, row.names = F, sep = "\t")
 
 ## Save out the individual lists for parrallel computing (p values can be bonferroni corrected properly afterwards)
+# categories <- c("KEGG_PATHWAY", "REACTOME_PATHWAY", "DISGENET", "GAD_DISEASE", "UP_TISSUE")
 
 gene_by_go[,2] <- str_replace(gene_by_go[,2], "'", "Q")
 
@@ -144,6 +145,13 @@ write.table(gene_by_go[grep("MGD:", gene_by_go[,2]),], file = "custom_gene_set_g
 write.table(gene_by_go[grep("HPO:", gene_by_go[,2]),], file = "custom_gene_set_geneBygo_HPO.txt", quote = F, col.names = F, row.names = F, sep = "\t") # 144803
 write.table(gene_by_go[grep("CLINGEN:", gene_by_go[,2]),], file = "custom_gene_set_geneBygo_CLINGEN.txt", quote = F, col.names = F, row.names = F, sep = "\t") # 144803
 write.table(gene_by_go[grep("PSYGENET:", gene_by_go[,2]),], file = "custom_gene_set_geneBygo_PSYGENET.txt", quote = F, col.names = F, row.names = F, sep = "\t") # 144803
+write.table(gene_by_go[grep("UP_TISSUE:", gene_by_go[,2]),], file = "custom_gene_set_geneBygo_UP_TISSUE.txt", quote = F, col.names = F, row.names = F, sep = "\t") # 144803
+write.table(gene_by_go[grep("KEGG_PATHWAY:", gene_by_go[,2]),], file = "custom_gene_set_geneBygo_KEGG_PATHWAY.txt", quote = F, col.names = F, row.names = F, sep = "\t") # 144803
+write.table(gene_by_go[grep("REACTOME_PATHWAY:", gene_by_go[,2]),], file = "custom_gene_set_geneBygo_REACTOME_PATHWAY.txt", quote = F, col.names = F, row.names = F, sep = "\t") # 144803
+write.table(gene_by_go[grep("GAD_DISEASE:", gene_by_go[,2]),], file = "custom_gene_set_geneBygo_GAD_DISEASE.txt", quote = F, col.names = F, row.names = F, sep = "\t") # 144803
+write.table(gene_by_go[grep("CGI:", gene_by_go[,2]),], file = "custom_gene_set_geneBygo_CGI.txt", quote = F, col.names = F, row.names = F, sep = "\t") # 144803
+write.table(gene_by_go[grep("GENOMICS_ENGLAND:", gene_by_go[,2]),], file = "custom_gene_set_geneBygo_GENOMICS_ENGLAND.txt", quote = F, col.names = F, row.names = F, sep = "\t") # 144803
+write.table(gene_by_go[grep("CTD:", gene_by_go[,2]),], file = "custom_gene_set_geneBygo_CTD.txt", quote = F, col.names = F, row.names = F, sep = "\t") # 144803
 
 
 
