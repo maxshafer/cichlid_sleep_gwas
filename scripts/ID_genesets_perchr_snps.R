@@ -36,50 +36,120 @@ clock_genes <- unique(c(cgg, cghg))
 
 files <- list.files("sra_reads_nobackup/combined_ann/", pattern = "_pvals_ann.gz")
 
-comparison <- c("pc1_60-species", "pc2_60-species", "total_rest_60-species")
-
 ### Pulling data from snps
 
 dfs_all <- lapply(files, function(x) fread(paste("sra_reads_nobackup/combined_ann/", x, sep = ""), showProgress = T))
 names(dfs_all) <- files
 
-per_chr <- lapply(comparison, function(comp) {
+gwas.datasets <- lapply(files, function(x) {
+  df <- dfs_all[[x]]
+  # df <- fread(paste("sra_reads_nobackup/combined_ann/", x, sep = ""), showProgress = T)
+  df <- df[df$`ANN[*].GENE` %in% clock_genes,]
+  return(df)
+})
   
-  gwas.datasets <- lapply(files, function(x) {
-    df <- dfs_all[[x]]
-    # df <- fread(paste("sra_reads_nobackup/combined_ann/", x, sep = ""), showProgress = T)
-    df <- df[df$`ANN[*].GENE` %in% clock_genes,]
-    columns <- c(c(2:3,16:21, as.numeric(grep(comp, colnames(df)))))
-    df <- df[, ..columns] # Change last two numbers to modify which comparison to keep and filter by
-    
-    if (comp == "summary") {
-      colnames(df) <- c("CHROM","POS","REF","ALT","ANN_GENE","ANN_IMPACT","ANN_EFFECT","ANN_DISTANCE","summary_mean","summary_min", "summary_prod")
-    } else {
-      colnames(df) <- c("CHROM","POS","REF","ALT","ANN_GENE","ANN_IMPACT","ANN_EFFECT","ANN_DISTANCE","piVals","PGLSpiVals")
-    }
-    
-    return(df)
-  })
+merged <- Reduce(rbind, gwas.datasets)
+merged$location <- paste(merged$CHROM, merged$POS, sep = ":")
+
+merged <- merged[!duplicated(merged$location),]
   
-  merged <- Reduce(rbind, gwas.datasets)
-  merged$location <- paste(merged$CHROM, merged$POS, sep = ":")
+pi <- merged %>% group_by(ANN_GENE) %>% slice_min(order_by = piVals, n = 1)
+pgls <- merged %>% group_by(ANN_GENE) %>% slice_min(order_by = PGLSpiVals, n = 1)
   
-  pi <- merged %>% group_by(ANN_GENE) %>% slice_min(order_by = piVals, n = 1)
-  pgls <- merged %>% group_by(ANN_GENE) %>% slice_min(order_by = PGLSpiVals, n = 1)
-  
-  merged <- merged[merged$location %in% c(pi$location, pgls$location),]
-  
-  return(merged)
-  
+merged <- merged[merged$location %in% c(pi$location, pgls$location),]
+
+colnames(merged) <- c("V1", "CHROM", "POS", "piVals_pc1_56species", "piVals_pc1_60species", "piVals_pc2_56species", "piVals_pc2_60species", "piVals_total_rest_56species", "piVals_total_rest_60species", "PGLSpiVals_pc1_56species", "PGLSpiVals_pc1_60species", "PGLSpiVals_pc2_56species", "PGLSpiVals_pc2_60species", "PGLSpiVals_total_rest_56species", "PGLSpiVals_total_rest_60species", "REF", "ALT", "ANN_GENE", "ANN_IMPACT", "ANN_EFFECT", "ANN_DISTANCE", "summary_mean", "summary_min", "summary_prod", "location")
+
+saveRDS(merged, file = "circadian-genes_perchr_60sp.rds")
+
+merged <- readRDS("circadian-genes_perchr_60sp.rds")
+
+## Make some plots
+
+pc1_scatter <- ggplot(merged, aes(x = log(piVals_pc1_60species)*-1, y = log(PGLSpiVals_pc1_60species)*-1)) + ggrastr::rasterise(geom_point(alpha = 1, size = 8, shape = 19, colour = "dodgerblue2"), scale = 0.1) 
+pc1_scatter <- pc1_scatter + theme_classic() + xlab("pGLS-GWAS p-value") + ylab("GLM-GWAS p-value") + ylim(c(0,22)) + xlim(c(0,22))
+pc1_scatter <- pc1_scatter + theme(axis.title = element_text(size = 10), axis.text = element_text(size = 8, colour = "black"), panel.background = element_blank())
+pc1_scatter <- pc1_scatter + plot_layout(width = unit(c(50), "mm"), height = unit(c(50), "mm"))
+pc1_scatter <- pc1_scatter + theme(
+  panel.background = element_rect(fill = "transparent",
+                                  colour = NA_character_), # necessary to avoid drawing panel outline
+  panel.grid.major = element_blank(), # get rid of major grid
+  panel.grid.minor = element_blank(), # get rid of minor grid
+  plot.background = element_rect(fill = "transparent",
+                                 colour = NA_character_), # necessary to avoid drawing plot outline
+  legend.background = element_rect(fill = "transparent"),
+  legend.box.background = element_rect(fill = "transparent"),
+  legend.key = element_rect(fill = "transparent")
+)
+
+ggsave("outs/scatter_plot_pc1_circadian.pdf", plot = pc1_scatter, width = 10, height = 10, units = "in")
+
+
+pc2_scatter <- ggplot(merged, aes(x = log(piVals_pc2_60species)*-1, y = log(PGLSpiVals_pc2_60species)*-1)) + ggrastr::rasterise(geom_point(alpha = 1, size = 8, shape = 19, colour = "dodgerblue2"), scale = 0.1) 
+pc2_scatter <- pc2_scatter + theme_classic() + xlab("pGLS-GWAS p-value") + ylab("GLM-GWAS p-value") + ylim(c(0,22)) + xlim(c(0,22))
+pc2_scatter <- pc2_scatter + theme(axis.title = element_text(size = 10), axis.text = element_text(size = 8, colour = "black"))
+pc2_scatter <- pc2_scatter + plot_layout(width = unit(c(50), "mm"), height = unit(c(50), "mm"))
+pc2_scatter <- pc2_scatter + theme(
+  panel.background = element_rect(fill = "transparent",
+                                  colour = NA_character_), # necessary to avoid drawing panel outline
+  panel.grid.major = element_blank(), # get rid of major grid
+  panel.grid.minor = element_blank(), # get rid of minor grid
+  plot.background = element_rect(fill = "transparent",
+                                 colour = NA_character_), # necessary to avoid drawing plot outline
+  legend.background = element_rect(fill = "transparent"),
+  legend.box.background = element_rect(fill = "transparent"),
+  legend.key = element_rect(fill = "transparent")
+)
+
+ggsave("outs/scatter_plot_pc2_circadian.pdf", plot = pc2_scatter, width = 10, height = 10, units = "in")
+rm(pc2_scatter)
+
+tr_scatter <- ggplot(merged, aes(x = log(piVals_total_rest_60species)*-1, y = log(PGLSpiVals_total_rest_60species)*-1)) + ggrastr::rasterise(geom_point(alpha = 1, size = 8, shape = 19, colour = "dodgerblue2"), scale = 0.1) 
+tr_scatter <- tr_scatter + theme_classic() + ylab("pGLS-GWAS p-value") + xlab("GLM-GWAS p-value") + ylim(c(0,22)) + xlim(c(0,22))
+tr_scatter <- tr_scatter + theme(axis.title = element_text(size = 10), axis.text = element_text(size = 8, colour = "black"))
+tr_scatter <- tr_scatter + plot_layout(width = unit(c(50), "mm"), height = unit(c(50), "mm"))
+tr_scatter <- tr_scatter + theme(
+  panel.background = element_rect(fill = "transparent",
+                                  colour = NA_character_), # necessary to avoid drawing panel outline
+  panel.grid.major = element_blank(), # get rid of major grid
+  panel.grid.minor = element_blank(), # get rid of minor grid
+  plot.background = element_rect(fill = "transparent",
+                                 colour = NA_character_), # necessary to avoid drawing plot outline
+  legend.background = element_rect(fill = "transparent"),
+  legend.box.background = element_rect(fill = "transparent"),
+  legend.key = element_rect(fill = "transparent")
+)
+
+ggsave("outs/scatter_plot_total_rest_circadian.pdf", plot = tr_scatter, width = 10, height = 10, units = "in")
+rm(tr_scatter)
+
+
+
+### Need to determine cutoff values for each
+
+dfs_all <- lapply(dfs_all, function(x) {
+  x$location <- paste(x$CHROM, x$POS, sep = ":")
+  return(x)
 })
 
-saveRDS(per_chr, file = "circadian-genes_perchr_60sp.rds")
+total_snp_numb <- sum(unlist(lapply(dfs_all, function(x) nrow(x[!duplicated(x$location),]))))
+
+## OK, so I need to find the pvalue of the 373rd ranked SNP by each metric, for each phenotype (by my calculations, it should be the 392nd ranked SNP, but based on the graphs, it is clearly the 373rd)
 
 
+log(max(filter_snps[[4]][!duplicated(filter_snps[[4]]$location),] %>% slice_min(order_by = piVals, n = 373) %>% pull(piVals)))*-1
+log(max(unique(filter_snps[[4]][,c("PGLSpiVals", "location")]) %>% slice_min(order_by = PGLSpiVals, n = 373) %>% pull(PGLSpiVals)))*-1
+
+log(max(unique(filter_snps[[5]][,c("piVals", "location")]) %>% slice_min(order_by = piVals, n = 373) %>% pull(piVals)))*-1
+log(max(unique(filter_snps[[5]][,c("PGLSpiVals", "location")]) %>% slice_min(order_by = PGLSpiVals, n = 373) %>% pull(PGLSpiVals)))*-1
+
+log(max(filter_snps[[6]][!duplicated(filter_snps[[6]]$location),] %>% slice_min(order_by = piVals, n = 373) %>% pull(piVals)))*-1
+log(max(filter_snps[[6]][!duplicated(filter_snps[[6]]$location),] %>% slice_min(order_by = PGLSpiVals, n = 373) %>% pull(PGLSpiVals)))*-1
 
 
-
-
+# ggplot(data = filter_snps[[4]][filter_snps[[4]]$location %in% (filter_snps[[4]][!duplicated(filter_snps[[4]]$location),] %>% slice_min(order_by = piVals, n = 373) %>% pull(location)),], aes(x = log(piVals)*-1, y = log(PGLSpiVals)*-1)) + geom_point()
+# ggplot(data = filter_snps[[5]][filter_snps[[5]]$location %in% (filter_snps[[5]][!duplicated(filter_snps[[5]]$location),] %>% slice_min(order_by = piVals, n = 373) %>% pull(location)),], aes(x = log(piVals)*-1, y = log(PGLSpiVals)*-1)) + geom_point()
+# ggplot(data = filter_snps[[6]][filter_snps[[6]]$location %in% (filter_snps[[6]][!duplicated(filter_snps[[6]]$location),] %>% slice_min(order_by = piVals, n = 373) %>% pull(location)),], aes(x = log(piVals)*-1, y = log(PGLSpiVals)*-1)) + geom_point()
 
 # 
 # ########################################################################

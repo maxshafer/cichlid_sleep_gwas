@@ -490,14 +490,15 @@ hCluster <- function(x = go_analysis, measure.var = "Benj.value", category = c("
 ## This is now the replacement, where it determines an order for GO Terms based on the min or mean value across behaviours
 
 subOrder <- function(GO = go_analysis, pvalue = 0.01, species = "human", category = "UP_TISSUE", type = c("min", "mean")) {
-  GO <- GO[GO$L2 == species & GO$Category == category & GO$PValue.value < pvalue,]
+  
+  GO <- GO[GO$Category == category & GO$Bonf.pvalue < pvalue,]
   if(type == "mean") {
-    term_order <- GO %>% group_by(Category, Term, L2) %>% summarise(mean = mean(PValue.value))
+    term_order <- GO %>% group_by(Category, Term, pheno) %>% summarise(mean = mean(Bonf.pvalue))
     term_order <- term_order$Term[order(term_order$mean, decreasing = T)]
   }
   if(type == "min") {
     term_order <- GO
-    term_order <- unique(term_order$Term[order(term_order$PValue.value, decreasing = T)])
+    term_order <- unique(term_order$Term[order(term_order$Bonf.pvalue, decreasing = T)])
   }
   GO$Term <- factor(GO$Term, levels = term_order)
   return(GO)
