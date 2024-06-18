@@ -36,11 +36,12 @@ module load R/4.0.3-foss-2018b
 #add your command lines below
 #############################
 
-## Final steps!! Run the GWAS and the PGLS-GWAS!
-## These run per chromosome, on the allele frequencies files generated above
-## They take awhile to run (especially the PGLS), and require lots of memory
-## Run in the folder where you want the output to end up
+## Final steps!! This filters the SNPs based on p-values from gwas and pgls-gwas
+## It also annotates them and separates by comparison
 
-Rscript /scicore/home/schiera/gizevo30/projects/cichlids_2/scripts/filterRun.R 0.00001
-Rscript /scicore/home/schiera/gizevo30/projects/cichlids_2/scripts/filterRun.R 0.00005
+# Rscript /scicore/home/schiera/gizevo30/projects/cichlids_2/scripts/filterRun.R 0.00001
+# Rscript /scicore/home/schiera/gizevo30/projects/cichlids_2/scripts/filterRun.R 0.00005
+
+# Run the permutations
+Rscript /scicore/home/schiera/gizevo30/projects/cichlids_2/scripts/filterRun_permute.R 800 1000
 

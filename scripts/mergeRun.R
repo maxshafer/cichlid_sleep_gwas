@@ -21,16 +21,16 @@ chromosome <- args[1]
 # cutoff <- as.numeric(args[2])
 print(chromosome)
 
-files <- list.files("sra_reads_nobackup/alleleFreqs/", pattern = chromosome)
+files <- list.files("sra_reads_nobackup/dump/alleleFreqs/", pattern = chromosome)
 # AF_file <- files[grep("AF.txt", files)]
-snpeff_file <- list.files("sra_reads_nobackup/final_snps_chr/", pattern = chromosome)
+snpeff_file <- list.files("sra_reads_nobackup/dump/final_snps_chr/", pattern = chromosome)
 snpeff_file <- snpeff_file[grepl("extracted", snpeff_file)]
 
 gwas_files <- files[grepl("_piVals_", files) & grepl(".txt", files)]
 pgls_files <- files[grepl("_PGLSpiVals_", files) & grepl(".txt", files)]
 
-gwas_names <- str_sub(gwas_files, start = 80, end = -5)
-pgls_names <- str_sub(pgls_files, start = 80, end = -5)
+gwas_names <- str_sub(gwas_files, start = 95, end = -5)
+pgls_names <- str_sub(pgls_files, start = 95, end = -5)
 
 
 ########################################################################
@@ -39,11 +39,11 @@ pgls_names <- str_sub(pgls_files, start = 80, end = -5)
 
 # AF <- fread(paste("sra_reads_nobackup/alleleFreqs/", AF_file, sep = ""))
 
-snpeff <- fread(paste("sra_reads_nobackup/final_snps_chr/", snpeff_file, sep = ""))
+snpeff <- fread(paste("sra_reads_nobackup/dump/final_snps_chr/", snpeff_file, sep = ""))
 
-gwas <- lapply(gwas_files, function(x) fread(paste("sra_reads_nobackup/alleleFreqs/", x, sep = "")))
+gwas <- lapply(gwas_files, function(x) fread(paste("sra_reads_nobackup/dump/alleleFreqs/", x, sep = "")))
 
-pgls <- lapply(pgls_files, function(x) fread(paste("sra_reads_nobackup/alleleFreqs/", x, sep = "")))
+pgls <- lapply(pgls_files, function(x) fread(paste("sra_reads_nobackup/dump/alleleFreqs/", x, sep = "")))
 
 
 ########################################################################
@@ -87,7 +87,7 @@ combined$summary_min <- apply(combined[,..columns], 1, function(x) min(x))
 combined$summary_prod <- apply(combined[,..columns], 1, function(x) prod(x))
 
 # save out
-gz1 <- gzfile(paste("sra_reads_nobackup/combined_ann/combined_", chromosome, "snps_pvals_ann.gz", sep = ""), "w")
+gz1 <- gzfile(paste("sra_reads_nobackup/dump/combined_ann/combined_", chromosome, "snps_pvals_ann.gz", sep = ""), "w")
 write.csv(combined, gz1)
 close(gz1)
 

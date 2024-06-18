@@ -1,0 +1,5001 @@
+Gene.name	GO.term.accession
+LOC100696988	REACTOME_PATHWAY:R-HSA-8863678~Neurodegenerative Diseases
+mdm2	GO:0019789
+nphs1	DISGENET:C0033687~Proteinuria
+yap1	MGD:MP:0002941~increased circulating alanine transaminase level
+wisp1	GO:0005178
+rgs22	PSYGENET:CXXX~No diseases associated
+vars	
+trappc2	GO:0005793
+cnn3	UP_TISSUE:Kidney
+tp63	GO:0046872
+ift88	MGD:MP:0004132~absent embryonic cilia
+fbln1	GO:0007162
+txn2	GO:0009410
+nsfl1c	UP_TISSUE:Erythroleukemia
+shh	MGD:MP:0001181~absent lungs
+braf	GO:0043066
+rev1	
+adat3	HPO:HP:0011220~Prominent forehead
+ryk	GO:0016740
+LOC100689885	GO:0008017
+alg12	PSYGENET:CXXX~No diseases associated
+tmc4	GO:0016020
+gtf2a1l	GO:0045893
+LOC102082062	
+kcnj8	MGD:MP:0020913~increased susceptibility to Riboviria infection
+LOC100698882	MGD:MP:0009412~skeletal muscle fiber degeneration
+LOC100711599	DISGENET:C3661489~Autosomal Dominant Myotubular Myopathy
+wac	HPO:HP:0000365~Hearing impairment
+sulf1	MGD:MP:0003048~abnormal cervical vertebrae morphology
+comt	GAD_DISEASE:bone density; height
+hdac2	GO:0000781
+prkrip1	GO:0003725
+map3k21	GO:0016310
+LOC100705244	GO:0006788
+map3k7	GO:0005737
+u2af2	GO:0008187
+prlr	GO:0019221
+marveld3	GO:0005515
+eif4h	GO:0016020
+LOC100710852	GO:0005634
+LOC100709462	HPO:HP:0001376~Limitation of joint mobility
+muc15	GAD_DISEASE:obesity (extreme)
+LOC100699821	GAD_DISEASE:Hyperlipidemias
+nbn	HPO:HP:0000010~Recurrent urinary tract infections
+polr3h	GO:0005666
+LOC100700997	REACTOME_PATHWAY:R-HSA-8878159~Transcriptional regulation by RUNX3
+ttc21b	GO:0005929
+shc1	GO:0005886
+LOC100710041	GO:0009263
+LOC100706618	GO:0030426
+rif1	GO:0140445
+wac	GO:0031571
+rpa2	GO:0031571
+LOC102082062	
+cnot3	GO:0030015
+spry2	GO:0043539
+LOC100696143	HPO:HP:0000006~Autosomal dominant inheritance
+adprm	CGI:CXXX~No diseases associated
+LOC100702285	CTD:C0017638~Glioma
+LOC102082062	GO:0030621
+mvk	GO:0005829
+mmab	GO:0008817
+zbed4	GO:0003723
+nudt6	CRB:CRB:0000022~Association with Survival No Antioxidants PSAP KO CRISPRi in Glutamatergic Neuron
+gosr2	GO:0000139
+rpl37a	REACTOME_PATHWAY:R-HSA-72613~Eukaryotic Translation Initiation
+atp7a	GO:0098655
+LOC100701934	MGD:MP:0011534~granular kidney
+nubp2	GO:0140663
+rad52	GO:0005634
+caprin1	GO:0000166
+rars	UP_TISSUE:Muscle
+cd36	GO:0005044
+igf1	DISGENET:C0342302~Brittle diabetes
+pde7a	GO:0019933
+smarca4	GO:0016514
+LOC100700092	MGD:MP:0000428~abnormal craniofacial morphology
+tbx21	GO:0000981
+opn1sw	GO:0005886
+cdc27	REACTOME_PATHWAY:R-HSA-8853884~Transcriptional Regulation by VENTX
+dnajc13	HPO:HP:0031435~Monotonic speech
+sox5	HPO:HP:0000369~Low-set ears
+LOC100696267	GO:0015630
+atp9a	GO:0005886
+LOC100534527	REACTOME_PATHWAY:R-HSA-111996~Ca-dependent events
+cebpa	MGD:MP:0001241~absent epidermis stratum corneum
+gli3	GO:0021631
+tcf7l2	CTD:C0087031~Juvenile-Onset Still Disease
+rassf1	GO:0005634
+psmd6	GO:0032991
+uba2	REACTOME_PATHWAY:R-HSA-3215018~Processing and activation of SUMO
+LOC100711181	UP_TISSUE:Ovary
+ins	CTD:C0234535~Clonic Seizures
+LOC100691603	REACTOME_PATHWAY:R-HSA-2262752~Cellular responses to stress
+LOC100707936	GAD_DISEASE:Type 2 Diabetes| edema | rosiglitazone
+dym	MGD:MP:0004174~abnormal spine curvature
+ftsj1	
+thnsl2	
+LOC100709940	GO:0043123
+LOC102082062	GO:0006396
+nudt2	DISGENET:C1458155~Mammary Neoplasms
+LOC100712136	GO:0016020
+LOC100697652	GO:0045728
+mthfr	GAD_DISEASE:Carcinoma, Squamous Cell|Mouth Neoplasms|Squamous cell carcinoma
+nudt1	GO:0008413
+dpm2	DISGENET:C3554385~CONGENITAL DISORDER OF GLYCOSYLATION, TYPE Iu
+LOC100696505	MGD:MP:0000596~abnormal liver development
+LOC100689819	GO:0006893
+LOC100707019	GO:0006869
+LOC100703685	REACTOME_PATHWAY:R-HSA-73857~RNA Polymerase II Transcription
+plekhm1	MGD:MP:0009142~decreased prepulse inhibition
+fgf10	MGD:MP:0000284~double outlet right ventricle
+rims4	GO:0045202
+wipf1	GO:0005515
+sod1	CTD:C4721845~Marfan Syndrome, Type I
+dbnl	GO:0002102
+col1a2	REACTOME_PATHWAY:R-HSA-1280218~Adaptive Immune System
+nkain2	GO:0005886
+plcg2	GO:0007165
+canx	GO:0030433
+epha3	GO:0010717
+slc2a11	GO:0055085
+cpne8	PSYGENET:CXXX~No diseases associated
+LOC100706288	DISGENET:C1848172~NIGHT BLINDNESS, CONGENITAL STATIONARY, TYPE 2A
+slc52a3	GO:0005737
+ntf3	GO:0090630
+LOC100696839	GO:0004298
+LOC100691726	GO:0006468
+mtor	GO:0043231
+suclg2	GAD_DISEASE:longevity
+LOC100689834	GO:0009611
+LOC100710389	GAD_DISEASE:several psychiatric disorders
+mc1r	GO:0019222
+LOC100698815	KEGG_PATHWAY:hsa00430
+pfas	UNIPROT:CXXX~No diseases associated
+adi1	CGI:CXXX~No diseases associated
+gemin5	ORPHANET:CXXX~No diseases associated
+nags	HPO:HP:0000007~Autosomal recessive inheritance
+snx6	GO:0030904
+LOC100707401	GO:0005783
+LOC100698083	GO:0005737
+LOC100704180	GO:0003723
+LOC100699478	GO:0034452
+rnf17	GO:0030154
+vasn	ORPHANET:CXXX~No diseases associated
+npr3	UNIPROT:CXXX~No diseases associated
+LOC100702673	GO:0045202
+LOC100708272	CTD:C4277682~Chemical and Drug Induced Liver Injury
+LOC100694980	GO:0004175
+irx5	GO:1990837
+deptor	GO:1904262
+stx16	GO:0031201
+ucma	GO:0060392
+LOC100702646	MGD:MP:0002500~granulomatous inflammation
+crip1	
+c5	
+thrb	GO:0000981
+mtrr	GO:0010181
+vps26c	GAD_DISEASE:Calcium
+arhgef16	GO:0005737
+aprt	REACTOME_PATHWAY:R-HSA-9734207~Nucleotide salvage defects
+LOC100707182	GO:0005634
+dmtf1	
+LOC100708121	GO:0005794
+LOC100701954	GO:0003677
+cad	GO:0004088
+tfr2	MGD:MP:0001262~decreased body weight
+hectd3	MGD:MP:0003961~decreased lean body mass
+LOC100694309	GO:0030336
+snrpd3	CRB:CRB:0000028~Association with Survival PSAP KO CRISPRi in Glutamatergic Neuron
+LOC100699012	GAD_DISEASE:Tunica Media
+me1	DISGENET:C2239176~Liver carcinoma
+gabrb2	GO:0045211
+pgam5	GO:0005739
+ghrhr	GO:0046887
+LOC100697782	GO:0008150
+lrp5	GO:0033687
+bnip2	CGI:CXXX~No diseases associated
+rpl32	GO:0002181
+wwp2	GO:0061630
+LOC100699832	GO:0005515
+srebf1	GO:0045944
+LOC100709284	MGD:MP:0000292~distended pericardium
+nt5c3a	GO:0046872
+stat3	GO:0007165
+pign	HPO:HP:0000256~Macrocephaly
+LOC100699914	GO:0006469
+cdyl2	
+hax1	GO:0042981
+inpp5e	GO:0032580
+sfxn5	CGI:CXXX~No diseases associated
+eif3b	GO:0003723
+LOC100694996	GO:0005769
+tbp	GO:0045893
+ttll1	GO:0016874
+g0s2	MGD:MP:0008034~enhanced lipolysis
+LOC100696166	GO:0000776
+drd3	GO:0001963
+mphosph10	UP_TISSUE:Prostate
+faap24	KEGG_PATHWAY:hsa03460
+mfn2	GO:0003924
+kcnj15	
+pex2	GO:0016558
+snx6	GO:0005769
+il10	GAD_DISEASE:thromboembolism, venous
+wwox	GO:0005515
+ctgf	MGD:MP:0012236~abnormal cholangiocyte morphology
+nr4a2	UP_TISSUE:Spleen
+tmem62	
+LOC100695379	HPO:HP:0000582~Upslanted palpebral fissure
+gth-ri	MGD:MP:0001751~increased circulating luteinizing hormone level
+usb1	GO:0016787
+LOC100712084	HPO:HP:0003006~Neuroblastoma
+poli	GO:0006259
+LOC100694690	MGD:MP:0002986~decreased urine calcium level
+map2k5	GO:0004672
+LOC100692817	GENOMICS_ENGLAND:CXXX~No diseases associated
+lig4	GO:0051276
+LOC100712573	MGD:MP:0010402~ventricular septal defect
+tectb	PSYGENET:CXXX~No diseases associated
+LOC100695821	GAD_DISEASE:Obesity
+ddit3	GO:0005634
+grn	HPO:HP:0002446~Astrocytosis
+eny2	GO:0045893
+LOC100697873	GO:0070324
+smarca4	GO:0005634
+pik3c2a	GAD_DISEASE:Endometrial Neoplasms
+c2cd5	MGD:MP:0009124~increased brown fat cell lipid droplet size
+LOC100707324	GO:0004683
+chst2	GO:0008146
+med1	GO:0010839
+homer2	CTD:C4225240~DEAFNESS, AUTOSOMAL DOMINANT 68
+LOC102082062	
+kif1b	UP_TISSUE:Leukemic T-cell
+ccdc65	HPO:HP:0100750~Atelectasis
+gnas	GO:0050896
+gtf3c2	GO:0003677
+mturn	GO:0045654
+LOC100705499	GO:0042572
+vegfc	GO:0001938
+LOC100711592	HPO:HP:0001263~Global developmental delay
+LOC102081429	GAD_DISEASE:Bone mineral density (hip)
+wrb	
+LOC100697187	GO:0034705
+LOC100701529	GO:0046872
+LOC100694653	DISGENET:C0041948~Uremia
+irf2	GO:0008283
+trip11	MGD:MP:0010827~small lung saccule
+nf2	MGD:MP:0001303~abnormal lens morphology
+ube2a	GO:0000785
+LOC100693900	UP_TISSUE:Fetal brain
+tert	GO:0007004
+LOC100709512	GO:0000981
+polr1a	GO:0006351
+eno4	GO:0008150
+eif4e3	GO:0003743
+agrn	MGD:MP:0011087~neonatal lethality, complete penetrance
+nek3	GO:0090043
+LOC100693933	MGD:MP:0000914~exencephaly
+gramd1a	GO:0005776
+LOC100698351	REACTOME_PATHWAY:R-HSA-8948216~Collagen chain trimerization
+kdm8	GO:0004177
+foxred2	GO:0005788
+cdc42bpa	GO:0006468
+sowahd	ORPHANET:CXXX~No diseases associated
+limk2	GO:0016310
+epcam	MGD:MP:0001730~embryonic growth arrest
+LOC100694161	CRB:CRB:0000028~Association with Survival PSAP KO CRISPRi in Glutamatergic Neuron
+pdgfrb	DISGENET:C1866182~Penttinen-Aula syndrome
+pigc	GO:0005789
+urm1	GO:0005829
+LOC100706019	MGD:MP:0006279~abnormal limb development
+foxp3	MGD:MP:0011015~decreased body surface temperature
+lg23h19orf44	
+LOC100711348	GO:0016787
+met	MGD:MP:0005293~impaired glucose tolerance
+braf	HPO:HP:0031162~Impaired oropharyngeal swallow response
+wnt3a	REACTOME_PATHWAY:R-HSA-5663202~Diseases of signal transduction by growth factor receptors and second messengers
+LOC100696183	GO:0035556
+phf5a	GO:0005654
+pde2a	REACTOME_PATHWAY:R-HSA-418457~cGMP effects
+erap2	GO:0002474
+LOC100709284	GO:0010468
+LOC100699288	GO:0005654
+abcc9	CLINGEN:C0795905~Cantu syndrome
+chrnd	HPO:HP:0009381~Short finger
+camk2b	GO:0000166
+LOC100692170	GO:0043153
+prc1	
+rpl35a	HPO:HP:0002076~Migraine
+ankrd6	GO:0090090
+soat1	GO:0016746
+fen1	MGD:MP:0004024~aneuploidy
+elp2	GO:0005634
+LOC100697672	GO:0005634
+pole3	GO:0006272
+slc46a1	HPO:HP:0001290~Generalized hypotonia
+LOC100694808	GO:0005813
+LOC100692645	ORPHANET:C0349639~Juvenile Myelomonocytic Leukemia
+dclre1a	UP_TISSUE:Erythroleukemia
+adamts9	DISGENET:C1855681~Nephronophthisis, familial juvenile
+fyn	GO:1905664
+fam89a	CLINGEN:CXXX~No diseases associated
+naa50	UP_TISSUE:Thalamus
+arap3	GO:0005096
+ttc19	DISGENET:C3541471~MITOCHONDRIAL COMPLEX III DEFICIENCY, NUCLEAR TYPE 1
+krit1	GO:0070161
+LOC100709268	GO:0031982
+katnb1	MGD:MP:0002686~globozoospermia
+stat3	GO:0071310
+glrb	GO:0016935
+clcc1	GO:0005783
+LOC100708442	REACTOME_PATHWAY:R-HSA-168898~Toll-like Receptor Cascades
+LOC100534398	GO:0000977
+LOC100710222	GO:0002376
+larp4	GO:0045727
+dglucy	GO:0016829
+uba52	REACTOME_PATHWAY:R-HSA-9820952~Respiratory Syncytial Virus Infection Pathway
+dip2a	GO:0010629
+pitrm1	GO:0005739
+aars	GO:0005524
+LOC100696839	REACTOME_PATHWAY:R-HSA-174178~APC/C
+LOC100693279	GO:0099149
+kcnc2	GO:0042734
+ftsj1	HPO:HP:0001263~Global developmental delay
+LOC100691078	MGD:MP:0002023~increased B cell derived lymphoma incidence
+gnas	HPO:HP:0002893~Pituitary adenoma
+slc25a13	GO:0015813
+usp14	GO:1903070
+bap1	HPO:HP:0000360~Tinnitus
+nxpe3	GO:0005515
+chd2	CRB:CRB:0000048~Negative hit with Survival CRISPRi in Glutamatergic Neuron
+LOC100694887	KEGG_PATHWAY:hsa00512
+rag1	HPO:HP:0003593~Infantile onset
+stat4	
+mapk10	GO:0000165
+LOC100708634	REACTOME_PATHWAY:R-HSA-8963896~HDL assembly
+rsu1	UP_TISSUE:Platelet
+rasd1	CTD:C0376358~Malignant neoplasm of prostate
+LOC100698681	GO:0016020
+gpr176	GO:0005886
+LOC100691271	GO:0016787
+lhpp	GO:0005515
+cops3	GO:1902162
+LOC100701843	MGD:MP:0000065~abnormal bone marrow cavity morphology
+srgap1	
+sost	HPO:HP:0011800~Midface retrusion
+cdk5	REACTOME_PATHWAY:R-HSA-8862803~Deregulated CDK5 triggers multiple neurodegenerative pathways in AlzheimerQs disease models
+dhx9	GO:0070937
+cntnap2	GO:0007420
+LOC100708359	GO:0005096
+rubcnl	GO:0016020
+nf2	GO:0005886
+apc2	GO:0005884
+trmt9b	GO:0008757
+map3k7	MGD:MP:0008525~decreased cranium height
+afdn	GO:0007155
+ube4a	KEGG_PATHWAY:hsa04120
+LOC100701917	GO:0001934
+prkd2	GO:0018105
+pqbp1	
+LOC100709264	GO:0016020
+snx33	GO:0036089
+lonp1	GO:0003727
+LOC100690208	GO:1904645
+itgb1	GO:0006909
+zmynd11	GO:0005634
+myo7a	MGD:MP:0006243~impaired pupillary reflex
+LOC100690035	MGD:MP:0013957~increased small intestine length
+klhl21	GO:0016567
+agmo	CRB:CRB:XXX~No CRB phenotype
+LOC100698909	GO:0005768
+LOC100707702	GO:0016020
+mdm2	GAD_DISEASE:ovarian cancer
+slc5a10	GO:0015755
+LOC102082918	UNIPROT:CXXX~No diseases associated
+nfib	MGD:MP:0001176~abnormal lung development
+LOC100702382	GO:0016311
+zar1	PSYGENET:CXXX~No diseases associated
+foxp1	GO:0000978
+LOC102078408	MGD:MP:0010701~fusion of atlas and odontoid process
+ecpas	GO:0031410
+dcakd	GO:0004140
+LOC100705483	GO:0002376
+emc10	
+mtor	DISGENET:C4704874~Mammary Carcinoma, Human
+LOC102082062	
+LOC100710946	GAD_DISEASE:Spinal Dysraphism
+LOC100534398	HPO:HP:0000858~Irregular menstruation
+stt3a	GO:0006487
+pomt1	GO:0016020
+LOC100690208	GO:0038023
+adam15	GO:0004222
+n6amt1	GO:0036009
+LOC100702891	CTD:C0029172~Oral Submucous Fibrosis
+abl1	GO:0051726
+grb14	GAD_DISEASE:Triglycerides
+serpinf1	GO:0010629
+tap1	GO:0016887
+LOC100711165	GO:0004601
+clic1	GO:1902476
+olfm1	GO:0005576
+LOC100712452	GO:0060765
+card11	CRB:CRB:0000054~Negative hit with Proliferation (CFSE Staining) in T Cell
+smarcd1	GO:2000045
+LOC100702891	MGD:MP:0010997~decreased aorta wall thickness
+sema6d	GO:0005515
+nrf1	GO:0000978
+ska3	GO:0005874
+nfatc4	GO:0006954
+dad1	MGD:MP:0000564~syndactyly
+obsl1	GO:0005737
+klc1	GO:0005856
+th	GO:0005515
+LOC100702382	MGD:MP:0004978~decreased B-1 B cell number
+LOC106098755	GO:0005654
+slc25a4	MGD:MP:0001625~cardiac hypertrophy
+hadhb	MGD:MP:0008489~slow postnatal weight gain
+LOC100701770	GO:0034446
+map3k7	GO:0002753
+slc26a2	HPO:HP:0001602~Laryngeal stenosis
+depdc5	GO:0035556
+atp5f1c	
+nbn	GAD_DISEASE:Lymphoma, Non-Hodgkin
+csk	GO:0004715
+atat1	GO:0005874
+rps6kc1	GO:0004674
+LOC100696641	GAD_DISEASE:AlzheimerQs disease   
+LOC102082062	
+rrnad1	GO:0016020
+cdc42bpa	GO:0005737
+dync1li2	GO:0005856
+abcg8	DISGENET:C0005818~Blood Platelet Disorders
+cdt1	GO:0033262
+ndfip2	UNIPROT:CXXX~No diseases associated
+LOC100702284	UP_TISSUE:Amygdala
+LOC100708547	REACTOME_PATHWAY:R-HSA-5663202~Diseases of signal transduction by growth factor receptors and second messengers
+dbf4	GO:0007049
+hyal2	GO:0046718
+aimp1	GO:0016020
+atp5f1a	GO:0070062
+ccdc47	GO:0005509
+srd5a3	MGD:MP:0001697~abnormal embryo size
+nfkb2	GO:0005654
+prkch	MGD:MP:0008074~increased CD4-positive, alpha beta T cell number
+haus4	GO:0005819
+taf6	GO:0045893
+LOC102082062	
+adat3	HPO:HP:0001838~Rocker bottom foot
+rhag	HPO:HP:0011273~Anisocytosis
+thumpd3	GO:0008033
+cd63	GO:0015031
+pparg	GAD_DISEASE:Hypercholesterolemia|LDLC levels
+pdhx	HPO:HP:0003828~Variable expressivity
+txnl4a	HPO:HP:0000347~Micrognathia
+adar	GO:0045070
+LOC100709869	REACTOME_PATHWAY:R-HSA-9707616~Heme signaling
+gckr	REACTOME_PATHWAY:R-HSA-170822~Regulation of Glucokinase by Glucokinase Regulatory Protein
+mmp2	DISGENET:C0235874~Disease Exacerbation
+esrra	GO:0000981
+LOC100699171	MGD:MP:0011085~postnatal lethality, complete penetrance
+b3galnt2	HPO:HP:0002353~EEG abnormality
+vbp1	GO:0006457
+LOC100709539	GO:0005886
+wnt1	HPO:HP:0000939~Osteoporosis
+atxn7l3	GO:0005634
+lhx6	GO:0005634
+mtor	GO:0046889
+LOC100693358	GO:0005737
+LOC100693121	GO:0006665
+nexn	GO:0007411
+cars2	GO:0005759
+mrpl58	REACTOME_PATHWAY:R-HSA-392499~Metabolism of proteins
+dag1	GO:0042383
+ift74	GO:0030030
+qsox1	GO:0000139
+LOC100700193	HPO:HP:0200134~Epileptic encephalopathy
+mrps18b	GO:0005763
+LOC100701393	GO:0005198
+bub1	GO:0004674
+utp23	GO:0003723
+pudp	GO:0008150
+znrd1	GO:0046872
+cdh13	GAD_DISEASE:Tuberculosis
+l2hgdh	GO:0005743
+nedd4	MGD:MP:0005013~increased lymphocyte cell number
+tctn3	HPO:HP:0000368~Low-set, posteriorly rotated ears
+ppm1l	GO:0017018
+LOC100705920	DISGENET:C0011581~Depressive disorder
+LOC100712209	GO:0007399
+tbx1	MGD:MP:0000037~abnormal lateral semicircular canal morphology
+LOC100698758	GO:0007264
+LOC100696873	GENOMICS_ENGLAND:CXXX~No diseases associated
+tap1	GO:0046978
+LOC100710257	GO:0048643
+ctxn2	HPO:HPO:XXX~No HPO phenotype
+rcan1	MGD:MP:0001921~reduced fertility
+ptpro	GO:0005886
+cntnap1	
+LOC100690299	MGD:MP:0000854~abnormal cerebellum development
+LOC100698670	GO:0033306
+LOC100695498	GO:0007214
+scarb1	GO:0070506
+nudt13	GO:0006734
+stn1	GO:0001650
+ubr5	GO:0003723
+hace1	GO:0016604
+LOC100704827	GO:0003756
+egr2	PSYGENET:C0036341~Schizophrenia
+kcnj11	DISGENET:C3495874~Nonepileptic Seizures
+chd5	GO:0000792
+LOC100692146	GO:0000245
+LOC100694706	CRB:CRB:0000025~Association with Survival PSAP KO CRISPRa in Glutamatergic Neuron
+txnip	UP_TISSUE:Lens
+lrif1	GO:0001740
+pjvk	GAD_DISEASE:hearing impairment|Hearing Loss
+LOC100694482	MGD:MP:0002833~increased heart weight
+ak9	GO:0009123
+dhx30	DISGENET:C4540496~NEURODEVELOPMENTAL DISORDER WITH SEVERE MOTOR IMPAIRMENT AND ABSENT LANGUAGE
+kiaa0825	MGD:MP:0009709~hydrometra
+thoc5	GO:0005634
+phospho1	MGD:MP:0011099~lethality throughout fetal growth and development, complete penetrance
+echs1	CTD:C1708349~Hereditary Diffuse Gastric Cancer
+LOC100693895	GO:0005515
+LOC100705711	CTD:C1959583~Myocardial Failure
+chd7	MGD:MP:0012703~decreased embryonic neuroepithelium thickness
+maml3	REACTOME_PATHWAY:R-HSA-2894858~Signaling by NOTCH1 HD+PEST Domain Mutants in Cancer
+sec22c	GO:0016192
+mark2	MGD:MP:0005459~decreased percent body fat/body weight
+LOC100689844	DISGENET:C0022340~Late-Infantile Neuronal Ceroid Lipfuscinosis
+LOC100705626	GO:0007265
+mark3	REACTOME_PATHWAY:R-HSA-5683057~MAPK family signaling cascades
+naa30	REACTOME_PATHWAY:R-HSA-6811442~Intra-Golgi and retrograde Golgi-to-ER traffic
+osbpl6	GO:0005886
+LOC100700539	GO:0035064
+LOC100706008	GO:0009617
+LOC102078679	CTD:CXXX~No diseases associated
+usp14	GO:0016579
+LOC100697439	MGD:MP:0009356~decreased liver triglyceride level
+tada2b	GO:0005634
+cemip	GO:0005576
+tmem25	
+maz	GO:0003723
+LOC100696627	GO:0016020
+LOC100705312	CRB:CRB:0000037~Association with Survival 21 Days CRISPRi in Glutamatergic Neuron
+LOC100690085	GO:0000785
+eif2b4	MGD:MP:0009978~abnormal cerebellum white matter morphology
+LOC100706183	GO:0090734
+rpa2	GO:0005662
+traf3	MGD:MP:0002444~abnormal T cell physiology
+nup93	GO:0060391
+rnf25	GO:0061630
+gjd2	GO:0019228
+bmp2	GO:0007507
+LOC100710831	REACTOME_PATHWAY:R-HSA-194315~Signaling by Rho GTPases
+fhl1	GO:0005886
+LOC112842139	UP_TISSUE:Kidney
+LOC102082062	
+hace1	GAD_DISEASE:menarche (age at onset)
+alox5ap	GO:0006691
+LOC100708217	MGD:MP:0001260~increased body weight
+smarca4	HPO:HP:0000158~Macroglossia
+fignl1	GO:0005634
+dmrt2	GO:0043565
+LOC100692689	
+pxk	GO:0005886
+hck	REACTOME_PATHWAY:R-HSA-164944~Nef and signal transduction
+nod2	GO:1904417
+clcc1	GO:0005794
+LOC102082062	
+LOC100698085	GO:2000058
+LOC100693545	CRB:CRB:0000025~Association with Survival PSAP KO CRISPRa in Glutamatergic Neuron
+lpar1	GO:0042734
+LOC100709904	CTD:C0014544~Epilepsy
+LOC100694066	GO:0005829
+clrn1	HPO:HP:0001513~Obesity
+cnp	GO:0016020
+ak5	UP_TISSUE:Lymph
+tsc2	GAD_DISEASE:several psychiatric disorders
+abi3bp	
+pold3	GO:0000731
+ppargc1a	MGD:MP:0002834~decreased heart weight
+gtf3a	GO:0005654
+LOC100711322	MGD:MP:0001544~abnormal cardiovascular system physiology
+chrnd	GENOMICS_ENGLAND:C4225370~MYASTHENIC SYNDROME, CONGENITAL, 3C, ASSOCIATED WITH ACETYLCHOLINE RECEPTOR DEFICIENCY
+LOC100689743	MGD:MP:0001926~female infertility
+LOC100694327	GO:0032956
+rbm8a	REACTOME_PATHWAY:R-HSA-72172~mRNA Splicing
+vps13a	
+LOC100703685	CTD:C0274860~Mercury Poisoning, Organic
+spry2	GAD_DISEASE:Respiratory Function Tests
+LOC100702324	GO:0008076
+stx16	HPO:HP:0006297~Hypoplasia of dental enamel
+raf1	MGD:MP:0011088~neonatal lethality, incomplete penetrance
+rpl31	HPO:HP:0000179~Thick lower lip vermilion
+kiaa0556	
+LOC100706088	GO:0010629
+ghr1	DISGENET:C0023893~Liver Cirrhosis, Experimental
+asah1	GO:0046514
+LOC100534577	MGD:MP:0008236~decreased susceptibility to neuronal excitotoxicity
+ddah1	GO:0006527
+LOC100534484	CTD:C0011860~Diabetes Mellitus, Non-Insulin-Dependent
+acbd4	REACTOME_PATHWAY:R-HSA-556833~Metabolism of lipids
+col1a2	DISGENET:C0023931~Lobstein Disease
+fbxo9	GO:0031146
+acat1	CTD:C0751110~Single Seizure
+fuz	GO:0001736
+ppil2	GO:0043170
+anxa2	GO:0016363
+LOC100703896	GO:1903561
+ctsd	MGD:MP:0001262~decreased body weight
+LOC100692385	GO:0019901
+slc6a1	GO:0051936
+LOC100691116	HPO:HP:0001252~Muscular hypotonia
+cyld	GO:0008233
+pex19	REACTOME_PATHWAY:R-HSA-1369062~ABC transporters in lipid homeostasis
+LOC100689834	UP_TISSUE:Uterine endothelium
+fance	HPO:HP:0000286~Epicanthus
+rassf9	MGD:MP:0002656~abnormal keratinocyte differentiation
+LOC100696839	REACTOME_PATHWAY:R-HSA-9755511~KEAP1-NFE2L2 pathway
+mmp9	DISGENET:C0004096~Asthma
+LOC100711609	GO:0006355
+pax9	MGD:MP:0004592~small mandible
+dapk1	GO:0010508
+LOC100711736	HPO:HP:0012444~Brain atrophy
+eno1	DISGENET:C0751406~Post-Traumatic Osteoporosis
+lg19h15orf41	
+LOC100705731	GO:0006942
+LOC100701773	GO:0005829
+wnt3a	CGI:CXXX~No diseases associated
+mras	HPO:HP:0004209~Clinodactyly of the 5th finger
+mmp9	UNIPROT:CXXX~No diseases associated
+lig1	REACTOME_PATHWAY:R-HSA-6781827~Transcription-Coupled Nucleotide Excision Repair (TC-NER)
+LOC102082062	GO:0003735
+fbxo38	GO:0002250
+echdc2	UP_TISSUE:Placenta
+slc1a2	GO:0015804
+gli3	HPO:HP:0010864~Intellectual disability, severe
+ush1c	HPO:HP:0000662~Nyctalopia
+serinc1	CTD:CXXX~No diseases associated
+snrpa1	GO:0030620
+LOC100698500	GAD_DISEASE:Dyskinesia, Drug-Induced|
+akt1	GO:0032991
+LOC100695403	CLINGEN:CXXX~No diseases associated
+hyls1	HPO:HP:0000864~Abnormality of the hypothalamus-pituitary axis
+psmc3	REACTOME_PATHWAY:R-HSA-9604323~Negative regulation of NOTCH4 signaling
+gtf2h4	
+mapk10	GO:0016301
+LOC100703376	GAD_DISEASE:Birth Weight|Leukemia|Leukemia, Myeloid, Acute|Precursor Cell Lymphoblastic Leukemia-Lymphoma
+uros	MGD:MP:0005508~abnormal skeleton morphology
+mapk10	GO:0005739
+LOC102082062	
+pms1	HPO:HP:0002017~Nausea and vomiting
+LOC100691799	GO:0061629
+cdc23	REACTOME_PATHWAY:R-HSA-8853884~Transcriptional Regulation by VENTX
+LOC100711669	MGD:MP:0001216~abnormal epidermal layer morphology
+tgfbi	GENOMICS_ENGLAND:C0339278~Reis-BucklersQ corneal dystrophy
+stk19	
+LOC102078747	GO:0097441
+rps3	GO:0006974
+dvl1	GO:0060070
+meioc	GO:0051729
+dtx2	GO:0007219
+ptcd2	GO:0050684
+ercc3	HPO:HP:0001807~Ridged nail
+ddx1	GO:0005634
+ostm1	
+LOC100705836	MGD:MP:0008872~abnormal physiological response to xenobiotic
+ncor2	
+trim2	GO:0043161
+ptpa	GO:0042803
+LOC100702822	CTD:C0151744~Myocardial Ischemia
+LOC100694953	GO:0005523
+slc6a3	GO:0005737
+mpz	CTD:C0270914~Hereditary Motor and Sensory-Neuropathy Type II
+lrfn5	HPO:HPO:XXX~No HPO phenotype
+LOC100703533	HPO:HP:0000463~Anteverted nares
+ctbs	UP_TISSUE:Thymus
+pebp1	REACTOME_PATHWAY:R-HSA-6802948~Signaling by high-kinase activity BRAF mutants
+LOC100697981	GO:0006886
+LOC100694738	GO:0042802
+kcnk18	CGI:CXXX~No diseases associated
+LOC100697497	GO:0044319
+atp6v1h	UNIPROT:CXXX~No diseases associated
+agap3	GO:0046872
+LOC102079941	UP_TISSUE:Small intestine
+map3k3	MGD:MP:0000694~spleen hypoplasia
+LOC102082062	
+fyn	GO:0005515
+zdhhc4	GO:0005794
+tert	GO:0032092
+ppia	
+LOC100704607	MGD:MP:0000745~tremors
+LOC100700616	GO:0035102
+coq8a	GO:0016740
+jag1	MGD:MP:0010457~pulmonary artery stenosis
+dbnl	GO:0048812
+LOC100706888	GO:0003677
+abr	GO:0004674
+xaf1	GO:0006915
+ret	HPO:HP:0001761~Pes cavus
+egfr	GO:0043235
+acadvl	MGD:MP:0005202~lethargy
+thrb	GO:0097067
+vps28	GO:0000813
+pak5	KEGG_PATHWAY:hsa04360
+LOC100701586	MGD:MP:0011086~postnatal lethality, incomplete penetrance
+LOC100695036	GO:0071949
+egf	MGD:MP:0000496~abnormal small intestine morphology
+taf5	GO:0005634
+LOC100693192	GO:0005886
+LOC100697129	GO:0042995
+tub	MGD:MP:0006325~impaired hearing
+LOC100689723	MGD:MP:0004484~altered response of heart to induced stress
+pitx1	MGD:MP:0008381~absent gonial bone
+asmtl	GO:0005829
+LOC100696254	REACTOME_PATHWAY:R-HSA-5250913~Positive epigenetic regulation of rRNA expression
+LOC100706637	GO:0005769
+zfp36l1	GO:0071375
+rag1	GO:1990238
+amt	GO:0005739
+anxa2	GO:0005546
+reln	GAD_DISEASE:autism
+LOC100707701	HPO:HP:0000902~Rib fusion
+pln	MGD:MP:0011087~neonatal lethality, complete penetrance
+anapc13	GO:0031145
+LOC100711700	GO:0030133
+LOC100695417	GO:0097190
+LOC106098755	GO:0005634
+vps35	MGD:MP:0008493~alpha-synuclein inclusion body
+stat4	GO:0005515
+LOC100698737	GO:0034334
+LOC100689762	GO:1990756
+LOC100708185	MGD:MP:0006024~collapsed Reissner membrane
+prkcd	GO:0008047
+LOC100698373	GO:0004672
+LOC100702313	GAD_DISEASE:Thromboangiitis Obliterans|Thrombophilia
+LOC100691117	GO:0018401
+leng8	
+tmem135	PSYGENET:CXXX~No diseases associated
+atp5mf	GO:0005743
+cnot9	GO:0005154
+fbxl20	GO:0005515
+LOC100692694	GO:0005216
+LOC100696627	GO:0016887
+kcnj8	GO:0030016
+sema3d	HPO:HP:0100806~Sepsis
+prelp	GO:0070062
+LOC100692869	MGD:MP:0003231~abnormal placenta vasculature
+fkbp15	DISGENET:C0740858~Substance abuse problem
+wnt16	GO:0046330
+lmna	HPO:HP:0002486~Myotonia
+LOC100690332	GO:0043066
+cct6a	GO:0044183
+scn3b	GO:0034220
+nfs1	GO:0005634
+LOC100705426	MGD:MP:0002759~abnormal caudal vertebrae morphology
+aldh1a2	GO:0003007
+nphs2	GO:0005886
+orc1	GO:0005654
+LOC100712531	HPO:HP:0007359~Focal-onset seizure
+rack1	MGD:MP:0000373~belly spot
+rbm28	HPO:HP:0009487~Ulnar deviation of the hand
+ano4	REACTOME_PATHWAY:R-HSA-9733458~Induction of Cell-Cell Fusion
+LOC100697802	MGD:MP:0009355~increased liver triglyceride level
+LOC102080114	MGD:MP:0009703~decreased birth body size
+pgap1	GO:0005789
+bsg	GO:0001525
+LOC100698737	GO:0001825
+erich1	CGI:CXXX~No diseases associated
+pde8b	CTD:C0750951~Lenticulostriate Disorders
+nck2	MGD:MP:0002961~abnormal axon guidance
+LOC100699467	GO:0005886
+hcn2	MGD:MP:0003216~absence seizures
+msl3	GO:0006325
+LOC102082062	
+mettl16	PSYGENET:CXXX~No diseases associated
+ano6	GO:0009986
+skp2	DISGENET:C0751291~Desmoplastic Medulloblastoma
+epg5	MGD:MP:0000745~tremors
+LOC100698478	GO:0005886
+LOC100706088	GO:0046982
+tmco1	MGD:MP:0011101~prenatal lethality, incomplete penetrance
+adar	GO:0003726
+ptpn11	REACTOME_PATHWAY:R-HSA-5663202~Diseases of signal transduction by growth factor receptors and second messengers
+LOC100711853	GO:0002429
+LOC100704305	GO:0005737
+dnajc27	GO:0003924
+LOC100704479	HPO:HP:0001288~Gait disturbance
+dse	GO:0005794
+LOC100694996	REACTOME_PATHWAY:R-HSA-74160~Gene expression (Transcription)
+LOC100692385	MGD:MP:0004041~increased susceptibility to kidney reperfusion injury
+LOC100702572	GO:0140658
+LOC100707845	GO:0006508
+LOC100698352	MGD:MP:0006379~abnormal spermatocyte morphology
+LOC100708550	GAD_DISEASE:Tobacco Use Disorder
+ptpn11	GO:0038127
+igbp1	HPO:HP:0000256~Macrocephaly
+slc25a26	GO:0000095
+LOC100695800	REACTOME_PATHWAY:R-HSA-373076~Class A/1 (Rhodopsin-like receptors)
+nr6a1	GO:0003700
+col4a2	MGD:MP:0010463~aorta stenosis
+sostdc1	CRB:CRB:XXX~No CRB phenotype
+LOC100707201	MGD:MP:0002176~increased brain weight
+LOC100711419	GO:0019899
+LOC100709904	GO:0008076
+tcerg1	
+nr0b1	GO:0016922
+foxg1	MGD:MP:0004408~decreased cochlear hair cell number
+tmem70	HPO:HP:0002093~Respiratory insufficiency
+slc5a5	GO:0035725
+ccdc88c	UP_TISSUE:Testis
+vcp	HPO:HP:0040129~Abnormal nerve conduction velocity
+naa60	GO:0008283
+LOC100698342	DISGENET:C4721508~Hamman-Rich Disease
+pitrm1	CRB:CRB:XXX~No CRB phenotype
+LOC100702235	REACTOME_PATHWAY:R-HSA-5693532~DNA Double-Strand Break Repair
+yif1b	GO:0005789
+LOC100698400	HPO:HP:0003418~Back pain
+errfi1	MGD:MP:0009546~absent gastric milk in neonates
+abcc10	GO:0015431
+bsg	GO:0001750
+piga	UP_TISSUE:Thymus
+LOC109194151	REACTOME_PATHWAY:R-HSA-9013422~RHOBTB1 GTPase cycle
+ube2b	MGD:MP:0008966~abnormal chiasmata formation
+clcn4	HPO:HP:0000280~Coarse facial features
+LOC102082062	
+ptk2b	DISGENET:C0751522~Status Epilepticus, Subclinical
+dbn1	GO:0061351
+sestd1	GO:0045111
+LOC100709268	GO:0009986
+LOC100702937	GO:0005272
+tnfrsf21	MGD:MP:0005015~increased T cell number
+LOC100703931	GO:0008233
+wdr45	GO:0005515
+LOC100702878	GO:0005737
+eomes	CTD:C0007102~Malignant tumor of colon
+ptrhd1	
+ercc1	GAD_DISEASE:Lymphoma, Non-Hodgkin|Lymphoma, Non-HodgkinQs
+pigm	HPO:HP:0004936~Venous thrombosis
+thg1l	GO:0005741
+farsa	GO:0005737
+rfc5	GO:0005663
+LOC100698325	GO:0008073
+nfatc4	GO:0006954
+sec61a1	GO:0005048
+bmi1	MGD:MP:0004599~abnormal vertebral arch morphology
+rps27a	REACTOME_PATHWAY:R-HSA-9711097~Cellular response to starvation
+popdc2	UP_TISSUE:Kidney
+LOC102082062	
+rpl18a	MGD:MP:XXX~No phenotype
+LOC100694317	PSYGENET:CXXX~No diseases associated
+exosc7	UP_TISSUE:Heart
+tmem45b	UP_TISSUE:Trachea
+LOC109204746	GAD_DISEASE:longevity
+tcp1	GO:0031625
+LOC100708883	GENOMICS_ENGLAND:CXXX~No diseases associated
+LOC100711184	MGD:MP:0004259~small placenta
+pold1	GO:0008296
+LOC100702312	
+LOC100708840	CTD:C0234533~Generalized seizures
+aff4	HPO:HP:0000574~Thick eyebrow
+bag6	GO:0030433
+ada	GO:0060205
+saraf	GO:0005783
+coq7	MGD:MP:0006035~abnormal mitochondrion morphology
+map1lc3c	PSYGENET:CXXX~No diseases associated
+zmpste24	HPO:HP:0001620~High pitched voice
+LOC106098186	GO:0098782
+mfn2	GO:0006626
+LOC100699040	GO:0005634
+LOC100705113	UP_TISSUE:Fetal adrenal gland
+b9d2	HPO:HP:0000368~Low-set, posteriorly rotated ears
+LOC100712573	GO:0006468
+mgst2	GO:0004364
+kat8	CTD:C0018802~Congestive heart failure
+LOC100698183	GO:0001227
+pomgnt2	GO:0016757
+csde1	GO:0005794
+LOC100700586	GO:0043161
+COX3	GO:0045277
+nr0b1	MGD:MP:0008078~increased CD8-positive, alpha-beta T cell number
+ssr4	
+acbd4	GO:0008289
+mterf2	GO:0006355
+LOC100711713	GO:0006338
+mars	GO:0016020
+LOC100698523	UP_TISSUE:Lung
+bcl10	DISGENET:C0079741~Lymphoma, Intermediate-Grade
+chrnd	DISGENET:C1854678~MULTIPLE PTERYGIUM SYNDROME, LETHAL TYPE
+LOC100696265	GO:0017166
+LOC100700935	REACTOME_PATHWAY:R-HSA-9006934~Signaling by Receptor Tyrosine Kinases
+sigirr	MGD:MP:0008568~abnormal interleukin secretion
+rps4x	CRB:CRB:0000019~Association with Survival No Antioxidants PSAP KO CRISPRa in Glutamatergic Neuron
+tp53bp1	GO:0042393
+ghitm	GO:0006915
+fdps	GO:0008202
+LOC100709511	GO:0005856
+LOC100698800	GO:0009650
+atp2b2	GO:0005388
+gng8	REACTOME_PATHWAY:R-HSA-418597~G alpha (z) signalling events
+gpr180	GO:0016020
+bap1	MGD:MP:0001281~increased vibrissae length
+prdm14	CRB:CRB:0000025~Association with Survival PSAP KO CRISPRa in Glutamatergic Neuron
+neo1	UP_TISSUE:Liver
+slc19a1	GO:0016323
+slc33a1	MGD:MP:0000780~abnormal corpus callosum morphology
+LOC100709465	GO:0030154
+mthfr	GAD_DISEASE:Abortion, Spontaneous|Abruptio Placentae|Blood Coagulation Disorders, Inherited|Pregnancy Complications, Hematologic|Thrombophilia
+rreb1	GO:0005737
+nob1	CGI:CXXX~No diseases associated
+pwwp2a	
+dtx1	CTD:C0279070~Adult Oligodendroglioma
+ythdf2	GO:0060339
+LOC100706563	MGD:MP:0002412~increased susceptibility to bacterial infection
+foxp3	MGD:MP:0008699~increased interleukin-4 secretion
+proser3	
+LOC100709284	GO:0002027
+nubp2	GO:0005524
+LOC102079789	GO:0019221
+mapkapk5	GO:0005829
+LOC100698414	GO:0030175
+clns1a	GO:0005654
+cast	HPO:HP:0025092~Epidermal acanthosis
+rbx1	REACTOME_PATHWAY:R-HSA-6782210~Gap-filling DNA repair synthesis and ligation in TC-NER
+taf13	GO:0006366
+LOC100700081	GO:0032506
+LOC100700131	GO:0016740
+sema5a	GO:0005515
+glut1	
+exd1	GO:0003676
+LOC100707845	GO:0050790
+sec22c	GO:0016192
+ush2a	HPO:HP:0000463~Anteverted nares
+ptrhd1	CGI:CXXX~No diseases associated
+synj1	DISGENET:C4510873~Atypical juvenile parkinsonism
+mixl1	ORPHANET:CXXX~No diseases associated
+paf1	GO:0005515
+LOC100693968	GO:0006355
+mfsd5	UP_TISSUE:Brain
+man2b1	HPO:HP:0002007~Frontal bossing
+ror2	HPO:HP:0000592~Blue sclerae
+klhl24	CGI:CXXX~No diseases associated
+cav1	HPO:HP:0001635~Congestive heart failure
+LOC100702251	HPO:HP:0005692~Joint hyperflexibility
+st6gal2	MGD:MP:0010124~decreased bone mineral content
+rpgrip1l	MGD:MP:0001075~abnormal accessory nerve morphology
+LOC100692645	GO:0001784
+itgb1	REACTOME_PATHWAY:R-HSA-195258~RHO GTPase Effectors
+LOC109194206	HPO:HP:0001923~Reticulocytosis
+LOC100705971	GO:0016310
+sec11a	GO:0008233
+LOC100711611	GO:0006508
+tifa	GO:0002753
+LOC100709693	CTD:C1257964~Exogenous Hyperinsulinism
+nkx2-5	HPO:HP:0030148~Heart murmur
+cdc42bpa	GO:0042802
+echdc1	MGD:MP:XXX~No phenotype
+lgals8	GO:0098792
+kdr	MGD:MP:0003544~abnormal vascular endothelial cell migration
+LOC100711684	DISGENET:C0009402~Colorectal Carcinoma
+LOC100691565	GO:0032452
+dph6	MGD:MP:0002075~abnormal coat/hair pigmentation
+LOC100707400	GO:0000976
+clta	REACTOME_PATHWAY:R-HSA-8856825~Cargo recognition for clathrin-mediated endocytosis
+LOC100709545	MGD:MP:0003728~abnormal retinal photoreceptor layer morphology
+cbx6	MGD:MP:0005179~decreased circulating cholesterol level
+LOC100697507	MGD:MP:0001258~decreased body length
+crebrf	HPO:HPO:XXX~No HPO phenotype
+irak1	KEGG_PATHWAY:hsa04620
+hm13	GO:0006465
+LOC100706409	GO:0070668
+grhl1	GO:0042803
+pou1f1	HPO:HP:0011968~Feeding difficulties
+pign	GO:0006506
+tspan7	MGD:MP:0012307~impaired spatial learning
+klf15	GO:0046872
+ssbp1	GO:0006268
+zswim6	HPO:HP:0000316~Hypertelorism
+LOC100692540	GO:0045296
+pigo	
+mta2	GO:0006355
+pold1	GO:0019899
+zhx2	MGD:MP:0005416~abnormal circulating protein level
+eif3k	GO:0032991
+mib2	GO:0007219
+gga3	CGI:CXXX~No diseases associated
+LOC100707344	REACTOME_PATHWAY:R-HSA-975956~Nonsense Mediated Decay (NMD) independent of the Exon Junction Complex (EJC)
+rpia	REACTOME_PATHWAY:R-HSA-71387~Metabolism of carbohydrates
+prkcq	CTD:C0035305~Retinal Detachment
+pcm1	GO:0034454
+abcg1	GO:0055091
+LOC100703692	GO:0046982
+patz1	GO:0001227
+epm2a	GO:0044042
+mapre2	GO:0031110
+lg8h7orf50	CGI:CXXX~No diseases associated
+blm	GO:0008270
+zcchc14	GO:0035091
+ins	GO:0006521
+zdhhc8	GAD_DISEASE:smooth pursuit eye movement abnormality
+LOC100699246	DISGENET:C0027540~Necrosis
+man2c1	REACTOME_PATHWAY:R-HSA-1430728~Metabolism
+LOC100711653	GO:0003674
+spdya	GO:0019901
+pigv	GO:0004376
+tango2	HPO:HP:0002066~Gait ataxia
+tab3	REACTOME_PATHWAY:R-HSA-9705683~SARS-CoV-2-host interactions
+LOC100704422	HPO:HP:0002133~Status epilepticus
+ttll1	MGD:MP:0001867~rhinitis
+pigv	HPO:HP:0001792~Small nail
+ogn	REACTOME_PATHWAY:R-HSA-3781865~Diseases of glycosylation
+nr2c2	GO:0003677
+LOC100705119	KEGG_PATHWAY:hsa04929
+myo19	GO:0005739
+LOC100707752	GAD_DISEASE:chronic obstructive pulmonary disease
+LOC100704394	GO:0005337
+LOC100696389	MGD:MP:0000890~thin cerebellar molecular layer
+LOC100534515	GO:0071392
+xrcc3	GAD_DISEASE:Hodgkin Disease
+plat	DISGENET:C0423689~Low Back Pain, Posterior Compartment
+ppih	GO:0005737
+LOC100700472	GO:0016787
+LOC100698670	GAD_DISEASE:Narcolepsy
+rnf26	GO:0032479
+zdbf2	GO:0046872
+unc93a	GO:0008150
+LOC109194230	REACTOME_PATHWAY:R-HSA-597592~Post-translational protein modification
+LOC102082062	
+LOC100696635	GO:0005515
+spg7	GO:0005524
+LOC100711479	REACTOME_PATHWAY:R-HSA-69656~Cyclin A
+add2	GO:0003779
+drd2	GAD_DISEASE:olanzapine
+phf23	GO:0005634
+LOC100701346	GO:0006919
+rho	GAD_DISEASE:retinitis pigmentosa
+mtss1	CTD:C4552091~Polyarthritis, Juvenile, Rheumatoid Factor Negative
+hmces	GO:0006508
+LOC100697420	GO:0060425
+LOC100700731	GO:0032154
+ezr	GO:0001726
+ino80c	CRB:CRB:0000018~Negative hit with Survival No Antioxidants CRISPRi in Glutamatergic Neuron
+hgf	CTD:C0751074~Diabetic Neuralgia
+mmp9	DISGENET:C0472388~Cytotoxic Cerebral Edema
+wdr19	MGD:MP:0000568~ectopic digits
+gchfr	GO:0009890
+kank1	
+nlrx1	GO:0005739
+LOC100707100	GO:0003924
+LOC100698935	REACTOME_PATHWAY:R-HSA-8956321~Nucleotide salvage
+gtf2h3	REACTOME_PATHWAY:R-HSA-167246~Tat-mediated elongation of the HIV-1 transcript
+pparg	MGD:MP:0010964~increased compact bone volume
+LOC100699154	GO:0042271
+atxn10	GO:0005615
+sgpp2	KEGG_PATHWAY:hsa04071
+gsn	HPO:HP:0011947~Respiratory tract infection
+pgk1	GO:0006096
+prmt2	GO:2000134
+rcan1	MGD:MP:0006412~abnormal T cell apoptosis
+kcng1	GO:0008076
+sp1	REACTOME_PATHWAY:R-HSA-9818030~NFE2L2 regulating tumorigenic genes
+mapk10	GO:0004705
+LOC100699899	KEGG_PATHWAY:hsa04925
+pip4p2	GO:0016020
+pi15	GO:0005576
+LOC100693678	GO:0038009
+LOC100711364	GAD_DISEASE:warfarin response
+cdk5rap3	GO:0044818
+LOC100696343	GO:0007420
+dennd4c	GO:0005794
+LOC100696392	GO:0008285
+nfkbil1	GO:0005634
+LOC100702180	GAD_DISEASE:cough
+LOC100690403	
+rpn1	GENOMICS_ENGLAND:CXXX~No diseases associated
+LOC100710852	GO:0048511
+eif4e2	
+rfx7	GO:0000981
+fcf1	GENOMICS_ENGLAND:CXXX~No diseases associated
+camsap3	GO:0031514
+taz	GO:0006936
+arhgef6	REACTOME_PATHWAY:R-HSA-73887~Death Receptor Signaling
+fhl2	GO:0055014
+LOC100693800	DISGENET:C0020796~Profound Mental Retardation
+tmco1	HPO:HP:0000218~High palate
+il17rd	DISGENET:C0162809~Kallmann Syndrome
+tollip	GO:0031625
+LOC100693777	GO:0000981
+dph5	GO:0005575
+ahdc1	GO:0003677
+lg12h9orf3	
+fosb	GO:1990837
+sod1	DISGENET:C0041408~Turner Syndrome
+daxx	GO:0003713
+clstn2	GO:0009986
+eya3	GO:0046872
+gpr183	GO:0061470
+arnt2	GO:0005634
+LOC102076518	GO:0070161
+rbmx	GO:0006366
+wdr12	CRB:CRB:0000024~Negative hit with Survival No Antioxidants PSAP KO CRISPRi in Glutamatergic Neuron
+LOC100699955	GO:0001516
+LOC102082062	
+LOC100709859	GO:0000981
+nkx2-5	MGD:MP:0004071~prolonged P wave
+rc3h1	GENOMICS_ENGLAND:C0024291~Lymphohistiocytosis, Hemophagocytic
+ripor2	GO:0005737
+mgll	GO:0006954
+garnl3	
+LOC100710044	CTD:C0023467~Leukemia, Myelocytic, Acute
+LOC100696613	HPO:HP:0008113~Multiple plantar creases
+cdkn1b	REACTOME_PATHWAY:R-HSA-9661069~Defective binding of RB1 mutants to E2F1
+iqgap1	GO:0007173
+pkig	GO:0005515
+clic1	GO:0034702
+LOC100694434	GO:0070822
+psmd2	REACTOME_PATHWAY:R-HSA-9755511~KEAP1-NFE2L2 pathway
+LOC100701210	GO:0030217
+ttpa	GO:0043325
+LOC100694317	GO:0005634
+dis3l	GO:0005813
+dnaaf4	GO:0030331
+hcrtr2	GAD_DISEASE:Autism
+ppil3	GO:0044238
+LOC100694365	UP_TISSUE:Thalamus
+ddx3x	GO:0000166
+bcas3	GO:0043085
+mgat5	GO:0006487
+rhot2	GO:0003924
+LOC100699409	CRB:CRB:XXX~No CRB phenotype
+LOC100705560	CRB:CRB:0000028~Association with Survival PSAP KO CRISPRi in Glutamatergic Neuron
+LOC100700061	MGD:MP:0011087~neonatal lethality, complete penetrance
+atp6ap2	GO:0005783
+nek11	GO:0005524
+naxe	
+LOC100707194	GO:0001992
+braf	HPO:HP:0000218~High palate
+egln3	HPO:HPO:XXX~No HPO phenotype
+ush1c	MGD:MP:0001394~circling
+LOC100708902	GO:0030020
+LOC100701200	GO:0005759
+LOC100705845	REACTOME_PATHWAY:R-HSA-109582~Hemostasis
+slc12a8	GO:0016020
+col1a1	GENOMICS_ENGLAND:C4551623~EHLERS-DANLOS SYNDROME, ARTHROCHALASIA TYPE, 1
+nbas	MGD:MP:0002792~abnormal retinal vasculature morphology
+nono	GO:0008380
+cdk5r1	GO:0030424
+eif4e3	GO:0006412
+tbc1d23	
+hdac5	GO:0009410
+anks3	GO:0005737
+dnaaf4	GO:0036158
+LOC100696178	GO:0051015
+LOC100709251	
+mrpl17	UNIPROT:CXXX~No diseases associated
+stk3	GO:0004672
+pomt1	GO:0016740
+drd5	GAD_DISEASE:ParkinsonQs disease; bipolar disorder
+eya1	REACTOME_PATHWAY:R-HSA-1266738~Developmental Biology
+LOC100704264	GO:0019221
+dazap2	GO:0016604
+LOC102082062	
+LOC100700092	HPO:HP:0000164~Abnormality of the dentition
+LOC100709462	MGD:MP:0013184~hemorrhagic ascites
+chtop	MGD:MP:0010404~ostium primum atrial septal defect
+LOC100692258	KEGG_PATHWAY:hsa04978
+LOC102082062	GO:0004842
+LOC100706770	GAD_DISEASE:Carcinoma, Squamous Cell|Head and Neck Neoplasms|Neoplasm Recurrence, Local|Neoplasms, Second Primary|Squamous cell carcinoma
+lg19h9orf72	GO:1990316
+shmt1	GAD_DISEASE:Cleft Lip|Cleft Palate
+rhoh	HPO:HP:0010280~Stomatitis
+LOC100711328	GO:0015914
+bmp2	GO:0001649
+clic1	GO:0016020
+nup88	GO:0000056
+LOC100705366	GO:0005737
+epas1	REACTOME_PATHWAY:R-HSA-162582~Signal Transduction
+LOC100692673	GO:0005886
+LOC100695408	GO:0042634
+rpl23	GO:0006412
+trrap	HPO:HP:0000414~Bulbous nose
+chd1l	GO:0016787
+LOC100707845	GO:0036021
+psma4	GO:0000502
+kiaa1143	UNIPROT:CXXX~No diseases associated
+fgl1	MGD:MP:0010379~decreased respiratory quotient
+brca2	GENOMICS_ENGLAND:C0265219~Miller Dieker syndrome
+LOC100711833	GO:0006816
+rbx1	REACTOME_PATHWAY:R-HSA-2644607~Loss of Function of FBXW7 in Cancer and NOTCH1 Signaling
+LOC100706053	MGD:MP:0000553~absent radius
+LOC102082062	
+hif1a	GO:0032364
+ndufa6	CRB:CRB:0000022~Association with Survival No Antioxidants PSAP KO CRISPRi in Glutamatergic Neuron
+gpatch8	CRB:CRB:0000012~Negative hit with Lysosome (Lysotracker Intensity) in Glutamatergic Neuron
+kat2a	GO:0043484
+pitpnm3	GO:0005509
+phb	GO:0005743
+LOC100696839	REACTOME_PATHWAY:R-HSA-422475~Axon guidance
+abr	GO:0090630
+LOC100691229	HPO:HP:0000545~Myopia
+LOC102082062	GO:0005688
+tsr2	HPO:HP:0002076~Migraine
+p53	GO:0003677
+LOC100698885	HPO:HP:0009465~Ulnar deviation of finger
+LOC100702161	GO:0003677
+gucy1a2	GO:0016849
+man1a2	REACTOME_PATHWAY:R-HSA-948021~Transport to the Golgi and subsequent modification
+dhx29	GO:0006413
+spg7	GO:0008270
+prkra	GO:0005634
+LOC100710393	GO:0005634
+zfyve21	UP_TISSUE:Bone marrow
+LOC102076274	MGD:MP:0003809~abnormal hair shaft morphology
+srebf1	REACTOME_PATHWAY:R-HSA-556833~Metabolism of lipids
+LOC100690287	GO:0008430
+rap1gds1	GO:0005085
+cc2d1b	GO:0043231
+ror1	GO:0016301
+pex11b	GO:0005778
+gclm	KEGG_PATHWAY:hsa01240
+hsd17b10	REACTOME_PATHWAY:R-HSA-6787450~tRNA modification in the mitochondrion
+LOC100709409	GO:1903561
+nars	UNIPROT:CXXX~No diseases associated
+asap2	PSYGENET:CXXX~No diseases associated
+LOC100696924	CTD:C0334596~Medulloepithelioma
+adamts3	HPO:HP:0100490~Camptodactyly of finger
+mstn	MGD:MP:0010238~increased skeletal muscle weight
+ramp2	DISGENET:C0242379~Malignant neoplasm of lung
+cep72	REACTOME_PATHWAY:R-HSA-380320~Recruitment of NuMA to mitotic centrosomes
+cemip	DISGENET:C3711374~Nonsyndromic Deafness
+plcb2	ORPHANET:CXXX~No diseases associated
+fzd5	REACTOME_PATHWAY:R-HSA-5340588~Signaling by RNF43 mutants
+LOC100697588	HPO:HP:0005280~Depressed nasal bridge
+atp2b2	GO:0005737
+cyp1b1	GAD_DISEASE:Hot Flashes
+rps24	GO:0002181
+LOC100695060	GO:0008495
+elp5	GO:0000049
+LOC100695545	
+ermp1	UP_TISSUE:Liver
+sytl1	CTD:CXXX~No diseases associated
+lmna	MGD:MP:0010179~rough coat
+lg12h9orf3	GO:0046872
+LOC100699040	GO:0005730
+nemf	
+LOC100698556	GO:0044233
+LOC100704683	GO:0016020
+LOC100694886	UP_TISSUE:Erythroleukemia
+gabbr2	MGD:MP:0009538~abnormal synapse morphology
+qki	MGD:MP:0001406~abnormal gait
+cgrrf1	
+ahi1	GO:0065001
+stk11	KEGG_PATHWAY:hsa04140
+frmd6	
+fzd2	GO:0003151
+tmem138	
+LOC100704419	GO:0032259
+LOC100707634	GO:0000281
+btk	GO:0051092
+LOC100690303	GO:0043235
+dars2	HPO:HP:0005340~Spastic/hyperactive bladder
+LOC100692985	MGD:MP:0011966~abnormal auditory brainstem response waveform shape
+pgm3	GO:0006048
+scarf2	HPO:HP:0001822~Hallux valgus
+LOC100706916	HPO:HP:0010550~Paraplegia
+ppp1r12a	
+luc7l	GAD_DISEASE:Type 2 Diabetes| edema | rosiglitazone
+clic1	GO:0005254
+LOC100707971	HPO:HP:0001956~Truncal obesity
+LOC100698823	MGD:MP:0001905~abnormal dopamine level
+LOC100698823	MGD:MP:0002919~enhanced paired-pulse facilitation
+rnf216	GO:0005829
+gcgr	GO:0016020
+clcn1	MGD:MP:0009434~paraparesis
+cog8	HPO:HP:0025045~Abnormal brain lactate level by MRS
+LOC100702313	DISGENET:C3852987~Acute Mesenteric Arterial Thrombosis
+col1a1	MGD:MP:0000489~abnormal large intestine morphology
+LOC100702235	REACTOME_PATHWAY:R-HSA-937061~TRIF(TICAM1)-mediated TLR4 signaling 
+LOC100692652	GO:0097367
+arpc5	REACTOME_PATHWAY:R-HSA-5663205~Infectious disease
+slc6a1	GO:0005886
+LOC100690208	GO:0005576
+LOC100705731	GO:0006937
+larp7	GO:0006397
+sema3a	GO:0021612
+clrn1	UP_TISSUE:Retina
+raly	GO:0042632
+LOC100692519	GO:0016020
+habp2	HPO:HP:3000037~Abnormality of neck blood vessel
+ugcg	GO:0009966
+LOC100692380	GO:0005515
+urod	DISGENET:C0162566~Porphyria Cutanea Tarda
+LOC100708678	GO:0042802
+fam210a	GO:0005737
+extl3	UP_TISSUE:Fetus
+tmco1	GO:0016020
+LOC100693209	GO:0003676
+LOC100697444	MGD:MP:0001922~reduced male fertility
+specc1l	UNIPROT:C0796179~Teebi syndrome
+spg7	GO:0016020
+uroc1	GO:0006547
+LOC100693192	GO:0008150
+LOC100702076	GO:0005634
+LOC100702076	GO:0005829
+racgap1	GO:0005096
+pkp2	
+socs3	GO:0016567
+foxg1	CTD:C0270824~Visual seizure
+LOC100706409	GO:0016740
+psap	GO:0010506
+hlcs	GO:0018271
+akt1	GO:0005654
+tnfrsf13b	DISGENET:C2936664~Acquired Hypogammaglobulinemia
+scfd1	GO:0006888
+uckl1	GO:0004849
+LOC100703008	GAD_DISEASE:ParkinsonQs disease    
+tmem25	
+adam9	GO:0004222
+polr2b	GO:0016740
+tgfa	MGD:MP:0003095~abnormal corneal stroma development
+xpa	DISGENET:C0007137~Squamous cell carcinoma
+nup88	GO:0017056
+gfm2	GO:0032543
+LOC100699040	GO:0000122
+supt6h	CTD:CXXX~No diseases associated
+myo19	GO:0030050
+mok	
+shoc2	GO:0005515
+psmd5	REACTOME_PATHWAY:R-HSA-453276~Regulation of mitotic cell cycle
+mppe1	GO:0005794
+stat3	REACTOME_PATHWAY:R-HSA-9725371~Nuclear events stimulated by ALK signaling in cancer
+xrcc1	GAD_DISEASE:Chromosome Aberrations|Chromosome abnormality|DNA Damage
+tpgs2	GO:0018095
+drd3	GAD_DISEASE:alcohol dependence
+ptpn11	GO:0007420
+agfg1	REACTOME_PATHWAY:R-HSA-199991~Membrane Trafficking
+LOC100694756	GO:0016020
+dapk1	GO:0004683
+baz1b	GO:0005524
+pdgfrb	GO:0043406
+cobl	GO:0051639
+trim23	GO:0045087
+hes1	REACTOME_PATHWAY:R-HSA-74160~Gene expression (Transcription)
+gne	GO:0006045
+igf1	GAD_DISEASE:patent ductus arteriosus
+LOC100704025	REACTOME_PATHWAY:R-HSA-9711123~Cellular response to chemical stress
+LOC100691587	MGD:MP:0011092~embryonic lethality, complete penetrance
+pus3	HPO:HP:0001347~Hyperreflexia
+pik3cd	GO:0016303
+LOC100712209	DISGENET:C0038586~Substance Use Disorders
+syk	GO:0018108
+nf2	MGD:MP:0001973~increased thermal nociceptive threshold
+lmna	GO:0031965
+ebna1bp2	CTD:CXXX~No diseases associated
+tnpo3	HPO:HP:0003691~Scapular winging
+rilpl2	CGI:CXXX~No diseases associated
+vrk1	GO:0005737
+ndor1	MGD:MP:0011629~decreased mitochondria number
+rfc4	REACTOME_PATHWAY:R-HSA-110314~Recognition of DNA damage by PCNA-containing replication complex
+LOC100710372	GO:0016020
+LOC100703625	GO:0016328
+ankrd6	UNIPROT:CXXX~No diseases associated
+dst	GO:0005509
+naa25	
+LOC100701773	CRB:CRB:XXX~No CRB phenotype
+taf6	HPO:HP:0001319~Neonatal hypotonia
+eif2b5	HPO:HP:0000786~Primary amenorrhea
+LOC100704785	GO:0007155
+LOC109195682	GO:0005789
+kdm1a	GO:0000781
+tap1	GO:0042605
+LOC100695719	CRB:CRB:0000022~Association with Survival No Antioxidants PSAP KO CRISPRi in Glutamatergic Neuron
+st3gal3	GO:0005515
+LOC100697931	CRB:CRB:XXX~No CRB phenotype
+shtn1	GO:0044295
+mst1	CTD:C1262760~Hepatitis, Drug-Induced
+derl1	CLINGEN:CXXX~No diseases associated
+ykt6	GO:0016020
+rgs7	GO:0005096
+LOC100708975	GO:0071943
+nox4	MGD:MP:0008874~decreased physiological sensitivity to xenobiotic
+imp4	GO:0006364
+zbtb16	GO:0016604
+iqgap3	GO:0008361
+LOC100694759	GO:2000726
+prmt7	GO:0035243
+p53	GO:0051974
+rps13	GO:0003735
+LOC100701615	GO:0005515
+ctnnb1	GO:0005737
+entpd1	KEGG_PATHWAY:hsa01100
+LOC100709409	GO:0015692
+dock8	GO:0007264
+LOC100692624	GO:0098637
+cd79a	HPO:HP:0000316~Hypertelorism
+pcmt1	GO:0008757
+LOC100705560	GO:0005958
+mgp	DISGENET:C0024668~Mammary Neoplasms, Experimental
+LOC100691978	GO:0019773
+ndc80	GO:0042802
+LOC102082062	
+casp7	GENOMICS_ENGLAND:CXXX~No diseases associated
+kank1	GO:0016020
+col1a2	GAD_DISEASE:osteogenesis Imperfecta
+ybx2	UP_TISSUE:Testis
+LOC100703014	GO:0043014
+znf131	PSYGENET:CXXX~No diseases associated
+ryr2	GO:0015278
+LOC100691689	DISGENET:C0036341~Schizophrenia
+LOC100705328	GO:0005737
+LOC100697562	GO:0005343
+nfkbil1	GO:0005634
+LOC100695800	ORPHANET:CXXX~No diseases associated
+myd88	KEGG_PATHWAY:hsa05164
+xrcc6	GO:0005667
+LOC100701832	GO:0006906
+LOC100695417	MGD:MP:0000168~abnormal bone marrow development
+pgm3	
+atox1	PSYGENET:CXXX~No diseases associated
+rnf2	REACTOME_PATHWAY:R-HSA-3108232~SUMO E3 ligases SUMOylate target proteins
+prxl2b	CLINGEN:CXXX~No diseases associated
+chd8	GO:0008094
+ddx11	GO:0006139
+tut4	
+LOC100692548	GO:0010387
+cacna1d	GO:0086012
+igf1	HPO:HP:0000252~Microcephaly
+tmprss15	HPO:HP:0007609~Hypoproteinemic edema
+LOC100696191	GO:0046777
+cebpz	CRB:CRB:0000018~Negative hit with Survival No Antioxidants CRISPRi in Glutamatergic Neuron
+LOC100694452	HPO:HPO:XXX~No HPO phenotype
+LOC100697322	GO:0016020
+bcl2l1	GO:0051881
+LOC100697588	GO:0005515
+LOC100695691	GO:0005515
+snrpf	GO:0005634
+dgat2	GO:0006651
+usp47	GO:0006508
+snx3	MGD:MP:0000841~abnormal hindbrain morphology
+itga7	HPO:HP:0003741~Congenital muscular dystrophy
+LOC100694176	KEGG_PATHWAY:hsa04972
+sos2	HPO:HP:0000470~Short neck
+txndc5	GO:0003756
+LOC100691639	MGD:MP:XXX~No phenotype
+LOC102083201	GO:0005829
+st18	GO:0008285
+slc16a2	HPO:HP:0002415~Leukodystrophy
+tgfa	CTD:C0024623~Malignant neoplasm of stomach
+wdr45	GO:0032266
+LOC100711831	GAD_DISEASE:Tobacco Use Disorder
+ints11	GO:0016180
+sirt6	GO:0016740
+LOC100708515	MGD:MP:0005343~increased circulating aspartate transaminase level
+LOC102082062	
+LOC100705990	CRB:CRB:0000047~Positive hit with Survival CRISPRi in Glutamatergic Neuron
+psma4	REACTOME_PATHWAY:R-HSA-4086400~PCP/CE pathway
+bag6	GO:0030154
+vars2	GO:0004812
+tgfbi	CTD:C1719672~Severe Sepsis
+tbc1d24	HPO:HP:0003828~Variable expressivity
+aldh1l2	GO:0005739
+nr1h3	GO:0003677
+polr3b	GO:0002376
+LOC100696124	DISGENET:C0740376~Middle Cerebral Artery Thrombosis
+sod2	GO:0042645
+itga4	REACTOME_PATHWAY:R-HSA-8949275~RUNX3 Regulates Immune Response and Cell Migration
+nipa2	GO:0006811
+casp9	REACTOME_PATHWAY:R-HSA-418889~Caspase activation via Dependence Receptors in the absence of ligand
+pkm	GO:0005829
+LOC100703352	GO:0006904
+llgl2	GO:0005737
+abhd12	GO:0005737
+LOC100703162	MGD:MP:0001303~abnormal lens morphology
+LOC100707667	GO:0016020
+LOC100708544	GO:0005743
+gtf2h3	REACTOME_PATHWAY:R-HSA-73779~RNA Polymerase II Transcription Pre-Initiation And Promoter Opening
+tmem107	GO:0060271
+cul4b	GO:0080008
+stat3	GO:0032755
+pkmyt1	MGD:MP:0010052~increased grip strength
+LOC102082062	GO:0030621
+sox2	GAD_DISEASE:Triglycerides
+uchl5	GO:0031011
+clcn3	GAD_DISEASE:Cholesterol, HDL
+hdac6	GO:0005771
+tp73	GO:0060044
+apex1	GO:0005739
+cd81	GO:0050861
+ifngr1l	GAD_DISEASE:Asthma|Bronchial Hyperreactivity|Hypersensitivity, Immediate
+pdpk1	REACTOME_PATHWAY:R-HSA-2428924~IGF1R signaling cascade
+mttp	GO:1902388
+cdk5rap3	GO:0005829
+LOC102082062	
+zbtb20	GO:0005654
+ghr	HPO:HP:0009803~Short phalanx of finger
+LOC100702364	CLINGEN:CXXX~No diseases associated
+hspb1	MGD:MP:0001792~impaired wound healing
+LOC102082062	
+adam15	GO:0006508
+mrpl20	GO:0005739
+LOC100709350	GO:0045892
+ash2l	GO:0006974
+LOC102082062	
+LOC100698267	UP_TISSUE:Lung
+psmb8	REACTOME_PATHWAY:R-HSA-9824446~Viral Infection Pathways
+plrg1	MGD:MP:0003077~abnormal cell cycle
+agt	MGD:MP:0006376~decreased circulating angiotensinogen level
+ppia	GO:0006915
+hook1	GO:0005856
+ilf3	GO:0003727
+LOC100689934	GO:0016311
+aldh1a2	DISGENET:C0086743~Osteoarthrosis Deformans
+fdps	GO:0033384
+LOC102082062	
+xk	DISGENET:C0393576~Chorea Acanthocytosis Syndrome
+stard10	
+sulf1	GO:0002063
+ripk4	GO:0006468
+atr	HPO:HP:0001596~Alopecia
+golm1	CRB:CRB:XXX~No CRB phenotype
+ccdc61	UP_TISSUE:Erythroleukemia
+znf830	GENOMICS_ENGLAND:CXXX~No diseases associated
+wdr12	MGD:MP:0003064~decreased coping response
+LOC100703553	MGD:MP:0001219~thick epidermis
+LOC100708039	DISGENET:C0678222~Breast Carcinoma
+LOC100699461	GAD_DISEASE:Tobacco Use Disorder
+LOC100699105	GAD_DISEASE:Angina pectoris|Myocardial Infarction
+fastkd2	GO:0006396
+LOC100689871	MGD:MP:0001925~male infertility
+chek1	GO:0005524
+adra2a	GO:0004938
+kif13a	GO:0010008
+ndufb9	GO:0007605
+tmprss6	GO:0005886
+LOC100711184	GO:0006468
+LOC100712547	CRB:CRB:0000028~Association with Survival PSAP KO CRISPRi in Glutamatergic Neuron
+mak	GO:0005737
+arhgap5	REACTOME_PATHWAY:R-HSA-9013026~RHOB GTPase cycle
+ret	GAD_DISEASE:Down Syndrome|Hirschsprung Disease|Nondisjunction, Genetic
+LOC100692869	UP_TISSUE:Brain
+usp9x	GO:0016020
+cul4b	GO:0016567
+msh5	GO:0140664
+gatd1	GO:0005737
+arl2	GO:0005856
+LOC100691573	MGD:MP:0002725~abnormal vein morphology
+LOC100695192	REACTOME_PATHWAY:R-HSA-69620~Cell Cycle Checkpoints
+epg5	MGD:MP:0000939~decreased motor neuron number
+tbc1d8	UP_TISSUE:Brain
+LOC100694047	GO:0016020
+LOC100704479	HPO:HP:0000316~Hypertelorism
+LOC100705749	MGD:MP:0011380~enlarged brain ventricles
+tbx1	GO:0097152
+gmpr	ORPHANET:CXXX~No diseases associated
+nfasc	MGD:MP:0005402~abnormal action potential
+LOC102082062	
+atf3	MGD:MP:0005533~increased body temperature
+LOC100695155	REACTOME_PATHWAY:R-HSA-73887~Death Receptor Signaling
+cnot3	GO:0006355
+cideb	GO:0097194
+LOC100710883	DISGENET:C0029408~Degenerative polyarthritis
+LOC100691234	GO:1904315
+LOC100702324	GO:0042391
+styxl1	GO:0004864
+LOC100707418	HPO:HP:0002355~Difficulty walking
+med27	REACTOME_PATHWAY:R-HSA-9824446~Viral Infection Pathways
+LOC100704394	GO:1901642
+mtor	CTD:C0334634~Malignant lymphoma, lymphocytic, intermediate differentiation, diffuse
+pfdn5	MGD:MP:0010236~abnormal retina outer limiting membrane morphology
+rnf19a	MGD:MP:0009454~impaired contextual conditioning behavior
+arpp21	GO:0005737
+LOC100706012	REACTOME_PATHWAY:R-HSA-1630316~Glycosaminoglycan metabolism
+LOC100689844	GO:0005765
+anxa2	GO:0003723
+rabep1	GO:0005768
+cmpk1	GO:0019205
+zwilch	GO:0005829
+bmpr1b	GO:0004675
+prima1	GO:0045202
+trip11	HPO:HP:0000278~Retrognathia
+LOC100705942	GO:0045967
+LOC100701577	GO:0004713
+mmp2	GO:0048013
+sh3kbp1	REACTOME_PATHWAY:R-HSA-6807004~Negative regulation of MET activity
+mal2	GAD_DISEASE:Hippocampus
+gatad1	MGD:MP:XXX~No phenotype
+fam120b	REACTOME_PATHWAY:R-HSA-400206~Regulation of lipid metabolism by PPARalpha
+etfb	CTD:C1856401~Glutaric Aciduria IIA
+lg5h12orf10	
+LOC102082062	
+washc1	GO:0000145
+LOC100706932	GO:0030425
+tbk1	CLINGEN:CXXX~No diseases associated
+tbxt	GO:0000785
+znf821	PSYGENET:CXXX~No diseases associated
+crtap	GO:0005576
+ccm2	MGD:MP:0000297~abnormal atrioventricular cushion morphology
+evc2	HPO:HP:0000698~Conical tooth
+dmc1	GO:0000794
+rps20	GO:0006412
+dtna	GO:0030054
+rprd1a	GO:0006357
+gosr2	GO:0016020
+slc37a4	GO:0015297
+khsrp	UP_TISSUE:Cervix carcinoma
+sppl2a	MGD:MP:0008495~decreased IgG1 level
+yif1b	GO:0005515
+p2ry6	GO:0006909
+LOC100706673	GO:0019904
+stk38l	GO:0005524
+sumo1	GO:0005515
+ara	GO:0004879
+hdac6	GO:0045814
+creb3l2	GO:0005654
+ush1c	GO:1904970
+LOC100709409	GO:0015293
+LOC100534461	GO:0006355
+tec	KEGG_PATHWAY:hsa04660
+neu4	GO:0006629
+atrip	GO:0005634
+uxs1	GO:0005737
+LOC100705918	GO:0005634
+glrx3	GO:0045454
+ints2	CTD:CXXX~No diseases associated
+atp6ap2	GO:0005783
+LOC100704299	GO:0035005
+trnt1	GO:0042803
+psmd6	GO:0043161
+sema7a	GO:0050727
+dlgap2	GO:0023052
+LOC100707845	GO:0030855
+dock8	UP_TISSUE:Erythroleukemia
+pdgfra	GO:0043235
+LOC100697603	GO:0005829
+dcun1d3	GENOMICS_ENGLAND:CXXX~No diseases associated
+depdc5	DISGENET:C2239176~Liver carcinoma
+bace1	UP_TISSUE:Pancreas
+nipa1	GO:0005768
+seh1l	GO:0006999
+prdm4	REACTOME_PATHWAY:R-HSA-193704~p75 NTR receptor-mediated signalling
+ctdp1	GO:0001096
+unc119b	CTD:CXXX~No diseases associated
+LOC100705827	GO:0007165
+slc4a2	GO:0005452
+ubr2	GO:0007140
+LOC100700539	GO:0005829
+vldlr	
+rasa1	GO:0005102
+LOC100705749	GO:0099073
+os9	GO:0005783
+LOC100704453	GO:0048193
+lg12h9orf116	GO:0005879
+wasf1	HPO:HP:0002816~Genu recurvatum
+arnt2	GO:0003700
+LOC100707667	GO:0061630
+bcor	GO:0003714
+kcnj3	GO:0005242
+eif2b1	GO:0006412
+b4galnt1	GO:0003947
+ppard	GO:0000122
+trim32	GO:0010994
+stt3a	GO:0018279
+srcin1	MGD:MP:0002912~abnormal excitatory postsynaptic potential
+igsf8	HPO:HPO:XXX~No HPO phenotype
+LOC100534452	GO:0031982
+hdac8	GO:0006325
+LOC100701934	HPO:HP:0007678~Lacrimal duct stenosis
+eef1d	GO:0005853
+LOC102082062	GO:0030621
+cnot1	HPO:HP:0001250~Seizure
+gns	HPO:HP:0000664~Synophrys
+hmbs	MGD:MP:0003313~abnormal locomotor activation
+slc6a3	CTD:C2751067~Parkinsonism-Dystonia, Infantile
+adam10	REACTOME_PATHWAY:R-HSA-2894858~Signaling by NOTCH1 HD+PEST Domain Mutants in Cancer
+slc6a15	UP_TISSUE:Cerebellum
+LOC100710831	GO:0016020
+dcaf11	GO:0016567
+LOC100698798	GO:0031410
+LOC100712579	MGD:MP:0008950~ventricular tachycardia
+LOC100697802	GO:0004623
+LOC100708121	GO:0015031
+LOC100695192	GO:0003677
+LOC109204597	GO:0016020
+igf1	GAD_DISEASE:Multiple Myeloma
+LOC100712562	HPO:HP:0000047~Hypospadias
+LOC100693325	GO:0005739
+LOC100690208	GO:0032693
+pcnx2	ORPHANET:CXXX~No diseases associated
+snx25	GO:0016020
+LOC102082062	
+med10	GO:0005634
+itgb1	GO:0008305
+LOC100689844	GO:0070613
+fmr1	GO:0002151
+LOC100702878	GO:0005829
+rexo4	GO:0005634
+aprt	GO:0016740
+hcn4	GO:0005249
+fgfr1op	GO:0006469
+ppm1b	GO:0005829
+fat4	UP_TISSUE:Lymph node
+pip4k2c	GO:0005886
+p2rx4	GO:0034220
+smg6	GO:0051972
+rgl1	GO:0007165
+LOC100696694	GO:0038203
+plat	MGD:MP:0005048~abnormal thrombosis
+psmd12	REACTOME_PATHWAY:R-HSA-9013694~Signaling by NOTCH4
+cd200	GO:0005886
+sec13	GO:0090110
+stra6	HPO:HP:0030680~Abnormality of cardiovascular system morphology
+rfxap	HPO:HP:0031390~Reduced MHC II surface expression
+ptch1	DISGENET:C3711390~9q22.3 Microdeletion
+LOC100701520	GO:0010008
+chek1	MGD:MP:0001882~abnormal lactation
+cpt2	HPO:HP:0011675~Arrhythmia
+LOC100704048	UP_TISSUE:Eye
+hsd3b7	MGD:MP:0005278~abnormal cholesterol homeostasis
+mrpl18	GO:0032543
+LOC100708927	GO:0005886
+ptpa	GO:0043666
+plod2	
+sms	HPO:HP:0000319~Smooth philtrum
+LOC100704529	GENOMICS_ENGLAND:CXXX~No diseases associated
+vps53	GO:0005768
+nod2	GAD_DISEASE:sarcoidosis
+tada3	REACTOME_PATHWAY:R-HSA-74160~Gene expression (Transcription)
+arhgap35	REACTOME_PATHWAY:R-HSA-9013026~RHOB GTPase cycle
+LOC100706409	MGD:MP:0005016~decreased lymphocyte cell number
+nampt	MGD:MP:0008450~retinal photoreceptor degeneration
+LOC100692904	HPO:HP:0001337~Tremor
+LOC100708037	CTD:CXXX~No diseases associated
+tctn3	DISGENET:C0152427~Polydactyly
+pds5b	GO:0005515
+LOC100701681	MGD:MP:0001859~kidney inflammation
+ezh2	DISGENET:C0030044~Acrocephaly
+ift140	HPO:HP:0000889~Abnormality of the clavicle
+atp7a	GO:0005515
+zfp64	GO:0046872
+LOC100707971	MGD:MP:0003402~decreased liver weight
+flt1	GO:0030335
+sept5	MGD:MP:0001364~decreased anxiety-related response
+gdf3	HPO:HP:0004635~Cervical C5/C6 vertebrae fusion
+LOC100694078	GO:0042802
+herc2	REACTOME_PATHWAY:R-HSA-69473~G2/M DNA damage checkpoint
+LOC100691274	GO:0000981
+gtpbp3	HPO:HP:0012751~Abnormal basal ganglia MRI signal intensity
+rab23	GO:0030054
+LOC100694501	REACTOME_PATHWAY:R-HSA-199991~Membrane Trafficking
+prkcd	GO:0035556
+polr1e	GO:0005634
+pin4	GO:0005654
+rab27a	GO:0019003
+mcu	GO:0070588
+jak1	MGD:MP:0004945~abnormal bone resorption
+LOC100699838	DISGENET:C0013261~Duane Retraction Syndrome
+abat	GENOMICS_ENGLAND:C0342708~Gamma aminobutyric acid transaminase deficiency
+rbm8a	UP_TISSUE:Umbilical cord blood
+spire2	GO:0003779
+setd9	ORPHANET:CXXX~No diseases associated
+pltp	GO:0120014
+mfsd4b	GO:0055085
+dpf1	GO:0070316
+masp2	REACTOME_PATHWAY:R-HSA-166658~Complement cascade
+LOC100707235	KEGG_PATHWAY:hsa00860
+nr2f1	HPO:HP:0000411~Protruding ear
+ano10	CTD:C0752120~Spinocerebellar Ataxia Type 1
+znf385c	CLINGEN:CXXX~No diseases associated
+ammecr1	GO:0005634
+LOC100690332	MGD:MP:0030069~broad face
+itga9	GO:0007229
+glrx5	HPO:HP:0001260~Dysarthria
+ntrk2	GO:0043410
+pax3	GO:0000981
+LOC100694232	MGD:MP:0001147~small testis
+LOC100706350	MGD:MP:0001292~abnormal lens vesicle development
+rad51d	GO:0000166
+ubr1	REACTOME_PATHWAY:R-HSA-1280218~Adaptive Immune System
+tnip2	GO:0070530
+LOC100693357	GO:0030672
+st3gal3	GO:0032580
+insm1	GO:0007399
+LOC102082062	
+LOC102075582	GO:0010801
+fosl1	GO:0005634
+LOC100694653	CTD:C0010674~Cystic Fibrosis
+rasal1	
+gtf2h1	REACTOME_PATHWAY:R-HSA-674695~RNA Polymerase II Pre-transcription Events
+mest	GO:0070062
+bbs10	UNIPROT:C1859568~BARDET-BIEDL SYNDROME 10
+cspg4	REACTOME_PATHWAY:R-HSA-3560782~Diseases associated with glycosaminoglycan metabolism
+LOC100712332	GO:0030425
+asns	GO:0004066
+pc	GO:0003824
+LOC100701832	UP_TISSUE:Testis
+LOC100710669	GO:0008236
+nek1	GO:0016301
+hras	KEGG_PATHWAY:hsa05221
+LOC100701740	GO:0019899
+LOC100711419	GO:0001782
+dbndd1	ORPHANET:CXXX~No diseases associated
+itga4	GO:0005886
+pick1	
+polr1e	REACTOME_PATHWAY:R-HSA-73854~RNA Polymerase I Promoter Clearance
+taf6	GO:0046982
+serpine1	REACTOME_PATHWAY:R-HSA-114608~Platelet degranulation 
+rps15a	GO:0006412
+LOC100693310	CGI:CXXX~No diseases associated
+LOC100707558	UP_TISSUE:Embryonic stem cell
+cacna1s	MGD:MP:0010053~decreased grip strength
+stra6	GO:0060322
+LOC102082062	
+epm2a	GO:0005789
+slc7a5	GO:0150104
+glra1	MGD:MP:0001925~male infertility
+ercc2	GO:0006366
+ift46	GO:0050821
+LOC100690562	KEGG_PATHWAY:hsa04910
+LOC100694327	GO:0003779
+gnas	GO:0031683
+kif7	GO:0007018
+scoc	GO:0005794
+catip	PSYGENET:CXXX~No diseases associated
+kdm6a	HPO:HP:0002024~Malabsorption
+kras	HPO:HP:0000126~Hydronephrosis
+chd2	MGD:MP:0010138~arteritis
+LOC100712260	GO:0070062
+LOC100712450	GO:0005515
+dot1l	MGD:MP:0001698~decreased embryo size
+ncoa6	MGD:MP:0005033~abnormal trophoblast giant cell morphology
+LOC102082062	
+tnfaip3	DISGENET:C0007621~Neoplastic Cell Transformation
+rfxap	HPO:HP:0002583~Colitis
+LOC102077946	GO:0004896
+LOC100697206	GO:0006836
+dag1	GO:0021682
+LOC100710105	GO:0055085
+mto1	GO:0008033
+eif2b5	GAD_DISEASE:Type 2 Diabetes| edema | rosiglitazone
+LOC100709003	MGD:MP:0004985~decreased osteoclast cell number
+cdipt	GO:0003881
+ldlr	MGD:MP:0003099~retinal detachment
+fam20a	HPO:HP:0000684~Delayed eruption of teeth
+socs6	GO:0006952
+dync2h1	HPO:HP:0001305~Dandy-Walker malformation
+ndufb3	GO:0070469
+mfsd8	GO:0055085
+enpep	
+cbfb	REACTOME_PATHWAY:R-HSA-8936459~RUNX1 regulates genes involved in megakaryocyte differentiation and platelet function
+eef2	GO:0005829
+LOC100705055	GO:0046540
+LOC100709350	GO:0000166
+galnt1	GO:0033116
+gbf1	GO:0005085
+atrx	HPO:HP:0000164~Abnormality of the dentition
+slc19a1	GAD_DISEASE:red cell folate concentrations
+cdk2ap1	GO:0001934
+sox10	GO:0022010
+LOC100708840	DISGENET:C0015814~Femur Head Necrosis
+LOC100697675	MGD:MP:0000163~abnormal cartilage morphology
+nup98	CTD:C2930975~Acute erythroleukemia - M6a subtype
+carm1	CTD:C0033860~Psoriasis
+spry2	MGD:MP:0004401~increased cochlear outer hair cell number
+LOC100701437	GO:0005262
+ppp2r5d	REACTOME_PATHWAY:R-HSA-68877~Mitotic Prometaphase
+psmd1	UP_TISSUE:Placenta
+tada2a	GO:0005634
+LOC100704395	DISGENET:C0042138~Uterine Neoplasms
+LOC100694220	MGD:MP:0008271~abnormal bone ossification
+tpo	GO:0004601
+fmn1	MGD:MP:0009728~abnormal calcaneum morphology
+pmpca	HPO:HP:0002317~Unsteady gait
+actb	GAD_DISEASE:monocyte chemoattractant protein 1 (66-77)
+efl1	GO:0003924
+rora	HPO:HP:0000750~Delayed speech and language development
+mutyh	GO:0005739
+mre11	GO:0030870
+tm9sf1	CTD:CXXX~No diseases associated
+LOC100710029	GO:0006397
+rora	HPO:HP:0001251~Ataxia
+cacna1c	HPO:HP:0004751~Paroxysmal ventricular tachycardia
+il7r	GAD_DISEASE:Lymphopenia|SCID|Severe Combined Immunodeficiency
+prkaa1	GO:0031588
+ap2s1	GO:0016192
+LOC100698400	KEGG_PATHWAY:hsa00190
+usp7	GO:1901537
+slc39a8	GO:1990540
+taf11	GO:0003713
+raf1	DISGENET:C4551602~Noonan Syndrome 1
+dst	GO:0005515
+LOC100691573	GO:0005524
+LOC100695091	GO:0005654
+amacr	CTD:C0376358~Malignant neoplasm of prostate
+six1	MGD:MP:0013541~abnormal submandibular gland development
+chchd4	GO:0033108
+mlycd	GO:0005759
+pc	GO:0000166
+gp1bb	REACTOME_PATHWAY:R-HSA-75892~Platelet Adhesion to exposed collagen
+rps6	CRB:CRB:0000033~Negative hit with Reactive Oxygen Species (CellRox Intensity) in Glutamatergic Neuron
+lbr	REACTOME_PATHWAY:R-HSA-9013106~RHOC GTPase cycle
+alg8	GO:0016758
+slc35b1	CLINGEN:CXXX~No diseases associated
+srp14	GO:0003723
+aptx	GO:0003690
+ckb	GO:0016301
+hyou1	GO:0000774
+LOC100706459	UP_TISSUE:Leukemic T-cell
+pth1r	GO:0004888
+ralb	UP_TISSUE:Thymus
+maco1	GO:0003674
+ggcx	
+mtmr2	GO:0006629
+tpd52	GO:0005737
+nup153	REACTOME_PATHWAY:R-HSA-3108232~SUMO E3 ligases SUMOylate target proteins
+xaf1	GO:0005634
+marco	PSYGENET:CXXX~No diseases associated
+LOC102082062	
+LOC100707936	REACTOME_PATHWAY:R-HSA-9772572~Early SARS-CoV-2 Infection Events
+alk	UNIPROT:C2751681~NEUROBLASTOMA, SUSCEPTIBILITY TO, 3
+adamts9	GAD_DISEASE:Waist-Hip Ratio
+elfn1	GO:0004864
+aptx	GO:0033699
+rpl21	REACTOME_PATHWAY:R-HSA-156902~Peptide chain elongation
+col4a2	MGD:MP:0013936~abnormal thymus topology
+tbc1d31	GO:0036064
+pink1	GO:1904881
+pik3cd	GO:0016310
+efemp1	DISGENET:C0024121~Lung Neoplasms
+ppm1g	UP_TISSUE:Skeletal muscle
+malsu1	UP_TISSUE:Cerebellum
+nkx3-2	MGD:MP:0003283~abnormal digestive organ placement
+macrod2	GAD_DISEASE:Amyotrophic Lateral Sclerosis|
+kcnc1	GO:0071805
+fbn1	MGD:MP:0001505~hunched posture
+LOC100708734	GO:0032480
+LOC100708824	GO:0005654
+p53	GO:0006978
+rilpl1	ORPHANET:CXXX~No diseases associated
+gnas	CTD:C0033806~Pseudohypoparathyroidism
+ikbkg	REACTOME_PATHWAY:R-HSA-168256~Immune System
+tmem231	HPO:HP:0003774~Stage 5 chronic kidney disease
+ryr3	CRB:CRB:0000018~Negative hit with Survival No Antioxidants CRISPRi in Glutamatergic Neuron
+il16	GO:0005615
+atf2	REACTOME_PATHWAY:R-HSA-975871~MyD88 cascade initiated on plasma membrane
+LOC100695063	GO:0043231
+ski	MGD:MP:0004607~abnormal cervical atlas morphology
+cacna1c	GO:0005886
+smarcc2	GO:0045893
+edil3	MGD:MP:0011380~enlarged brain ventricles
+ndufb8	GO:0006120
+rab3ip	GO:0060271
+orc4	GO:0003688
+LOC100699225	GO:0050995
+LOC100707476	GO:0071542
+LOC100711622	CRB:CRB:0000047~Positive hit with Survival CRISPRi in Glutamatergic Neuron
+nlgn1	GAD_DISEASE:Tobacco Use Disorder
+madd	
+foxp1	GO:0048661
+nbl1	GO:0007399
+mphosph6	GO:0000460
+vps37b	ORPHANET:CXXX~No diseases associated
+LOC100707845	
+bdnf	GO:0007169
+atp13a2	CTD:C0268281~Infantile neuronal ceroid lipofuscinosis
+slc44a4	GO:0055085
+jund	MGD:MP:0005560~decreased circulating glucose level
+LOC100696265	REACTOME_PATHWAY:R-HSA-446388~Regulation of cytoskeletal remodeling and cell spreading by IPP complex components
+LOC100707752	CLINGEN:C0751202~Cystathionine beta-Synthase Deficiency Disease
+LOC100709858	KEGG_PATHWAY:hsa04068
+eif4a3	GO:0016607
+synpo	GO:0005737
+ada	MGD:MP:0002376~abnormal dendritic cell physiology
+hexb	CTD:C0036161~Sandhoff Disease
+mccc2	GO:0004485
+LOC100706019	GO:0036122
+cobl	GO:0051639
+dera	GO:0004139
+col1a2	MGD:MP:0003723~abnormal long bone morphology
+LOC100698415	GO:0043065
+dock1	GO:0005737
+LOC100708442	GO:0034976
+cdc40	GO:0071013
+rpl13a	MGD:MP:0003058~increased insulin secretion
+LOC100694149	GO:0003743
+hnrnpa3	GO:0005634
+fabp2	GAD_DISEASE:coronary artery disease
+LOC100689790	HPO:HP:0003025~Metaphyseal irregularity
+rragc	GO:0005525
+frmd3	GAD_DISEASE:diabetes, type 1 
+mpp7	GO:0071896
+LOC100705642	DISGENET:C0206368~Exfoliation Syndrome
+ska1	GO:0000775
+gripap1	GO:0016020
+LOC100692650	REACTOME_PATHWAY:R-HSA-1430728~Metabolism
+LOC100695758	GO:0043231
+LOC100699171	GO:0005634
+gba	GO:0050295
+ogg1	REACTOME_PATHWAY:R-HSA-5649702~APEX1-Independent Resolution of AP Sites via the Single Nucleotide Replacement Pathway
+fblim1	GO:0001650
+pomt1	HPO:HP:0000050~Hypoplastic male external genitalia
+LOC100534461	GO:0001228
+plekhg5	GENOMICS_ENGLAND:C3809309~CHARCOT-MARIE-TOOTH DISEASE, RECESSIVE INTERMEDIATE C
+mmp2	DISGENET:C0376634~Craniofacial Abnormalities
+dst	GO:0005634
+LOC100705499	GO:0016020
+med21	REACTOME_PATHWAY:R-HSA-1266738~Developmental Biology
+bmp4	GO:0072104
+esyt2	UP_TISSUE:Brain
+csk	CRB:CRB:0000022~Association with Survival No Antioxidants PSAP KO CRISPRi in Glutamatergic Neuron
+pparg	GO:0051716
+phgdh	HPO:HP:0000007~Autosomal recessive inheritance
+rpl17	REACTOME_PATHWAY:R-HSA-72312~rRNA processing
+slc6a1	DISGENET:C0002736~Amyotrophic Lateral Sclerosis
+LOC100708840	DISGENET:C0684276~Hypsarrhythmia
+abl1	DISGENET:C0205643~Carcinoma, Cribriform
+LOC100698318	GO:0005911
+LOC102079463	MGD:MP:0002114~abnormal axial skeleton morphology
+numb	GO:0050769
+ube2c	CTD:C0006142~Malignant neoplasm of breast
+mettl9	GO:0032259
+chdh	GO:0019285
+LOC100689728	REACTOME_PATHWAY:R-HSA-162582~Signal Transduction
+ppid	CTD:CXXX~No diseases associated
+polg	HPO:HP:0002151~Increased serum lactate
+rassf1	CLINGEN:CXXX~No diseases associated
+baz2b	
+rida	
+pax5	MGD:MP:0002169~no abnormal phenotype detected
+nfatc4	GO:0005829
+sgf29	DISGENET:C3658290~Drug-Induced Acute Liver Injury
+npnt	GO:0016020
+LOC102082062	
+nudt2	CRB:CRB:XXX~No CRB phenotype
+rab5c	GO:0005525
+pink1	MGD:MP:0005621~abnormal cell physiology
+ap5s1	GO:0005829
+frmd4a	DISGENET:C0013222~Drug Use Disorders
+cars	GO:0004812
+stard3	GO:0016020
+glb1	HPO:HP:0000648~Optic atrophy
+pola1	HPO:HP:0000837~Increased circulating gonadotropin level
+clstn3	GO:0005509
+ngly1	HPO:HP:0008151~Prolonged prothrombin time
+chek2	GO:0006974
+cpe	GO:0050839
+gpr119	REACTOME_PATHWAY:R-HSA-381771~Synthesis, secretion, and inactivation of Glucagon-like Peptide-1 (GLP-1)
+LOC100705952	DISGENET:C0033975~Psychotic Disorders
+kmt2a	GO:0003677
+LOC100706082	GAD_DISEASE:Amyotrophic Lateral Sclerosis|
+LOC100703194	GO:0008379
+ndufs6	MGD:MP:0000274~enlarged heart
+b3gntl1	
+LOC100694718	GO:0019787
+LOC100711328	GO:0016740
+rrp7a	GO:0001825
+LOC100696873	REACTOME_PATHWAY:R-HSA-1266738~Developmental Biology
+ubtf	GO:0001181
+tshr	UNIPROT:C1836706~Hyperthyroidism, Nonautoimmune
+LOC100703716	GO:0071949
+cftr	DISGENET:C0038586~Substance Use Disorders
+LOC100702251	GO:0005634
+LOC100692353	DISGENET:C0024623~Malignant neoplasm of stomach
+LOC100700859	MGD:MP:0002269~muscular atrophy
+LOC100705898	GO:0005769
+cps1	GO:0000050
+gata4	GO:0045165
+LOC100698598	CRB:CRB:0000025~Association with Survival PSAP KO CRISPRa in Glutamatergic Neuron
+LOC102082062	
+LOC100696542	HPO:HP:0100543~Cognitive impairment
+LOC100701321	GO:0005886
+phgdh	GO:0051287
+LOC100707164	
+gad2	CTD:C0149958~Complex partial seizures
+ndufaf3	GENOMICS_ENGLAND:C4748790~MITOCHONDRIAL COMPLEX I DEFICIENCY, NUCLEAR TYPE 18
+LOC100691573	GO:0001707
+LOC102082062	
+prkd1	GO:0004674
+nelfe	GO:0003723
+LOC100701022	GO:0003841
+dusp10	GO:0004722
+nsa2	CGI:CXXX~No diseases associated
+atp6v1f	GO:0045202
+LOC100707214	MGD:MP:0008727~enlarged heart right atrium
+LOC100707580	GO:0036120
+fgfr3	HPO:HP:0001387~Joint stiffness
+mfsd4b	REACTOME_PATHWAY:R-HSA-425407~SLC-mediated transmembrane transport
+tmem214	
+LOC100700469	ORPHANET:C0271091~Retinoschisis, Juvenile, X-Linked
+yipf3	ORPHANET:CXXX~No diseases associated
+thbs1	GO:0043236
+LOC100702878	GO:0005829
+vipr1	MGD:MP:0001393~ataxia
+p2rx4	KEGG_PATHWAY:hsa04020
+LOC100702251	GO:0016573
+nat10	GO:0000781
+ogfod3	
+dpys	HPO:HP:0001357~Plagiocephaly
+mpp1	GO:0005886
+LOC100705716	GO:0032869
+LOC100709544	GO:0106245
+pomt1	GO:0005789
+mapk10	GO:0004705
+arx	GO:0006355
+ntrk2	GO:0030424
+trmt10a	HPO:HP:0000592~Blue sclerae
+exoc5	GO:0090148
+LOC100695257	MGD:MP:0003083~abnormal tibialis anterior morphology
+LOC100706140	GO:1990904
+LOC100694039	GO:0016787
+LOC100698882	GO:0007399
+p4hb	GO:0005515
+ccndbp1	GO:0051726
+pcf11	GO:0000993
+maz	MGD:MP:0011923~abnormal bladder urine volume
+LOC100696606	KEGG_PATHWAY:hsa04512
+aplp1	GO:0005886
+kdr	MGD:MP:0012757~abnormal cranial neural crest cell migration
+cacna1g	GO:0005261
+nup35	REACTOME_PATHWAY:R-HSA-176033~Interactions of Vpr with host cellular proteins
+rag1	MGD:MP:0004947~skin inflammation
+alkbh2	GO:0005654
+adat3	HPO:HP:0002553~Highly arched eyebrow
+chodl	GO:0007399
+ampd1	GO:0009168
+tcf21	MGD:MP:0009890~cleft secondary palate
+LOC100697652	GO:0045728
+vav3	MGD:MP:0005662~increased circulating adrenaline level
+cnp	UP_TISSUE:Erythroleukemia
+LOC100690208	GO:0005055
+LOC100697933	UP_TISSUE:Brain
+wnt16	MGD:MP:0010968~decreased compact bone area
+shbg	GO:0005576
+pomgnt2	DISGENET:C4284790~Muscular Dystrophy-Dystroglycanopathy (Congenital with Brain and Eye Anomalies) Type A, 1
+kbtbd2	CGI:CXXX~No diseases associated
+agtr1	GO:0007266
+nphp4	MGD:MP:0003731~abnormal retinal outer nuclear layer morphology
+lig3	CTD:CXXX~No diseases associated
+LOC102082062	
+hapln4	GO:0007417
+rpl24	REACTOME_PATHWAY:R-HSA-8953897~Cellular responses to stimuli
+ung	GO:0016787
+pycr3	GO:0006561
+idua	MGD:MP:0003974~abnormal endocardium morphology
+atp6v1a	GO:0016469
+LOC100697502	MGD:MP:0008140~podocyte foot process effacement
+hells	GO:0044027
+p53	GO:0005634
+bub3	HPO:HP:0010880~Increased nuchal translucency
+LOC100707019	MGD:MP:0011939~increased food intake
+cd109	GO:0004867
+LOC100701917	GO:0007160
+p53	CTD:C0345904~Malignant neoplasm of liver
+LOC100706088	HPO:HP:0005280~Depressed nasal bridge
+dnm1	GO:0098978
+uhrf1	GO:0003677
+ano6	GO:0006821
+rbx1	REACTOME_PATHWAY:R-HSA-2894858~Signaling by NOTCH1 HD+PEST Domain Mutants in Cancer
+iqgap1	DISGENET:C0023893~Liver Cirrhosis, Experimental
+ngly1	HPO:HP:0002540~Inability to walk
+tex261	MGD:MP:0003960~increased lean body mass
+anapc11	GO:0016567
+kcnc2	GO:0016323
+LOC100705914	MGD:MP:0010400~increased liver glycogen level
+traip	HPO:HP:0002750~Delayed skeletal maturation
+rad52	GO:2000819
+dmpk	GO:0031966
+nrp1	MGD:MP:0001077~abnormal spinal nerve morphology
+elavl3	
+mlh3	HPO:HP:0001824~Weight loss
+hal	GO:0003824
+LOC100702792	UP_TISSUE:Liver
+prdm5	HPO:HP:0000563~Keratoconus
+elavl2	GAD_DISEASE:Hemoglobins
+LOC100702967	GO:0004558
+LOC100692380	HPO:HP:0001488~Bilateral ptosis
+LOC100695450	GO:0010666
+dyrk1a	GO:0005634
+ubap2l	GO:0005515
+LOC100707847	MGD:MP:0001360~abnormal social investigation
+fh	KEGG_PATHWAY:hsa01100
+prpf38b	CLINGEN:CXXX~No diseases associated
+tgfb1i1	GO:0030855
+fah	GO:0006559
+slc6a1	GO:0051936
+LOC100694062	CTD:C0010606~Adenoid Cystic Carcinoma
+dglucy	GO:0003674
+nbas	UNIPROT:C3541319~SHORT STATURE, OPTIC NERVE ATROPHY, AND PELGER-HUET ANOMALY
+bckdk	GO:0016772
+glut1	GAD_DISEASE:diabetic nephropathy.
+myo7a	GO:0042490
+LOC100702293	GENOMICS_ENGLAND:CXXX~No diseases associated
+xpnpep3	GO:0004177
+fktn	HPO:HP:0100578~Lipoatrophy
+LOC102082062	
+LOC100702695	GO:0006879
+mme	GO:0097242
+prr7	GO:0048471
+LOC100712449	HPO:HP:0000729~Autistic behavior
+mrps27	GO:0005763
+sh2b3	GO:0038163
+fance	DISGENET:C0023465~Acute monocytic leukemia
+LOC100696665	MGD:MP:0008918~microgliosis
+LOC100706346	GAD_DISEASE:warfarin therapy, response to
+pde8b	HPO:HP:0002395~Lower limb hyperreflexia
+LOC100709284	GO:0030018
+adgrb1	GO:0014069
+LOC100692530	GO:0005654
+LOC100707336	GO:0051048
+LOC100707394	MGD:MP:0001716~abnormal placenta labyrinth morphology
+ube2i	GO:0005654
+rif1	GO:0000781
+eefsec	GENOMICS_ENGLAND:CXXX~No diseases associated
+qki	MGD:MP:0002064~seizures
+adar	GO:0005737
+LOC100702031	GO:0031105
+gps2	GO:0010804
+LOC102082577	GO:0005654
+tg	MGD:MP:0008207~decreased B-2 B cell number
+LOC100709243	UP_TISSUE:Brain
+sptan1	GO:0015629
+abhd5	GO:0008654
+xrn1	GO:0005829
+LOC100691587	GO:0032981
+rbp4	GO:0060347
+LOC100691710	GO:0043066
+nedd4l	GO:0016567
+ncoa1	GO:0005634
+ube2b	MGD:MP:0010948~abnormal double-strand DNA break repair
+mrpl3	REACTOME_PATHWAY:R-HSA-5389840~Mitochondrial translation elongation
+LOC100704700	GAD_DISEASE:several psychiatric disorders
+plvap	CRB:CRB:XXX~No CRB phenotype
+ddx21	CRB:CRB:0000046~Association with Survival CRISPRi in Glutamatergic Neuron
+lmtk2	CTD:C0376358~Malignant neoplasm of prostate
+musk	MGD:MP:0002083~premature death
+LOC100698426	GO:0005385
+vars	
+b4galnt1	GO:0019915
+LOC100691077	GO:0051281
+rreb1	GO:0090336
+LOC100708550	UP_TISSUE:Ovarian carcinoma
+nfkbia	GO:0010888
+LOC100701476	KEGG_PATHWAY:hsa01100
+gpsm1	GO:0030154
+plat	DISGENET:C0393953~Anterior Cerebral Circulation Infarction
+LOC102082062	
+LOC100698207	GO:0060536
+rhot2	CRB:CRB:XXX~No CRB phenotype
+dcps	HPO:HP:0000750~Delayed speech and language development
+LOC100712562	GO:0019901
+nid1	HPO:HP:0000175~Cleft palate
+nfkb1	GAD_DISEASE:Abortion, Spontaneous
+cnih4	GO:0016192
+col1a1	MGD:MP:0005324~ascites
+bcl6b	GO:0001227
+mtor	GO:0031410
+park7	GO:0005783
+golga2	GO:0005794
+pax3	HPO:HP:0000430~Underdeveloped nasal alae
+LOC100697588	GO:0005246
+atg4c	GAD_DISEASE:Fibrinogen
+hps5	UP_TISSUE:Embryonic kidney
+psme3	GO:0008537
+ehmt2	GO:0016279
+dpf1	GO:0000785
+LOC100695496	REACTOME_PATHWAY:R-HSA-168256~Immune System
+LOC100689797	GO:0005886
+myo1c	GO:0042995
+mastl	GO:0005654
+LOC100699771	GO:0006220
+pde9a	GO:0005829
+tekt3	CTD:CXXX~No diseases associated
+med17	CTD:C0269102~Endometrioma
+LOC100707845	GO:0005576
+tctn3	HPO:HP:0000496~Abnormality of eye movement
+nsmaf	REACTOME_PATHWAY:R-HSA-73887~Death Receptor Signaling
+mettl5	GO:0043414
+stk17b	GO:0016301
+LOC100701131	GAD_DISEASE:Eosinophils
+LOC100710242	GO:0080025
+p53	REACTOME_PATHWAY:R-HSA-6804754~Regulation of TP53 Expression
+LOC100708956	GO:0090543
+tubd1	GO:0005737
+naglu	MGD:MP:0005201~abnormal retinal pigment epithelium morphology
+ip6k1	GO:0005524
+tuft1	GAD_DISEASE:Dental Caries
+casr	GAD_DISEASE:Hypocalcemia|Hypocalcemia result
+LOC102082062	
+LOC100706346	GO:0007596
+sqstm1	GO:0031410
+foxp1	CTD:C4552091~Polyarthritis, Juvenile, Rheumatoid Factor Negative
+LOC102082062	
+LOC100698817	GO:0007165
+cul4a	GO:0006974
+tyk2	REACTOME_PATHWAY:R-HSA-110056~MAPK3 (ERK1) activation
+LOC100690815	GO:0005634
+cacna1c	GO:0043010
+msh2	MGD:MP:0008770~decreased survivor rate
+ccdc174	HPO:HP:0000486~Strabismus
+LOC102082062	
+iqub	GO:0007618
+LOC100702954	GO:0045893
+LOC100692100	UP_TISSUE:Liver
+aimp1	HPO:HP:0000280~Coarse facial features
+LOC100707142	GO:0005743
+sntg1	
+hdac6	GO:0030424
+fxn	GO:0008284
+LOC100702259	REACTOME_PATHWAY:R-HSA-9031628~NGF-stimulated transcription
+egf	DISGENET:C4510731~Familial primary hypomagnesemia with normocalciuria and normocalcemia
+cdca2	GO:0005654
+ankfy1	MGD:MP:0001407~short stride length
+LOC109195656	UP_TISSUE:Thalamus
+tp73	GO:0001228
+LOC100702684	DISGENET:C0033860~Psoriasis
+slc6a2	DISGENET:C1269683~Major Depressive Disorder
+scap	GO:0005794
+hmces	GO:0006508
+LOC100692170	CRB:CRB:0000048~Negative hit with Survival CRISPRi in Glutamatergic Neuron
+specc1l	HPO:HP:0000582~Upslanted palpebral fissure
+mafk	GO:0000976
+LOC100692939	MGD:MP:0006283~increased medulloblastoma incidence
+kpna3	GO:0005737
+gabpa	GO:0000976
+LOC100705070	GO:0034470
+LOC100708840	GO:0005576
+LOC100703880	GO:1990756
+LOC100706414	CGI:CXXX~No diseases associated
+nup188	REACTOME_PATHWAY:R-HSA-9705683~SARS-CoV-2-host interactions
+LOC100704868	GO:0030670
+syk	REACTOME_PATHWAY:R-HSA-1280215~Cytokine Signaling in Immune system
+madd	GO:0032483
+rfx3	MGD:MP:0004403~absent cochlear outer hair cells
+LOC100690111	CRB:CRB:0000048~Negative hit with Survival CRISPRi in Glutamatergic Neuron
+LOC102082412	GO:0071493
+fancl	GO:0043240
+egflam	MGD:MP:0004021~abnormal rod electrophysiology
+mical2	GO:0005737
+LOC109194175	HPO:HP:0007272~Progressive psychomotor deterioration
+cops3	GO:0009416
+chchd7	GO:0005739
+LOC100708867	UP_TISSUE:Liver
+brd1	GO:0043249
+LOC102082062	
+igf1	DISGENET:C0027746~Nerve Degeneration
+LOC100706673	GO:0070161
+mxd1	GO:0005515
+socs1	GO:0046426
+LOC100707174	GO:0004842
+cacna1c	GO:0061577
+sfxn4	GO:1990542
+LOC106098755	MGD:MP:0009408~decreased skeletal muscle fiber density
+LOC100692258	GO:0006826
+slc4a4	GO:0005515
+sqle	CTD:C0019208~Hepatoma, Novikoff
+p53	GO:1903451
+anxa2	GO:0005634
+trps1	HPO:HP:0002758~Osteoarthritis
+setdb1	GENOMICS_ENGLAND:CXXX~No diseases associated
+tbc1d20	
+ctnnb1	GO:0072079
+pofut1	GO:0016266
+arhgef26	GO:0005085
+LOC100704203	GO:0062023
+dixdc1	
+LOC100695498	GO:0110165
+LOC100698426	GO:0071577
+wdr34	HPO:HP:0000286~Epicanthus
+ryr2	GO:0003143
+fus	HPO:HP:0000741~Apathy
+LOC100703704	GO:0032991
+gba	GO:1905165
+psap	CRB:CRB:0000004~Association with Labile Iron (FeRhoNox Intensity) in Glutamatergic Neuron
+taf1a	GO:0006360
+LOC100706692	GO:0005254
+cspg4	GO:0005925
+cd226	GO:0019901
+LOC100705611	GO:0005886
+tab1	MGD:MP:0000278~abnormal myocardial fiber morphology
+LOC100695013	GO:0005525
+tpp1	GO:0006508
+agtr1	GAD_DISEASE:Diabetes Mellitus|Diabetic Angiopathies|Hypertension
+LOC100699860	MGD:MP:0001302~eyelids open at birth
+lg10hxorf57	GO:0005694
+rnd3	GO:0000166
+LOC100708638	
+serpine2	GO:0008201
+LOC100704625	GO:0045499
+far1	GO:0035336
+ltbp3	MGD:MP:0010872~increased trabecular bone mass
+LOC100698301	GO:0007165
+bag6	GO:0050821
+LOC100703476	GO:0001851
+LOC102078255	GO:0031295
+LOC100693550	MGD:MP:0005202~lethargy
+pfdn1	
+LOC100696267	HPO:HP:0000563~Keratoconus
+myo15a	
+myog	GO:0032993
+LOC100703974	GO:0042393
+lbr	REACTOME_PATHWAY:R-HSA-1640170~Cell Cycle
+LOC100698773	GO:0005777
+cadm3	REACTOME_PATHWAY:R-HSA-421270~Cell-cell junction organization
+mark2	GO:0070507
+LOC100708147	GO:0005856
+bag6	GO:0071818
+rbl1	MGD:MP:0002896~abnormal bone mineralization
+stam2	GO:0005654
+gabrd	KEGG_PATHWAY:hsa05033
+foxp1	GO:0032651
+ezh1	GO:0031507
+atp5if1	GO:0140260
+LOC100704346	GO:0007249
+pck2	GO:0071548
+ipo4	UP_TISSUE:Skin
+LOC100690208	GO:0034116
+LOC100710962	GO:0016055
+LOC100694887	CGI:CXXX~No diseases associated
+LOC100697389	GO:0061157
+LOC100709596	MGD:MP:XXX~No phenotype
+ralgps1	GO:0007265
+tmprss5	GAD_DISEASE:Blood Pressure Determination
+atg12	CRB:CRB:0000046~Association with Survival CRISPRi in Glutamatergic Neuron
+LOC100701567	HPO:HP:0001073~Cigarette-paper scars
+ppp2r5d	REACTOME_PATHWAY:R-HSA-168164~Toll Like Receptor 3 (TLR3) Cascade
+bbs2	GO:0042995
+LOC100692615	GO:0022617
+slx4	UP_TISSUE:Leukemic T-cell
+cct4	GO:1904871
+etfbkmt	GO:0005737
+anapc13	GO:0005680
+LOC100691991	MGD:MP:0008915~fused carpal bones
+fgfr3	HPO:HP:0006753~Neoplasm of the stomach
+p3h4	GO:0017185
+glra1	GO:0097305
+cpe	MGD:MP:0005137~increased growth hormone level
+abl1	CRB:CRB:0000025~Association with Survival PSAP KO CRISPRa in Glutamatergic Neuron
+cacna1g	GO:0005886
+hspa9	HPO:HP:0003196~Short nose
+LOC100694047	GO:0016020
+smox	GO:0052901
+lcat	CRB:CRB:XXX~No CRB phenotype
+LOC100693325	KEGG_PATHWAY:hsa04148
+LOC100708840	MGD:MP:0011957~decreased compensatory feeding amount
+galt	MGD:MP:0000872~abnormal cerebellum external granule cell layer morphology
+LOC100534461	MGD:MP:0030869~thyroid cartilage hypoplasia
+vipas39	HPO:HP:0000369~Low-set ears
+sfswap	
+lhx2	MGD:MP:0001577~anemia
+LOC100695857	MGD:MP:0000063~decreased bone mineral density
+pard3	GO:0070830
+adamts13	GO:0016485
+wdr92	GO:0120293
+LOC100708172	DISGENET:C0010606~Adenoid Cystic Carcinoma
+strada	GO:0005524
+LOC100707394	REACTOME_PATHWAY:R-HSA-5654741~Signaling by FGFR3
+atg16l1	MGD:MP:0030940~impaired autophagy
+LOC100706088	GO:0045944
+jpt2	GO:0005737
+LOC100699205	GO:0017018
+phox2b	GO:0048894
+cdc45	GO:0005515
+LOC100696649	GO:0017146
+hspb1	CTD:C0007102~Malignant tumor of colon
+LOC100691065	KEGG_PATHWAY:hsa04340
+LOC100712573	GO:0001569
+LOC100695702	GO:0005109
+dnm2	GO:0000166
+lypd6	GO:0016020
+ppp1cc	MGD:MP:0009839~multiflagellated sperm
+ube4b	GO:0005634
+hspd1	GO:0016020
+LOC100712564	DISGENET:C0752351~Embryo Loss
+LOC100694653	PSYGENET:C0005586~Bipolar Disorder
+LOC100704623	HPO:HP:0040288~Nasogastric tube feeding
+agt	GO:0005615
+synpo	MGD:MP:0001473~reduced long term potentiation
+pycr3	GO:0006561
+slc39a12	KEGG_PATHWAY:hsa05012
+tef	GO:0006357
+LOC100692649	DISGENET:C1720887~Female Urogenital Diseases
+alk	GAD_DISEASE:Hemoglobins
+bmp5	GO:0008285
+LOC100696266	MGD:MP:0008260~abnormal autophagy
+ednra	CTD:C0919267~ovarian neoplasm
+aasdhppt	UP_TISSUE:Liver
+kcnj6	GO:0015467
+mecp2	MGD:MP:0000788~abnormal cerebral cortex morphology
+vax1	GO:0006355
+tdrd9	HPO:HP:0011961~Non-obstructive azoospermia
+LOC100706281	KEGG_PATHWAY:hsa05205
+ndufv1	HPO:HP:0003737~Mitochondrial myopathy
+sf1	GAD_DISEASE:Gout
+bdnf	GAD_DISEASE:memory impairment
+ush1c	GO:0005886
+slc35b4	GO:0005794
+LOC100691895	GO:0070187
+slc39a8	GO:0005765
+cdc42bpa	GO:0070062
+shank2	GO:0005883
+plcb2	REACTOME_PATHWAY:R-HSA-163685~Integration of energy metabolism
+taf1	GO:0043565
+LOC100708638	GO:1990837
+fam83d	GO:0005819
+glod4	
+kcnma1	REACTOME_PATHWAY:R-HSA-9662360~Sensory processing of sound by inner hair cells of the cochlea
+myd88	GO:0006909
+ssh1	GO:0006470
+sik3	HPO:HP:0002721~Immunodeficiency
+sulf1	GO:0030513
+ndufv3	KEGG_PATHWAY:hsa05012
+xpa	HPO:HP:0000962~Hyperkeratosis
+rgs22	GO:0001650
+LOC100700131	GO:1903830
+wbp2	GO:0031490
+LOC100712573	HPO:HP:0001864~Clinodactyly of the 5th toe
+pla2g7	UP_TISSUE:Myeloid
+LOC100699203	GO:0030663
+cass4	GO:0005737
+kif3c	REACTOME_PATHWAY:R-HSA-199991~Membrane Trafficking
+ctu2	GO:0005515
+mapk1	GO:0050847
+LOC100710680	GO:0009887
+adm2	KEGG_PATHWAY:hsa04270
+LOC102079641	GO:0005615
+gbf1	GO:0032012
+hdac9	GO:0005654
+LOC100694458	GO:0005515
+agl	GO:1904813
+plcd1	MGD:MP:0001216~abnormal epidermal layer morphology
+alg2	HPO:HP:0008180~Mildly elevated creatine kinase
+dapk1	CTD:C0220636~Malignant neoplasm of salivary gland
+plekha5	GENOMICS_ENGLAND:C0008924~Cleft upper lip
+tp63	HPO:HP:0001561~Polyhydramnios
+rnf213	GO:0005811
+LOC100698703	GO:0000981
+efhd2	REACTOME_PATHWAY:R-HSA-194315~Signaling by Rho GTPases
+slc39a13	HPO:HP:0000963~Thin skin
+tcf7l2	GO:0048660
+mmaa	GO:0009235
+LOC100697931	GO:0045599
+sdha	GO:0005743
+LOC100705611	GO:0016323
+elf2	CTD:C3714758~Juvenile psoriatic arthritis
+psmd8	UNIPROT:CXXX~No diseases associated
+LOC100689993	GO:0005770
+mocs2	GO:0030366
+socs1	GO:0016567
+LOC100712452	GO:0005654
+bace1	GO:0005886
+prkcd	GO:0005634
+LOC100703866	GO:0008152
+LOC100702054	KEGG_PATHWAY:hsa04371
+mapk8ip3	GO:0016192
+grn	HPO:HP:0000556~Retinal dystrophy
+LOC100691504	GO:0008217
+tfcp2	
+LOC100692909	REACTOME_PATHWAY:R-HSA-9824439~Bacterial Infection Pathways
+LOC100708651	CGI:CXXX~No diseases associated
+LOC100705119	GO:0005654
+pfas	UP_TISSUE:Liver
+LOC100700080	GAD_DISEASE:urolithiasis
+sf3b4	UP_TISSUE:Testis
+galnt1	MGD:MP:0000221~decreased leukocyte cell number
+vav3	MGD:MP:0010766~abnormal NK cell physiology
+LOC102082062	
+sbf1	DISGENET:C3695063~Charcot-Marie-Tooth disease type 4B3
+ipo8	CGI:CXXX~No diseases associated
+egfl7	GO:0045746
+LOC100702954	GO:0005737
+plcg2	GO:0061760
+LOC100702251	GO:0046872
+slc2a4	GO:0016020
+LOC100696582	GO:0000785
+LOC100690370	GO:0055038
+LOC100707971	GO:0005524
+zeb2	HPO:HP:0000612~Iris coloboma
+gatad2b	HPO:HP:0000286~Epicanthus
+LOC100711262	UP_TISSUE:Placenta
+drd2	GAD_DISEASE:Blood Pressure Determination
+tfap2c	CTD:C1708349~Hereditary Diffuse Gastric Cancer
+e2f7	GO:0006355
+azi2	GO:0005737
+plat	GO:0005576
+LOC100695545	GO:0030054
+nup93	GO:0015031
+LOC100695498	GO:0004965
+LOC100534483	DISGENET:C0086237~Epilepsy, Cryptogenic
+nop10	HPO:HP:0000499~Abnormal eyelash morphology
+LOC100695758	GO:0008234
+eed	REACTOME_PATHWAY:R-HSA-73857~RNA Polymerase II Transcription
+LOC102082062	
+pde2a	GO:0005794
+rnaseh2b	HPO:HP:0003552~Muscle stiffness
+ltn1	GO:0046872
+mapk4	REACTOME_PATHWAY:R-HSA-5683057~MAPK family signaling cascades
+LOC100692539	GO:0006357
+gpbp1l1	GO:0006351
+gdnf	MGD:MP:0006100~abnormal tegmentum morphology
+cars	GO:0046872
+dusp8	GO:0033550
+ift74	GO:0031514
+LOC100690422	GO:1902495
+LOC100698140	GO:0071712
+nkx2-8	GO:0043565
+trim45	GO:0005737
+sybu	GO:0019896
+hexa	GO:0004563
+LOC102082062	
+ophn1	
+LOC100702878	GO:0030055
+rb1	MGD:MP:0004215~abnormal myocardial fiber physiology
+sec61b	UP_TISSUE:Embryonic kidney
+ghr1	GO:0005576
+LOC100709869	DISGENET:C0011615~Dermatitis, Atopic
+LOC100706871	CGI:CXXX~No diseases associated
+LOC100694789	GO:0008017
+ube2i	GO:0006511
+ncoa1	REACTOME_PATHWAY:R-HSA-3214847~HATs acetylate histones
+gdf10	GAD_DISEASE:Myocardial Infarction
+traf3	GO:0033209
+esrrg	
+mest	GO:0007498
+LOC100692385	GO:0000785
+ntrk2	GO:0008284
+gli3	MGD:MP:0001178~pulmonary hypoplasia
+vamp4	REACTOME_PATHWAY:R-HSA-8856825~Cargo recognition for clathrin-mediated endocytosis
+miga2	GO:0016020
+LOC100692261	UP_TISSUE:Thalamus
+unc5a	GO:0006915
+agap3	GO:0046872
+LOC100700415	DISGENET:C4479534~TOWNES-BROCKS SYNDROME 2
+ccnd1	REACTOME_PATHWAY:R-HSA-69242~S Phase
+LOC100692170	REACTOME_PATHWAY:R-HSA-9820965~Respiratory syncytial virus (RSV) genome replication, transcription and translation
+pfdn6	GO:0005737
+ghrhr	MGD:MP:0008489~slow postnatal weight gain
+qars	HPO:HP:0000286~Epicanthus
+eif3i	GO:0005515
+LOC109194206	HPO:HP:0001250~Seizure
+LOC100695450	GO:0071277
+LOC100710932	MGD:MP:0004998~decreased CNS synapse formation
+fbl	GO:0008757
+LOC100707262	GO:0007186
+psma5	REACTOME_PATHWAY:R-HSA-5678895~Defective CFTR causes cystic fibrosis
+nr1i2	GO:0006355
+ubp1	MGD:MP:0000260~abnormal angiogenesis
+hus1	MGD:MP:0003396~abnormal embryonic hematopoiesis
+mettl5	GO:0005730
+LOC100698696	GO:0031966
+gli3	MGD:MP:0000757~herniated abdominal wall
+ldlr	GO:0032050
+thrb	HPO:HP:0002925~Increased thyroid-stimulating hormone level
+ccz1	MGD:MP:XXX~No phenotype
+mapk6	GO:0005737
+LOC100698613	GO:0021544
+LOC100699818	
+c8g	GO:0031640
+p53	GO:0003700
+ykt6	ORPHANET:CXXX~No diseases associated
+txn2	REACTOME_PATHWAY:R-HSA-8953897~Cellular responses to stimuli
+LOC102082062	
+atf2	GO:0061629
+cib1	GO:0070374
+ppie	GO:0006457
+mapk1	REACTOME_PATHWAY:R-HSA-170968~Frs2-mediated activation
+LOC100698140	GO:0005783
+lnpep	GO:0030163
+LOC100692674	KEGG_PATHWAY:hsa04260
+map3k8	GO:0004674
+lrrc8a	GO:0007283
+cacnb2	GO:0006816
+LOC100698083	REACTOME_PATHWAY:R-HSA-9634815~Transcriptional Regulation by NPAS4
+znf410	GO:0005634
+pard3	GAD_DISEASE:AlzheimerQs disease   
+LOC100710041	HPO:HP:0002361~Psychomotor deterioration
+plcxd3	GO:0016787
+lancl1	GO:0005886
+mcf2	GO:0005737
+smarca4	GO:0006338
+LOC102082062	
+LOC100690715	GO:0005737
+dnajc17	CLINGEN:CXXX~No diseases associated
+knl1	REACTOME_PATHWAY:R-HSA-68877~Mitotic Prometaphase
+fermt2	GO:0033622
+hspg2	HPO:HP:0000298~Mask-like facies
+serpinf1	CTD:C0010043~Corneal Ulcer
+cbx2	GO:0007548
+itga4	UP_TISSUE:Leukemic T-cell
+LOC100702174	GO:0005515
+LOC100708690	GO:0090148
+fli1	KEGG_PATHWAY:hsa05202
+ppp2r5d	REACTOME_PATHWAY:R-HSA-71387~Metabolism of carbohydrates
+meaf6	GO:0005634
+gp1bb	HPO:HP:0000130~Abnormality of the uterus
+ctnnb1	GO:0045296
+dpy19l4	UP_TISSUE:Colon endothelium
+kif13a	GO:0016887
+LOC100696265	GO:0005178
+immt	UP_TISSUE:Cervix
+rhoh	GO:0005886
+txndc5	MGD:MP:0005179~decreased circulating cholesterol level
+LOC100696641	GO:0004930
+mrpl55	GO:0005762
+prkd2	GO:0045766
+cspp1	HPO:HP:0000221~Furrowed tongue
+pdpk1	REACTOME_PATHWAY:R-HSA-74751~Insulin receptor signalling cascade
+pxdn	CTD:C1862839~Anterior segment mesenchymal dysgenesis
+LOC102082062	
+eef1akmt2	GO:0008168
+LOC100699650	GO:0047192
+LOC100711784	UP_TISSUE:Erythroleukemia
+usp4	MGD:MP:0005017~decreased B cell number
+gsk3b	
+lpar1	GO:0070915
+dxo	GO:0050779
+LOC100701917	MGD:MP:0001262~decreased body weight
+atg13	GO:0000407
+pnpo	UP_TISSUE:Thymus
+rnf157	GO:0016567
+cacna1g	GO:0006811
+maea	MGD:MP:0000245~abnormal erythropoiesis
+LOC100691573	GO:1990712
+anapc5	UP_TISSUE:Leukemic T-cell
+LOC100534515	GO:0007267
+hspbp1	MGD:MP:0001155~arrest of spermatogenesis
+galnt7	GO:0004653
+LOC100701624	GO:0016020
+foxred2	GO:0005783
+mtor	REACTOME_PATHWAY:R-HSA-388841~Costimulation by the CD28 family
+col1a1	MGD:MP:0002187~abnormal fibula morphology
+gopc	GO:0006893
+kcnq3	GO:0016020
+stard3nl	UP_TISSUE:Fetal brain
+cfap221	GO:0005929
+LOC100702614	GO:0005249
+ccdc77	
+fer1l6	ORPHANET:CXXX~No diseases associated
+tspan7	HPO:HP:0002465~Poor speech
+sgcg	GAD_DISEASE:Alcoholism
+LOC100707201	GAD_DISEASE:Cowden syndrome
+slc45a1	HPO:HP:0008770~Obsessive-compulsive trait
+LOC102082062	
+LOC102082062	
+LOC100699848	GO:0048333
+LOC100709803	GO:0047676
+LOC100696839	REACTOME_PATHWAY:R-HSA-69206~G1/S Transition
+os9	GO:0005783
+iyd	GO:0016020
+LOC100704013	GO:0061630
+LOC102082062	
+tnpo2	GO:0006886
+LOC100712562	GO:0043197
+melk	GO:0000086
+kitlg	GENOMICS_ENGLAND:C4225241~DEAFNESS, AUTOSOMAL DOMINANT 69
+LOC100699505	GO:0031045
+col6a1	ORPHANET:C0410179~Ullrich congenital muscular dystrophy 1
+ophn1	REACTOME_PATHWAY:R-HSA-9013026~RHOB GTPase cycle
+hax1	GO:0030136
+rc3h1	PSYGENET:CXXX~No diseases associated
+phox2b	MGD:MP:0006243~impaired pupillary reflex
+nr2e1	GO:0048856
+LOC100698085	GAD_DISEASE:several psychiatric disorders
+rbm5	GO:0000381
+hspb11	GO:0007283
+sirt4	GO:0106419
+ciao2a	GO:0005654
+utp4	GO:0005730
+mfn2	GO:0120162
+LOC100712046	GAD_DISEASE:asthma
+anos1	ORPHANET:C0162809~Kallmann Syndrome
+LOC100707988	GO:0004065
+LOC100702148	REACTOME_PATHWAY:R-HSA-2262752~Cellular responses to stress
+acer2	GO:0046872
+bfsp2	CGI:CXXX~No diseases associated
+LOC102081412	GO:0016746
+adar	GO:0003725
+LOC102082062	GO:0031145
+uba1	GO:0005634
+LOC100711323	GO:0005525
+LOC102082062	
+taf1	GO:0006338
+fancl	
+LOC100696542	GO:0016740
+gdnf	MGD:MP:0000520~absent kidney
+tll1	MGD:MP:0013630~increased bone trabecular spacing
+cenpf	GO:0030154
+cnksr1	GO:0005938
+sfpq	DISGENET:C0019693~HIV Infections
+trmt112	GO:0031167
+ednra	CTD:C0238301~Cancer of Nasopharynx
+slc45a2	DISGENET:C1510472~Drug Dependence
+pck2	GO:0004613
+pgf	CGI:CXXX~No diseases associated
+LOC100707972	GO:0004353
+fbxo43	CTD:CXXX~No diseases associated
+hif1a	CTD:C0178540~Cerebral Hypoxia-Ischemia
+fam53b	MGD:MP:0002875~decreased erythrocyte cell number
+LOC100693549	GO:0043231
+drd3	GO:0043278
+slc7a5	UP_TISSUE:Placenta
+cenpk	GO:0000775
+LOC100706088	GO:0002931
+ltn1	REACTOME_PATHWAY:R-HSA-983168~Antigen processing
+fgl2	
+chd4	GO:0006338
+ubxn10	CLINGEN:CXXX~No diseases associated
+LOC100707970	MGD:MP:0010702~split cervical atlas
+smo	MGD:MP:0030198~nasal septum hypoplasia
+lamp2	CTD:C0878677~Glycogen Storage Disease Type IIb
+cdipt	GO:0005886
+map3k13	GO:0016020
+uhmk1	GO:0004674
+atr	REACTOME_PATHWAY:R-HSA-3371453~Regulation of HSF1-mediated heat shock response
+fbxo7	MGD:MP:0002599~increased mean platelet volume
+fam43a	HPO:HPO:XXX~No HPO phenotype
+engase	MGD:MP:XXX~No phenotype
+LOC100698697	GO:0005634
+LOC100703974	GO:0031638
+naa50	MGD:MP:0001914~hemorrhage
+rps18	GO:0003735
+LOC100699478	GO:0038026
+tmem125	GENOMICS_ENGLAND:CXXX~No diseases associated
+LOC100710242	GO:0035091
+LOC100708466	GO:0042802
+zgpat	GO:0043565
+LOC100706770	CTD:C1708349~Hereditary Diffuse Gastric Cancer
+dctn2	KEGG_PATHWAY:hsa05132
+LOC100707400	GO:0042056
+ptpn23	GO:0005768
+hdac6	GO:0033558
+LOC100702394	
+tbc1d20	GO:0000139
+LOC100695257	ORPHANET:C1843687~ATRIAL FIBRILLATION, FAMILIAL, 1 (disorder)
+sirt2	GO:0140297
+tor2a	GO:0005783
+tmem182	GAD_DISEASE:Iron
+gba2	GO:0030833
+LOC102082062	
+shmt1	GO:0006563
+LOC100697452	CLINGEN:CXXX~No diseases associated
+tollip	GO:0033235
+LOC100703117	GO:0006355
+cul4a	GO:0016567
+nxn	MGD:MP:0004377~small frontal bone
+LOC100696143	GO:0016020
+idh1	GO:0004450
+ints11	GO:0004521
+LOC100705818	GO:1905502
+pax9	PSYGENET:CXXX~No diseases associated
+daw1	GO:0007507
+LOC100702106	CGI:CXXX~No diseases associated
+sall4	MGD:MP:0011090~perinatal lethality, incomplete penetrance
+entpd6	GO:0005576
+msx1	DISGENET:C0406735~Hypoplastic enamel-onycholysis-hypohidrosis syndrome
+lg12h12orf43	GO:0005634
+LOC100708378	GO:0016740
+atp5f1a	GO:0042776
+golga3	GO:0005515
+grxcr2	DISGENET:C3892049~DEAFNESS, AUTOSOMAL RECESSIVE 101
+chd2	GO:0042393
+exoc1	GO:0005886
+LOC100693120	
+foxp3	GO:0042803
+lias	GO:0009107
+LOC100692868	
+fbl	GO:0008757
+LOC100711553	GO:0005737
+parp2	REACTOME_PATHWAY:R-HSA-73894~DNA Repair
+dag1	GO:0005829
+supt4h1	MGD:MP:0005642~decreased mean corpuscular hemoglobin concentration
+sart3	DISGENET:C0265970~Porokeratosis, Disseminated Superficial Actinic
+LOC100709445	GO:0001764
+oplah	UP_TISSUE:Testis
+ajuba	REACTOME_PATHWAY:R-HSA-5617472~Activation of anterior HOX genes in hindbrain development during early embryogenesis
+was	HPO:HP:0002488~Acute leukemia
+LOC100708172	GO:0003677
+c8a	GO:0006955
+ppargc1b	GO:0003676
+LOC100707110	GO:0005654
+parn	GO:0016787
+rpl17	REACTOME_PATHWAY:R-HSA-8868773~rRNA processing in the nucleus and cytosol
+aanat	GO:0016740
+stat3	GO:0003677
+LOC100698203	GO:0043030
+mgrn1	
+LOC100708685	REACTOME_PATHWAY:R-HSA-388396~GPCR downstream signalling
+LOC102082062	
+LOC100708943	GAD_DISEASE:Diseases in Twins
+LOC100711853	GO:0005886
+piezo1	GO:0016020
+LOC100691710	GO:0045948
+LOC100710456	GO:0005783
+eif3b	GO:0003676
+neurod1	HPO:HP:0000112~Nephropathy
+il6st	PSYGENET:CXXX~No diseases associated
+LOC100701332	UNIPROT:CXXX~No diseases associated
+LOC100706096	GO:0006574
+slx4	MGD:MP:0011100~preweaning lethality, complete penetrance
+cd276	UNIPROT:CXXX~No diseases associated
+snx10	GO:0006886
+hyou1	MGD:MP:0000877~abnormal Purkinje cell morphology
+lrba	UP_TISSUE:Liver
+spock3	GO:0005515
+LOC100694889	GO:0016316
+LOC100694335	HPO:HPO:XXX~No HPO phenotype
+lrpprc	MGD:MP:0006207~embryonic lethality during organogenesis
+fyn	GO:0007411
+abcc10	GO:0042908
+LOC100691710	GO:1904263
+negr1	CRB:CRB:XXX~No CRB phenotype
+npr1	MGD:MP:0030082~long lower incisors
+tbpl1	MGD:MP:0002209~decreased germ cell number
+bag6	GO:0071818
+sirt6	MGD:MP:0000221~decreased leukocyte cell number
+LOC100697681	GO:0003779
+ccdc39	HPO:HP:0001131~Corneal dystrophy
+ccnj	CRB:CRB:0000019~Association with Survival No Antioxidants PSAP KO CRISPRa in Glutamatergic Neuron
+dhx36	GO:0002376
+sod1	DISGENET:C0231696~Gait, Hemiplegic
+pappa	GO:0032354
+LOC100709243	GO:0008270
+znf131	
+LOC100708715	GO:0016020
+LOC100711616	GO:0035023
+pms2	GO:0005524
+cacna1c	GO:0060402
+ehmt2	GO:0042054
+kif4a	GO:0016363
+cript	GO:0043198
+kat2a	HPO:HPO:XXX~No HPO phenotype
+LOC100708890	GO:0004937
+ube2m	REACTOME_PATHWAY:R-HSA-170834~Signaling by TGF-beta Receptor Complex
+abcc9	DISGENET:C0086132~Depressive Symptoms
+gtf2h4	REACTOME_PATHWAY:R-HSA-167152~Formation of HIV elongation complex in the absence of HIV Tat
+wwox	HPO:HP:0001270~Motor delay
+atf2	GO:0005741
+LOC100694501	MGD:MP:0002590~increased mean corpuscular volume
+rabgap1	HPO:HPO:XXX~No HPO phenotype
+cnr1	GO:0004949
+pcsk2	GAD_DISEASE:smoking cessation
+mars	GO:0006418
+fmr1	GO:0005515
+sec22c	GO:0006888
+LOC100706901	MGD:MP:0013601~increased testis apoptosis
+phex	
+actb	GO:0016363
+zc3h14	GO:0003723
+tsc2	DISGENET:C3495874~Nonepileptic Seizures
+cep89	REACTOME_PATHWAY:R-HSA-5620912~Anchoring of the basal body to the plasma membrane
+afmid	GO:0019441
+ddb1	REACTOME_PATHWAY:R-HSA-5696398~Nucleotide Excision Repair
+uba52	GO:0005654
+LOC100695816	REACTOME_PATHWAY:R-HSA-5668914~Diseases of metabolism
+LOC100695821	GO:0001525
+LOC100696753	GO:1990349
+LOC102076104	GAD_DISEASE:asthma
+chrna5	DISGENET:C0028043~Nicotine Dependence
+LOC100690208	GO:0001774
+rbm26	GO:0003676
+pex16	HPO:HP:0100543~Cognitive impairment
+cstf2	GO:0031124
+nlrc5	GO:0043549
+kdm2a	GO:0006338
+hsp70	GO:0030425
+LOC100706095	GO:0007216
+cdk5r1	MGD:MP:0002912~abnormal excitatory postsynaptic potential
+slc46a1	HPO:HP:0002017~Nausea and vomiting
+LOC100705990	REACTOME_PATHWAY:R-HSA-8951664~Neddylation
+rps8	REACTOME_PATHWAY:R-HSA-1799339~SRP-dependent cotranslational protein targeting to membrane
+LOC100698414	REACTOME_PATHWAY:R-HSA-1643685~Disease
+dlx5	MGD:MP:0000443~abnormal snout morphology
+tmem151b	GO:0016020
+LOC100704677	GO:0016020
+LOC100710620	GO:0006508
+grn	MGD:MP:0001212~skin lesions
+LOC100708856	GO:0016020
+sf3b1	HPO:HP:0100533~Inflammatory abnormality of the eye
+mrvi1	PSYGENET:CXXX~No diseases associated
+ndufa10	GO:0009060
+rtcb	ORPHANET:CXXX~No diseases associated
+mvk	GO:0016740
+psmd10	REACTOME_PATHWAY:R-HSA-983169~Class I MHC mediated antigen processing & presentation
+LOC100691876	GO:0032809
+tyk2	GO:0005856
+lmo3	GO:0140297
+serpine1	MGD:MP:0005450~abnormal energy expenditure
+nagpa	MGD:MP:0003174~increased lysosomal enzyme secretion
+atp8b2	MGD:MP:0010123~increased bone mineral content
+kdr	GO:0009986
+cited1	GO:0032496
+st6galnac5	GO:0005794
+nfkb2	HPO:HP:0030804~Trachyonychia
+LOC100698613	MGD:MP:0003873~pharyngeal arch hypoplasia
+rb1	CTD:C0750887~Adrenal Cancer
+clp1	GO:0005524
+LOC100703292	GO:0016740
+LOC100695242	PSYGENET:CXXX~No diseases associated
+LOC100708442	MGD:MP:0008102~lymph node hyperplasia
+zbtb21	GO:0008327
+opa1	GAD_DISEASE:Glaucoma, Open-Angle|Low Tension Glaucoma|Ocular Hypertension
+LOC100711869	GO:0045956
+abr	
+slc25a45	GO:0005739
+trmt13	GO:0106050
+bag6	GO:0010498
+rps2	DISGENET:C0242184~Hypoxia
+mfn2	HPO:HP:0001618~Dysphonia
+chrd	GENOMICS_ENGLAND:CXXX~No diseases associated
+LOC100694986	CTD:C1969342~PULMONARY HYPERTENSION, PRIMARY, DEXFENFLURAMINE-ASSOCIATED
+tmem130	CGI:CXXX~No diseases associated
+LOC100695257	MGD:MP:0003638~abnormal response/metabolism to endogenous compounds
+LOC100705927	CRB:CRB:0000031~Association with Reactive Oxygen Species (CellRox Intensity) in Glutamatergic Neuron
+c1d	DISGENET:C0001973~Alcoholic Intoxication, Chronic
+mmachc	HPO:HP:0001290~Generalized hypotonia
+maf1	GO:0001006
+LOC100691498	GO:0006891
+siah1	REACTOME_PATHWAY:R-HSA-1266738~Developmental Biology
+utp18	GO:0016020
+cfap44	GO:0008233
+ift27	DISGENET:C3889475~BARDET-BIEDL SYNDROME 19
+ahi1	GO:0070121
+LOC100703527	GO:0005737
+caprin1	GO:0000166
+LOC100700979	HPO:HP:0002322~Resting tremor
+ube4b	GO:0005737
+prkcq	GAD_DISEASE:Cholesterol, LDL
+LOC100704868	GO:0005829
+LOC100710661	GO:0005829
+sucnr1	PSYGENET:CXXX~No diseases associated
+LOC100708542	ORPHANET:CXXX~No diseases associated
+fgg	GO:0110165
+LOC100698945	MGD:MP:0001262~decreased body weight
+slc43a1	GO:0015820
+arhgap29	
+usp37	
+taf6	GO:0005669
+LOC102082062	
+nedd4	GO:0032801
+ddit3	GO:0034976
+sema4d	GO:0005102
+kras	MGD:MP:0000275~heart hyperplasia
+mark3	GO:0005524
+atg16l1	GO:0042802
+abcd4	HPO:HP:0003524~Decreased methionine synthase activity
+LOC100691272	MGD:MP:0005449~abnormal food intake
+LOC100704398	GO:0050852
+cad	GO:0016363
+als2	GO:0043539
+basp1	GO:0045892
+LOC100711715	GO:0001525
+sbf1	UP_TISSUE:Liver
+coq2	UP_TISSUE:Melanoma
+LOC100699400	UP_TISSUE:Brain
+tradd	GO:0005068
+pigt	GO:0016255
+disp1	HPO:HP:0001636~Tetralogy of Fallot
+col1a2	DISGENET:C0018824~Heart valve disease
+gbf1	GO:0016020
+cacnb2	GO:0070588
+snrpd2	GO:0005829
+ntsr1	GO:0005794
+LOC100693204	GO:0019899
+marveld3	GO:0010633
+ptk2b	GO:0005515
+LOC100696294	CRB:CRB:XXX~No CRB phenotype
+foxp1	GO:0032680
+ntrk2	GO:0042803
+LOC102082062	
+LOC100709027	GO:0046697
+ahctf1	GO:0015031
+LOC100703376	GO:0046872
+LOC100697675	MGD:MP:0003205~testicular atrophy
+polb	GO:0071707
+LOC100702646	GO:0045019
+selenot	UP_TISSUE:Liver
+dusp8	REACTOME_PATHWAY:R-HSA-5683057~MAPK family signaling cascades
+nudt21	MGD:MP:0013292~embryonic lethality prior to organogenesis
+nfil3	DISGENET:C0494410~Nonorganic Sleep Wake Cycle Disorders
+ghitm	UP_TISSUE:Hair follicle dermal papilla
+tp63	GO:0005654
+LOC100699097	HPO:HP:0003198~Myopathy
+mkrn2	GO:0005737
+wnt7b	GO:0060428
+ptpn11	MGD:MP:0009320~increased lymphoblastic lymphoma incidence
+rnf8	MGD:MP:0008497~decreased IgG2b level
+gstz1	GO:0006749
+htr2a	GAD_DISEASE:nicotine dependence; cotinine
+ap3b1	HPO:HP:0002206~Pulmonary fibrosis
+c9	GO:0006957
+gng8	REACTOME_PATHWAY:R-HSA-451326~Activation of kainate receptors upon glutamate binding
+LOC100690208	GO:0009611
+ino80e	GO:0005634
+abcg1	GO:0120020
+LOC100694236	GO:0005794
+napepld	GO:0070292
+gabra6	CRB:CRB:XXX~No CRB phenotype
+hyou1	GO:0000166
+LOC100690511	GO:0046469
+nek9	GO:0004672
+LOC102082062	
+tmem130	GO:0005794
+comt	UP_TISSUE:Liver
+LOC100702878	GO:0005737
+g3bp1	UP_TISSUE:Embryonic kidney
+prkn	GO:0045732
+ldlrad4	GO:0031901
+LOC100711713	GO:0005515
+fkrp	
+clp1	UP_TISSUE:Cerebellum
+trpm2	CTD:C0338831~Manic
+map3k7cl	GO:0005515
+abhd12	DISGENET:C2675205~Distal muscle atrophy due to neurologic disease
+LOC100706970	DISGENET:C0024121~Lung Neoplasms
+kat2a	GO:0048312
+spred1	HPO:HP:0002705~High, narrow palate
+rps3a	GO:0003735
+LOC102078747	GO:0097441
+sf3b1	MGD:MP:0011094~embryonic lethality before implantation, complete penetrance
+lancl1	GO:0050750
+rttn	GO:0005813
+mep1b	GO:0016020
+LOC100707454	UP_TISSUE:Blood
+pex5	GO:0006625
+ptprd	GO:0099560
+gsr	GO:0050660
+ndufb2	GO:0008137
+tmem127	GENOMICS_ENGLAND:C0031511~Pheochromocytoma
+nr1h4	GO:0003700
+cemip	ORPHANET:CXXX~No diseases associated
+hps4	GO:0016192
+LOC102082062	
+LOC109194151	GO:0097193
+gigyf2	
+g0s2	MGD:MP:0009133~decreased white fat cell size
+ajap1	MGD:MP:0010124~decreased bone mineral content
+lpl	GAD_DISEASE:interleukin 8 release after cardiac surgery
+smox	REACTOME_PATHWAY:R-HSA-351200~Interconversion of polyamines
+LOC100707454	GAD_DISEASE:TPMT activity
+ext2	CGI:C0029463~Osteosarcoma
+eef1d	GO:0001650
+sertad2	MGD:MP:0002451~abnormal macrophage physiology
+mcfd2	GO:0005509
+exoc3	GO:0000145
+mfn1	GO:0051646
+znrd1	GO:0003899
+cep63	GO:0098535
+hddc3	GO:0046872
+ube4a	HPO:HPO:XXX~No HPO phenotype
+polg2	GO:0005759
+LOC100691876	GO:0007420
+rnf103	GO:0004842
+foxp1	HPO:HP:0001252~Muscular hypotonia
+LOC100708012	GO:0005743
+rchy1	GO:0004842
+ehmt2	GO:0042054
+c2cd2l	UP_TISSUE:Leukemic T-cell
+cbx4	CTD:CXXX~No diseases associated
+apbb2	GO:0045944
+sod1	GO:0006749
+pik3cb	REACTOME_PATHWAY:R-HSA-186763~Downstream signal transduction
+cep152	GO:0098536
+cxadr	GO:0030426
+fgf7	KEGG_PATHWAY:hsa04151
+ppp4r4	GO:0019888
+brca2	DISGENET:C0265219~Miller Dieker syndrome
+igf2r	GO:0005768
+flii	GO:0005654
+prdm16	HPO:HP:0000486~Strabismus
+LOC102075906	MGD:MP:0006032~abnormal ureteric bud morphology
+sepsecs	CRB:CRB:0000034~Association with Survival 14 Days CRISPRi in Glutamatergic Neuron
+hps4	GO:0005515
+plin2	GO:0015909
+tcte1	HPO:HPO:XXX~No HPO phenotype
+LOC100706019	GO:0045668
+polg	HPO:HP:0003547~Shoulder girdle muscle weakness
+gipc1	MGD:MP:0003394~increased cardiac output
+rest	UP_TISSUE:Erythroleukemia
+LOC100697722	DISGENET:C1708349~Hereditary Diffuse Gastric Cancer
+pex7	MGD:MP:0000788~abnormal cerebral cortex morphology
+atr	REACTOME_PATHWAY:R-HSA-5693616~Presynaptic phase of homologous DNA pairing and strand exchange
+LOC100692991	GO:0021955
+LOC100703133	MGD:MP:0012270~cardiac edema
+gsn	MGD:MP:0001541~abnormal osteoclast physiology
+sall1	HPO:HP:0000365~Hearing impairment
+msl3	
+snx5	DISGENET:C0235874~Disease Exacerbation
+nup58	GO:0017056
+LOC100704892	GO:0007130
+wnt3a	GO:0021874
+LOC100711853	GO:0045954
+hoxb9	CRB:CRB:0000044~Positive hit with Survival CRISPRa in Glutamatergic Neuron
+glrx2	GO:0009266
+sf1	GO:0003723
+cep135	GO:0010457
+zcrb1	GO:0003723
+krit1	GO:0033622
+LOC100709869	GO:0061629
+tbx20	GO:0000977
+plch2	GO:0016042
+LOC100709874	GO:0045182
+insyn2	PSYGENET:CXXX~No diseases associated
+LOC109203822	GO:0030154
+crhbp	GO:0009755
+extl2	GO:0005654
+kmt2a	GO:0032259
+aplp1	GO:0006897
+taz	
+pnkp	GO:0006287
+fgd1	CTD:C1856871~Autosomal recessive facio-digito-genital syndrome
+scarf2	GO:0007157
+fgf17	REACTOME_PATHWAY:R-HSA-190373~FGFR1c ligand binding and activation
+LOC100694473	HPO:HP:0011463~Childhood onset
+cd63	GO:0031902
+rpl6	GO:0003735
+LOC102082008	GO:0004521
+rgs7	DISGENET:C3714756~Intellectual Disability
+cops6	
+mtr	GO:0005737
+ano3	GO:0005886
+LOC100694653	KEGG_PATHWAY:hsa04218
+epas1	CRB:CRB:XXX~No CRB phenotype
+tcf7l2	GO:0000978
+cdk2	GO:0035173
+rpl24	REACTOME_PATHWAY:R-HSA-71291~Metabolism of amino acids and derivatives
+LOC100705119	GO:0002092
+foxp1	GO:0003677
+tchp	GO:0005739
+LOC100697215	GO:0031625
+LOC100709203	MGD:MP:0002673~abnormal sperm number
+LOC100691573	GO:1904707
+cdk10	HPO:HP:0002937~Hemivertebrae
+Phospho-APC/C mediated degradation of Cyclin A	
+pik3cg	GO:0016740
+LOC106098755	GO:0000122
+dnai2	KEGG_PATHWAY:hsa05014
+trip11	MGD:MP:0005621~abnormal cell physiology
+dock5	HPO:HPO:XXX~No HPO phenotype
+hras	GO:0042127
+LOC100698854	GO:0005856
+LOC100702031	GO:0015630
+LOC100693200	MGD:MP:0014201~abnormal intestinal epithelium physiology
+noct	GO:0046872
+LOC100711715	MGD:MP:0011167~abnormal adipose tissue development
+slc10a7	GO:0006811
+blm	GAD_DISEASE:Chronic renal failure|Kidney Failure, Chronic
+akt1	GO:0005978
+znf438	GO:0043565
+LOC100706837	
+stc2	GO:0005783
+gnas	GO:0005886
+tbl2	HPO:HP:0000089~Renal hypoplasia
+lpar4	GO:0008289
+banf1	REACTOME_PATHWAY:R-HSA-177539~Autointegration results in viral DNA circles
+mrpl33	GO:0005762
+erbin	GO:0071356
+ercc2	REACTOME_PATHWAY:R-HSA-75953~RNA Polymerase II Transcription Initiation
+rnf182	GO:0005737
+nr1h4	GO:1902122
+ube2i	GO:0036211
+LOC100691977	MGD:MP:0008898~abnormal acrosome morphology
+phldb1	GO:0043231
+ndufb4	CRB:CRB:0000040~Association with Survival 28 Days CRISPRi in Glutamatergic Neuron
+cdc6	CGI:CXXX~No diseases associated
+tsc2	HPO:HP:0007449~Confetti-like hypopigmented macules
+ddc	CTD:C0752098~Autosomal Dominant Parkinsonism
+ncl	REACTOME_PATHWAY:R-HSA-5663205~Infectious disease
+LOC100708243	GO:0021978
+ttc38	CRB:CRB:XXX~No CRB phenotype
+ifih1	
+spata7	HPO:HP:0001347~Hyperreflexia
+serpine2	GO:0030414
+farsa	UP_TISSUE:Uterus
+pdx1	HPO:HP:0003477~Peripheral axonal neuropathy
+LOC102082062	
+idi1	GO:0005737
+braf	HPO:HP:0010576~Intracranial cystic lesion
+fen1	GO:0005634
+mtmr2	GO:0030424
+med16	GO:0016592
+rps14	GO:0005737
+LOC100703629	GO:0010008
+atm	GO:0005634
+LOC100534577	GO:0004972
+LOC100705999	GO:0005886
+LOC100691931	REACTOME_PATHWAY:R-HSA-74160~Gene expression (Transcription)
+ddx55	GO:0005515
+wdhd1	GO:0043229
+LOC100700289	GO:0001725
+abhd18	GENOMICS_ENGLAND:CXXX~No diseases associated
+LOC100711753	GO:0034379
+LOC100703376	DISGENET:C0001627~Congenital adrenal hyperplasia
+LOC100699679	GO:0005634
+hip1	CGI:CXXX~No diseases associated
+ckap5	GO:0016043
+rnaseh2a	HPO:HP:0011968~Feeding difficulties
+LOC100707201	HPO:HP:0000995~Melanocytic nevus
+capn10	GO:0032869
+epsti1	
+LOC100703628	REACTOME_PATHWAY:R-HSA-73776~RNA Polymerase II Promoter Escape
+rbbp8	ORPHANET:C0265202~Seckel syndrome
+LOC100692170	GO:0005975
+hgsnat	GO:0016746
+LOC100711270	GO:0005515
+hexa	UP_TISSUE:Thalamus
+comt	GO:0032259
+LOC102082062	GO:0030533
+mmab	REACTOME_PATHWAY:R-HSA-3359471~Defective MMAB causes MMA, cblB type
+birc6	GO:0060712
+arl15	CTD:CXXX~No diseases associated
+dnah10	GO:0030286
+cpeb1	GO:0000900
+LOC102082062	
+LOC100691272	MGD:MP:0001417~decreased exploration in new environment
+LOC100707201	HPO:HP:0002827~Hip dislocation
+LOC100695417	DISGENET:C0750901~Alzheimer Disease, Early Onset
+lima1	GO:0006629
+map3k20	
+nfe2l2	
+LOC100700039	GAD_DISEASE:Tobacco Use Disorder
+nop53	UP_TISSUE:Cervix carcinoma
+aqp9	GO:0015722
+LOC100706095	PSYGENET:C0005586~Bipolar Disorder
+mre11	GAD_DISEASE:Hip
+zeb1	HPO:HP:0007663~Reduced visual acuity
+LOC100703776	REACTOME_PATHWAY:R-HSA-70171~Glycolysis
+arl6ip1	GO:0071787
+chd9	GO:0004386
+batf	GO:0006357
+LOC100704348	CTD:C4721507~Alveolitis, Fibrosing
+cebpg	GO:0042267
+mkrn2	UP_TISSUE:Melanoma
+brip1	GO:0051536
+cav1	MGD:MP:0000630~mammary gland hyperplasia
+camk2b	REACTOME_PATHWAY:R-HSA-1489509~DAG and IP3 signaling
+LOC100708657	GO:0006670
+atrx	GO:0006325
+LOC100702148	GO:0005102
+chst10	MGD:MP:0002206~abnormal CNS synaptic transmission
+gbf1	
+LOC100704783	UP_TISSUE:Cervix carcinoma
+LOC102082062	GO:0005730
+LOC100691403	GO:0046872
+pax5	MGD:MP:0008212~absent mature B cells
+mark3	GO:0032092
+htr2a	GAD_DISEASE:medication overuse headache
+LOC100709268	GENOMICS_ENGLAND:C0497327~Dementia
+tiam2	GO:0090630
+mast4	GO:0000287
+pdcd6ip	GO:0070062
+seh1l	GO:0031503
+ttll11	GO:0005829
+LOC100696265	GO:0045893
+psmb7	REACTOME_PATHWAY:R-HSA-5689603~UCH proteinases
+LOC100705402	GO:0035255
+mbip	REACTOME_PATHWAY:R-HSA-9772755~Formation of WDR5-containing histone-modifying complexes
+rpl37	REACTOME_PATHWAY:R-HSA-8953897~Cellular responses to stimuli
+mapk10	GO:0016310
+ubald1	UP_TISSUE:Melanoma
+ndufa1	HPO:HP:0000508~Ptosis
+LOC100701827	CRB:CRB:XXX~No CRB phenotype
+snap23	GO:0005739
+LOC100694434	GO:0003714
+LOC100700731	GO:0005634
+ddr1	GO:0014909
+cad	GO:0005829
+LOC100710254	CTD:CXXX~No diseases associated
+rps10	GO:0022626
+mavs	GO:0060760
+lpl	GAD_DISEASE:myocardial infarction; stable angina of effort
+gsk3b	GO:0031334
+mvk	CTD:C2239176~Liver carcinoma
+svip	REACTOME_PATHWAY:R-HSA-168256~Immune System
+LOC100694900	GAD_DISEASE:breast cancer neutropenia
+LOC102082062	GO:0097526
+LOC100691607	GO:0004715
+syne3	GO:0005635
+qki	GO:0048710
+LOC100704211	MGD:MP:0005317~increased triglyceride level
+cdk1	KEGG_PATHWAY:hsa04218
+cilp	MGD:MP:0000221~decreased leukocyte cell number
+armc9	GO:0060271
+LOC100690876	REACTOME_PATHWAY:R-HSA-211859~Biological oxidations
+pde1a	GO:0046872
+selenok	GO:0005794
+fastkd5	GO:0005759
+LOC100708054	GO:0016197
+LOC102082062	
+pms1	DISGENET:C0496920~Neoplasm of uncertain or unknown behavior of ovary
+LOC100694808	GAD_DISEASE:Head and Neck Neoplasms|Neoplasm Recurrence, Local|Neoplasms, Second Primary
+itgb1	GO:0001968
+kcnc2	GO:0034702
+LOC100697385	GO:0005829
+cc2d1b	GO:0005634
+LOC100706088	GO:0007519
+ndufa9	MGD:MP:0003085~abnormal egg cylinder morphology
+ifngr1l	GO:0060333
+sgk2	GO:0006468
+LOC100705749	GO:0016020
+sgce	HPO:HP:0001336~Myoclonus
+ano10	DISGENET:C0752124~Spinocerebellar Ataxia Type 6 (disorder)
+kcnma1	GO:0005886
+det1	GO:0080008
+LOC100707316	MGD:MP:0000166~abnormal chondrocyte morphology
+LOC102082978	HPO:HP:0002226~White eyebrow
+morc2	GO:0005737
+LOC100704054	UP_TISSUE:Amygdala
+dbt	GO:0005759
+ctnna2	UP_TISSUE:Hippocampus
+sirt5	GO:0036046
+vti1b	GO:0005737
+LOC100706088	GO:0005737
+LOC100698688	HPO:HP:0009830~Peripheral neuropathy
+bmper	MGD:MP:0003345~decreased rib number
+LOC100700186	CTD:C0019151~Hepatic Encephalopathy
+fosl1	GO:0045787
+nr1h4	GO:0010988
+hsd17b4	CTD:C3658299~Zellweger Spectrum
+LOC102082074	CRB:CRB:XXX~No CRB phenotype
+mdm2	GO:0002039
+nkx2-8	MGD:MP:0010943~abnormal bronchus epithelium morphology
+mvp	GO:0034774
+akt1	GO:0010628
+ogfod1	MGD:MP:0000559~abnormal femur morphology
+LOC100693660	GO:0005634
+hdac9	GO:0051153
+LOC100707016	GO:0030136
+pin1	
+LOC100702251	GO:0016573
+sirt1	GO:0043161
+col4a5	HPO:HP:0001417~X-linked inheritance
+ppargc1b	GO:0005654
+LOC102082062	
+chek2	GO:0031625
+ctsh	GO:0008234
+dnm1	GO:0003924
+stat3	GO:0003677
+zmynd11	MGD:MP:0001127~small ovary
+ak2	HPO:HP:0001944~Dehydration
+yeats2	GO:0043229
+LOC100698882	CRB:CRB:0000022~Association with Survival No Antioxidants PSAP KO CRISPRi in Glutamatergic Neuron
+LOC100702233	MGD:MP:0002971~abnormal brown adipose tissue morphology
+yap1	MGD:MP:0003331~increased hepatocellular carcinoma incidence
+dbnl	GO:0045296
+golgb1	
+acsl4	GO:0006631
+abce1	GO:0016887
+col16a1	GO:0005788
+chd7	GO:0042472
+arid4b	GO:0006325
+LOC100690099	MGD:MP:0006254~thin cerebral cortex
+f5	GAD_DISEASE:Embryo Loss|Habitual aborter NOS|Thrombophilia
+sec61b	REACTOME_PATHWAY:R-HSA-1236974~ER-Phagosome pathway
+wdr35	HPO:HP:0002676~Cloverleaf skull
+tnfrsf21	CLINGEN:CXXX~No diseases associated
+edar	HPO:HP:0008388~Abnormal toenail morphology
+ano4	GO:1902476
+LOC100698319	GO:0005525
+LOC100689885	GO:0005875
+LOC100703297	CRB:CRB:0000027~Negative hit with Survival PSAP KO CRISPRa in Glutamatergic Neuron
+LOC100703532	MGD:MP:0012752~abnormal cardiac neural crest cell migration
+LOC100710973	GO:0002020
+LOC100692191	GO:0015031
+LOC100696367	GO:0006476
+LOC100705560	MGD:MP:0006254~thin cerebral cortex
+lrfn5	
+LOC102082062	
+myo1c	GO:0031267
+anxa2	GO:0044090
+miox	GO:0050113
+LOC102082062	
+glis2	GO:0003677
+epb41l2	GO:0030866
+LOC100712416	GO:0000981
+akap6	GO:0005515
+slc39a13	HPO:HP:0000218~High palate
+srbd1	HPO:HPO:XXX~No HPO phenotype
+LOC100708723	GAD_DISEASE:Vitiligo
+LOC100709782	GO:0005096
+map3k3	MGD:MP:0008688~decreased interleukin-2 secretion
+LOC100704495	GO:0036294
+rps15a	GO:0003723
+LOC100707581	GO:0046328
+LOC100707716	KEGG_PATHWAY:hsa04940
+dapk1	GO:2000310
+LOC100694458	GO:0005886
+bcl2l1	GO:0031410
+atrx	HPO:HP:0000297~Facial hypotonia
+dop1b	GO:0005794
+agl	GO:0004133
+ndufs2	GO:0008137
+LOC100690783	GO:0030307
+slc12a4	GO:1990573
+LOC100693400	MGD:MP:0013292~embryonic lethality prior to organogenesis
+LOC100691799	MGD:MP:0000709~enlarged thymus
+LOC100710064	
+myf6	GO:0090575
+fbln1	GAD_DISEASE:Cell Adhesion Molecules
+LOC100706888	UP_TISSUE:Erythroleukemia
+pin1	GO:0016607
+csf3r	CGI:C0023473~Myeloid Leukemia, Chronic
+LOC100699429	GO:0048241
+dnajc17	UP_TISSUE:Colon carcinoma
+LOC100709616	GO:0005739
+napepld	GO:0005635
+LOC100699821	MGD:MP:0003179~thrombocytopenia
+ppip5k1	GO:0016301
+pdx1	GO:0000785
+wasf1	UP_TISSUE:Testis
+slc8a3	GO:0042552
+arhgef18	HPO:HP:0000563~Keratoconus
+anxa2	GO:0005544
+ptprk	GO:0030054
+rnpc3	MGD:MP:0011094~embryonic lethality before implantation, complete penetrance
+slc15a5	HPO:HPO:XXX~No HPO phenotype
+sec13	GO:0051028
+LOC100705950	GO:0000166
+acly	GO:0046912
+ap3s2	MGD:MP:0005343~increased circulating aspartate transaminase level
+sh3d19	GO:0051044
+tmem41b	GO:0005789
+mapk6	GO:0006468
+LOC100699311	
+acmsd	UP_TISSUE:Brain
+kat14	GO:0006357
+rad51	GO:0033063
+prkd2	GO:0016301
+btg1	PSYGENET:CXXX~No diseases associated
+prdm16	HPO:HP:0001636~Tetralogy of Fallot
+slc27a4	MGD:MP:0030798~joint contracture
+hypk	GO:0005737
+nat10	GO:0032211
+LOC106098755	GO:0000981
+LOC100710764	GO:0098552
+LOC100692869	GAD_DISEASE:Arthritis, Rheumatoid|Rheumatoid Arthritis|Anti-TNF Response
+LOC100695155	REACTOME_PATHWAY:R-HSA-1280218~Adaptive Immune System
+ogg1	GO:0005515
+LOC100694109	MGD:MP:0005385~cardiovascular system phenotype
+ing1	DISGENET:C0024623~Malignant neoplasm of stomach
+ccdc88c	DISGENET:C0752123~Spinocerebellar Ataxia Type 5
+psmb8	GO:0045444
+ezr	GO:0032991
+LOC100701770	GO:0070527
+tubgcp6	HPO:HP:0000568~Microphthalmia
+LOC102082062	
+LOC100704180	GO:0016779
+LOC100703522	MGD:MP:0001265~decreased body size
+cacna1g	GO:0005886
+LOC100692353	GO:1904893
+pdx1	MGD:MP:0009109~decreased pancreas weight
+sfxn4	HPO:HP:0002151~Increased serum lactate
+LOC100708655	CTD:C1257931~Mammary Neoplasms, Human
+cacnb4	DISGENET:C0520966~Abnormal coordination
+p53	MGD:MP:0001412~excessive scratching
+pcsk7	GO:0005515
+LOC106098755	GO:0006357
+angptl4	GO:0070328
+tmem154	
+tmod4	ORPHANET:CXXX~No diseases associated
+ddb1	GO:0005730
+kif26a	GO:0021987
+fbxw7	GO:2001205
+mutyh	GO:0005515
+LOC100712573	HPO:HP:0000006~Autosomal dominant inheritance
+phldb1	GO:0005829
+cd63	GO:0005765
+mydgf	GO:0043066
+ppih	GO:0006457
+hgf	CTD:C0345967~Malignant mesothelioma
+uchl1	GO:0005829
+LOC100704394	GO:0016324
+mrpl44	ORPHANET:C3809339~COMBINED OXIDATIVE PHOSPHORYLATION DEFICIENCY 16
+disp1	GO:0016020
+clcn7	DISGENET:C3645711~Congenital Osteopetrosis
+LOC100702878	GO:0005515
+LOC100705749	UP_TISSUE:Lung
+vps33a	MGD:MP:0005606~increased bleeding time
+LOC100706140	GO:0005829
+rfc4	GO:0006261
+fzd5	GO:0008595
+LOC102082412	DISGENET:C0004238~Atrial Fibrillation
+LOC102082062	
+gnal	GO:0007165
+hlcs	REACTOME_PATHWAY:R-HSA-5668914~Diseases of metabolism
+ndufb5	GO:0009060
+LOC100711859	
+rbm33	GO:0003723
+fgfr3	GO:0017134
+brca2	GO:0006338
+hdac6	GO:0030424
+abcc8	ORPHANET:C1832386~Diabetes Mellitus, Transient Neonatal, 1
+sf3b1	GO:0008380
+dnajc19	HPO:HP:0008734~Decreased testicular size
+rbm5	GO:0000245
+LOC100705260	GO:0005179
+cct2	GO:0016887
+mtmr10	GO:0005737
+med4	CRB:CRB:0000016~Association with Survival No Antioxidants CRISPRi in Glutamatergic Neuron
+apbb3	GO:0016604
+rbbp8	GO:0010792
+zbtb46	GO:0000981
+tmeff2	GO:0016020
+ndufs2	GO:0032981
+e2f1	DISGENET:C3658290~Drug-Induced Acute Liver Injury
+gdap1	MGD:MP:0004931~enlarged epididymis
+xpa	HPO:HP:0001266~Choreoathetosis
+dnah5	MGD:MP:0002639~micrognathia
+fam3a	UP_TISSUE:Skin
+LOC100705439	HPO:HP:0001387~Joint stiffness
+LOC100704838	GO:0004672
+ap2s1	REACTOME_PATHWAY:R-HSA-373760~L1CAM interactions
+sphk2	GO:0016740
+LOC102082062	GO:0005615
+tap1	GO:0042605
+LOC100691504	REACTOME_PATHWAY:R-HSA-2022377~Metabolism of Angiotensinogen to Angiotensins
+pdpk1	MGD:MP:0005560~decreased circulating glucose level
+LOC100710257	GO:1901890
+utp15	MGD:MP:XXX~No phenotype
+vax1	GO:0007417
+aspm	GO:0005874
+LOC100696265	GO:0030036
+LOC100692758	HPO:HP:0003301~Irregular vertebral endplates
+itgb1	GO:0042383
+myo1b	GO:0005886
+plat	GAD_DISEASE:stroke, lacunar
+LOC100708634	DISGENET:C0205643~Carcinoma, Cribriform
+LOC102082978	GAD_DISEASE:Cholesterol, HDL
+dhrs1	
+LOC100691481	GO:0071364
+thoc6	UP_TISSUE:Lung
+dhx58	GO:0016787
+nfe2l2	CTD:C0400966~Non-alcoholic Fatty Liver Disease
+nr5a1	GO:0033327
+LOC100712060	GO:0035025
+eefsec	PSYGENET:CXXX~No diseases associated
+eps8l2	GO:0045296
+ap3d1	GO:0005737
+LOC100698329	GO:0008535
+immt	GO:0005739
+scrn3	UP_TISSUE:Lung
+id2	MGD:MP:0002741~small olfactory bulb
+LOC100692262	GO:0005890
+LOC100704579	GO:0006833
+LOC100690541	GO:0051928
+pfas	GO:0004642
+klhl2	REACTOME_PATHWAY:R-HSA-8951664~Neddylation
+mocs3	GO:0016779
+trip13	HPO:HP:0000003~Multicystic kidney dysplasia
+LOC100694711	KEGG_PATHWAY:hsa04514
+gps1	REACTOME_PATHWAY:R-HSA-8856828~Clathrin-mediated endocytosis
+plcg2	GO:0048471
+atrx	HPO:HP:0011903~HbH hemoglobin
+sash3	MGD:MP:0001800~abnormal humoral immune response
+nf2	GO:0005515
+LOC100708927	GO:0006811
+bloc1s6	GO:0008089
+setd2	MGD:MP:0001701~incomplete embryo turning
+zdhhc8	GO:0005794
+mllt10	GO:0045944
+LOC100710169	GO:0045335
+pigg	GO:0051377
+LOC100712332	GO:0005886
+scaf4	GO:0003723
+fmr1	GO:0043204
+LOC100706644	GO:0004114
+tap1	
+LOC102082062	
+snx16	GO:0035091
+scg5	GO:0030141
+LOC100706346	GO:0047057
+bag6	GO:0042771
+edaradd	HPO:HP:0000970~Anhidrosis
+LOC109194206	GO:0008625
+slc5a11	GO:0022857
+LOC100711821	GO:0005654
+foxg1	MGD:MP:0004572~fusion of basioccipital and basisphenoid bone
+LOC112841648	HPO:HP:0002145~Frontotemporal dementia
+ppie	GO:0003755
+LOC100689834	GO:0005201
+LOC100711075	REACTOME_PATHWAY:R-HSA-5663205~Infectious disease
+nbn	GO:0005515
+LOC100701658	
+LOC102082062	
+cdc6	GO:0000076
+ccbe1	HPO:HP:0100764~Lymphangioma
+LOC100709869	GO:0000978
+LOC100705483	MGD:MP:0000490~abnormal crypts of Lieberkuhn morphology
+LOC100707042	GO:0016020
+LOC109202907	GO:0016020
+rpl8	REACTOME_PATHWAY:R-HSA-392499~Metabolism of proteins
+LOC100712348	MGD:MP:0005095~decreased T cell proliferation
+blm	REACTOME_PATHWAY:R-HSA-1474165~Reproduction
+lrrc3b	CRB:CRB:XXX~No CRB phenotype
+znf438	GO:0005515
+nfib	DISGENET:C0010606~Adenoid Cystic Carcinoma
+LOC100690783	GO:0003743
+pde2a	GO:0005759
+rab11fip3	PSYGENET:CXXX~No diseases associated
+duox1	GO:0106293
+LOC100712573	HPO:HP:0000822~Hypertension
+sphkap	GO:0005737
+timm22	GO:0045039
+maz	GO:0045893
+lg15h1orf198	CRB:CRB:0000019~Association with Survival No Antioxidants PSAP KO CRISPRa in Glutamatergic Neuron
+bdnf	MGD:MP:0001454~abnormal cued conditioning behavior
+LOC100708611	GO:0010803
+hadh	GO:0016491
+LOC100694597	GO:0008542
+LOC100707635	DISGENET:C0037771~Paraparesis, Spastic
+dkc1	MGD:MP:0030927~decreased telomere length
+cited1	UP_TISSUE:Erythroleukemia
+kat14	UP_TISSUE:Erythroleukemia
+LOC100705021	GENOMICS_ENGLAND:C0236792~Asperger Syndrome
+trpm7	DISGENET:C0001430~Adenoma
+zdhhc2	GO:0005886
+dysf	HPO:HP:0003749~Pelvic girdle muscle weakness
+morc2	GO:0005634
+LOC100712332	GAD_DISEASE:several psychiatric disorders
+acad11	CRB:CRB:0000030~Negative hit with Survival PSAP KO CRISPRi in Glutamatergic Neuron
+LOC100701336	GO:0055085
+rfx3	GO:0006357
+exosc8	GO:0005694
+ndufa8	CRB:CRB:0000016~Association with Survival No Antioxidants CRISPRi in Glutamatergic Neuron
+xpa	MGD:MP:0001513~limb grasping
+lig4	GO:0071479
+ntrk2	GO:0010976
+mlx	GO:0001227
+plekhm1	UP_TISSUE:Erythroleukemia
+LOC102082064	UP_TISSUE:Testis
+fgfr3	MGD:MP:0000434~megacephaly
+dcakd	GO:0015937
+pik3cg	GO:0106310
+asah1	GO:1904724
+nkx6-1	UP_TISSUE:Pancreatic islet
+rhpn1	ORPHANET:CXXX~No diseases associated
+kif16b	REACTOME_PATHWAY:R-HSA-5653656~Vesicle-mediated transport
+LOC100690085	GO:0006357
+kansl2	GO:0045893
+cd36	MGD:MP:0002106~abnormal muscle physiology
+LOC100690092	GO:0046850
+cerkl	DISGENET:C0035334~Retinitis Pigmentosa
+epha7	MGD:MP:0001890~anencephaly
+nbn	GO:0032206
+ctnnb1	HPO:HP:0005214~Intestinal obstruction
+ppp1r16b	GO:0005886
+tbc1d32	GO:0042733
+traf4	GO:0030323
+st3gal3	GO:0032580
+gata3	MGD:MP:0008487~abnormal mesonephros morphology
+LOC100693678	GO:0051926
+colq	GO:0062023
+cast	GO:0005829
+npr1	HPO:HP:0001156~Brachydactyly
+eef1d	GO:0005085
+lg12h9orf3	GAD_DISEASE:Insulin Resistance
+srrm4	
+cdc45	GO:0007049
+LOC100702364	GO:0005515
+LOC100701317	HPO:HPO:XXX~No HPO phenotype
+smyd4	CTD:C0205833~Medullomyoblastoma
+samd4a	GO:0001650
+LOC109194175	HPO:HP:0000508~Ptosis
+kdsr	GO:0006666
+LOC100692078	GO:0004842
+ppargc1b	UP_TISSUE:Cervix carcinoma
+mettl5	GO:0032259
+LOC100708217	GO:0016020
+LOC100692170	GO:0050115
+mapk10	GO:0016310
+apex1	
+ubr1	GO:0006511
+ncf4	DISGENET:C0678202~Regional enteritis
+pomgnt1	MGD:MP:0001265~decreased body size
+zbtb16	GO:0046872
+parn	GO:0005634
+ltn1	GO:0008270
+ndrg4	GO:0005737
+LOC100692790	DISGENET:C0018800~Cardiomegaly
+LOC100694718	GO:0050687
+LOC100709545	GO:0005737
+cd63	GO:0005765
+siva1	GO:0032088
+lpl	GO:0005886
+huwe1	HPO:HP:0001417~X-linked inheritance
+cacna1g	GO:0008331
+LOC102082062	
+mrpl55	GO:0032543
+slc26a2	HPO:HP:0002514~Cerebral calcification
+LOC100708554	GO:0005829
+eda	HPO:HP:0000830~Anterior hypopituitarism
+ndufv1	GO:0051536
+leprot	GAD_DISEASE:Type 2 Diabetes| edema | rosiglitazone
+cdc7	GO:0045171
+LOC100706673	GO:0003723
+prkar1b	GO:2000480
+fosl2	GO:0030316
+rad9b	REACTOME_PATHWAY:R-HSA-5685938~HDR through Single Strand Annealing (SSA)
+anapc11	GO:0061630
+chmp3	REACTOME_PATHWAY:R-HSA-2555396~Mitotic Metaphase and Anaphase
+rfc1	
+LOC100691349	GO:0006836
+lrp5	MGD:MP:0003731~abnormal retinal outer nuclear layer morphology
+kcnj6	REACTOME_PATHWAY:R-HSA-112316~Neuronal System
+LOC100705845	GO:0005886
+alad	GO:0005829
+fosb	GO:0003700
+LOC100697603	GO:0044877
+cftr	GO:0005789
+setd3	GO:0003779
+LOC100698332	CRB:CRB:0000022~Association with Survival No Antioxidants PSAP KO CRISPRi in Glutamatergic Neuron
+LOC100697588	HPO:HP:0010808~Protruding tongue
+LOC102082062	
+ctnnd1	GO:0007043
+hyal2	GO:0031410
+ara	MGD:MP:0001940~testis hypoplasia
+psmc1	REACTOME_PATHWAY:R-HSA-69239~Synthesis of DNA
+LOC100706288	HPO:HP:0007766~Optic disc hypoplasia
+cyfip1	GO:0001726
+rsl24d1	UP_TISSUE:Blood
+chn2	REACTOME_PATHWAY:R-HSA-9013149~RAC1 GTPase cycle
+chd4	UP_TISSUE:Leukemic T-cell
+cdc20	MGD:MP:0003702~abnormal chromosome morphology
+LOC100696268	HPO:HP:0010585~Small epiphyses
+bckdk	GO:0045763
+depdc5	GO:0005737
+epm2a	GO:0005654
+dpagt1	GO:0005783
+mpl	HPO:HP:0002488~Acute leukemia
+LOC102082062	
+hypk	
+herpud1	GO:0016020
+LOC102082062	
+csnk1a1	GENOMICS_ENGLAND:CXXX~No diseases associated
+polr3a	HPO:HP:0001321~Cerebellar hypoplasia
+psmb3	REACTOME_PATHWAY:R-HSA-69275~G2/M Transition
+arid4b	MGD:MP:0004929~decreased epididymis weight
+galnt13	GO:0004653
+ctnnb1	GO:0033234
+pdxdc1	GO:0016830
+LOC100534578	GAD_DISEASE:Lymphoma, Large B-Cell, Diffuse
+steap3	GO:0006826
+lpl	GAD_DISEASE:Coronary Disease|Coronary heart disease
+mak	GO:0005634
+gabrg2	HPO:HP:0001265~Hyporeflexia
+tert	HPO:HP:0004808~Acute myeloid leukemia
+LOC100694542	GO:0030321
+rchy1	GO:0008270
+selenop	DISGENET:C0848676~Subfertility, Male
+pdx1	HPO:HP:0002123~Generalized myoclonic seizure
+LOC100692916	GO:0016192
+LOC100694249	GO:0006508
+ldlr	GO:0005770
+clcn4	ORPHANET:C2931498~Mental Retardation, X-Linked 1
+blvra	GO:0046872
+yars	UNIPROT:C1842237~Charcot-Marie-Tooth Disease, Dominant Intermediate C
+ara	MGD:MP:0005598~decreased ventricle muscle contractility
+mtr	GO:0046872
+abca12	GO:0061436
+fhit	GO:0047710
+adgrv1	GO:0007154
+LOC102082062	
+LOC100705859	REACTOME_PATHWAY:R-HSA-1500931~Cell-Cell communication
+nedd4l	GO:0042391
+nudt8	CTD:CXXX~No diseases associated
+gata4	GO:0009653
+LOC100699105	MGD:MP:0002590~increased mean corpuscular volume
+acot7	GO:0005829
+myb	GO:0006355
+LOC100703880	REACTOME_PATHWAY:R-HSA-5621481~C-type lectin receptors (CLRs)
+rcan3	UP_TISSUE:Brain
+nr2e1	MGD:MP:0000812~abnormal dentate gyrus morphology
+lzts3	GO:0030425
+psmc2	CTD:CXXX~No diseases associated
+ube2g1	GO:0061631
+LOC100698743	GO:0016020
+slc18a2	GO:0005886
+LOC100706654	GO:0000978
+LOC100689726	GO:0052845
+nf2	GO:0030336
+comt	HPO:HP:0000396~Overfolded helix
+extl3	GO:0006486
+creb1	GAD_DISEASE:anger expression
+map2k1	GO:0000166
+LOC100699730	UP_TISSUE:Thyroid
+dag1	GO:0002009
+pcgf2	MGD:MP:0000079~abnormal basioccipital bone morphology
+amigo3	GO:0007155
+akap9	GO:0007165
+LOC100691229	GO:0006657
+ube2i	REACTOME_PATHWAY:R-HSA-68882~Mitotic Anaphase
+hsd17b3	GAD_DISEASE:hypospadias
+cep290	HPO:HP:0004348~Abnormality of bone mineral density
+LOC100700383	CRB:CRB:0000021~Negative hit with Survival No Antioxidants PSAP KO CRISPRa in Glutamatergic Neuron
+cacna1c	GO:0035585
+LOC100712209	UP_TISSUE:Brain
+LOC100709268	GAD_DISEASE:Macular Degeneration
+nxf1	REACTOME_PATHWAY:R-HSA-8953854~Metabolism of RNA
+dhx30	GO:0005737
+rps3a	GO:0005840
+LOC102082062	
+nfatc2	MGD:MP:0002497~increased IgE level
+wbp2nl	GO:0033011
+idh3g	GO:0006099
+LOC100534577	GO:0043195
+tsc2	
+chst14	HPO:HP:0000337~Broad forehead
+syt3	GO:0005544
+ppp2r5d	DISGENET:C4225354~MENTAL RETARDATION, AUTOSOMAL DOMINANT 35
+dhx35	UNIPROT:CXXX~No diseases associated
+mtr	DISGENET:C0006142~Malignant neoplasm of breast
+cfap74	CTD:CXXX~No diseases associated
+sdha	KEGG_PATHWAY:hsa05014
+LOC102082062	
+gtf2h5	REACTOME_PATHWAY:R-HSA-6796648~TP53 Regulates Transcription of DNA Repair Genes
+LOC100703033	ORPHANET:CXXX~No diseases associated
+dlg5	GO:0042130
+st3gal4	GO:0009101
+LOC100693327	UP_TISSUE:Brain
+LOC100701739	CLINGEN:CXXX~No diseases associated
+drp2	GO:0014069
+heatr3	CRB:CRB:0000022~Association with Survival No Antioxidants PSAP KO CRISPRi in Glutamatergic Neuron
+nisch	GO:0005829
+LOC100703553	HPO:HP:0011103~Abnormal left ventricular outflow tract morphology
+gli3	MGD:MP:0004342~scapular bone foramen
+grik2	GO:0005886
+psma2	GO:0005634
+pcgf2	GAD_DISEASE:Chronic renal failure|Kidney Failure, Chronic
+grhl3	GO:0003677
+glrx	GO:0015038
+rmnd5b	GO:0034657
+gata2	GO:1902895
+ercc3	UNIPROT:C0268136~Xeroderma pigmentosum, group B
+cpd	GO:0008233
+LOC100703806	CGI:C0154017~Benign neoplasm of bladder
+acot7	UP_TISSUE:Colon
+LOC100706409	CGI:C0007114~Malignant neoplasm of skin
+LOC100707394	GAD_DISEASE:gastric atrophy H. pylori infection
+mtcl1	GO:0097427
+kdm8	GO:0048511
+LOC100690862	KEGG_PATHWAY:hsa01100
+p4ha2	GO:0005515
+LOC100701700	GO:0051213
+LOC100708917	GO:0030204
+LOC102081741	PSYGENET:CXXX~No diseases associated
+LOC100703974	GO:0001968
+LOC100709859	GO:0071376
+snai2	HPO:HP:0001249~Intellectual disability
+clic1	GO:0034220
+plxnd1	GO:0030334
+fnip1	MGD:MP:0006036~abnormal mitochondrial physiology
+fgfr3	GO:0005783
+LOC100692078	GO:0007049
+sel1l	CRB:CRB:0000004~Association with Labile Iron (FeRhoNox Intensity) in Glutamatergic Neuron
+polr2b	GO:0003677
+LOC102076673	GO:0050821
+LOC100703095	GO:0000776
+slc44a4	GO:0015871
+wnk4	GO:0016301
+brd7	GO:0005634
+srsf11	GO:0003723
+LOC100698985	REACTOME_PATHWAY:R-HSA-418217~G beta
+slc25a13	
+coasy	GO:0000166
+LOC100693188	GO:0046872
+LOC100697933	
+LOC100706673	CRB:CRB:0000028~Association with Survival PSAP KO CRISPRi in Glutamatergic Neuron
+LOC100690099	REACTOME_PATHWAY:R-HSA-9716542~Signaling by Rho GTPases, Miro GTPases and RHOBTB3
+dnajc10	GO:0015035
+LOC100698862	GAD_DISEASE:height
+dnajc15	MGD:MP:0002702~decreased circulating free fatty acid level
+ppp2r5d	GO:0005829
+lg6h16orf45	
+wars	GO:0019210
+kdr	GO:0005768
+atp7a	HPO:HP:0002857~Genu valgum
+LOC100705558	GO:0031410
+LOC100689797	GO:0005886
+lcat	GAD_DISEASE:dominant effect on HDL-cholesterol
+cep78	GO:0005813
+LOC100707130	DISGENET:C3714756~Intellectual Disability
+hlx	MGD:MP:0003924~diaphragmatic hernia
+LOC102082062	
+mboat7	GO:0005789
+sez6	GO:0005783
+LOC100692393	HPO:HP:0000966~Hypohidrosis
+cnr1	GAD_DISEASE:substance abuse
+LOC100702362	GO:0005739
+polr3f	GO:0005666
+adam15	GO:0031514
+slc39a9	GO:0071577
+LOC100711230	GO:0051015
+LOC100697286	REACTOME_PATHWAY:R-HSA-8856825~Cargo recognition for clathrin-mediated endocytosis
+atm	GO:0005737
+prkdc	GO:0006974
+nrp1	GO:0046872
+ppl	DISGENET:C0033578~Prostatic Neoplasms
+faap100	CTD:CXXX~No diseases associated
+fhl2	CTD:C4704874~Mammary Carcinoma, Human
+LOC100691316	GO:0005634
+LOC100693219	GO:0034452
+tgfb1i1	GO:2000060
+rfx6	GO:0030154
+LOC100700820	GO:0043565
+shc1	GO:0005739
+pde2a	GO:0005886
+nipal2	REACTOME_PATHWAY:R-HSA-5223345~Miscellaneous transport and binding events
+twnk	
+neu1	GO:0052794
+dctn2	GO:0005813
+LOC100706409	GAD_DISEASE:gastrointestinal cancer
+dusp10	GO:0008138
+cfap410	GO:0005739
+LOC100709268	GO:0006468
+pigt	GO:0016255
+LOC100697187	GO:0016020
+kras	HPO:HP:0002354~Memory impairment
+chodl	GO:0005737
+ttc39a	UNIPROT:CXXX~No diseases associated
+LOC102082062	
+LOC112848065	HPO:HP:0000565~Esotropia
+plekhf2	GO:0030133
+ucn	GAD_DISEASE:obesity
+rnf130	REACTOME_PATHWAY:R-HSA-983168~Antigen processing
+nfkb1	KEGG_PATHWAY:hsa05171
+depdc5	GO:0035556
+barx2	MGD:MP:0000160~kyphosis
+sh3kbp1	REACTOME_PATHWAY:R-HSA-8876384~Listeria monocytogenes entry into host cells
+mapk1	KEGG_PATHWAY:hsa05145
+mapre2	HPO:HP:0000160~Narrow mouth
+LOC100696655	GO:0046872
+LOC100694604	GO:0005886
+map2k1	HPO:HP:0000637~Long palpebral fissure
+fermt2	GO:0005912
+vav1	DISGENET:C0751291~Desmoplastic Medulloblastoma
+piezo1	HPO:HP:0000347~Micrognathia
+polr3c	GO:0002376
+LOC100705428	GO:0003690
+cln8	GO:0006644
+pde10a	GAD_DISEASE:Triglycerides
+ust	DISGENET:C3468561~familial atrial fibrillation
+flcn	MGD:MP:0003917~increased kidney weight
+chrna5	DISGENET:C0149958~Complex partial seizures
+braf	CGI:C0699791~Stomach Carcinoma
+pds5b	MGD:MP:0003632~abnormal nervous system morphology
+kank1	GO:0005886
+sepsecs	UP_TISSUE:T-cell lymphoma
+LOC109194736	REACTOME_PATHWAY:R-HSA-162582~Signal Transduction
+rag1	MGD:MP:0008663~increased interleukin-12 secretion
+rag2	MGD:MP:0013956~decreased colon length
+polr3f	GO:0005634
+lbr	HPO:HP:0002007~Frontal bossing
+slc9a6	GO:0031901
+tbk1	MGD:MP:0011085~postnatal lethality, complete penetrance
+sqstm1	HPO:HP:0000716~Depressivity
+il10	GAD_DISEASE:Arthritis, Rheumatoid
+golph3	GO:0005768
+tsc2	MGD:MP:0002216~abnormal seminiferous tubule morphology
+LOC100702076	GO:0003730
+LOC100699280	MGD:MP:0003638~abnormal response/metabolism to endogenous compounds
+LOC100702413	GO:0005515
+LOC100691587	GO:0032979
+parp4	GO:0005856
+LOC100702076	GO:1902164
+nbr1	MGD:MP:0010124~decreased bone mineral content
+mrpl37	ORPHANET:CXXX~No diseases associated
+LOC100710680	GO:0000981
+cacna1c	GO:0007507
+cckar	DISGENET:C0085762~Alcohol abuse
+rc3h1	GO:0030889
+aspm	GO:0005515
+LOC100703115	GO:1902287
+anxa1	GO:0070062
+LOC100700920	GO:0005794
+steap4	GO:0070062
+kif3c	MGD:MP:0011100~preweaning lethality, complete penetrance
+LOC100691587	GO:0032979
+ddx10	UP_TISSUE:Cervix carcinoma
+myh11	MGD:MP:0003566~abnormal cell adhesion
+ndufs3	HPO:HP:0003128~Lactic acidosis
+LOC100690421	GO:0042995
+ppig	GO:0016363
+psmd13	GO:1904813
+myd88	KEGG_PATHWAY:hsa04010
+LOC102082062	
+pcid2	MGD:MP:0002123~abnormal definitive hematopoiesis
+comt	GO:0016020
+LOC100700952	GO:0071310
+arl6ip1	GO:0016020
+ret	GO:0009410
+chfr	GO:0046872
+taf3	REACTOME_PATHWAY:R-HSA-3700989~Transcriptional Regulation by TP53
+stmp1	CGI:CXXX~No diseases associated
+skp1	REACTOME_PATHWAY:R-HSA-9762114~GSK3B and BTRC
+tpp1	
+ccnyl1	GO:0019901
+LOC100697014	MGD:MP:0003786~premature aging
+rpl31	DISGENET:C0678222~Breast Carcinoma
+LOC100697722	
+nr4a2	GO:0003677
+LOC100709859	GO:0006357
+LOC102077149	GO:2000010
+dhx33	GO:0005634
+LOC100697672	PSYGENET:CXXX~No diseases associated
+slc33a1	GO:0016020
+eif6	GO:0043023
+LOC102082062	
+LOC106096438	CLINGEN:CXXX~No diseases associated
+extl3	HPO:HP:0000639~Nystagmus
+epha4	GO:0005005
+kif3c	MGD:MP:0001399~hyperactivity
+LOC100694458	GO:0071476
+ap1s1	GO:0030117
+LOC102082062	
+LOC100701596	GO:0016740
+LOC100705223	GO:0005515
+ift22	GO:0030992
+washc4	UP_TISSUE:Erythroleukemia
+LOC100691806	GO:0003735
+ncbp1	CRB:CRB:0000028~Association with Survival PSAP KO CRISPRi in Glutamatergic Neuron
+LOC109203822	
+ralgapb	UP_TISSUE:Human uterus endothel primary cell culture
+nde1	HPO:HP:0012736~Profound global developmental delay
+nmt1	GO:0004379
+LOC100705349	CTD:C1257925~Mammary Carcinoma, Animal
+pdgfrb	
+LOC100695545	GO:0032958
+LOC100692649	MGD:MP:0008146~asymmetric sternocostal joints
+asah1	GO:1904813
+LOC100703384	REACTOME_PATHWAY:R-HSA-6782210~Gap-filling DNA repair synthesis and ligation in TC-NER
+LOC100704479	
+LOC100694773	REACTOME_PATHWAY:R-HSA-4608870~Asymmetric localization of PCP proteins
+brca2	HPO:HP:0000010~Recurrent urinary tract infections
+LOC100694434	HPO:HP:0001249~Intellectual disability
+il6st	GO:0042802
+ddx23	GO:0005524
+naa20	GO:0006474
+p2rx4	GO:0008270
+fgf3	MGD:MP:0003163~absent posterior semicircular canal
+hras	REACTOME_PATHWAY:R-HSA-5654708~Downstream signaling of activated FGFR3
+dpm3	GO:0018406
+aire	MGD:MP:0002169~no abnormal phenotype detected
+LOC100693961	GO:0006337
+LOC100708715	GO:0005515
+LOC100707737	GO:0000432
+epha3	GO:1903078
+mapk10	GO:0004705
+qki	GO:0006397
+usp14	MGD:MP:0002083~premature death
+ezh1	GO:0035098
+haus7	
+men1	GO:0045786
+LOC100700081	HPO:HP:0001257~Spasticity
+LOC100697440	MGD:MP:0006426~Mullerian duct degeneration
+rps3a	REACTOME_PATHWAY:R-HSA-72764~Eukaryotic Translation Termination
+alg1	REACTOME_PATHWAY:R-HSA-5668914~Diseases of metabolism
+LOC100699097	MGD:MP:0009404~centrally nucleated skeletal muscle fibers
+plgrkt	GAD_DISEASE:Acquired Immunodeficiency Syndrome|Disease Progression
+LOC100693121	GO:0003677
+mta1	REACTOME_PATHWAY:R-HSA-392499~Metabolism of proteins
+dym	HPO:HP:0006450~Multicentric ossification of proximal femoral epiphyses
+gtpbp3	UNIPROT:C4015447~COMBINED OXIDATIVE PHOSPHORYLATION DEFICIENCY 23
+znf131	GO:0000122
+dst	MGD:MP:0001516~abnormal motor coordination/balance
+cryl1	KEGG_PATHWAY:hsa01100
+ctnnb1	GO:0030054
+LOC100709080	UP_TISSUE:Lymph node
+LOC100710852	REACTOME_PATHWAY:R-HSA-8948751~Regulation of PTEN stability and activity
+hif1a	MGD:MP:0005621~abnormal cell physiology
+yap1	GO:0005829
+vps28	GO:0032509
+gtf2h4	GO:0005669
+ap3s2	
+tdp2	DISGENET:C0752123~Spinocerebellar Ataxia Type 5
+gadl1	GO:0004782
+dync1h1	GO:0003723
+LOC100691573	HPO:HP:0002376~Developmental regression
+flcn	GO:1901856
+mapk10	GO:0042752
+ppp2r2d	KEGG_PATHWAY:hsa05142
+LOC100708956	REACTOME_PATHWAY:R-HSA-1640170~Cell Cycle
+msh4	GO:0051321
+tp63	MGD:MP:0002048~increased lung adenoma incidence
+LOC100699860	MGD:MP:0011262~abnormal pharyngeal arch mesenchyme morphology
+slc7a9	GO:0042605
+LOC100710649	GO:0070382
+LOC100698259	GO:0005247
+LOC100698981	GAD_DISEASE:Psychiatric Disorders
+acss1	GO:0005524
+nr1h3	GO:0005634
+hnf4a	MGD:MP:0000608~dissociated hepatocytes
+opa1	GO:0007007
+actl6a	MGD:MP:0008255~decreased megakaryocyte cell number
+LOC100704310	GO:1903169
+LOC100708112	GO:0016740
+grb14	GO:0046627
+mthfr	CTD:C0041696~Unipolar Depression
+il7r	GO:1904894
+LOC100712358	GO:0005768
+xrcc2	GO:2000269
+sirt2	GENOMICS_ENGLAND:CXXX~No diseases associated
+fancc	HPO:HP:0000175~Cleft palate
+LOC100710393	GO:0070876
+ Folding, assembly and peptide loading of class I MHC	
+LOC102082062	
+ctnnb1	MGD:MP:0013466~keratoconjunctivitis sicca
+nos1	CTD:C0270823~Petit mal status
+fbxl3	KEGG_PATHWAY:hsa04710
+ercc2	GO:1901990
+plekha2	REACTOME_PATHWAY:R-HSA-1660499~Synthesis of PIPs at the plasma membrane
+chd9	GO:0000166
+cchcr1	GO:0030154
+LOC100711421	REACTOME_PATHWAY:R-HSA-196071~Metabolism of steroid hormones
+LOC100701567	MGD:MP:0005300~abnormal corneal stroma morphology
+atm	CGI:C2363142~T-Cell Prolymphocytic Leukemia
+akt1	
+nup214	HPO:HP:0001428~Somatic mutation
+LOC100699105	GO:0007596
+LOC100701954	HPO:HP:0011968~Feeding difficulties
+LOC100691710	GO:0004672
+irf5	GO:0032495
+LOC100709268	GO:0005615
+cfap57	
+ino80	UP_TISSUE:Testis
+LOC100705942	GO:0046598
+snrpd2	GO:0070062
+ccnh	DISGENET:C0024232~Lymphatic Metastasis
+flcn	GO:0044877
+kiz	GO:0005737
+LOC100706019	GO:0045668
+cd200	GO:0005886
+mettl22	MGD:MP:XXX~No phenotype
+LOC100712084	MGD:MP:0005039~hypoxia
+shox2	GO:0005634
+rad50	GO:0005634
+kbtbd8	UNIPROT:C0006142~Malignant neoplasm of breast
+LOC100711592	HPO:HP:0003066~Limited knee extension
+igf1	GAD_DISEASE:Chorioamnionitis|Fetal Membranes, Premature Rupture|Infection of amniotic sac and membranes
+lrrk2	GO:0051770
+LOC100707614	GO:0008465
+LOC102082667	ORPHANET:CXXX~No diseases associated
+LOC100705260	CTD:C1135196~Heart Failure, Diastolic
+kdm1a	GAD_DISEASE:Mortality
+LOC100704125	GO:0005833
+LOC100703477	GO:0031624
+ppargc1b	MGD:MP:0006138~congestive heart failure
+rpl17	GO:0022625
+tada3	GO:0140672
+pde2a	GO:0007193
+taf6	GO:0016251
+dlg3	GO:0097120
+rnmt	GO:0001650
+tnpo2	GO:0031267
+LOC100706916	
+gramd2b	
+zdhhc9	UP_TISSUE:Muscle
+mapkapk5	CTD:CXXX~No diseases associated
+LOC100710707	UP_TISSUE:Testis
+ppl	PSYGENET:CXXX~No diseases associated
+LOC100710813	GO:0003723
+LOC100710649	GO:0070083
+ntrk2	GO:0043087
+taf1	GO:0046982
+LOC100694808	GO:0019901
+LOC100692540	GO:0006886
+mapk10	GO:0106310
+LOC100709904	GO:0043005
+psmg1	PSYGENET:CXXX~No diseases associated
+LOC100703997	CRB:CRB:0000024~Negative hit with Survival No Antioxidants PSAP KO CRISPRi in Glutamatergic Neuron
+dhx38	
+LOC100709275	GO:0005524
+bcap29	GO:0005789
+gpr143	GO:0006726
+LOC100534525	GAD_DISEASE:Retinal Diseases
+grip1	HPO:HP:0000445~Wide nose
+LOC100698523	KEGG_PATHWAY:hsa04926
+LOC100703716	GAD_DISEASE:Albuminuria
+pip5kl1	CRB:CRB:XXX~No CRB phenotype
+msh5	GO:0005524
+LOC100706770	MGD:MP:0002842~increased systemic arterial blood pressure
+ctnnd1	GO:0005515
+lpar1	GO:0007202
+herc1	HPO:HP:0007204~Diffuse white matter abnormalities
+sult1a4	REACTOME_PATHWAY:R-HSA-9753281~Paracetamol ADME
+ptk2b	GO:0097440
+LOC100696518	GO:0005251
+gdpd2	GO:0008081
+hbs1l	MGD:MP:0005568~increased circulating total protein level
+dcun1d3	MGD:MP:0002702~decreased circulating free fatty acid level
+uimc1	GO:0005654
+LOC100691074	MGD:MP:0006070~increased retinal photoreceptor cell number
+def8	GO:0032418
+cd63	GO:0007160
+slc5a5	HPO:HP:0000239~Large fontanelles
+wrap73	GO:0005815
+nr4a2	GAD_DISEASE:schizophrenia
+LOC100697952	
+sf3b3	ORPHANET:CXXX~No diseases associated
+tmem170a	GO:0005635
+atoh1	GO:0045666
+tp63	HPO:HP:0006342~Peg-shaped maxillary lateral incisors
+LOC100707454	REACTOME_PATHWAY:R-HSA-9748784~Drug ADME
+vps33b	MGD:MP:0010099~abnormal thoracic cage shape
+LOC100712573	DISGENET:C0005940~Bone Diseases
+ahi1	GO:0070161
+ccdc18	GENOMICS_ENGLAND:CXXX~No diseases associated
+rdm1	GO:0005730
+spata2l	CTD:CXXX~No diseases associated
+gck	GAD_DISEASE:type 2 diabetic
+LOC100692684	MGD:MP:0003984~embryonic growth retardation
+LOC100691233	UNIPROT:CXXX~No diseases associated
+cav1	GO:0031410
+LOC102075629	GO:0005515
+LOC100699569	GO:0014718
+phf8	GO:0051864
+rnf6	HPO:HP:0008872~Feeding difficulties in infancy
+mad1l1	GO:0043515
+LOC100700693	GO:0016020
+LOC100708611	MGD:MP:0008234~absent spleen marginal zone
+chek2	GO:0006974
+ap1s1	GO:0005794
+mthfr	MGD:MP:0012335~increased circulating homocysteine level
+LOC102082062	
+coq2	HPO:HP:0002066~Gait ataxia
+gpaa1	GO:0042765
+edil3	MGD:MP:0011109~lethality throughout fetal growth and development, incomplete penetrance
+rps4x	UP_TISSUE:Liver
+cep55	HPO:HP:0000110~Renal dysplasia
+wdr91	GO:0031902
+bcar3	GO:0001784
+LOC100701529	GO:0006177
+dennd1a	GO:0005085
+ace	GAD_DISEASE:chronic obstructive pulmonary disease/COPD
+LOC102078408	HPO:HP:0100716~Self-injurious behavior
+LOC100698207	CTD:C0024623~Malignant neoplasm of stomach
+os9	GO:0000836
+LOC100711851	GO:0005886
+gripap1	
+fam53b	GO:0090263
+LOC100707570	
+ezh2	HPO:HP:0000286~Epicanthus
+fktn	HPO:HP:0040081~Abnormal circulating creatine kinase concentration
+ercc2	GO:0005737
+LOC100703095	GO:0006611
+fbxo3	GO:0031146
+ehmt1	HPO:HP:0000733~Stereotypy
+pdk1	GO:0005524
+pbld	GO:0042802
+ptpn11	MGD:MP:0008519~thin retinal outer plexiform layer
+LOC100699012	UP_TISSUE:Carcinoma
+cd164	GO:0005886
+LOC100697444	GO:1903860
+cnnm1	GO:0005886
+LOC100698412	GO:0098609
+celsr1	MGD:MP:0011101~prenatal lethality, incomplete penetrance
+strap	CLINGEN:CXXX~No diseases associated
+LOC100697215	GO:0016020
+xrn2	GO:0003677
+dysf	GO:0042383
+LOC100709723	GO:0043547
+LOC100702918	GO:0005759
+whrn	GO:0001917
+LOC100534527	GO:0005634
+derl2	MGD:MP:0005150~cachexia
+med22	GO:0051123
+vav1	
+LOC100711262	KEGG_PATHWAY:hsa04964
+wdr45	GO:0005515
+prrc1	UP_TISSUE:Uterus
+hnf1b	GO:0035565
+adcy8	KEGG_PATHWAY:hsa04611
+sf3b4	HPO:HP:0030084~Clinodactyly
+LOC100700081	GO:0042582
+rcc1	GO:0005634
+gad2	GAD_DISEASE:Body Fat Distribution
+abcc8	GO:0008281
+chrd	GO:0005615
+phex	GO:0006508
+pcyt1b	GO:0005783
+extl2	GO:0005654
+LOC102077463	GO:0016324
+LOC100692298	GO:0005524
+LOC100690958	MGD:MP:0010900~abnormal pulmonary interalveolar septum morphology
+usb1	GO:0000175
+bcorl1	HPO:HP:0000733~Stereotypy
+nr1i2	GO:0005515
+LOC100703423	CTD:C4277682~Chemical and Drug Induced Liver Injury
+LOC100706837	GO:0005886
+rhobtb2	HPO:HP:0002376~Developmental regression
+LOC100702218	GO:0005654
+LOC100691065	HPO:HP:0000470~Short neck
+LOC100707845	GO:0005764
+nkx2-5	MGD:MP:0010626~thick tricuspid valve cusps
+hrh1	MGD:MP:0002493~increased IgG level
+LOC100690783	GO:0005524
+cep57l1	GO:0042802
+LOC100695813	HPO:HP:0002982~Tibial bowing
+fam222a	UNIPROT:CXXX~No diseases associated
+pole3	REACTOME_PATHWAY:R-HSA-69278~Cell Cycle, Mitotic
+lrch1	GO:0005515
+atp6v0e1	GO:0055085
+ndufb5	GAD_DISEASE:drug-related genes 
+LOC100703704	GO:0005737
+arfgap2	DISGENET:C0024623~Malignant neoplasm of stomach
+slco4a1	GO:0043252
+pwwp2b	CRB:CRB:XXX~No CRB phenotype
+antxr2	GO:0038023
+LOC100701209	GO:0046785
+atp9b	GO:0005794
+slc19a1	CTD:C0205651~Adenoma, Trabecular
+ghitm	GO:0005739
+NA	CRB:CRB:0000010~Association with Lysosome (Lysotracker Intensity) in Glutamatergic Neuron
+b4galt7	REACTOME_PATHWAY:R-HSA-1430728~Metabolism
+mad1l1	GO:0005813
+agtr1	GAD_DISEASE:Apoplexy|Brain Ischemia|Hypertension|Stroke
+LOC100707201	MGD:MP:0005355~enlarged thyroid gland
+LOC100700798	GO:0016740
+med1	GO:1990841
+ccni	GO:0031965
+LOC100709278	CLINGEN:CXXX~No diseases associated
+vps33a	HPO:HP:0001903~Anemia
+vipr2	MGD:MP:0001262~decreased body weight
+map2k7	GO:0038095
+LOC100700872	CTD:C3658290~Drug-Induced Acute Liver Injury
+elfn1	MGD:MP:0004924~abnormal behavior
+pc	CTD:C3658290~Drug-Induced Acute Liver Injury
+hsp70	GO:0000398
+gucy1b1	GO:0038023
+gba	GO:0006665
+fam161b	PSYGENET:CXXX~No diseases associated
+LOC100711230	GO:0032587
+prdm16	GO:0005829
+LOC100696143	GO:0035579
+jam2	GO:0070160
+polr2c	REACTOME_PATHWAY:R-HSA-167152~Formation of HIV elongation complex in the absence of HIV Tat
+atp10a	GO:0005783
+LOC100705763	GO:0055085
+LOC100698963	GO:0051289
+wbp2nl	MGD:MP:XXX~No phenotype
+stk26	GO:0042803
+LOC100709465	MGD:MP:0004979~abnormal neuronal precursor cell number
+dll1	HPO:HP:0010804~Tented upper lip vermilion
+acox1	HPO:HP:0001252~Muscular hypotonia
+gabrg2	HPO:HP:0002283~Global brain atrophy
+irf6	MGD:MP:0000454~abnormal jaw morphology
+tnpo3	HPO:HP:0000980~Pallor
+LOC100707418	GO:0006687
+mcrs1	GO:0005730
+LOC100694365	MGD:MP:0004215~abnormal myocardial fiber physiology
+LOC100707336	GO:0038138
+LOC100700186	GO:0005634
+rad18	GO:0044877
+ubxn6	GO:0005829
+LOC100708442	REACTOME_PATHWAY:R-HSA-166166~MyD88-independent TLR4 cascade 
+marveld3	GO:0005923
+LOC100696318	
+LOC100707702	GO:0007165
+map2k1	GO:0004674
+LOC100703685	REACTOME_PATHWAY:R-HSA-1266738~Developmental Biology
+cnot11	CGI:CXXX~No diseases associated
+adi1	UP_TISSUE:Adipose tissue
+plxna4	GAD_DISEASE:Lipids
+LOC100702054	HPO:HP:0001250~Seizure
+cep162	GO:0060271
+LOC100696918	GAD_DISEASE:Type 2 Diabetes| edema | rosiglitazone
+pde8a	GO:0007165
+zc3h11a	CTD:C0006142~Malignant neoplasm of breast
+vars	
+mgat4b	
+jak1	GO:0005737
+LOC100694537	GO:0003341
+cmtr2	GO:0008757
+eef1e1	REACTOME_PATHWAY:R-HSA-71291~Metabolism of amino acids and derivatives
+hdac8	
+abcc5	GO:0016020
+LOC100704479	HPO:HP:0002126~Polymicrogyria
+LOC100702878	GO:0005829
+tmem173	GO:0035438
+cog6	GO:0032588
+pdgfc	MGD:MP:0005103~abnormal retinal pigmentation
+barhl2	CGI:CXXX~No diseases associated
+pak1	KEGG_PATHWAY:hsa04666
+usp8	HPO:HP:0012378~Fatigue
+slitrk2	MGD:MP:0000062~increased bone mineral density
+palb2	GO:0003677
+LOC100701948	HPO:HP:0001762~Talipes equinovarus
+atm	GAD_DISEASE:Type 2 Diabetes| edema | rosiglitazone
+abhd8	UP_TISSUE:Embryo
+pold1	CTD:C0011052~Prelingual Deafness
+LOC100696988	GO:0005509
+LOC100700973	HPO:HP:0002305~Athetosis
+LOC102082255	GO:0031267
+emx2	MGD:MP:0004739~conductive hearing loss
+LOC100694017	GO:0005576
+LOC102082062	GO:0005840
+LOC100689819	GO:0015248
+LOC100703854	GO:0005737
+LOC100711408	GO:0007015
+bpgm	HPO:HP:0001939~Abnormality of metabolism/homeostasis
+LOC100708172	REACTOME_PATHWAY:R-HSA-3214847~HATs acetylate histones
+galk1	GO:0005534
+LOC100534398	GO:0001228
+LOC109203106	GO:0016020
+LOC100695663	MGD:MP:0000572~abnormal autopod morphology
+ece1	UP_TISSUE:Placenta
+LOC100704495	HPO:HP:0001269~Hemiparesis
+ercc1	GO:0008584
+pmpcb	
+LOC100689759	GO:0030866
+ubb	REACTOME_PATHWAY:R-HSA-162906~HIV Infection
+LOC100709019	GO:0015986
+rufy2	
+cfap61	
+psmd3	REACTOME_PATHWAY:R-HSA-5357801~Programmed Cell Death
+mme	GAD_DISEASE:AlzheimerQs disease
+psmc2	GO:0005654
+slc38a9	GO:0071986
+LOC100690481	CTD:C0028754~Obesity
+rc3h1	MGD:MP:0001859~kidney inflammation
+LOC100705311	GO:0042995
+mlh1	GO:0030983
+LOC100711348	GO:0005737
+casc3	REACTOME_PATHWAY:R-HSA-422475~Axon guidance
+grik4	
+pcgf6	UNIPROT:CXXX~No diseases associated
+LOC100698670	GO:0005789
+zswim6	CRB:CRB:0000009~Negative hit with Labile Iron (FeRhoNox Intensity) in Glutamatergic Neuron
+tctn3	GENOMICS_ENGLAND:C0431399~Familial aplasia of the vermis
+LOC100694149	GO:0002183
+cdc14a	DISGENET:C0011053~Deafness
+nusap1	GO:0005634
+mtm1	GO:0006470
+stra6	
+gnptab	MGD:MP:0014185~cerebellum atrophy
+LOC100706970	GAD_DISEASE:alcohol
+nsg1	GO:0005794
+dolpp1	REACTOME_PATHWAY:R-HSA-446193~Biosynthesis of the N-glycan precursor (dolichol lipid-linked oligosaccharide, LLO) and transfer to a nascent protein
+LOC100696627	GO:0150104
+LOC100696652	GO:0042995
+tfap2b	HPO:HP:0008498~No permanent dentition
+ap1g1	REACTOME_PATHWAY:R-HSA-432722~Golgi Associated Vesicle Biogenesis
+prmt5	GO:0005794
+LOC100712562	GO:0005525
+LOC100699299	GO:0097150
+LOC100690920	REACTOME_PATHWAY:R-HSA-1566948~Elastic fibre formation
+flt4	UP_TISSUE:Placenta
+jmjd4	GO:0005737
+cenpt	GO:0000776
+myocd	DISGENET:C0018800~Cardiomegaly
+LOC100694718	UP_TISSUE:Kidney
+LOC100701219	HPO:HP:0002299~Brittle hair
+LOC100704479	GAD_DISEASE:colorectal cancer endometrial cancer
+LOC100691481	GO:0005886
+dnah5	MGD:MP:0010406~common atrium
+tk2	GO:0005759
+gapvd1	GO:0005085
+LOC100700586	GO:0005634
+cep41	
+cdk5	GO:0006468
+iyd	GO:0030659
+nubpl	HPO:HP:0000508~Ptosis
+LOC100704348	GO:0003700
+becn1	GO:0035032
+nf2	GO:0003779
+larp7	GO:0005654
+LOC100704479	GO:0030295
+dhfr	GO:0006730
+tert	DISGENET:C0678222~Breast Carcinoma
+epcam	GO:0009986
+LOC100690715	HPO:HP:0001347~Hyperreflexia
+armh1	
+LOC102082062	
+LOC100705898	GO:0006811
+ube2v2	GO:0070062
+LOC100694289	UP_TISSUE:Placenta
+mboat7	HPO:HP:0002059~Cerebral atrophy
+sema6d	
+cd36	GO:0009986
+disc1	MGD:MP:0001262~decreased body weight
+LOC100706624	PSYGENET:CXXX~No diseases associated
+hoxd9	MGD:MP:0004322~abnormal sternebra morphology
+zfpm1	GO:0045944
+LOC102082062	
+dhx29	GO:0016282
+babam2	GO:0070552
+nkx2-5	GO:0003180
+LOC100689943	GO:0030218
+LOC100708890	GO:0008285
+zmat2	GO:0046540
+LOC100691200	GAD_DISEASE:breast cancer
+mthfr	GAD_DISEASE:asthma; folate; hyperhomocystinemia
+fahd1	UP_TISSUE:Kidney
+ptrh2	MGD:MP:0000751~myopathy
+irak1	HPO:HP:0000123~Nephritis
+akap9	GO:0005795
+LOC100707476	GO:0000978
+cacnb2	GO:0034702
+LOC102082062	
+mfsd8	UP_TISSUE:Placenta
+phex	MGD:MP:0004380~short frontal bone
+LOC100692199	CTD:CXXX~No diseases associated
+bmpr1b	REACTOME_PATHWAY:R-HSA-162582~Signal Transduction
+polg2	HPO:HP:0003828~Variable expressivity
+LOC100692885	GO:0005515
+foxp1	GO:1900424
+eif2ak1	CTD:C3241937~Nonalcoholic Steatohepatitis
+htr2b	DISGENET:C1961112~Heart Decompensation
+txndc5	PSYGENET:C0036341~Schizophrenia
+mmp9	DISGENET:C0027051~Myocardial Infarction
+drd5	MGD:MP:0004183~abnormal sympathetic nervous system physiology
+LOC100709284	GO:0005432
+pdxdc1	CGI:CXXX~No diseases associated
+mindy3	GO:0008234
+hck	MGD:MP:0001790~abnormal immune system physiology
+nr2c2ap	CRB:CRB:0000046~Association with Survival CRISPRi in Glutamatergic Neuron
+add1	GO:0005886
+ect2	GO:0005829
+gata4	GO:0003677
+LOC100696652	GO:0071805
+LOC100706244	
+dhh	MGD:MP:0009431~decreased fetal weight
+ctsc	GO:0033116
+gabrd	HPO:HP:0002392~EEG with polyspike wave complexes
+LOC102082577	HPO:HP:0001388~Joint laxity
+LOC100708145	GO:0046579
+LOC100693777	GO:0005634
+LOC100706088	GO:0043537
+ppard	CTD:C0025202~melanoma
+ctsc	GO:0006915
+LOC100692415	GO:0009168
+map3k13	GO:0005524
+LOC102082062	
+cadm3	GAD_DISEASE:Monocyte Chemoattractant Protein-1
+LOC100704495	GO:0005737
+vars	GO:0002161
+nalcn	GO:0005886
+LOC100706082	GAD_DISEASE:Connective Tissue Diseases|Fetal Diseases|Inflammation|Musculoskeletal Diseases|Pregnancy Complications, Hematologic|Premature Birth|Skin Diseases
+polr2c	GO:0003677
+sh3pxd2b	DISGENET:C1384666~hearing impairment
+krit1	GO:0005886
+slc6a9	GO:0046985
+gpr34	MGD:MP:0008663~increased interleukin-12 secretion
+nup98	GO:1990841
+stat4	HPO:HP:0007256~Abnormal pyramidal sign
+chst11	GO:0016740
+LOC100702251	CTD:C4704862~Polyarthritis, Juvenile, Rheumatoid Factor Positive
+LOC100696191	GO:0045840
+map3k12	GO:0004706
+tada2a	GO:0045995
+aqp9	REACTOME_PATHWAY:R-HSA-432047~Passive transport by Aquaporins
+rps3	REACTOME_PATHWAY:R-HSA-392499~Metabolism of proteins
+eif2b2	CRB:CRB:0000028~Association with Survival PSAP KO CRISPRi in Glutamatergic Neuron
+LOC100692530	GO:0000978
+lonrf3	MGD:MP:0010092~increased circulating magnesium level
+LOC100704453	CTD:CXXX~No diseases associated
+ppil2	GO:0005886
+LOC100697145	ORPHANET:CXXX~No diseases associated
+lpar1	GO:0007200
+immt	GO:0061617
+LOC100709278	GO:0022857
+LOC100692298	
+LOC100700352	GO:0005634
+tlr2	GO:0001666
+tmem131l	GAD_DISEASE:Mental Competency
+LOC100707723	GO:0005783
+LOC100698773	GO:0080019
+LOC100694109	GO:0046872
+LOC100700667	GO:0004951
+ldlrap1	KEGG_PATHWAY:hsa04979
+f5	GAD_DISEASE:Kidney Diseases|Pulmonary Embolism|Pulmonary Embolisms|Thrombosis|Venous Thrombosis
+LOC100705583	GO:0035264
+rps3	GO:0005730
+LOC100707201	MGD:MP:0005502~abnormal renal/urinary system physiology
+LOC100695821	DISGENET:C0270844~Tonic Seizures
+LOC100695379	MGD:MP:0004339~absent clavicle
+LOC100697360	HPO:HP:0006808~Cerebral hypomyelination
+phf21b	
+irak1bp1	GO:0007249
+col16a1	CRB:CRB:0000043~Association with Survival CRISPRa in Glutamatergic Neuron
+LOC100704013	GO:0042802
+mthfr	CTD:C0398623~Thrombophilia
+adamtsl2	DISGENET:C0282631~Facies
+LOC100697412	GO:0050830
+LOC102082062	
+vamp3	GO:0043005
+ube2i	REACTOME_PATHWAY:R-HSA-5663205~Infectious disease
+prkab1	MGD:MP:0001262~decreased body weight
+ufd1	GO:0005829
+tfam	CTD:C0751415~Atherosclerotic Parkinsonism
+ubap2	
+oard1	GO:0061463
+sptlc3	CTD:CXXX~No diseases associated
+itgb1bp1	GO:0005092
+homer2	GO:0003779
+il10	GAD_DISEASE:Adenocarcinoma|Carcinoma, Squamous Cell|Cervical Intraepithelial Neoplasia|Cervical Neoplasm|Precancerous Conditions|Squamous cell carcinoma|Uterine Cervical Neoplasms
+anxa2	DISGENET:C1262760~Hepatitis, Drug-Induced
+LOC100705440	DISGENET:C0004352~Autistic Disorder
+LOC100698853	GO:0004748
+hadhb	UP_TISSUE:Skeletal muscle
+LOC100710169	GO:0090387
+oca2	MGD:MP:0001384~abnormal pup retrieval
+tnip2	CRB:CRB:0000048~Negative hit with Survival CRISPRi in Glutamatergic Neuron
+gpalpp1	GAD_DISEASE:Stroke
+bmp4	GO:0042476
+stra6	GO:0048520
+slc25a4	HPO:HP:0004308~Ventricular arrhythmia
+LOC100694131	GO:0000159
+med11	GO:0000151
+gsn	GO:0005634
+trpv4	DISGENET:C0205713~Roussy-Levy Syndrome (disorder)
+LOC100703692	DISGENET:C0005587~Depression, Bipolar
+LOC100691316	GO:0005615
+anapc1	REACTOME_PATHWAY:R-HSA-176409~APC/C
+e2f1	HPO:HPO:XXX~No HPO phenotype
+irx5	CTD:C0271901~Microcytic hypochromic anemia (disorder)
+LOC100708442	GO:0042802
+abcd3	KEGG_PATHWAY:hsa02010
+ndufa3	GO:0005743
+hnrnpd	GO:0071392
+LOC100695679	UNIPROT:C1335177~Ovarian Serous Adenocarcinoma
+tbc1d2b	GO:0005096
+als2	GO:0005085
+herc4	GO:0007283
+pex6	DISGENET:C1832200~Peroxisome biogenesis disorders
+wrnip1	GO:0017116
+LOC100703383	DISGENET:C0010054~Coronary Arteriosclerosis
+ehmt1	GO:0005654
+hip1	GO:0099637
+scarb1	GAD_DISEASE:lipoproteins and HDL
+dmc1	GO:0005524
+klhl15	GO:2000042
+inpp4b	PSYGENET:CXXX~No diseases associated
+LOC102076438	GO:0045202
+cnksr2	
+mapk1	GO:0005634
+LOC100702823	GO:0001650
+fig4	GO:0036092
+ift80	HPO:HP:0004599~Absent or minimally ossified vertebral bodies
+LOC100711981	GO:0006355
+xpa	GO:0003684
+LOC102082062	
+mgrn1	GO:0061630
+LOC100701814	GO:0051056
+LOC100689719	GO:0017128
+LOC100694718	GO:1902036
+LOC100707418	GO:0005764
+clcn3	GO:0045335
+pgrmc1	GO:0020037
+syt3	DISGENET:C0006142~Malignant neoplasm of breast
+trpv4	GO:0043117
+acmsd	CLINGEN:CXXX~No diseases associated
+mia3	
+LOC100699105	MGD:MP:0010878~increased trabecular bone volume
+LOC100691116	DISGENET:C0347869~Epilepsy, Akinetic
+hsp90ab1	GO:0003723
+LOC100712136	MGD:MP:0000807~abnormal hippocampus morphology
+usp45	ORPHANET:C0339527~Leber Congenital Amaurosis
+dyrk1a	GO:0043621
+nxf1	KEGG_PATHWAY:hsa05164
+ncoa2	MGD:MP:0002216~abnormal seminiferous tubule morphology
+LOC100707701	MGD:MP:0002270~abnormal pulmonary alveolus morphology
+LOC100696252	GO:0016020
+ero1a	GO:0005783
+LOC100702313	MGD:MP:0000292~distended pericardium
+kat14	GO:0045995
+aars	GO:0140018
+itgb1	GO:0001968
+mapk1	DISGENET:C1708349~Hereditary Diffuse Gastric Cancer
+mks1	MGD:MP:0000084~abnormal fontanelle morphology
+LOC100700729	GO:0005737
+LOC102082062	GO:0007010
+orc1	HPO:HP:0100783~Breast aplasia
+sdccag8	GO:0005911
+raf1	MGD:MP:0002652~thin myocardium
+LOC100705227	GO:0016020
+pemt	GO:0006656
+wdr1	
+pomgnt1	ORPHANET:C0035334~Retinitis Pigmentosa
+ccdc172	GAD_DISEASE:Iron
+LOC100701332	GO:0035335
+stra6	GO:0043583
+parm1	GO:0043231
+mmachc	GO:0033787
+rmi2	CRB:CRB:XXX~No CRB phenotype
+odf2	MGD:MP:0011050~abnormal respiratory motile cilium morphology
+tirap	GO:0035663
+dctpp1	REACTOME_PATHWAY:R-HSA-15869~Metabolism of nucleotides
+LOC100708845	
+rab30	GO:0005802
+tsen54	UP_TISSUE:Cerebellum
+LOC102082062	
+LOC102082062	
+LOC100705244	REACTOME_PATHWAY:R-HSA-8980692~RHOA GTPase cycle
+gck	GAD_DISEASE:fasting glucose 
+pappa	PSYGENET:CXXX~No diseases associated
+LOC100707481	GO:0045087
+mlh3	HPO:HP:0001402~Hepatocellular carcinoma
+LOC100708356	GO:0006397
+nlgn3	GO:0099054
+lhx9	GO:0046872
+LOC100711348	GO:0016607
+LOC100698224	GO:0003834
+cenpo	GO:0005634
+LOC100690511	HPO:HP:0001263~Global developmental delay
+gss	GO:0016874
+aif1l	GO:0046872
+als2	GO:0042803
+LOC100712209	GO:0070593
+egf	GAD_DISEASE:HIV Infections|[X]Human immunodeficiency virus disease
+nanos3	GO:0048471
+LOC100698444	GO:0008236
+LOC102082062	GO:0005515
+zzef1	GO:0046872
+LOC100690244	GO:0005886
+LOC100695405	
+LOC100708917	GO:0008376
+LOC100691739	HPO:HP:0008081~Pes valgus
+lg14h19orf54	GO:0006508
+LOC100700685	REACTOME_PATHWAY:R-HSA-6806834~Signaling by MET
+lg11h7orf31	GO:0005813
+setd1a	GO:0140945
+psmc5	REACTOME_PATHWAY:R-HSA-350562~Regulation of ornithine decarboxylase (ODC)
+setd2	GO:0008168
+atp1b2	GO:0006814
+LOC100710649	GO:0071277
+LOC100702424	GO:0005759
+scnm1	UP_TISSUE:Erythroleukemia
+LOC100703653	CGI:C0149782~Squamous cell carcinoma of lung
+LOC100704211	MGD:MP:0000186~decreased circulating HDL cholesterol level
+pggt1b	MGD:MP:0001732~postnatal growth retardation
+gas2l1	GO:0001725
+LOC100691052	UP_TISSUE:Thymus
+dixdc1	CTD:C0338831~Manic
+LOC100704669	HPO:HP:0010302~Spinal cord tumor
+mfap3l	PSYGENET:CXXX~No diseases associated
+LOC100703259	HPO:HP:0007939~Blue cone monochromacy
+LOC100711616	GO:0050731
+dcp1a	GO:0031087
+tes	MGD:MP:0013575~abnormal forestomach-glandular stomach junction morphology
+LOC100705275	DISGENET:C0205648~Adenoma, Microcystic
+snap47	GO:0031629
+pgr	MGD:MP:0001923~reduced female fertility
+LOC100702251	GO:0005654
+bub3	HPO:HP:0002667~Nephroblastoma
+neurl1b	PSYGENET:CXXX~No diseases associated
+fbxo43	
+traf3	REACTOME_PATHWAY:R-HSA-168164~Toll Like Receptor 3 (TLR3) Cascade
+LOC100710804	CGI:CXXX~No diseases associated
+LOC100711165	DISGENET:C0752351~Embryo Loss
+fgf6	REACTOME_PATHWAY:R-HSA-74751~Insulin receptor signalling cascade
+LOC100706476	MGD:MP:0002169~no abnormal phenotype detected
+ndufaf8	HPO:HP:0000114~Proximal tubulopathy
+camk2b	DISGENET:C0033937~Psychoses, Drug
+rad51d	REACTOME_PATHWAY:R-HSA-5693579~Homologous DNA Pairing and Strand Exchange
+nkiras1	GO:0048286
+polr3f	CLINGEN:CXXX~No diseases associated
+LOC100534515	GAD_DISEASE:obesity
+LOC100706970	CLINGEN:CXXX~No diseases associated
+NA	HPO:HP:0002355~Difficulty walking
+LOC100692599	GO:0008202
+LOC100701567	MGD:MP:0001614~abnormal blood vessel morphology
+LOC100694458	GO:0015629
+dtl	UP_TISSUE:Thymus
+nono	GO:0003723
+LOC100706113	GO:0005739
+fut8	GO:0046368
+s1pr1	GAD_DISEASE:Type 2 Diabetes| edema | rosiglitazone
+smc3	HPO:HP:0009623~Proximal placement of thumb
+Mb	GO:0015671
+ip6k1	GAD_DISEASE:Crohn Disease|CrohnQs disease
+polr2l	REACTOME_PATHWAY:R-HSA-167158~Formation of the HIV-1 Early Elongation Complex
+herc1	HPO:HP:0001263~Global developmental delay
+tmbim6	GO:0005886
+snrnp27	GO:0005634
+nup210	REACTOME_PATHWAY:R-HSA-168256~Immune System
+LOC100694149	GO:0005737
+LOC100699821	GO:0016323
+dnm1	MGD:MP:0011967~increased or absent threshold for auditory brainstem response
+ctnnbip1	GO:0005634
+LOC100709239	GO:0070160
+spata17	GAD_DISEASE:Hypertrophy, Left Ventricular
+LOC100692530	GO:0006355
+pik3cd	GO:0016303
+LOC112848065	HPO:HP:0007906~Ocular hypertension
+slc25a3	GO:0005886
+cacna1g	GO:0110165
+dis3l2	GO:0004518
+kif22	HPO:HP:0100625~Enlarged thorax
+LOC102082062	GO:0046872
+grb2	GO:0048009
+LOC100699310	MGD:MP:0006113~abnormal heart septum morphology
+zic2	MGD:MP:0009266~abnormal mesendoderm development
+sar1b	HPO:HP:0000505~Visual impairment
+LOC102079881	HPO:HP:0008499~High hypermetropia
+LOC100534398	GO:0000122
+sucla2	CLINGEN:C1850598~Leigh Syndrome due to Mitochondrial Complex III Deficiency
+LOC100710680	GO:0007420
+lamtor5	GO:0071986
+LOC100703293	GO:0005085
+LOC100693708	GO:0005886
+anxa2	GO:0098609
+arhgef11	GO:0005886
+tead1	HPO:HP:0000483~Astigmatism
+xrcc1	GAD_DISEASE:Adenocarcinoma|Stomach Neoplasms
+cacna1d	GO:0034220
+letmd1	GO:0005743
+anxa1	GO:0005829
+LOC100710852	GO:0005634
+galnt1	GO:0016740
+cltb	GO:0016020
+sart1	UP_TISSUE:Placenta
+abhd14b	GO:0005654
+dll4	GO:0003209
+ptpn13	GO:0004725
+atp7a	GO:0043682
+LOC100696124	CTD:C2350344~Chronic Lung Injury
+gamt	GO:0032259
+adam10	MGD:MP:0000691~enlarged spleen
+LOC100698807	DISGENET:C0752104~Familial Juvenile Parkinsonism
+LOC100705845	GO:0015459
+hoxb8	MGD:MP:0004624~abnormal thoracic cage morphology
+nubpl	GO:0032981
+LOC100710277	REACTOME_PATHWAY:R-HSA-375276~Peptide ligand-binding receptors
+ctu2	GO:0016779
+prkcb	GO:0005829
+mapk4	GO:0046982
+htr7	GO:0030594
+LOC100702414	GO:0005525
+gtf2h1	GO:0005675
+LOC100704787	HPO:HP:0001059~Pterygium
+nufip1	CTD:CXXX~No diseases associated
+LOC102082062	
+rhoq	HPO:HPO:XXX~No HPO phenotype
+LOC100711263	CTD:C0038587~Substance Withdrawal Syndrome
+tmprss2	GO:0008233
+ara	GO:1902895
+LOC100703561	GO:0006749
+oga	GO:0005829
+LOC100701135	HPO:HP:0000750~Delayed speech and language development
+tbx4	GO:1990401
+LOC100697588	MGD:MP:0004807~abnormal paired-pulse inhibition
+LOC100701446	MGD:MP:0000480~increased rib number
+hoxd9	PSYGENET:CXXX~No diseases associated
+eny2	GO:0071819
+LOC100698352	MGD:MP:0008261~arrest of male meiosis
+LOC100699396	GO:1900029
+dph1	MGD:MP:0008944~decreased sensitivity to induced cell death
+clpp	GO:0004176
+larp4b	GO:0045727
+LOC100698085	MGD:MP:0001501~abnormal sleep pattern
+gad2	GO:0016831
+golga2	GO:0006617
+lck	
+ints10	GO:0005634
+nf2	HPO:HP:0200034~Papule
+pgbd5	GO:0005654
+dusp12	GO:0005737
+LOC100694393	MGD:MP:0002944~increased lactate dehydrogenase level
+tirap	GO:0034145
+parvb	GO:0042995
+ints11	GO:0005634
+LOC102082062	GO:0005576
+dus3l	GO:0008033
+ctu2	GO:0016783
+hbp1	GO:0005515
+arhgap26	GO:0005543
+LOC100696470	HPO:HP:0000965~Cutis marmorata
+fkbp11	GO:0016853
+LOC100712454	MGD:MP:0030579~thoracoabdominoschisis
+mfn2	PSYGENET:CXXX~No diseases associated
+smo	MGD:MP:0014101~decreased chondrocyte proliferation
+stxbp1	HPO:HP:0003065~Patellar hypoplasia
+gemin7	GO:0005634
+rps13	
+lrp5	MGD:MP:0000555~absent carpal bone
+jpt2	GO:0005829
+ptpn6	MGD:MP:0000716~abnormal immune system cell morphology
+LOC100697722	PSYGENET:C0011581~Depressive disorder
+ace2	GO:0110165
+slc20a2	HPO:HP:0001300~Parkinsonism
+ndor1	GO:0005654
+wdfy3	UP_TISSUE:Liver
+fancc	GO:0006289
+LOC100710977	REACTOME_PATHWAY:R-HSA-5607761~Dectin-1 mediated noncanonical NF-kB signaling
+LOC100712084	GENOMICS_ENGLAND:C1861848~PARAGANGLIOMAS 4
+LOC100689849	CGI:CXXX~No diseases associated
+LOC100705583	GO:0060351
+polr2i	REACTOME_PATHWAY:R-HSA-9018519~Estrogen-dependent gene expression
+wdr74	GO:0001825
+fabp1	REACTOME_PATHWAY:R-HSA-189483~Heme degradation
+adra1b	MGD:MP:0009750~impaired behavioral response to addictive substance
+LOC100689869	REACTOME_PATHWAY:R-HSA-9678108~SARS-CoV-1 Infection
+tap1	GO:0005524
+allc	KEGG_PATHWAY:hsa01100
+LOC100534567	MGD:MP:0004994~abnormal brain wave pattern
+gth-ri	MGD:MP:0002016~ovary cysts
+cdk1	GO:0030332
+LOC100694889	MGD:MP:0003312~abnormal locomotor coordination
+bnip3	GO:0042802
+znf410	GO:0000978
+apaf1	MGD:MP:0012702~increased embryonic neuroepithelium thickness
+mms19	UP_TISSUE:Lymph
