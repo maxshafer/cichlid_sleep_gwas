@@ -9,11 +9,11 @@
 #SBATCH --qos=1day           #You will run in this queue
 
 # Paths to STDOUT or STDERR files should be absolute or relative to current working directory
-#SBATCH --output=/scicore/home/schiera/gizevo30/projects/cichlids_2/scripts/logs/Qualmaskstdout.txt     #These are the STDOUT and STDERR files
-#SBATCH --error=/scicore/home/schiera/gizevo30/projects/cichlids_2/scripts/logs/Qualmaskstderr.txt
+#SBATCH --output=/home/ayasha/scratch/logs/Qualmaskstdout.txt     #These are the STDOUT and STDERR files
+#SBATCH --error=/home/ayasha/scratch/logs/Qualmaskstderr.txt
 
 #SBATCH --mail-type=END,FAIL,TIME_LIMIT
-#SBATCH --mail-user=max.shafer@gmail.com        #You will be notified via email when your task ends or fails
+#SBATCH --mail-user=ayasha.abdallawyse@mail.utoronto.ca         #You will be notified via email when your task ends or fails
 
 #This job runs from the current working directory
 
@@ -28,7 +28,9 @@
 #################################
 
 module load Java
-module load BEDTools/2.30.0-GCC-10.3.0
+module load StdEnv/2020
+module load bedtools/2.30.0
+module load gatk
 
 #export your required environment variables below
 #################################################
@@ -37,9 +39,9 @@ module load BEDTools/2.30.0-GCC-10.3.0
 #add your command lines below
 #############################
 
-~/gatk-4.2.4.1/gatk VariantFiltration -R ~/projects/cichlids_2/genome/GCF_001858045.1_ASM185804v2_genomic_edit.fna -V /scicore/home/schiera/gizevo30/projects/cichlids_2/sra_reads_nobackup/cohort_db_geno.g.vcf.gz --filter-expression "QD < 2.0 || FS > 60.0 || MQ < 40.0 || MQRankSum < -12.5 || ReadPosRankSum < -8.0" --filter-name "LQ_filter" -O /scicore/home/schiera/gizevo30/projects/cichlids_2/sra_reads_nobackup/cohort_db_geno_lq.filt.g.vcf.gz
+gatk VariantFiltration -R ~/projects/def-mshafer/genome/Oreochromis_niloticus.O_niloticus_UMD_NMBU.dna.toplevel.fa -V ~/scratch/temp_data/NMBU_cohort_genotyped_whole.g.vcf.gz --filter-expression "QD < 2.0 || FS > 60.0 || MQ < 40.0 || MQRankSum < -12.5 || ReadPosRankSum < -8.0" --filter-name "LQ_filter" -O ~/projects/def-mshafer/ayasha/cichlids_gwas/NMBU_cohort_genotyped_lq.filt.g.vcf.gz
 
-gunzip -c /scicore/home/schiera/gizevo30/projects/cichlids_2/sra_reads_nobackup/cohort_db_geno_lq.filt.g.vcf.gz | awk '{if ($7=="LQ_filter") { print $1"\t"$2-1"\t"$2; }}' > cohort_db_geno.LQ.tmp.bed
+gunzip -c ~/projects/def-mshafer/ayasha/cichlids_gwas/NMBU_cohort_genotyped_lq.filt.g.vcf.gz | awk '{if ($7=="LQ_filter") { print $1"\t"$2-1"\t"$2; }}' > ~/projects/def-mshafer/genome/masks/NMBU_cohort_genotyped.LQ.tmp.bed
 
-mergeBed -i cohort_db_geno.LQ.tmp.bed > cohort_db_genoLQ.bed
+mergeBed -i ~/projects/def-mshafer/genome/masks/NMBU_cohort_genotyped.LQ.tmp.bed > ~/projects/def-mshafer/genome/masks/NMBU_cohort_genotyped.LQ.bed
 

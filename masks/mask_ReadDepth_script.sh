@@ -9,11 +9,11 @@
 #SBATCH --qos=1day           #You will run in this queue
 
 # Paths to STDOUT or STDERR files should be absolute or relative to current working directory
-#SBATCH --output=/scicore/home/schiera/gizevo30/projects/cichlids_2/scripts/logs/masks2DPtdout.txt     #These are the STDOUT and STDERR files
-#SBATCH --error=/scicore/home/schiera/gizevo30/projects/cichlids_2/scripts/logs/masks2DPtderr.txt
+#SBATCH --output=/home/ayasha/scratch/logs/masks2DPtdout.txt     #These are the STDOUT and STDERR files
+#SBATCH --error=/home/ayasha/scratch/logs/masks2DPtderr.txt
 
 #SBATCH --mail-type=END,FAIL,TIME_LIMIT,COMPLETE
-#SBATCH --mail-user=max.shafer@gmail.com        #You will be notified via email when your task ends or fails
+#SBATCH --mail-user=ayasha.abdallawyse@mail.utoronto.ca       #You will be notified via email when your task ends or fails
 
 #This job runs from the current working directory
 
@@ -27,8 +27,10 @@
 #load your required modules below
 #################################
 
-module load BEDTools/2.30.0-GCC-10.3.0
-module load BCFtools/1.12-GCC-10.3.0
+module load StdEnv/2020
+module load bedtools/2.30.0
+module load gcc/9.3.0
+module load bcftools/1.13
 
 #add your command lines below
 #############################
@@ -38,12 +40,13 @@ module load BCFtools/1.12-GCC-10.3.0
 # So the full thing runs, but takes a couple of hours in an srun - but looks good, similar to what he sees I guess, would choose something like 900/1000 - 1800/1900
 
 # bcftools query -f '%INFO/DP\n' /scicore/home/schiera/gizevo30/projects/cichlids_2/sra_reads_nobackup/cohort_db_geno.g.vcf.gz | awk '{if (rand() < 0.1) { if ($1 == ".") {$1 = 0;} print;}}' | gzip -c > cohort_db_geno.DP.gz
+# bcftools query -f '%INFO/DP\n' ~/scratch/temp_data/NMBU_cohort_genotyped_whole.g.vcf.gz | awk '{if (rand() < 0.1) { if ($1 == ".") {$1 = 0;} print;}}' | gzip -c > ~/projects/def-mshafer/ayasha/cichlids_gwas/NMBU_cohort_genotyped.DP.gz
 
 # Run the command to make the mask using the cutoffs deteremined using the above
 
-min=900
-max=1900
+min=1000
+max=1600
 
-# bcftools query -f '%CHROM\t%POS\t%INFO/DP\n' /scicore/home/schiera/gizevo30/projects/cichlids_2/sra_reads_nobackup/cohort_db_geno.g.vcf.gz | awk -v mi="$min" -v ma="$max" '{if ($3 == ".") {$3 = 0;} if (($3 <= mi) || ($3 >= ma)) {print $1"\t"$2-1"\t"$2;}}' > cohort_db_geno.DPmask.tmp.bed
+bcftools query -f '%CHROM\t%POS\t%INFO/DP\n' ~/scratch/temp_data/NMBU_cohort_genotyped_whole.g.vcf.gz | awk -v mi="$min" -v ma="$max" '{if ($3 == ".") {$3 = 0;} if (($3 <= mi) || ($3 >= ma)) {print $1"\t"$2-1"\t"$2;}}' > ~/projects/def-mshafer/genome/masks/NMBU_cohort_genotyped.DPmask.tmp.bed
 
-mergeBed -i cohort_db_geno.DPmask.tmp.bed > cohort_db_geno.DPMask.bed
+mergeBed -i ~/projects/def-mshafer/genome/masks/NMBU_cohort_genotyped.DPmask.tmp.bed > ~/projects/def-mshafer/genome/masks/NMBU_cohort_genotyped.DPMask.bed
