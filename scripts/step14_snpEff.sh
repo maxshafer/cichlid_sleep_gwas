@@ -48,35 +48,35 @@ file_list="/home/ayasha/projects/def-mshafer/genome/Oreochromis_niloticus.O_nilo
 INTERVAL=`sed -n "$SLURM_ARRAY_TASK_ID"p "${file_list}" | cut -f 1 -d ','`
 
 # Unzip it
-# gunzip -c cohort_db_geno_${INTERVAL}.hardfiltered_SNPS.biallelic.NoSingletons.g.vcf.gz > unzipped_${INTERVAL}_g.vcf
+gunzip -c /home/ayasha/projects/def-mshafer/gwas_output/NMBU_cohort_genotyped_${INTERVAL}.hardfiltered_SNPS.biallelic.NoSingletons.g.vcf.gz > /home/ayasha/projects/def-mshafer/gwas_output/unzipped_${INTERVAL}_g.vcf
 
 # Modify it
 
-# cat unzipped_${INTERVAL}_g.vcf | sed "s/^${INTERVAL}/${INTERVAL}.1/" > unzipped_${INTERVAL}_mod.g.vcf
+cat /home/ayasha/projects/def-mshafer/gwas_output/unzipped_${INTERVAL}_g.vcf | sed "s/^${INTERVAL}/${INTERVAL}.1/" > /home/ayasha/projects/def-mshafer/gwas_output/unzipped_${INTERVAL}_mod.g.vcf
 
-# rm unzipped_${INTERVAL}_g.vcf
+rm /home/ayasha/projects/def-mshafer/gwas_output/unzipped_${INTERVAL}_g.vcf
 
 # Annotate it
-# java -Xmx8g -jar ~/bin/snpEff/snpEff.jar -v ASM185804v2 unzipped_${INTERVAL}_mod.g.vcf > unzipped_${INTERVAL}_mod.ann.g.vcf
+java -Xmx8g -jar ~/snpEff/snpEff.jar -v GCA_001858045.3 /home/ayasha/projects/def-mshafer/gwas_output/unzipped_${INTERVAL}_mod.g.vcf > /home/ayasha/projects/def-mshafer/gwas_output/unzipped_${INTERVAL}_mod.ann.g.vcf
 
-# rm unzipped_${INTERVAL}_mod.g.vcf
+rm unzipped_${INTERVAL}_mod.g.vcf
 
 # Extract it
 
-# cat unzipped_${INTERVAL}_mod.ann.g.vcf | ~/bin/snpEff/scripts/vcfEffOnePerLine.pl | java -Xmx8g -jar ~/bin/snpEff/SnpSift.jar extractFields - CHROM POS REF ALT "ANN[*].GENE" "ANN[*].IMPACT" "ANN[*].EFFECT" "ANN[*].DISTANCE" > extracted_${INTERVAL}.txt
-gzip extracted_${INTERVAL}.txt
+cat /home/ayasha/projects/def-mshafer/gwas_output/unzipped_${INTERVAL}_mod.ann.g.vcf | ~/snpEff/scripts/vcfEffOnePerLine.pl | java -Xmx8g -jar ~/snpEff/SnpSift.jar extractFields - CHROM POS REF ALT "ANN[*].GENE" "ANN[*].IMPACT" "ANN[*].EFFECT" "ANN[*].DISTANCE" > /home/ayasha/projects/def-mshafer/gwas_output/extracted_${INTERVAL}.txt
+gzip /home/ayasha/projects/def-mshafer/gwas_output/extracted_${INTERVAL}.txt
 
 # Cut it
 
-# cat unzipped_${INTERVAL}_mod.ann.g.vcf | cut -f1 -d: > unzipped_${INTERVAL}_final.g.vcf
+cat /home/ayasha/projects/def-mshafer/gwas_output/unzipped_${INTERVAL}_mod.ann.g.vcf | cut -f1 -d: > /home/ayasha/projects/def-mshafer/gwas_output/unzipped_${INTERVAL}_final.g.vcf
 
-rm unzipped_${INTERVAL}_mod.ann.g.vcf
+rm /home/ayasha/projects/def-mshafer/gwas_output/unzipped_${INTERVAL}_mod.ann.g.vcf
 
 # Zip it
 
-# gzip -c unzipped_${INTERVAL}_final.g.vcf > final_${INTERVAL}.g.vcf.gz
+gzip -c /home/ayasha/projects/def-mshafer/gwas_output/unzipped_${INTERVAL}_final.g.vcf > final_${INTERVAL}.g.vcf.gz
 
-# rm unzipped_${INTERVAL}_final.g.vcf
+rm /home/ayasha/projects/def-mshafer/gwas_output/unzipped_${INTERVAL}_final.g.vcf
 
 
 

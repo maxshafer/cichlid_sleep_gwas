@@ -9,11 +9,11 @@
 #SBATCH --qos=1day           #You will run in this queue
 
 # Paths to STDOUT or STDERR files should be absolute or relative to current working directory
-#SBATCH --output=/scicore/home/schiera/gizevo30/projects/cichlids_2/scripts/logs/step16_filterRun_stdout.txt     #These are the STDOUT and STDERR files
-#SBATCH --error=/scicore/home/schiera/gizevo30/projects/cichlids_2/scripts/logs/step16_filterRun_stderr.txt
+#SBATCH --output=/home/ayasha/scratch/logs/step16_filterRun_stdout.txt     #These are the STDOUT and STDERR files
+#SBATCH --error=/home/ayasha/scratch/logs/step16_filterRun_stderr.txt
 
 #SBATCH --mail-type=END,FAIL,TIME_LIMIT
-#SBATCH --mail-user=max.shafer@gmail.com        #You will be notified via email when your task ends or fails
+#SBATCH --mail-user=ayasha.abdallawyse@mail.utoronto.ca        #You will be notified via email when your task ends or fails
 
 #This job runs from the current working directory
 
@@ -27,7 +27,8 @@
 #load your required modules below
 #################################
 
-module load R/4.0.3-foss-2018b
+module load StdEnv/2020
+module load r/4.0.2
 
 #export your required environment variables below
 #################################################
@@ -41,6 +42,6 @@ module load R/4.0.3-foss-2018b
 ## They take awhile to run (especially the PGLS), and require lots of memory
 ## Run in the folder where you want the output to end up
 
-Rscript /scicore/home/schiera/gizevo30/projects/cichlids_2/scripts/filterRun.R 0.00001
-Rscript /scicore/home/schiera/gizevo30/projects/cichlids_2/scripts/filterRun.R 0.00005
+Rscript /home/ayasha/projects/def-mshafer/cichlid_sleep_gwas/scripts/filterRun.R 0.00001
+Rscript /home/ayasha/projects/def-mshafer/cichlid_sleep_gwas/scripts/filterRun.R 0.00005
 
