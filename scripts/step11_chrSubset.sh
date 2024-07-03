@@ -9,13 +9,13 @@
 #SBATCH --qos=6hours           #You will run in this queue
 
 # Paths to STDOUT or STDERR files should be absolute or relative to current working directory
-#SBATCH --output=/scicore/home/schiera/gizevo30/projects/cichlids_2/scripts/logs/step11_chrSub_stdout.txt     #These are the STDOUT and STDERR files
-#SBATCH --error=/scicore/home/schiera/gizevo30/projects/cichlids_2/scripts/logs/step11_chrSub_stderr.txt
+#SBATCH --output=/home/ayasha/scratch/logs/step11_%a_chrSub_stdout.txt     #These are the STDOUT and STDERR files
+#SBATCH --error=/home/ayasha/scratch/logs/step11_%a_chrSub_stderr.txt
 
 #You selected an array of jobs from 1 to 9 with 9 simultaneous jobs
 #SBATCH --array=1-25%25
 #SBATCH --mail-type=END,FAIL,TIME_LIMIT
-#SBATCH --mail-user=max.shafer@gmail.com        #You will be notified via email when your task ends or fails
+#SBATCH --mail-user=ayasha.abdallawyse@mail.utoronto.ca         #You will be notified via email when your task ends or fails
 
 #This job runs from the current working directory
 
@@ -30,8 +30,11 @@
 #################################
 
 # module load GATK/3.7-0-Java-1.8.0_92
-module load Java
-module load BCFtools/1.12-GCC-10.3.0
+module load java
+module load StdEnv/2020  
+module load gcc/9.3.0
+module load bcftools/1.13
+module load gatk
 
 #export your required environment variables below
 #################################################
@@ -45,15 +48,14 @@ module load BCFtools/1.12-GCC-10.3.0
 # This queries the list of chromosomes, with the unplaced one last
 
 # comma separated df with rows, samples, interval
-file_list="/scicore/home/schiera/gizevo30/projects/cichlids_2/genome/GCF_001858045.1_ASM185804v2_genomic_edit.chrs"
-# file_list="/scicore/home/schiera/gizevo30/projects/cichlids_2/genome/melatonin_genes_loc"
+file_list="/home/ayasha/projects/def-mshafer/genome/Oreochromis_niloticus.O_niloticus_UMD_NMBU.dna.toplevel.chromosomes"
 
 # this is the second column of index_array_40x.csv
 INTERVAL=`sed -n "$SLURM_ARRAY_TASK_ID"p "${file_list}" | cut -f 1 -d ','`
 
-bcftools view -r $INTERVAL --threads 8 -O z -o cohort_db_geno_${INTERVAL}.hardfiltered_SNPS.biallelic.NoSingletons.g.vcf.gz ../cohort_db_geno.hardfiltered_SNPS.biallelic.NoSingletons.g.vcf.gz
+bcftools view -r $INTERVAL --threads 8 -O z -o /home/ayasha/projects/def-mshafer/gwas_output/NMBU_cohort_genotyped_${INTERVAL}.hardfiltered_SNPS.biallelic.NoSingletons.g.vcf.gz /home/ayasha/projects/def-mshafer/gwas_output/NMBU_cohort_genotyped_SNPS.biallelic.NoSingletons.g.vcf.gz
 # bcftools view -r $INTERVAL --threads 8 -O z -o cohort_db_geno_${INTERVAL}.g.vcf.gz cohort_db_geno.g.vcf.gz
 
-~/gatk-4.2.4.0/gatk IndexFeatureFile -I cohort_db_geno_${INTERVAL}.hardfiltered_SNPS.biallelic.NoSingletons.g.vcf.gz
+gatk IndexFeatureFile -I /home/ayasha/projects/def-mshafer/gwas_output/NMBU_cohort_genotyped_${INTERVAL}.hardfiltered_SNPS.biallelic.NoSingletons.g.vcf.gz
 # ~/gatk-4.2.4.0/gatk IndexFeatureFile -I cohort_db_geno_${INTERVAL}.g.vcf.gz
 

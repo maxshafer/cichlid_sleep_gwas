@@ -9,13 +9,13 @@
 #SBATCH --qos=1day           #You will run in this queue
 
 # Paths to STDOUT or STDERR files should be absolute or relative to current working directory
-#SBATCH --output=/scicore/home/schiera/gizevo30/projects/cichlids_2/scripts/logs/step12_alleleFreqstdout.txt     #These are the STDOUT and STDERR files
-#SBATCH --error=/scicore/home/schiera/gizevo30/projects/cichlids_2/scripts/logs/step12_alleleFreqstderr.txt
+#SBATCH --output=/home/ayasha/scratch/logs/step12_alleleFreqstdout.txt     #These are the STDOUT and STDERR files
+#SBATCH --error=/home/ayasha/scratch/logs/step12_alleleFreqstderr.txt
 
 #You selected an array of jobs from 1 to 9 with 9 simultaneous jobs
 #SBATCH --array=1-25%25
 #SBATCH --mail-type=END,FAIL,TIME_LIMIT
-#SBATCH --mail-user=max.shafer@gmail.com        #You will be notified via email when your task ends or fails
+#SBATCH --mail-user=ayasha.abdallawyse@mail.utoronto.ca        #You will be notified via email when your task ends or fails
 
 #This job runs from the current working directory
 
@@ -29,7 +29,9 @@
 #load your required modules below
 #################################
 
-module load Boost/1.76.0-GCC-10.3.0
+module load StdEnv/2020 
+module load gcc/10.2.0 
+module load boost/1.76
 
 #export your required environment variables below
 #################################################
@@ -43,12 +45,12 @@ module load Boost/1.76.0-GCC-10.3.0
 ## custom scripts/programs in the 'evo' package on github
 
 # comma separated df with rows, samples, interval
-file_list="/scicore/home/schiera/gizevo30/projects/cichlids_2/genome/GCF_001858045.1_ASM185804v2_genomic_edit.chrs"
+file_list="/home/ayasha/projects/def-mshafer/genome/Oreochromis_niloticus.O_niloticus_UMD_NMBU.dna.toplevel.chromosomes"
 
 # this is the second column of index_array_40x.csv
 INTERVAL=`sed -n "$SLURM_ARRAY_TASK_ID"p "${file_list}" | cut -f 1 -d ','`
 
-~/evo/Build/evo alleleFreq -n cohort_db_geno_${INTERVAL}_fromProbabilities --use-genotype-probabilities ../cohort_db_geno_${INTERVAL}.hardfiltered_SNPS.biallelic.NoSingletons.g.vcf.gz ../../scripts/speciesCodesAndGenomeIDs_for_GWAS_2.txt
+~/evo/Build/evo alleleFreq -n NMBU_cohort_genotyped_${INTERVAL}_fromProbabilities --use-genotype-probabilities /home/ayasha/projects/def-mshafer/gwas_output/NMBU_cohort_genotyped_${INTERVAL}.hardfiltered_SNPS.biallelic.NoSingletons.g.vcf.gz /home/ayasha/projects/def-mshafer/cichlid_sleep_gwas/scripts/speciesCodesAndGenomeIDs_for_GWAS_2.txt
 
 
 # ~/evo/Build/evo alleleFreq -n test_fromProbabilities --use-genotype-probabilities test.g.vcf.gz medians_for_GWAS_withoutfilter_speciesCodesAndGenomeIDs_wOretan.txt

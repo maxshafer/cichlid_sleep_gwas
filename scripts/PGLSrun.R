@@ -58,7 +58,7 @@ doPGSL <- function(x) {
 # # For testing
 # tanTree <- read.nexus("../../../05_BEAST_RAxML.tre")
 
-tanTree <- read.nexus("/scicore/home/schiera/gizevo30/projects/cichlids_2/scripts/05_BEAST_RAxML.tre")
+tanTree <- read.nexus("/home/ayasha/projects/def-mshafer/cichlid_sleep_gwas/scripts/05_BEAST_RAxML.tre")
 
 ############
 ### Read phenotype vector  
