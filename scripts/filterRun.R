@@ -3,7 +3,7 @@ library(ggplot2)
 library(data.table)
 library(dplyr)
 
-setwd("/scicore/home/schiera/gizevo30/projects/cichlids_2")
+setwd("/home/ayasha/scratch/temp_data/gwas/")
 
 ########################################################################
 #######   Defining trailing arguments  #################################
@@ -22,9 +22,9 @@ percentile <- as.numeric(args[1])
 #######   Defining  arguments  #########################################
 ########################################################################
 
-files <- list.files("sra_reads_nobackup/combined_ann/", pattern = "_pvals_ann.gz")
+files <- list.files("combined_ann/", pattern = "_pvals_ann.gz")
 
-comparison <- c("summary", "55-species", "58-species", "spd_60-species", "peak_dawn", "peak_dusk", "total_rest")
+comparison <- c("summary", "spd_60-species", "pref_sfi", "pref_max_cons", "dn_pref")
 
 # ########################################################################
 # #######   Load in data  ################################################
@@ -76,7 +76,7 @@ comparison <- c("summary", "55-species", "58-species", "spd_60-species", "peak_d
 per_chr <- lapply(comparison, function(comp) {
   
   gwas.datasets <- lapply(files, function(x) {
-    df <- fread(paste("sra_reads_nobackup/combined_ann/", x, sep = ""), showProgress = T)
+    df <- fread(paste("combined_ann/", x, sep = ""), showProgress = T)
     columns <- c(c(2:3,16:21, as.numeric(grep(comp, colnames(df)))))
     df <- df[, ..columns] # Change last two numbers to modify which comparison to keep and filter by
     if (comp == "summary") {
@@ -108,6 +108,6 @@ per_chr <- lapply(comparison, function(comp) {
 })
 
 
-saveRDS(per_chr, file = paste("sra_reads_nobackup/combined_ann/filter_SNPs_perchr", percentile, "percentile", sep = "_"))
+saveRDS(per_chr, file = paste("combined_ann/filter_SNPs_perchr", percentile, "percentile", sep = "_"))
 
 
