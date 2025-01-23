@@ -98,4 +98,3 @@ write.table(ps.withLoc, file = paste(substr(AFfile, 1, nchar(AFfile)-7), "_piVal
 GWASvector.noMiss <- GWASvector.noMiss[which(-log10(ps) > 8)]
 save(GWASvector.noMiss, file = paste(substr(AFfile, 1, nchar(AFfile)-7), "_piVals_", args[3],"_", nrow(y), "-species", ".gwas", sep = ""))
 
-

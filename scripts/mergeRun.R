@@ -1,7 +1,7 @@
 library(data.table)
 library(stringr)
 
-setwd("/scicore/home/schiera/gizevo30/projects/cichlids_2")
+setwd("/home/ayasha/scratch/temp_data/gwas/")
 
 ########################################################################
 #######   Defining trailing arguments  #################################
@@ -21,9 +21,18 @@ chromosome <- args[1]
 # cutoff <- as.numeric(args[2])
 print(chromosome)
 
-files <- list.files("sra_reads_nobackup/alleleFreqs/", pattern = chromosome)
+# for LG1 and 2, fails bc it gathers other files for LG10-19, etc
+if (chromosome == "LG1" | chromosome == "LG2") {
+   use_adjustment <- TRUE
+   chromosome <- paste(chromosome, "_", sep = "")
+} else { use_adjustment <- FALSE }
+
+files <- list.files("alleleFreqs/", pattern = chromosome)
 # AF_file <- files[grep("AF.txt", files)]
-snpeff_file <- list.files("sra_reads_nobackup/final_snps_chr/", pattern = chromosome)
+
+if (use_adjustment == TRUE) { chromosome <- str_replace(chromosome, "_", ".txt") }
+
+snpeff_file <- list.files("final_snps_chr/", pattern = chromosome)
 snpeff_file <- snpeff_file[grepl("extracted", snpeff_file)]
 
 gwas_files <- files[grepl("_piVals_", files) & grepl(".txt", files)]
@@ -39,11 +48,11 @@ pgls_names <- str_sub(pgls_files, start = 80, end = -5)
 
 # AF <- fread(paste("sra_reads_nobackup/alleleFreqs/", AF_file, sep = ""))
 
-snpeff <- fread(paste("sra_reads_nobackup/final_snps_chr/", snpeff_file, sep = ""))
+snpeff <- fread(paste("final_snps_chr/", snpeff_file, sep = ""))
 
-gwas <- lapply(gwas_files, function(x) fread(paste("sra_reads_nobackup/alleleFreqs/", x, sep = "")))
+gwas <- lapply(gwas_files, function(x) fread(paste("alleleFreqs/", x, sep = "")))
 
-pgls <- lapply(pgls_files, function(x) fread(paste("sra_reads_nobackup/alleleFreqs/", x, sep = "")))
+pgls <- lapply(pgls_files, function(x) fread(paste("alleleFreqs/", x, sep = "")))
 
 
 ########################################################################
@@ -79,7 +88,8 @@ combined <- merge(combined, snpeff)
 ## I will need to calculate the mean, min/max, and products per chromosome, then retain just these? No, I will probably
 ## want to look at the values in each, so I should save these out, then repeat a filtering step
 
-comparison <- c("spd_60-species", "peak_dawn", "peak_dusk", "total_rest")
+comparison <- c("pref_sfi", "pref_max_cons", "dn_pref")
+#comparison <- c("pref_sfi", "pref_max_cons")
 columns <- unlist(lapply(comparison, function(x) grep(x, colnames(combined))))
 
 combined$summary_mean <- rowMeans(combined[,..columns])
@@ -87,7 +97,7 @@ combined$summary_min <- apply(combined[,..columns], 1, function(x) min(x))
 combined$summary_prod <- apply(combined[,..columns], 1, function(x) prod(x))
 
 # save out
-gz1 <- gzfile(paste("sra_reads_nobackup/combined_ann/combined_", chromosome, "snps_pvals_ann.gz", sep = ""), "w")
+gz1 <- gzfile(paste("combined_ann/combined_", chromosome, "snps_pvals_ann.gz", sep = ""), "w")
 write.csv(combined, gz1)
 close(gz1)
 

@@ -9,8 +9,8 @@
 #SBATCH --qos=6hours           #You will run in this queue
 
 # Paths to STDOUT or STDERR files should be absolute or relative to current working directory
-#SBATCH --output=/home/ayasha/scratch/logs/step14_snpEff_stdout.txt     #These are the STDOUT and STDERR files
-#SBATCH --error=/home/ayasha/scratch/logs/step14_snpEff_stderr.txt
+#SBATCH --output=/home/ayasha/scratch/logs/step14_%a_snpEff_stdout.txt     #These are the STDOUT and STDERR files
+#SBATCH --error=/home/ayasha/scratch/logs/step14_%a_snpEff_stderr.txt
 
 #You selected an array of jobs from 1 to 9 with 9 simultaneous jobs
 #SBATCH --array=1-22%22
@@ -48,35 +48,35 @@ file_list="/home/ayasha/projects/def-mshafer/genome/Oreochromis_niloticus.O_nilo
 INTERVAL=`sed -n "$SLURM_ARRAY_TASK_ID"p "${file_list}" | cut -f 1 -d ','`
 
 # Unzip it
-gunzip -c /home/ayasha/projects/def-mshafer/gwas_output/NMBU_cohort_genotyped_${INTERVAL}.hardfiltered_SNPS.biallelic.NoSingletons.g.vcf.gz > /home/ayasha/projects/def-mshafer/gwas_output/unzipped_${INTERVAL}_g.vcf
+#gunzip -c /home/ayasha/projects/def-mshafer/ayasha/gwas_output/NMBU_cohort_genotyped_${INTERVAL}.hardfiltered_SNPS.biallelic.NoSingletons.g.vcf.gz > /home/ayasha/scratch/temp_data/gwas/unzipped_${INTERVAL}.g.vcf
 
 # Modify it
 
-cat /home/ayasha/projects/def-mshafer/gwas_output/unzipped_${INTERVAL}_g.vcf | sed "s/^${INTERVAL}/${INTERVAL}.1/" > /home/ayasha/projects/def-mshafer/gwas_output/unzipped_${INTERVAL}_mod.g.vcf
+#cat /home/ayasha/projects/def-mshafer/gwas_output/unzipped_${INTERVAL}_g.vcf | sed "s/^${INTERVAL}/${INTERVAL}.1/" > /home/ayasha/projects/def-mshafer/gwas_output/unzipped_${INTERVAL}_mod.g.vcf
 
-rm /home/ayasha/projects/def-mshafer/gwas_output/unzipped_${INTERVAL}_g.vcf
+#rm /home/ayasha/projects/def-mshafer/gwas_output/unzipped_${INTERVAL}_g.vcf
 
 # Annotate it
-java -Xmx8g -jar ~/snpEff/snpEff.jar -v GCA_001858045.3 /home/ayasha/projects/def-mshafer/gwas_output/unzipped_${INTERVAL}_mod.g.vcf > /home/ayasha/projects/def-mshafer/gwas_output/unzipped_${INTERVAL}_mod.ann.g.vcf
+#java -Xmx8g -jar ~/snpEff/snpEff.jar -v O_niloticus_UMD_NMBU.99 /home/ayasha/scratch/temp_data/gwas/unzipped_${INTERVAL}.g.vcf > /home/ayasha/scratch/temp_data/gwas/unzipped_${INTERVAL}_mod.ann.g.vcf
 
-rm unzipped_${INTERVAL}_mod.g.vcf
+#rm /home/ayasha/projects/def-mshafer/gwas_output/unzipped_${INTERVAL}_mod.g.vcf
 
 # Extract it
 
-cat /home/ayasha/projects/def-mshafer/gwas_output/unzipped_${INTERVAL}_mod.ann.g.vcf | ~/snpEff/scripts/vcfEffOnePerLine.pl | java -Xmx8g -jar ~/snpEff/SnpSift.jar extractFields - CHROM POS REF ALT "ANN[*].GENE" "ANN[*].IMPACT" "ANN[*].EFFECT" "ANN[*].DISTANCE" > /home/ayasha/projects/def-mshafer/gwas_output/extracted_${INTERVAL}.txt
-gzip /home/ayasha/projects/def-mshafer/gwas_output/extracted_${INTERVAL}.txt
+cat /home/ayasha/scratch/temp_data/gwas/unzipped_${INTERVAL}_mod.ann.g.vcf | ~/snpEff/scripts/vcfEffOnePerLine.pl | java -Xmx8g -jar ~/snpEff/SnpSift.jar extractFields - CHROM POS REF ALT "ANN[*].GENE" "ANN[*].IMPACT" "ANN[*].EFFECT" "ANN[*].DISTANCE" > /home/ayasha/scratch/temp_data/gwas/extracted_${INTERVAL}.txt
+gzip /home/ayasha/scratch/temp_data/gwas/extracted_${INTERVAL}.txt
 
 # Cut it
 
-cat /home/ayasha/projects/def-mshafer/gwas_output/unzipped_${INTERVAL}_mod.ann.g.vcf | cut -f1 -d: > /home/ayasha/projects/def-mshafer/gwas_output/unzipped_${INTERVAL}_final.g.vcf
+cat /home/ayasha/scratch/temp_data/gwas/unzipped_${INTERVAL}_mod.ann.g.vcf | cut -f1 -d: > /home/ayasha/scratch/temp_data/gwas/unzipped_${INTERVAL}_final.g.vcf
 
-rm /home/ayasha/projects/def-mshafer/gwas_output/unzipped_${INTERVAL}_mod.ann.g.vcf
+rm /home/ayasha/scratch/temp_data/gwas/unzipped_${INTERVAL}_mod.ann.g.vcf
 
 # Zip it
 
-gzip -c /home/ayasha/projects/def-mshafer/gwas_output/unzipped_${INTERVAL}_final.g.vcf > final_${INTERVAL}.g.vcf.gz
+gzip -c /home/ayasha/scratch/temp_data/gwas/unzipped_${INTERVAL}_final.g.vcf > /home/ayasha/scratch/temp_data/gwas/final_${INTERVAL}.g.vcf.gz
 
-rm /home/ayasha/projects/def-mshafer/gwas_output/unzipped_${INTERVAL}_final.g.vcf
+#rm /home/ayasha/scratch/temp_data/gwas/unzipped_${INTERVAL}_final.g.vcf
 
 
 

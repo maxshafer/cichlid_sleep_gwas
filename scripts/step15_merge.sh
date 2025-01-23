@@ -5,12 +5,12 @@
 #SBATCH --mem-per-cpu=16G              #This is the memory reserved per core.
 #Total memory reserved: 16GB
 
-#SBATCH --time=6:00:00        #This is the time that your task will run
-#SBATCH --qos=6hours           #You will run in this queue
+#SBATCH --time=24:00:00        #This is the time that your task will run
+#SBATCH --qos=1day           #You will run in this queue
 
 # Paths to STDOUT or STDERR files should be absolute or relative to current working directory
-#SBATCH --output=/home/ayasha/scratch/logs/step15_mergeRun_stdout.txt     #These are the STDOUT and STDERR files
-#SBATCH --error=/home/ayasha/scratch/logs/step15_mergeRun_stderr.txt
+#SBATCH --output=/home/ayasha/scratch/logs/step15_%a_mergeRun_stdout.txt     #These are the STDOUT and STDERR files
+#SBATCH --error=/home/ayasha/scratch/logs/step15_%a_mergeRun_stderr.txt
 
 #You selected an array of jobs from 1 to 25 with 25 simultaneous jobs
 #SBATCH --array=1-22%22

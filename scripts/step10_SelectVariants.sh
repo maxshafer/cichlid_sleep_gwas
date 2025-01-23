@@ -9,11 +9,11 @@
 #SBATCH --qos=1day           #You will run in this queue
 
 # Paths to STDOUT or STDERR files should be absolute or relative to current working directory
-#SBATCH --output=/scicore/home/schiera/gizevo30/projects/cichlids_2/scripts/logs/step10_VarFiltstdout.txt     #These are the STDOUT and STDERR files
-#SBATCH --error=/scicore/home/schiera/gizevo30/projects/cichlids_2/scripts/logs/step10_VarFiltstderr.txt
+#SBATCH --output=/home/ayasha/scratch/logs/step10_VarFiltstdout.txt     #These are the STDOUT and STDERR files
+#SBATCH --error=/home/ayasha/scratch/logs/step10_VarFiltstderr.txt
 
 #SBATCH --mail-type=END,FAIL,TIME_LIMIT
-#SBATCH --mail-user=max.shafer@gmail.com        #You will be notified via email when your task ends or fails
+#SBATCH --mail-user=ayasha.abdallawyse@mail.utoronto.ca        #You will be notified via email when your task ends or fails
 
 #This job runs from the current working directory
 
@@ -27,9 +27,12 @@
 #load your required modules below
 #################################
 
-module load Java
-module load BEDTools/2.30.0-GCC-10.3.0
-module load BCFtools/1.12-GCC-10.3.0
+module load java
+module load bedtools/2.30.0
+module load StdEnv/2020  
+module load gcc/9.3.0
+module load bcftools/1.16
+module load gatk
 
 #export your required environment variables below
 #################################################
@@ -46,16 +49,17 @@ module load BCFtools/1.12-GCC-10.3.0
 # ~/gatk-4.2.4.0/gatk IndexFeatureFile -I cohort_db_geno.allMasksMerged.bed
 
 # Then make a new Filtered g.vcf file, before hard filtereing using the mask
-cd /scicore/home/schiera/gizevo30/projects/cichlids_2/sra_reads_nobackup/
+# cd /home/ayasha/projects/def-mshafer/ayasha/sra/
 
-#~/gatk-4.2.4.0/gatk VariantFiltration -R ~/projects/cichlids_2/genome/GCF_001858045.1_ASM185804v2_genomic_edit.fna -V cohort_db_geno_filtered.g.vcf.gz --mask ../masks/cohort_db_geno.allMasksMerged.bed --mask-name "combined_filter" -O cohort_db_geno_SoftFilter.g.vcf.gz
+# gatk VariantFiltration -R ~/projects/def-mshafer/genome/Oreochromis_niloticus.O_niloticus_UMD_NMBU.dna.toplevel.fa -V cohort_db_geno_filtered.g.vcf.gz --mask ../masks/cohort_db_geno.allMasksMerged.bed --mask-name "combined_filter" -O cohort_db_geno_SoftFilter.g.vcf.gz
 
-#~/gatk-4.2.4.0/gatk SelectVariants -R ~/projects/cichlids_2/genome/GCF_001858045.1_ASM185804v2_genomic_edit.fna -V cohort_db_geno_SoftFilter.g.vcf.gz --exclude-filtered true -O cohort_db_geno_hardfiltered.g.vcf.gz
+# gatk SelectVariants -R ~/projects/def-mshafer/genome/Oreochromis_niloticus.O_niloticus_UMD_NMBU.dna.toplevel.fa -V cohort_db_geno_SoftFilter.g.vcf.gz --exclude-filtered true -O cohort_db_geno_hardfiltered.g.vcf.gz
 
 
 # This is subsetting the VCF to keep only balletic SNPs and excluding singletons and indels
 # These numbers correspond to the total haplotypes present in the dataset (119*2 = 238) 
-# bcftools view --max-ac 236 --min-ac 2 -m2 -M2 --exclude-types indels -O z -o cohort_db_geno.hardfiltered_SNPS.biallelic.NoSingletons.g.vcf.gz cohort_db_geno_hardfiltered.g.vcf.gz
+# bcftools view --max-ac 236 --min-ac 5 -m2 -M2 --exclude-types indels -O z -o /home/ayasha/projects/def-mshafer/gwas_output/maf5/NMBU_cohort_genotyped.hardfiltered_SNPS.biallelic.NoSingletons.g.vcf.gz /home/ayasha/projects/def-mshafer/gwas_output/NMBU_cohort_genotyped_hardfiltered.g.vcf.gz
+bcftools view --max-ac 236 --min-ac 5 -m2 -M2 --exclude-types indels -O z -o ~/scratch/temp_data/output.vcf.gz NMBU_cohort_genotyped_hardfiltered.g.vcf.gz
 
-~/gatk-4.2.4.0/gatk IndexFeatureFile -I cohort_db_geno.hardfiltered_SNPS.biallelic.NoSingletons.g.vcf.gz
+gatk IndexFeatureFile -I ~/scratch/temp_data/output.vcf.gz
 

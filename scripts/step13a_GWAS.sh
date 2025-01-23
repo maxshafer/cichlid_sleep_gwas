@@ -9,8 +9,8 @@
 #SBATCH --qos=1day           #You will run in this queue
 
 # Paths to STDOUT or STDERR files should be absolute or relative to current working directory
-#SBATCH --output=/home/ayasha/scratch/logs/step13a_GWASstdout.txt     #These are the STDOUT and STDERR files
-#SBATCH --error=/home/ayasha/scratch/logs/step13a_GWASstderr.txt
+#SBATCH --output=/home/ayasha/scratch/logs/step13a_%a_GWASstdout.txt     #These are the STDOUT and STDERR files
+#SBATCH --error=/home/ayasha/scratch/logs/step13a_%a_GWASstderr.txt
 
 #You selected an array of jobs from 1 to 25 with 25 simultaneous jobs
 #SBATCH --array=1-22%22
@@ -50,6 +50,6 @@ file_list="/home/ayasha/projects/def-mshafer/genome/Oreochromis_niloticus.O_nilo
 # this is the second column of index_array_40x.csv
 INTERVAL=`sed -n "$SLURM_ARRAY_TASK_ID"p "${file_list}" | cut -f 1 -d ','`
 
-Rscript /home/ayasha/projects/def-mshafer/cichlid_sleep_gwas/scripts/GWASrun.R speciesCodesAndGenomeIDs_for_GWAS_2_NMBU_cohort_genotyped_${INTERVAL}_fromProbabilities_AF.txt ../pheno_data/cichlids_consolidation_values_full.csv pref_sfi
-Rscript /home/ayasha/projects/def-mshafer/cichlid_sleep_gwas/scripts/GWASrun.R speciesCodesAndGenomeIDs_for_GWAS_2_NMBU_cohort_genotyped_${INTERVAL}_fromProbabilities_AF.txt ../pheno_data/cichlids_consolidation_values_full.csv pref_max_cons 
-Rscript /home/ayasha/projects/def-mshafer/cichlid_sleep_gwas/scripts/GWASrun.R speciesCodesAndGenomeIDs_for_GWAS_2_NMBU_cohort_genotyped_${INTERVAL}_fromProbabilities_AF.txt ../pheno_data/cichlids_consolidation_values_full.csv dn_pref
+Rscript /home/ayasha/projects/def-mshafer/cichlid_sleep_gwas/scripts/GWASrun.R ~/scratch/temp_data/gwas/alleleFreqs/speciesCodesAndGenomeIDs_for_GWAS_2_NMBU_cohort_genotyped_${INTERVAL}_fromProbabilities_AF.txt  /home/ayasha/projects/def-mshafer/cichlid_sleep_gwas/pheno_data/cichlids_consolidation6s_values_full.csv pref_sfi
+Rscript /home/ayasha/projects/def-mshafer/cichlid_sleep_gwas/scripts/GWASrun.R ~/scratch/temp_data/gwas/alleleFreqs/speciesCodesAndGenomeIDs_for_GWAS_2_NMBU_cohort_genotyped_${INTERVAL}_fromProbabilities_AF.txt  /home/ayasha/projects/def-mshafer/cichlid_sleep_gwas/pheno_data/cichlids_consolidation6s_values_noLamsig.csv pref_max_cons 
+Rscript /home/ayasha/projects/def-mshafer/cichlid_sleep_gwas/scripts/GWASrun.R ~/scratch/temp_data/gwas/alleleFreqs/speciesCodesAndGenomeIDs_for_GWAS_2_NMBU_cohort_genotyped_${INTERVAL}_fromProbabilities_AF.txt  /home/ayasha/projects/def-mshafer/cichlid_sleep_gwas/pheno_data/cichlids_consolidation6s_values_full.csv dn_pref

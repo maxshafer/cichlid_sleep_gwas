@@ -106,4 +106,4 @@ PGLSpiVals <- apply(AFscaled.noMiss[-which(naVector == TRUE),], 1, doPGSL)
 pglsGWASvector.withLoc <- cbind(AFfull[names(PGLSpiVals),1:2],PGLSpiVals)
 
 # Write the results to disk
-write.table(pglsGWASvector.withLoc, file = paste(substr(AFfile, 1, nchar(AFfile)-7), "_PGLSpiVals_", args[3],"_", nrow(y), "-species", ".txt", sep = ""), quote=F, sep="\t")
+write.table(pglsGWASvector.withLoc, file = paste("/home/ayasha/scratch/temp_data/gwas/", substr(AFfile, 1, nchar(AFfile)-7), "_PGLSpiVals_", args[3],"_", nrow(y), "-species", ".txt", sep = ""), quote=F, sep="\t")

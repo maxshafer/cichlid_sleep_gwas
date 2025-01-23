@@ -1,16 +1,16 @@
 #!/bin/bash
 
-#SBATCH --job-name=PGLS                   #This is the name of your job
+#SBATCH --job-name=PGLS_6                   #This is the name of your job
 #SBATCH --cpus-per-task=1                  #This is the number of cores reserved
 #SBATCH --mem-per-cpu=128G              #This is the memory reserved per core.
 #Total memory reserved: 128GB
 
-#SBATCH --time=76:00:00        #This is the time that your task will run
+#SBATCH --time=168:00:00        #This is the time that your task will run
 #SBATCH --qos=1week           #You will run in this queue
 
 # Paths to STDOUT or STDERR files should be absolute or relative to current working directory
-#SBATCH --output=/home/ayasha/scratch/logs/step13b_PGLSstdout.txt     #These are the STDOUT and STDERR files
-#SBATCH --error=/home/ayasha/scratch/logs/step13b_PGLSstderr.txt
+#SBATCH --output=/home/ayasha/scratch/logs/step13b_%a_PGLSstdout.txt     #These are the STDOUT and STDERR files
+#SBATCH --error=/home/ayasha/scratch/logs/step13b_%a_PGLSstderr.txt
 
 #You selected an array of jobs from 1 to 25 with 25 simultaneous jobs
 #SBATCH --array=1-22%22
@@ -48,9 +48,10 @@ module load r/4.0.2
 file_list="/home/ayasha/projects/def-mshafer/genome/Oreochromis_niloticus.O_niloticus_UMD_NMBU.dna.toplevel.chromosomes"
 
 # this is the second column of index_array_40x.csv
+#INTERVAL=`sed -n "$SLURM_ARRAY_TASK_ID"p "${file_list}" | cut -f 1 -d ','`
 INTERVAL=`sed -n "$SLURM_ARRAY_TASK_ID"p "${file_list}" | cut -f 1 -d ','`
 
-Rscript /home/ayasha/projects/def-mshafer/cichlid_sleep_gwas/scripts/PGLSrun.R speciesCodesAndGenomeIDs_for_GWAS_2_NMBU_cohort_genotyped_${INTERVAL}_fromProbabilities_AF.txt ../pheno_data/cichlids_consolidation_values_full.csv pref_sfi
-Rscript /home/ayasha/projects/def-mshafer/cichlid_sleep_gwas/scripts/PGLSrun.R speciesCodesAndGenomeIDs_for_GWAS_2_NMBU_cohort_genotyped_${INTERVAL}_fromProbabilities_AF.txt ../pheno_data/cichlids_consolidation_values_full.csv pref_max_cons
-Rscript /home/ayasha/projects/def-mshafer/cichlid_sleep_gwas/scripts/PGLSrun.R speciesCodesAndGenomeIDs_for_GWAS_2_NMBU_cohort_genotyped_${INTERVAL}_fromProbabilities_AF.txt ../pheno_data/cichlids_consolidation_values_full.csv dn_pref
+Rscript /home/ayasha/projects/def-mshafer/cichlid_sleep_gwas/scripts/PGLSrun.R ~/scratch/temp_data/gwas/alleleFreqs/speciesCodesAndGenomeIDs_for_GWAS_2_NMBU_cohort_genotyped_${INTERVAL}_fromProbabilities_AF.txt ../pheno_data/cichlids_consolidation6s_full.csv pref_sfi
+Rscript /home/ayasha/projects/def-mshafer/cichlid_sleep_gwas/scripts/PGLSrun.R ~/scratch/temp_data/gwas/alleleFreqs/speciesCodesAndGenomeIDs_for_GWAS_2_NMBU_cohort_genotyped_${INTERVAL}_fromProbabilities_AF.txt ../pheno_data/cichlids_consolidation6s_values_noLamsig.csv pref_max_cons
+Rscript /home/ayasha/projects/def-mshafer/cichlid_sleep_gwas/scripts/PGLSrun.R ~/scratch/temp_data/gwas/alleleFreqs/speciesCodesAndGenomeIDs_for_GWAS_2_NMBU_cohort_genotyped_${INTERVAL}_fromProbabilities_AF.txt ../pheno_data/cichlids_consolidation6s_values_full.csv dn_pref
 

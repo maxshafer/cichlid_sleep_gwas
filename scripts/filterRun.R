@@ -24,7 +24,7 @@ percentile <- as.numeric(args[1])
 
 files <- list.files("combined_ann/", pattern = "_pvals_ann.gz")
 
-comparison <- c("summary", "spd_60-species", "pref_sfi", "pref_max_cons", "dn_pref")
+comparison <- c("summary", "pref_sfi", "pref_max_cons", "dn_pref")
 
 # ########################################################################
 # #######   Load in data  ################################################
@@ -77,8 +77,11 @@ per_chr <- lapply(comparison, function(comp) {
   
   gwas.datasets <- lapply(files, function(x) {
     df <- fread(paste("combined_ann/", x, sep = ""), showProgress = T)
-    columns <- c(c(2:3,16:21, as.numeric(grep(comp, colnames(df)))))
+    #columns <- c(c(2:3,16:21, as.numeric(grep(comp, colnames(df)))))
+    # columns were hard coded but middle ones depend how many tests are stored
+    columns <- c(c(2:3,10:15, as.numeric(grep(comp, colnames(df)))))
     df <- df[, ..columns] # Change last two numbers to modify which comparison to keep and filter by
+    print(colnames(df))
     if (comp == "summary") {
       colnames(df) <- c("CHROM","POS","REF","ALT","ANN_GENE","ANN_IMPACT","ANN_EFFECT","ANN_DISTANCE","summary_mean","summary_min", "summary_prod")
     } else {
