@@ -38,9 +38,15 @@ meta_data <- read.csv(text=gsheet2text(url, format='csv'), stringsAsFactors=FALS
 speed_data <- read.csv("pca_input_zscore.csv", row.names = "time_of_day")
 speed_data <- t(speed_data)
 
+sizes <- read.csv("pheno_data/experimental_fish_sizes.csv")
+
 ## load in old and new data, so I can have total_rest, as well as Annika's pc values
 sleepData <- read.csv("pheno_data/cichlid_pc-loadings_eco-morph_rest_full.csv")
 sleepData$tribe <- meta_data$tribe[match(sleepData$six_letter_name_Ronco, meta_data$six_letter_name_Ronco)]
+sleepData$max_size <- meta_data$size_male[match(sleepData$six_letter_name_Ronco, meta_data$six_letter_name_Ronco)]
+sleepData$category <- meta_data$category_paper[match(sleepData$six_letter_name_Ronco, meta_data$six_letter_name_Ronco)]
+sleepData$size_mean <- sizes$size_mean[match(sleepData$six_letter_name_Ronco, sizes$six_letter_name_Ronco)]
+sleepData$size_max <- sizes$size_max[match(sleepData$six_letter_name_Ronco, sizes$six_letter_name_Ronco)]
 
 rownames(sleepData) <- sleepData$six_letter_name_Ronco
 
@@ -65,9 +71,15 @@ sleep_data$diet <- meta_data$diet[match(sleep_data$six_letter_name_Ronco, meta_d
 
 phylo.plot <- ggtree(as.phylo(cichlidTree), layout = "rectangular") + theme_tree(bgcolor = NA) + geom_tiplab(offset = 0)
 
-p3 <- phylo.plot + geom_tile(data = sleep_data, aes(y=y, x=x+1.5, fill = pc1), width = 1, height = 0.9, size = 1.5, inherit.aes = FALSE) + scale_fill_distiller(palette = "RdBu", direction = 1) #+ scale_color_discrete(na.value = 'transparent')
-p3 <- p3 + new_scale("fill") + new_scale("size") + geom_tile(data = sleep_data, aes(y=y, x=x+2.75, fill = pc2), width = 1, height = 0.9, size = 1.5, inherit.aes = FALSE) + scale_fill_distiller(palette = "BrBG", direction = -1)
-p3 <- p3 + new_scale("size") + new_scale("fill") + geom_tile(data = sleep_data, aes(y=y, x=x+4.5, fill = total_rest, width = total_rest/9), height = 0.9, size = 1.5, inherit.aes = FALSE) + scale_fill_distiller(palette = "PRGn", direction = -1) 
+# crepuscular': '#26D97A', 'nocturnal': '#40A9BF', 'diurnal': '#CED926', 'cathemeral': '#737F8C'
+
+#geom_point(data = cichlids.diel.2, aes(y=y, x=x+2, colour = peak, size = 10), shape = 18)
+
+p3 <- phylo.plot 
+p3 <- p3 + geom_point(data = sleep_data, aes(colour = category, y = y, x = x+1.5), size = 2) + scale_colour_manual(values = c('#737F8C', '#26D97A', '#CED926', '#40A9BF'))
+p3 <- p3 + geom_tile(data = sleep_data, aes(y=y, x=x+2.75, fill = pc1), width = 1, height = 0.9, size = 1.5, inherit.aes = FALSE) + scale_fill_distiller(palette = "RdBu", direction = 1) #+ scale_color_discrete(na.value = 'transparent')
+p3 <- p3 + new_scale("fill") + new_scale("size") + geom_tile(data = sleep_data, aes(y=y, x=x+4, fill = pc2), width = 1, height = 0.9, size = 1.5, inherit.aes = FALSE) + scale_fill_distiller(palette = "BrBG", direction = -1)
+p3 <- p3 + new_scale("size") + new_scale("fill") + geom_tile(data = sleep_data, aes(y=y, x=x+5.75, fill = total_rest, width = total_rest/9), height = 0.9, size = 1.5, inherit.aes = FALSE) + scale_fill_distiller(palette = "PRGn", direction = -1) 
 
 p4 <- p3 + plot_layout(guides = "collect", width = unit(c(100), "mm"), height = unit(c(100), "mm"))
 
@@ -97,6 +109,7 @@ Predict <- predict(quadraticModel,list(pc1=Values, pc1_2=Values^2))
 
 # PC2 = -4.626(pc1)^2 + -0.026(hours) - 0.191
 
+## Run a PGLS
 compD = comparative.data(phy = cichlidTree, data=sleep_data, six_letter_name_Ronco)
 fitmod <- pgls(pc2 ~ pc1 + pc1_2, compD)
 summary_fitmod <- summary(fitmod)
@@ -187,7 +200,7 @@ tr_K <- phylosig(cichlidTree, trait.data.tr, method = "K", test = T) # 0.52516
 ################ OK run pairwise pgls on activity features    ##########################################
 ########################################################################################################
 
-variables <- c("pc1", "pc2", "total_rest")
+variables <- c("pc1", "pc2", "total_rest", "max_size", "size_mean", "size_max")
 comp.data <- comparative.data(cichlidTree, sleepData, six_letter_name_Ronco, vcv = TRUE)
 
 ## This gives me the full grid, and also keeps them as the correct class objects
@@ -225,9 +238,30 @@ pc2_tr <- pc2_tr + annotate("text", x=-0.05, y=17, label = paste("Linear (pGLS) 
 pc1_pc2 <- ggplot(sleep_data, aes(x = pc1, y = pc2, colour = tribe, label = six_letter_name_Ronco)) + geom_point(size = 2) + scale_colour_manual(values = c("#59595C", "#FDDF13", "#F04D29", "#9AB9D9", "#682E7A", "#C588BB", "#535CA9","#86C773")) + theme_classic() + ylab("PC2 (crepuscular preference)") + xlab("PC1 (diurnal - nocturnal preference)") #+ geom_text_repel(force = 2) 
 pc1_pc2 <- pc1_pc2 + annotate("text", x=-0.05, y=0, label = paste("Linear (pGLS) \n r^2 = ", round(out$r.squared[out$namex == "pc1" & out$namey == "pc2"], 4), "\n p-value = ", round(out$p.value[out$namex == "pc1" & out$namey == "pc2"], 4), sep = ""), hjust = 0)
 
+
+###### Compare sizes to total rest
+tr_ms <- ggplot(sleep_data, aes(y = total_rest, x = max_size, colour = diet, label = six_letter_name_Ronco)) + geom_point(size = 2) + scale_colour_manual(values = c("#59595C", "#FDDF13", "#F04D29", "#9AB9D9", "#682E7A", "#C588BB", "#535CA9","#86C773")) + theme_classic() + ylab("Total rest (hrs)") + xlab("Max size (literature)") #+ geom_text_repel(force = 2) 
+tr_ms <- tr_ms + annotate("text", x=40, y=10, label = paste("Linear (pGLS) \n r^2 = ", round(out$r.squared[out$namex == "total_rest" & out$namey == "max_size"], 4), "\n p-value = ", round(out$p.value[out$namex == "total_rest" & out$namey == "max_size"], 4), sep = ""), hjust = 0)
+
+tr_sm <- ggplot(sleep_data, aes(y = total_rest, x = size_mean, colour = diet, label = six_letter_name_Ronco)) + geom_point(size = 2) + scale_colour_manual(values = c("#59595C", "#FDDF13", "#F04D29", "#9AB9D9", "#682E7A", "#C588BB", "#535CA9","#86C773")) + theme_classic() + ylab("Total rest (hrs)") + xlab("Mean size (measured)") #+ geom_text_repel(force = 2) 
+tr_sm <- tr_sm + annotate("text", x=6.5, y=15, label = paste("Linear (pGLS) \n r^2 = ", round(out$r.squared[out$namex == "total_rest" & out$namey == "size_mean"], 4), "\n p-value = ", round(out$p.value[out$namex == "total_rest" & out$namey == "size_mean"], 4), sep = ""), hjust = 0)
+
+tr_smax <- ggplot(sleep_data, aes(y = total_rest, x = size_max, colour = diet, label = six_letter_name_Ronco)) + geom_point(size = 2) + scale_colour_manual(values = c("#59595C", "#FDDF13", "#F04D29", "#9AB9D9", "#682E7A", "#C588BB", "#535CA9","#86C773")) + theme_classic() + ylab("Total rest (hrs)") + xlab("Max size (measured)") #+ geom_text_repel(force = 2) 
+tr_smax <- tr_smax + annotate("text", x=10, y=11, label = paste("Linear (pGLS) \n r^2 = ", round(out$r.squared[out$namex == "total_rest" & out$namey == "size_max"], 4), "\n p-value = ", round(out$p.value[out$namex == "total_rest" & out$namey == "size_max"], 4), sep = ""), hjust = 0)
+
+## make plots for comparing sizes
+ms_sm <- ggplot(sleep_data, aes(y = max_size, x = size_mean, colour = diet, label = six_letter_name_Ronco)) + geom_point(size = 2) + scale_colour_manual(values = c("#59595C", "#FDDF13", "#F04D29", "#9AB9D9", "#682E7A", "#C588BB", "#535CA9","#86C773")) + theme_classic() + ylab("Max size (literature)") + xlab("Mean size (measured)") #+ geom_text_repel(force = 2) 
+ms_smax <- ggplot(sleep_data, aes(y = max_size, x = size_max, colour = diet, label = six_letter_name_Ronco)) + geom_point(size = 2) + scale_colour_manual(values = c("#59595C", "#FDDF13", "#F04D29", "#9AB9D9", "#682E7A", "#C588BB", "#535CA9","#86C773")) + theme_classic() + ylab("Max size (literature)") + xlab("Max size (measured)") #+ geom_text_repel(force = 2) 
+sm_smax <- ggplot(sleep_data, aes(y = size_mean, x = size_max, colour = diet, label = six_letter_name_Ronco)) + geom_point(size = 2) + scale_colour_manual(values = c("#59595C", "#FDDF13", "#F04D29", "#9AB9D9", "#682E7A", "#C588BB", "#535CA9","#86C773")) + theme_classic() + ylab("Mean size (measured)") + xlab("Max size (measured)") #+ geom_text_repel(force = 2) 
+
+# tr_ms + tr_sm + tr_smax + ms_sm + ms_smax + sm_smax + plot_layout(nrow = 2, guides = "collect")
+
 ########################################################################################################
 ################ OK run pairwise PLS / pGLS    #########################################################
 ########################################################################################################
+
+ecomorpho.tree <- drop.tip(cichlidTree, c("Astbur", "Neodev", "Neolon", "Telluf"))
+
 
 ###### OK, so I ran the scripts in ronco_et_al to generate the input data for her PLS analysis, and can now use it against our data!
 ## Try the geomorph two-block pls (it's somehow like cca?)
@@ -256,11 +290,14 @@ isotopes <- isotopes[!is.na(isotopes$d13C),]
 # Prep speed and total rest data
 speed <- as.data.frame(speed_data[row.names(isotopes),])
 rest <- sleepData[row.names(isotopes),c("total_rest"), drop = FALSE]
+size <- sleepData[row.names(isotopes),c("max_size"), drop = FALSE]
 
-ecomorpho.tree <- drop.tip(cichlidTree, c("Astbur", "Neodev", "Neolon", "Telluf"))
+### Calculate multivariate K using geomorph
+
+kmulti <- physignal(A = as.matrix(speed), phy = ecomorpho.tree, iter = 999, print.progress = T) # Kmulti = 0.4114, p-value = 0.006
 
 ## Run two block pls for speed and rest vs isotopes, body, uoj, and lpj
-variables.pls <- c("speed", "rest", "body", "uoj", "lpj", "isotopes")
+variables.pls <- c("speed", "rest", "body", "uoj", "lpj", "isotopes", "size")
 
 ## This gives me the full grid, and also keeps them as the correct class objects
 grid.pls <- expand.grid(variables.pls, variables.pls)
@@ -268,6 +305,10 @@ grid.pls <- expand.grid(variables.pls, variables.pls)
 output.grid.pls <- apply(grid.pls, 1, function(x) {
   
   if (x[1] == x[2]) {
+    return ("NA")
+  } 
+  
+  if ("rest" %in% x & "size" %in% x) {
     return ("NA")
   } else {
 
@@ -281,6 +322,14 @@ output.grid.pls <- apply(grid.pls, 1, function(x) {
   }
   
 })
+
+# ## To get deformed grids for body shape that correlates with high or low rest amounts
+# pls_plot <- plot(output.grid.pls[[10]])
+# picknplot.shape(pls_plot)
+body_morph_data <- output.grid.pls[[10]]$data$data
+body_morph_data$total_rest <- sleep_data$total_rest[match(rownames(body_morph_data), sleep_data$six_letter_name_Ronco)]
+body_morph_data$tribe <- sleep_data$tribe[match(rownames(body_morph_data), sleep_data$six_letter_name_Ronco)]
+body_morph_plot <- ggplot(body_morph_data, aes(x = total_rest, y = XScores, colour = tribe)) + geom_point() + xlab("Total Rest (hrs)") + ylab("Body morphology PLS1 values") + scale_colour_manual(values = c("#59595C", "#FDDF13", "#F04D29", "#9AB9D9", "#682E7A", "#C588BB", "#535CA9","#86C773"))
 
 output.grid.pls <- output.grid.pls[!(is.na(output.grid.pls))]
 
@@ -308,6 +357,10 @@ output.grid.data <- apply(grid.pls, 1, function(x) {
   
   if (x[1] == x[2]) {
     return (NA)
+  } 
+  
+  if ("rest" %in% x & "size" %in% x) {
+    return ("NA")
   } else {
     
     f <- two.b.pls(eval(as.name(paste(x[1]))), eval(as.name(paste(x[2]))))
@@ -369,22 +422,203 @@ pdf("Extended_data_Fig5.pdf", width = 15, height = 15)
 dev.off()
 
 
+# design = "
+# AAAAAABE
+# AAAAAACF
+# AAAAAADG
+# HHHIIIJJ
+# HHHIIIJJ
+# HHHIIIJJ"
+
 design = "
-AAAAAABE
-AAAAAACF
-AAAAAADG
-HHHIIIJJ
-HHHIIIJJ
-HHHIIIJJ"
+AAAAABE
+AAAAACE
+AAAAADE
+FFGHHII
+FFGHHII"
 
 # A should be 150 wide, and 75 tall (2x as wide as tall), B-D (and E-G) should be same wide as tall, H-I should be same wide as tall
 
-patchwork <- p3 + pc1_box + pc2_box + tr_box + plot_spacer() + plot_spacer() + plot_spacer() + pls.grid.plot.arsq + pc1_vs_pc2_plot + plot_spacer() + plot_layout(guides = "collect", design = design, width = unit(c(35), "mm"), height = unit(c(35), "mm"))
+# patchwork <- p3 + pc1_box + pc2_box + tr_box + plot_spacer() + plot_spacer() + plot_spacer() + pls.grid.plot.arsq + pc1_vs_pc2_plot + plot_spacer() + plot_layout(guides = "collect", design = design, width = unit(c(35), "mm"), height = unit(c(35), "mm"))
 
-pdf("figure_2_mockup.pdf", width = 20, height = 15)
+patchwork <- p3 + pc1_box + pc2_box + tr_box + plot_spacer() + pls.grid.plot.arsq + body_morph_plot + tr_sm + pc1_vs_pc2_plot + plot_layout(guides = "collect", design = design, width = unit(c(35), "mm"), height = unit(c(35), "mm"))
+
+pdf("figure_2_mockup_rev.pdf", width = 20, height = 15)
 patchwork + plot_annotation(tag_levels = 'A')
 dev.off()
 
 
 
+
+
+
+
+
+
+### Finding distances between points (eye size)
+
+test <- two.d.array(body)
+
+xenbat <- as.data.frame(body[,, dimnames(body)[[3]] %in% "Xenbat"])
+colnames(xenbat) <- c("X", "Y")
+xenbat$labels <- c(1:20)
+## Plot to see if I got it right - I didn't, because #16 was removed, all of these numbers are shifted (I think there was)
+ggplot(xenbat, aes(x = X, y = Y, label = labels)) + geom_point() + geom_text_repel()
+
+lmks <- matrix(c(16,18,17,19,1,7), ncol=2, byrow=TRUE, dimnames = list(c("eyeW", "eyeH", "SL"),c("start", "end")))
+
+lineardists <- as.data.frame(interlmkdist(body, lmks))
+
+lineardists$ratio_width <- lineardists[,1] / lineardists[,3]
+lineardists$ratio_height <- lineardists[,2] / lineardists[,3]
+lineardists$ratio_eyes <- lineardists[,1] / lineardists[,2]
+
+sleep_data$eye_ratio_w <- lineardists$ratio_width[match(sleep_data$six_letter_name_Ronco, row.names(lineardists))]
+sleep_data$eye_ratio_h <- lineardists$ratio_height[match(sleep_data$six_letter_name_Ronco, row.names(lineardists))]
+sleep_data$eye_ratio_eyes <- lineardists$ratio_eyes[match(sleep_data$six_letter_name_Ronco, row.names(lineardists))]
+
+
+pc1_erw <- ggplot(sleep_data, aes(x = pc1, y = eye_ratio_w, colour = tribe)) + geom_point()
+pc1_erh <- ggplot(sleep_data, aes(x = pc1, y = eye_ratio_h, colour = tribe)) + geom_point()
+pc2_erw <- ggplot(sleep_data, aes(x = pc2, y = eye_ratio_w, colour = tribe)) + geom_point()
+pc2_erh <- ggplot(sleep_data, aes(x = pc2, y = eye_ratio_h, colour = tribe)) + geom_point()
+tr_erw <- ggplot(sleep_data, aes(x = total_rest, y = eye_ratio_w, colour = tribe)) + geom_point()
+tr_erh <- ggplot(sleep_data, aes(x = total_rest, y = eye_ratio_h, colour = tribe)) + geom_point()
+
+## Focus on width, which has the best relationship (but still not phylogenetically significant)
+pc1_erw <- pc1_erw + xlab("PC1 (diurnal - nocturnal preference)") + ylab("Relative eye width") + scale_colour_manual(values = c("#59595C", "#FDDF13", "#F04D29", "#9AB9D9", "#682E7A", "#C588BB", "#535CA9","#86C773"))
+pc1_erw <- pc1_erw + annotate("text", x=-0.1, y=0.14, label= "Linear (PGLS) \n p-value = 0.4301", hjust = 0)
+
+eye_size_category_plot <- ggplot(sleep_data, aes(x = category, y = eye_ratio_w, group = category)) + geom_boxplot(alpha = 0.25, colour = "black", fill = "grey", outlier.colour = "transparent") + geom_jitter(colour = "black", width = 0.15) + xlab("") + theme_classic()
+eye_size_category_plot <- eye_size_category_plot + annotate("text", x = 2, y=0.14, label= "Phylogenetic ANOVA \n p-value = 0.09291", hjust = 0)
+
+design2 <- "
+AAAB"
+eye_plot <- eye_size_category_plot + pc1_erw + plot_layout(guides = "collect", design = design2, width = unit(c(35), "mm"), height = unit(c(35), "mm"))
+
+pdf("figure_eye_plot_rev.pdf", width = 20, height = 15)
+eye_plot 
+dev.off()
+
+
+
+
+
+ggplot(sleep_data, aes(x = pc1, y = eye_ratio_w, colour = tribe, label = six_letter_name_Ronco)) + geom_point() + scale_colour_viridis() + geom_text_repel()
+ggplot(sleep_data, aes(x = category, y = eye_ratio_w, colour = pc1, label = six_letter_name_Ronco)) + geom_boxplot() + geom_jitter(width = 0.1, size = 3) + scale_colour_viridis() + geom_text_repel()
+
+test <- aov(eye_ratio_w ~ category, sleep_data)
+summary.lm(test)
+eye_ratio_w <- sleep_data$eye_ratio_w
+names(eye_ratio_w) <- sleep_data$six_letter_name_Ronco
+eye_ratio_w <- eye_ratio_w[!is.na(eye_ratio_w)]
+
+sleep_data_category <- factor(sleep_data$category, levels = c("nocturnal", "diurnal", "crepuscular", "cathemeral"))
+names(sleep_data_category) <- sleep_data$six_letter_name_Ronco
+sleep_data_category <- sleep_data_category[names(eye_ratio_w)]
+
+summary(aov.phylo(eye_ratio_w ~ sleep_data_category, cichlidTree, nsim = 1000, test = "Wilks"))
+
+comp.data <- comparative.data(cichlidTree, sleep_data, six_letter_name_Ronco, vcv = TRUE)
+mod <- pgls(eye_ratio_w ~ pc1, comp.data, lambda = "ML")
+summary(mod)
+
+
+
+
+#create a new variable for pc1_2
+sleep_data$pc1_2 <- sleep_data$pc1^2
+sleep_data$pc2_2 <- sleep_data$pc2^2
+sleep_data$total_rest_2 <- sleep_data$total_rest^2
+
+#fit quadratic regression model
+quadraticModel <- lm(eye_ratio_w ~ pc1 + pc1_2, data=sleep_data)
+
+
+# create sequence of hour values
+Values <- seq(-0.2, 0.2, 0.001)
+
+## Make a trend line for the quadratic fit
+#create list of predicted happines levels using quadratic model
+Predict <- predict(quadraticModel,list(pc1=Values, pc1_2=Values^2))
+
+# PC2 = -4.626(pc1)^2 + -0.026(hours) - 0.191
+
+compD = comparative.data(phy = cichlidTree, data=sleep_data, six_letter_name_Ronco)
+fitmod <- pgls(eye_ratio_w ~ pc1 + pc1_2, compD)
+summary_fitmod <- summary(fitmod)
+
+# PC2 = -4.083814(pc1)^2 + 0.035057(hours) - 0.186
+
+Predict_pgls <- predict(fitmod,list(pc1=Values, pc1_2=Values^2))
+
+#create scatterplot of original data values
+trend_line_data <- data.frame(pc1 = Values, eye_ratio_w = Predict_pgls)
+
+#add predicted lines based on quadratic regression model
+sleep_data$tribe <- factor(sleep_data$tribe, levels = c("Boulengerochromini", "Cyphotilapiini", "Cyprichromini", "Ectodini", "Eretmodini", "Lamprologini", "Limnochromini", "Trophenini"))
+test_plot <- ggplot(sleep_data, aes(x = pc1, y = eye_ratio_w, colour = tribe, label = six_letter_name_Ronco)) + geom_point(size = 4) + scale_colour_manual(values = c("#59595C", "#FDDF13", "#F04D29", "#9AB9D9", "#682E7A", "#C588BB", "#535CA9","#86C773")) + theme_classic() + ylab("PC2 (crepuscular preference)") + xlab("PC1 (diurnal - nocturnal preference)") #+ geom_text_repel(force = 2) 
+test_plot <- test_plot + geom_line(data = trend_line_data, aes(x=pc1, y = eye_ratio_w), inherit.aes = FALSE, size = 1.5, alpha = 1, colour = "black")
+
+## Update #s based on summary(quandraticModel) and summary_fitmod)
+pc1_vs_pc2_plot <- pca_plot + annotate("text", x=-0.1, y=0.01, label= "Quadratic \n r^2 = 0.6334 \n p-value = 3.787e-13 \n Quadratic (PGLS) \n r^2 = 0.5302 \n p-value = 2.023e-09", hjust = 0)
+
+
+
+
+
+library(sp)
+
+x1 <- rnorm(100, 0.8, 0.3)
+y1 <- rnorm(100, 0.8, 0.3)
+hpts <- chull(x = xenbat$X, y = xenbat$Y)
+hpts <- c(hpts, hpts[1])
+xy.coords <- cbind(x1, y1)
+chull.coords <- xy.coords[hpts,]
+chull.poly <- Polygon(chull.coords, hole=F)
+chull.area <- chull.poly@area
+
+test <- lapply(ecomorpho.tree$tip.label, function(species) {
+  data <- as.data.frame(body[,, dimnames(body)[[3]] %in% species])
+  colnames(data) <- c("X", "Y")
+  data$labels <- c(1:20)
+  x <- data[,1]
+  y <- data[,2]
+  hpts <- chull(x = x, y = y)
+  hpts <- c(hpts, hpts[1])
+  xy.coords <- cbind(x, y)
+  chull.coords <- xy.coords[hpts,]
+  chull.poly <- Polygon(chull.coords, hole=F)
+  chull.area <- chull.poly@area
+  
+  # eyes
+  
+  hpts <- chull(x = x[16:19], y = y[16:19])
+  hpts <- c(hpts, hpts[1])
+  xy.coords <- cbind(x, y)
+  chull.coords <- xy.coords[hpts,]
+  chull.poly <- Polygon(chull.coords, hole=F)
+  chull.area.eyes <- chull.poly@area
+  
+  return(chull.area.eyes/chull.area)
+  
+})
+
+df <- data.frame(names = ecomorpho.tree$tip.label, ratio = unlist(test))
+sleep_data$eye_area_ratio <- df$ratio[match(sleep_data$six_letter_name_Ronco, df$names)]
+
+test <- aov(eye_area_ratio ~ category, sleep_data)
+summary.lm(test)
+
+eye_area_ratio <- sleep_data$eye_area_ratio
+names(eye_area_ratio) <- sleep_data$six_letter_name_Ronco
+eye_ratio_eyes <- sleep_data$eye_ratio_eyes
+names(eye_ratio_eyes) <- sleep_data$six_letter_name_Ronco
+eye_ratio_w <- sleep_data$eye_ratio_w
+names(eye_ratio_w) <- sleep_data$six_letter_name_Ronco
+eye_ratio_h <- sleep_data$eye_ratio_h
+names(eye_ratio_h) <- sleep_data$six_letter_name_Ronco
+
+aov.test <- aov.phylo(eye_ratio_w ~ sleep_data_category, cichlidTree, nsim = 1000, test = "Wilks")
+summary(aov.test)
 
