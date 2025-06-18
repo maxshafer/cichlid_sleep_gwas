@@ -324,8 +324,8 @@ output.grid.pls <- apply(grid.pls, 1, function(x) {
 })
 
 # ## To get deformed grids for body shape that correlates with high or low rest amounts
-# pls_plot <- plot(output.grid.pls[[10]])
-# picknplot.shape(pls_plot)
+pls_plot <- plot(output.grid.pls[[10]])
+picknplot.shape(pls_plot)
 body_morph_data <- output.grid.pls[[10]]$data$data
 body_morph_data$total_rest <- sleep_data$total_rest[match(rownames(body_morph_data), sleep_data$six_letter_name_Ronco)]
 body_morph_data$tribe <- sleep_data$tribe[match(rownames(body_morph_data), sleep_data$six_letter_name_Ronco)]

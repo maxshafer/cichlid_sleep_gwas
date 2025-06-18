@@ -7,6 +7,8 @@ library(patchwork)
 library(mvSLOUCH)
 library(geiger)
 library(phytools)
+library(corHMM)
+library(stringr)
 
 setwd(here())
 
@@ -17,6 +19,7 @@ setwd(here())
 source("/Volumes/BZ/Home/gizevo30/R_Projects/Plot-multiple-scales-same-aes-ggplot2.R")
 
 cichlids.diel <- read.csv("pheno_data/cichlid_pc-loadings_eco-morph_rest_full.csv")
+cichlids.diel.cat <- read.csv("~/Documents/Manuscripts/cichlidS/Revisions_04_2025/Supplemental_data/Supplementary_Data_1.csv")
 lt_phylo <- read.nexus("scripts/05_BEAST_RAxML.tre")
 
 cichlids.diel$tips <- cichlids.diel$six_letter_name_Ronco
@@ -28,6 +31,78 @@ d <- fortify(subset)
 cichlids.diel <- cichlids.diel[cichlids.diel$tips %in% subset$tip.label,]
 cichlids.diel$tips <- factor(cichlids.diel$tips, levels = rev(with(d, label[order(y, decreasing=T)])))
 cichlids.diel$y <- as.numeric(cichlids.diel$tips)
+cichlids.diel$categorical <- cichlids.diel.cat$categorical[match(cichlids.diel$six_letter_name_Ronco, cichlids.diel.cat$species)]
+cichlids.diel$categorical2 <- cichlids.diel.cat$categorical[match(cichlids.diel$six_letter_name_Ronco, cichlids.diel.cat$species)]
+cichlids.diel$categorical2 <- str_replace(cichlids.diel$categorical2, "cathemeral", "crepuscular")
+########################################################### #####################################################################################################################################
+#### Categorical models w/ corHMM  #############################################################################################################################################################
+################################################################################################################################################################################################
+
+
+cor_model_er <- corHMM(phy = subset, data = cichlids.diel[, c("tips", "categorical")], rate.cat = 1, model = "ER", node.states = "marginal")
+cor_model_sym <- corHMM(phy = subset, data = cichlids.diel[, c("tips", "categorical")], rate.cat = 1, model = "SYM", node.states = "marginal")
+cor_model_ard <- corHMM(phy = subset, data = cichlids.diel[, c("tips", "categorical")], rate.cat = 1, model = "ARD", node.states = "marginal")
+
+cor_model_er2 <- corHMM(phy = subset, data = cichlids.diel[, c("tips", "categorical2")], rate.cat = 1, model = "ER", node.states = "marginal")
+cor_model_sym2 <- corHMM(phy = subset, data = cichlids.diel[, c("tips", "categorical2")], rate.cat = 1, model = "SYM", node.states = "marginal")
+cor_model_ard2 <- corHMM(phy = subset, data = cichlids.diel[, c("tips", "categorical2")], rate.cat = 1, model = "ARD", node.states = "marginal")
+
+constrained.sym.matrix <- matrix(nrow = 3, ncol = 3, data = c(NA,1,2,1,NA,NA,2,NA,NA))
+constrained.ard.matrix <- matrix(nrow = 3, ncol = 3, data = c(NA,1,2,3,NA,NA,4,NA,NA))
+
+cor_model_sym2_cons <- corHMM(phy = subset, data = cichlids.diel[, c("tips", "categorical2")], rate.cat = 1, rate.mat = constrained.sym.matrix, model = "SYM", node.states = "marginal")
+cor_model_ard2_cons <- corHMM(phy = subset, data = cichlids.diel[, c("tips", "categorical2")], rate.cat = 1,rate.mat = constrained.ard.matrix, model = "ARD", node.states = "marginal")
+
+trait.vector <- cichlids.diel$categorical2[match(subset$tip.label, cichlids.diel$six_letter_name_Ronco)]
+ace_model_er <- ace(trait.vector, subset, model = "ER", type = "discrete")
+ace_model_sym <- ace(trait.vector, subset, model = "SYM", type = "discrete")
+ace_model_ard <- ace(trait.vector, subset, model = "ARD", type = "discrete")
+
+
+### Phytools 3 state modelling
+
+trait.vector <- cichlids.diel$categorical2
+names(trait.vector) <- cichlids.diel$six_letter_name_Ronco
+phytools_model_er <- fitMk(subset, trait.vector, model = "ER")
+phytools_model_sym <- fitMk(subset, trait.vector, model = "SYM")
+phytools_model_ard <- fitMk(subset, trait.vector, model = "ARD")
+
+constrained.sym.matrix <- matrix(nrow = 3, ncol = 3, data = c(0,1,2,1,0,0,2,0,0))
+constrained.ard.matrix <- matrix(nrow = 3, ncol = 3, data = c(0,1,2,3,0,0,4,0,0))
+phytools_model_sym_cons <- fitMk(subset, trait.vector, model = constrained.sym.matrix)
+phytools_model_ard_cons <- fitMk(subset, trait.vector, model = constrained.ard.matrix)
+
+AIC(phytools_model_er, phytools_model_sym, phytools_model_sym_cons, phytools_model_ard, phytools_model_ard_cons)
+
+### Phytools 4 state modelling
+
+trait.vector <- cichlids.diel$categorical
+names(trait.vector) <- cichlids.diel$six_letter_name_Ronco
+phytools_model_er4 <- fitMk(subset, trait.vector, model = "ER")
+phytools_model_sym4 <- fitMk(subset, trait.vector, model = "SYM")
+phytools_model_ard4 <- fitMk(subset, trait.vector, model = "ARD")
+
+constrained.sym.matrix4 <- matrix(nrow = 4, ncol = 4, data = c(0,1,2,3,1,0,4,5,2,4,0,0,3,5,0,0))
+constrained.ard.matrix4 <- matrix(nrow = 4, ncol = 4, data = c(0,1,2,3,4,0,5,6,7,8,0,0,9,10,0,0))
+phytools_model_sym_cons4 <- fitMk(subset, trait.vector, model = constrained.sym.matrix4)
+phytools_model_ard_cons4 <- fitMk(subset, trait.vector, model = constrained.ard.matrix4)
+
+AIC(phytools_model_er4, phytools_model_sym4, phytools_model_sym_cons4, phytools_model_ard4, phytools_model_ard_cons4)
+
+
+
+out <- make.simmap(subset, trait.vector, model="ARD", nsim=10)
+
+## These are all slightly different, but generally agree that nothing is favored over the ER model (too few tips), but that in both SYM and ARD models, direct transitions lower in favour of cathemeral -> nocturnal
+## and crepuscular -> diurnal transitions
+## My guess is that in the ER reconstruction, if we look at the # of transitions, we would see something similar?
+
+ggtree(subset, right = TRUE) %<+% cichlids.diel + geom_tippoint(aes(colour = categorical), size=3)
+
+phylo.plot <- ggtree(as.phylo(subset), layout = "circular", right = T) + theme_tree(bgcolor = NA) + geom_tiplab(offset = 2, size = 2.5)
+
+p4 <- phylo.plot + geom_tile(data = cichlids.diel, aes(y=y, x=x, fill = categorical), width = 1, inherit.aes = FALSE, color = "white") + scale_fill_manual(values = c("grey", "green", "red", "blue"))
+
 
 ################################################################################################################################################################################################
 #### Test phylogenetic models w/ geiger  #######################################################################################################################################################
